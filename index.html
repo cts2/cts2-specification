@@ -1,0 +1,108 @@
+---
+layout: default
+title: Home
+mainmenukey: home
+---
+<div id="masthead">
+    <div id="slogan">
+        <p class="engraved">Get Twinkql now and simplify integration of a SPARQL datasource into your application</p>
+        <a style="float:left" class="download-button" href="http://search.maven.org/remotecontent?filepath=org/twinkql/twinkql/{% include current-version.html %}/twinkql-{% include current-version.html %}-package.zip">
+            <p>Download</p>
+            <p class="smallprint">Zip (v{% include current-version.html %})</p>
+        </a>
+        <a style="float:left" class="download-button" href="documentation/installation.html">
+         	<p>Maven</p>
+            <p class="smallprint">Depedency info</p>
+        </a>
+    </div>
+    <img src="img/twinkql-logo.png" />
+    <p class="engraved" style="font-size:14pt">A SPARQL to Object Mapping Framework</p>
+</div>
+<div class="clear vspace"></div>
+
+<div class="sticker fullWidth">
+    <div class="stickerHeading titillium">
+        <h1>Key Concepts</h1>
+    </div>
+    <ul id="introBadges">
+        <li>    
+            <img src="img/feature-icons/trash-icon.png" />				
+            <p class="titillium heading">Result Bindings</p>
+            <p>Easily bind SPARQL results to your Java Beans using XML Mappings</p>						
+        </li>					
+        <li>
+            <img src="img/feature-icons/reuse-icon.png" />					
+            <p class="titillium heading">Reusability</p>
+            <p>Extend and link results maps to fit your Java Bean hierarchy</p>						
+        </li>
+        <li>
+            <img src="img/feature-icons/xml-icon.png" />					
+            <p class="titillium heading">Dynamic SPARQL</p>
+            <p>Need to build complex SPARQL on the fly? Twinkql can handle that</p>
+        </li>
+        <li>
+            <img src="img/feature-icons/clean-icon.png" />					
+            <p class="titillium heading">Keep SPARQL out of your Code!</p>
+            <p>Keep your Java code clean and healthy! Move your SPARQL out of your code and into XML</p>						
+        </li>					
+    </ul>
+    <div class="clear"></div>
+</div>
+
+<div class="floatLeft">
+    <div class="sticker" style="width: 380px">
+        <div class="stickerHeading titillium">
+            <h1>More features</h1>
+        </div>
+        <ul class="tickIcons">
+            <li>Free, open source (<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>)</li>
+            <li>Java Framework</li>
+            <li>Seamless integration with Spring</li>
+            <li>Uses familiar paradigms. Modeled after <a href="http://www.mybatis.org">MyBatis</a> JDBC Mapping Framework</li>            
+            <li>
+                Fully documented
+                <p class="smallprint">API docs and sample DBPedia queries included</p>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sticker" style="width: 380px">
+        <div class="stickerHeading titillium">
+            <h1>Get started</h1>
+        </div>
+        <ul class="stickerList">
+            <li>
+                <a href="documentation/introduction.html">Introduction to Twinkql</a>
+                <p class="smallprint">Goals and philosophies</p>
+            </li>        	
+            <li>
+                <a href="documentation/links.html">External links and projects using Twinkql</a>
+            	<p class="smallprint">Find more information on the Twinkql community</p>
+            </li>        	
+            <li>
+                <a href="http://github.com/cts2/twinkql/">Source code on Github</a>
+            </li>
+        </ul>
+    </div>    
+</div>	
+
+<div class="sticker floatRight" style="width:494px">
+    <div class="stickerHeading titillium">
+        <h1><b>New:</b> Twinkql, CTS2, and NCBO</h1>
+    </div>
+	<p>
+		Twinkql is being used to implement a <a href="http://informatics.mayo.edu/cts2">CTS2</a> Implementation
+		driven by the <a href="http://www.bioontology.org">National Center for Biomedical Ontology</a>'s new 
+		<a href="http://sparql.bioontology.org/">SPARQL endpoint</a>.
+	</p>
+</div>		
+        
+<div class="sticker floatRight homepageExample" style="width:494px">
+    <div class="stickerHeading titillium">
+        <h1>What it looks like</h1>
+    </div>
+    {% include homepage-example.html %}
+    <p>Named SPARQL queries can be called from your application. These queries my contain parameters, and may be built dynamically based
+    on parameter values. The queries may then be bound to a ResultMapping, which specifies the binding points between the returned SPARQL
+    variables and the beans.</p>
+</div>		
