@@ -177,6 +177,14 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
+				<xs:attribute name="associationID" type="core:URI" use="optional">
+					<xs:annotation>
+						<xs:documentation>the unique identifier of the association instance. While the update mechanism of the CTS<sub>2</sub> specifications requires that all <i>Changeable</i> elements have unique identifiers, the rules
+							and mechanism for assigning unique identifiers to statements and associations are non-trivial. At the moment, the CTS<sub>2</sub> specification remains silent when it comes to arriving at how this identifier is
+							generated except to note that, if two service implementations do not generate the same unique identifier for the same assertion, then the <i>prevImage</i> element in <i>Changeable</i> becomes the only way to
+							identify which Association instance is being updated or deleted.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
