@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogMaintenanceServices"
+xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+xmlns:updateServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+name="ValueSetCatalogMaintenanceService"
+targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogMaintenanceServices">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogMaintenanceServices"
+      schemaLocation="ValueSetCatalogMaintenanceServiceTypes.xsd" />
+    </xsd:schema>
+
+  </wsdl:types>
+
+  <!-- BaseService Messages -->
+  <wsdl:message name="getServiceDescription">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescription" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProvider">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProvider" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceNameResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceNameResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProviderResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProviderResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersion">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationTypeResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationTypeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfileResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfileResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceDescriptionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescriptionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationType">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationType" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceName">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceName" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespace">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespace" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespaceResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespaceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfile">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfile" />
+  </wsdl:message>
+
+  <!-- End BaseService Messages -->
+  <!-- UpdateService Messages -->
+  <wsdl:message name="getSupportedStructures">
+    <wsdl:part name="parameters" element="updateServiceTypes:getSupportedStructures" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedStructuresResponse">
+    <wsdl:part name="parameters" element="updateServiceTypes:getSupportedStructuresResponse" />
+  </wsdl:message>
+
+  <!-- End UpdateService Messages -->
+  <wsdl:message name="createValueSet">
+    <wsdl:part name="parameters" element="tns:createValueSet" />
+  </wsdl:message>
+
+  <wsdl:message name="deleteChangeableResponse">
+    <wsdl:part name="parameters" element="tns:deleteChangeableResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="putChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:putChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:readChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="updateChangeSetMetadataResponse">
+    <wsdl:part name="parameters" element="tns:updateChangeSetMetadataResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="updateChangeSetMetadata">
+    <wsdl:part name="parameters" element="tns:updateChangeSetMetadata" />
+  </wsdl:message>
+
+  <wsdl:message name="validateChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:validateChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="listChanges">
+    <wsdl:part name="parameters" element="tns:listChanges" />
+  </wsdl:message>
+
+  <wsdl:message name="updateValueSetResponse">
+    <wsdl:part name="parameters" element="tns:updateValueSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="putChangeSet">
+    <wsdl:part name="parameters" element="tns:putChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="listChangesResponse">
+    <wsdl:part name="parameters" element="tns:listChangesResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="createChangeSet">
+    <wsdl:part name="parameters" element="tns:createChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="commitChangeSet">
+    <wsdl:part name="parameters" element="tns:commitChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="updateChangeableMetadataResponse">
+    <wsdl:part name="parameters" element="tns:updateChangeableMetadataResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="createChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:createChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="createValueSetResponse">
+    <wsdl:part name="parameters" element="tns:createValueSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="rollbackChangeSet">
+    <wsdl:part name="parameters" element="tns:rollbackChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="validateChangeSet">
+    <wsdl:part name="parameters" element="tns:validateChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="updateValueSet">
+    <wsdl:part name="parameters" element="tns:updateValueSet" />
+  </wsdl:message>
+
+  <wsdl:message name="commitChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:commitChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readChangeSet">
+    <wsdl:part name="parameters" element="tns:readChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="updateChangeableMetadata">
+    <wsdl:part name="parameters" element="tns:updateChangeableMetadata" />
+  </wsdl:message>
+
+  <wsdl:message name="deleteChangeable">
+    <wsdl:part name="parameters" element="tns:deleteChangeable" />
+  </wsdl:message>
+
+  <wsdl:message name="rollbackChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:rollbackChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readIteratableChangeSet">
+    <wsdl:part name="parameters" element="tns:readIteratableChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="readIteratableChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:readIteratableChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="newProperty">
+    <wsdl:part name="parameters" element="tns:newProperty" />
+  </wsdl:message>
+
+  <wsdl:message name="newPropertyResponse">
+    <wsdl:part name="parameters" element="tns:newPropertyResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="newResourceTarget">
+    <wsdl:part name="parameters" element="tns:newResourceTarget" />
+  </wsdl:message>
+
+  <wsdl:message name="newResourceTargetResponse">
+    <wsdl:part name="parameters" element="tns:newResourceTargetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="newLiteralTarget">
+    <wsdl:part name="parameters" element="tns:newLiteralTarget" />
+  </wsdl:message>
+
+  <wsdl:message name="newLiteralTargetResponse">
+    <wsdl:part name="parameters" element="tns:newLiteralTargetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="newEntityReferenceTarget">
+    <wsdl:part name="parameters" element="tns:newEntityReferenceTarget" />
+  </wsdl:message>
+
+  <wsdl:message name="newEntityReferenceTargetResponse">
+    <wsdl:part name="parameters" element="tns:newEntityReferenceTargetResponse" />
+  </wsdl:message>
+
+  <wsdl:portType name="ValueSetCatalogMaintenanceServicePortType">
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <wsdl:input name="getSupportedFormat" message="tns:getSupportedFormat" />
+      <wsdl:output name="getSupportedFormatResponse" message="tns:getSupportedFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <wsdl:input name="getServiceVersion" message="tns:getServiceVersion" />
+      <wsdl:output name="getServiceVersionResponse" message="tns:getServiceVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <wsdl:input name="getDefaultFormat" message="tns:getDefaultFormat" />
+      <wsdl:output name="getDefaultFormatResponse" message="tns:getDefaultFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <wsdl:input name="getKnownNamespace" message="tns:getKnownNamespace" />
+      <wsdl:output name="getKnownNamespaceResponse" message="tns:getKnownNamespaceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <wsdl:input name="getSupportedProfile" message="tns:getSupportedProfile" />
+      <wsdl:output name="getSupportedProfileResponse" message="tns:getSupportedProfileResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <wsdl:input name="getServiceProvider" message="tns:getServiceProvider" />
+      <wsdl:output name="getServiceProviderResponse" message="tns:getServiceProviderResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <wsdl:input name="getServiceName" message="tns:getServiceName" />
+      <wsdl:output name="getServiceNameResponse" message="tns:getServiceNameResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <wsdl:input name="getServiceDescription" message="tns:getServiceDescription" />
+      <wsdl:output name="getServiceDescriptionResponse"
+      message="tns:getServiceDescriptionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <wsdl:input name="getImplementationType" message="tns:getImplementationType" />
+      <wsdl:output name="getImplementationTypeResponse"
+      message="tns:getImplementationTypeResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseService -->
+    <!-- UpdateService -->
+    <wsdl:operation name="getSupportedStructures">
+      <wsdl:input name="getSupportedStructures" message="tns:getSupportedStructures" />
+      <wsdl:output name="getSupportedStructuresResponse"
+      message="tns:getSupportedStructuresResponse" />
+    </wsdl:operation>
+
+    <!-- End UpdateService -->
+    <wsdl:operation name="listChanges">
+      <wsdl:input name="listChanges" message="tns:listChanges" />
+      <wsdl:output name="listChangesResponse" message="tns:listChangesResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="putChangeSet">
+      <wsdl:input name="putChangeSet" message="tns:putChangeSet" />
+      <wsdl:output name="putChangeSetResponse" message="tns:putChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeableMetadata">
+      <wsdl:input name="updateChangeableMetadata" message="tns:updateChangeableMetadata" />
+      <wsdl:output name="updateChangeableMetadataResponse"
+      message="tns:updateChangeableMetadataResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="deleteChangeable">
+      <wsdl:input name="deleteChangeable" message="tns:deleteChangeable" />
+      <wsdl:output name="deleteChangeableResponse" message="tns:deleteChangeableResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeSetMetadata">
+      <wsdl:input name="updateChangeSetMetadata" message="tns:updateChangeSetMetadata" />
+      <wsdl:output name="updateChangeSetMetadataResponse"
+      message="tns:updateChangeSetMetadataResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="createChangeSet">
+      <wsdl:input name="createChangeSet" message="tns:createChangeSet" />
+      <wsdl:output name="createChangeSetResponse" message="tns:createChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="validateChangeSet">
+      <wsdl:input name="validateChangeSet" message="tns:validateChangeSet" />
+      <wsdl:output name="validateChangeSetResponse" message="tns:validateChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="updateValueSet">
+      <wsdl:input name="updateValueSet" message="tns:updateValueSet" />
+      <wsdl:output name="updateValueSetResponse" message="tns:updateValueSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="commitChangeSet">
+      <wsdl:input name="commitChangeSet" message="tns:commitChangeSet" />
+      <wsdl:output name="commitChangeSetResponse" message="tns:commitChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="createValueSet">
+      <wsdl:input name="createValueSet" message="tns:createValueSet" />
+      <wsdl:output name="createValueSetResponse" message="tns:createValueSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="readChangeSet">
+      <wsdl:input name="readChangeSet" message="tns:readChangeSet" />
+      <wsdl:output name="readChangeSetResponse" message="tns:readChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="rollbackChangeSet">
+      <wsdl:input name="rollbackChangeSet" message="tns:rollbackChangeSet" />
+      <wsdl:output name="rollbackChangeSetResponse" message="tns:rollbackChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="readIteratableChangeSet">
+      <wsdl:input name="readIteratableChangeSet" message="tns:readIteratableChangeSet" />
+      <wsdl:output name="readIteratableChangeSetResponse"
+      message="tns:readIteratableChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="newProperty">
+      <wsdl:input name="newProperty" message="tns:newProperty" />
+      <wsdl:output name="newPropertyResponse" message="tns:newPropertyResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="newResourceTarget">
+      <wsdl:input name="newResourceTarget" message="tns:newResourceTarget" />
+      <wsdl:output name="newResourceTargetResponse" message="tns:newResourceTargetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="newLiteralTarget">
+      <wsdl:input name="newLiteralTarget" message="tns:newLiteralTarget" />
+      <wsdl:output name="newLiteralTargetResponse" message="tns:newLiteralTargetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="newEntityReferenceTarget">
+      <wsdl:input name="newEntityReferenceTarget" message="tns:newEntityReferenceTarget" />
+      <wsdl:output name="newEntityReferenceTargetResponse"
+      message="tns:newEntityReferenceTargetResponse" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="ValueSetCatalogMaintenanceServiceSoapBinding"
+  type="tns:ValueSetCatalogMaintenanceServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">alist of the representation formats
+      supported by the service. Example: text/html, text/xml, application/json</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the version or release identifier of
+      the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the default format used by the
+      service unless otherwise specified</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getDefaultFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getDefaultFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of namespaces recognized by
+      this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal
+      URL's, etc.), &lt;i&gt;knownNamespace&lt;/i&gt; includes the namespace name, an optional URI
+      \emph{and} a place to provide textual detail describing what the namespace references. Note
+      that namespace names must be unique across an entire CTS2 implementation - the same
+      namespace name cannot represent one namespace in code system A and a second in code system B.
+      Note also that namespace names are \emph{local} to a service instance. Information that is
+      communicated between service instances, recorded in data tables or client software
+      \emph{must} use full URIs.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownNamespace">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownNamespaceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a reference to the individual or
+      organization that provides the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceProvider">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceProviderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of service profiles that are
+      supported by this service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedProfile">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedProfileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a description of the service, its
+      use, etc.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceDescription">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceDescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a short name that identifies the
+      particular service and implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceName">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the particular implementation type(s)
+      supported by this profile</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getImplementationType">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getImplementationTypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- EndBaseService -->
+    <!-- UpdateService -->
+    <wsdl:operation name="getSupportedStructures">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of structural profiles that
+      the update service can apply changes to</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedStructures">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedStructuresResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- End UpdateService -->
+    <wsdl:operation name="listChanges">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">List the URIs of all the changes that
+      were applied between &lt;i&gt;fromDate&lt;/i&gt; and &lt;i&gt;toDate&lt;/i&gt;. If
+      &lt;i&gt;fromDate&lt;/i&gt; is absent or is less than &lt;i&gt;toDate&lt;/i&gt;, entries will
+      be listed in forward chronological order, otherwise they will be listed in reverse
+      order.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="listChanges">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="listChangesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="putChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Install the supplied change set into
+      the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="putChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="putChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeableMetadata">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the metadata for a change set
+      and return an image of the updated resource.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateChangeableMetadata">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="updateChangeableMetadataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="deleteChangeable">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove the
+      &lt;i&gt;changeAble&lt;/i&gt; resource from the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteChangeable">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="deleteChangeableResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeSetMetadata">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the descriptive information of
+      a change set.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateChangeSetMetadata">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="updateChangeSetMetadataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="createChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new change set and set it in
+      an OPEN state</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="createChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="validateChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Validate the change set and report
+      any errors or warnings that would occur were it to be applied.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validateChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="validateChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="updateValueSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update an existing
+      &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Update an existing
+      &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateValueSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="updateValueSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceDescriptionUpdateExceptions">
+        <documentation>The set of exceptions that can occur on updating any resource
+        description</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+        name="ResourceDescriptionUpdateExceptions" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="commitChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Apply the proposed changes specified
+      in the change set transaction to the changeable being updated.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="commitChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="commitChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="createValueSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
+      &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Create a new
+      &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createValueSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="createValueSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="DuplicateValueSetURI">
+        <documentation>The supplied value set URI already exists as an &lt;i&gt;about&lt;/i&gt; or
+        &lt;i&gt;alternateID&lt;/i&gt; for a value set in the service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="DuplicateValueSetURI" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="DuplicateValueSetName">
+        <documentation>The supplied &lt;i&gt;valueSetName&lt;/i&gt; already exists in the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="DuplicateValueSetName" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="readChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the change set referenced by
+      the supplied URI.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="readChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="readChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="rollbackChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Cancel the proposed changes specified
+      in a change set transaction to the changeable being updated.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="rollbackChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="rollbackChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="readIteratableChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a change set with an iterator
+      that allows its contents to be read in chunks.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="readIteratableChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="readIteratableChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newProperty">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
+      &lt;i&gt;Property&lt;/i&gt; for inclusion in a resource or statement
+      construct</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newProperty">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newPropertyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newResourceTarget">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
+      &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;RESOURCE&lt;/i&gt;. This is a helper
+      function that is used in the creation and update of other resources and does \emph{not}
+      change the state of the service. Note that URI's that reference classes, predicates or
+      individuals should be created using the &lt;i&gt;newEntityReferenceTarget
+      &lt;/i&gt;method</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newResourceTarget">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newResourceTargetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newLiteralTarget">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
+      &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;LITERAL&lt;/i&gt;. Note that this is a
+      helper function and does not change the state of the service itself.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newLiteralTarget">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newLiteralTargetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newEntityReferenceTarget">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a
+      &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;ENTITY&lt;/i&gt;. Note that this is a
+      helper function and does not effect the state of the service. Services may choose to validate
+      the input parameters of this method when it is invoked or may postpone validation until the
+      corresponding create or update service call is invoked.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newEntityReferenceTarget">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newEntityReferenceTargetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="ValueSetCatalogMaintenanceService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ValueSetCatalogMaintenanceServicePort"
+    binding="tns:ValueSetCatalogMaintenanceServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ValueSetCatalogMaintenanceServicePort" />
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

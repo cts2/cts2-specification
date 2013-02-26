@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:valueSetDefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionReadServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionReadServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="getSupportedTag" type="tns:getSupportedTag"/>
+  <xs:complexType name="getSupportedTag"/>
+  
+  <xs:element name="getSupportedTagResponse" type="tns:getSupportedTagResponse"/>
+  <xs:complexType name="getSupportedTagResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="core:VersionTagReference"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="exists" type="tns:exists"/>
+  <xs:complexType name="exists">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionURI" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="existsResponse" type="tns:existsResponse"/>
+  <xs:complexType name="existsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="read" type="tns:read"/>
+  <xs:complexType name="read">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionURI" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readResponse" type="tns:readResponse"/>
+  <xs:complexType name="readResponse">
+    <xs:sequence>
+      <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="existsDefinitionForValueSet" type="tns:existsDefinitionForValueSet"/>
+  <xs:complexType name="existsDefinitionForValueSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="existsDefinitionForValueSetResponse" type="tns:existsDefinitionForValueSetResponse"/>
+  <xs:complexType name="existsDefinitionForValueSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readDefinitionForValueSet" type="tns:readDefinitionForValueSet"/>
+  <xs:complexType name="readDefinitionForValueSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readDefinitionForValueSetResponse" type="tns:readDefinitionForValueSetResponse"/>
+  <xs:complexType name="readDefinitionForValueSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

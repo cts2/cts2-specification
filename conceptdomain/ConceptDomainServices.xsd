@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainServices" 
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="ConceptDomainMaintenanceService" type="ConceptDomainMaintenanceService"/>
+	<xs:complexType name="ConceptDomainMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="UpdateConceptDomainCatalogEntryRequest" type="UpdateConceptDomainCatalogEntryRequest"/>
+	<xs:complexType name="UpdateConceptDomainCatalogEntryRequest">
+		<xs:complexContent>
+			<xs:extension base="coreservice:UpdateAbstractResourceDescription">
+				<xs:sequence>
+					<xs:element name="updatedDefiningEntity" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="definingEntity" type="core:EntityReference" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ConceptDomainHistoryService" type="ConceptDomainHistoryService"/>
+	<xs:complexType name="ConceptDomainHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ConceptDomainQueryService" type="ConceptDomainQueryService"/>
+	<xs:complexType name="ConceptDomainQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:attribute name="allConceptDomains" type="core:ConceptDomainCatalogEntryDirectoryURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ConceptDomainReadService" type="ConceptDomainReadService"/>
+	<xs:complexType name="ConceptDomainReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

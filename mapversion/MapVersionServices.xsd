@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns:mapversion="http://schema.omg.org/spec/CTS2/1.0/MapVersion"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/MapVersionServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/MapVersionServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/MapVersion" schemaLocation="MapVersion.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="MapRole" type="MapRole"/>
+	<xs:simpleType name="MapRole">
+		<xs:annotation>
+			<xs:documentation>An indicator that determines whether the "from", the "to" or both components of a Map or MapVersion are being queried.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="MAP_FROM_ROLE">
+				<xs:annotation>
+					<xs:documentation>Restrict a query to address only the "from" side of a MapCatalogEntry or MapVersion.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MAP_TO_ROLE">
+				<xs:annotation>
+					<xs:documentation>Restrict a query to address only the "to" side of a MapCatalogEntry or MapVersion.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BOTH_MAP_ROLES">
+				<xs:annotation>
+					<xs:documentation>The query addresses both the "from" and "to" side of a map</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="MapStatus" type="MapStatus"/>
+	<xs:simpleType name="MapStatus">
+		<xs:annotation>
+			<xs:documentation>An indicator that determines whether all referencs...</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="UNMAPPED">
+				<xs:annotation>
+					<xs:documentation>An entity is included in the "from" part of the map but does not appear in an MapEntry or it appars in the "to" part of the map but does not appear in the output of a MapRule</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NOMAP">
+				<xs:annotation>
+					<xs:documentation>An entity is included in the "from" part of the map and there is a MapEntry that references it but there the target set is empty. NOMAP references entities that have been explicitly declared to have no mapping</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MAPPED">
+				<xs:annotation>
+					<xs:documentation>An entity is included in the "from" part of the map and appears in a MapEntry or it appars in the "to" part of the map and appears in one or more MapRules. MAPPED includes NOMAP entities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ALLMAPENTRIES">
+				<xs:annotation>
+					<xs:documentation>The union of UNMAPPED and MAPPED entities - any entity that is a source or target of a map whether mentioned or not.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="CreateMapVersionRequest" type="CreateMapVersionRequest"/>
+	<xs:complexType name="CreateMapVersionRequest">
+		<xs:sequence>
+			<xs:element name="fromCodeSystemVersion" type="coreservice:NameOrURI" minOccurs="0" />
+			<xs:element name="fromValueSetDefinition" type="coreservice:NameOrURI" minOccurs="0" />
+			<xs:element name="toCodeSystemVersion" type="coreservice:NameOrURI" minOccurs="0" />
+			<xs:element name="toValueSetDefinition" type="coreservice:NameOrURI" minOccurs="0" />
+			<xs:element name="useCodeSystemVersions" type="coreservice:NameOrURIList" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="documentURI" type="core:DocumentURI" use="required" />
+		<xs:attribute name="mapVersionName" type="core:MapVersionName" use="required" />
+	</xs:complexType>
+	
+	<xs:element name="UpdateMapVersionRequest" type="UpdateMapVersionRequest"/>
+	<xs:complexType name="UpdateMapVersionRequest">
+		<xs:complexContent>
+			<xs:extension base="coreservice:UpdateResourceVersionDescription">
+				<xs:sequence>
+					<xs:element name="updatedUseCodeSystemVersions" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="useCodeSystemVersions" type="coreservice:NameOrURIList" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedApplicableContexts" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="applicableContexts" type="coreservice:NameOrURIList" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="MapVersionHistoryService" type="MapVersionHistoryService"/>
+	<xs:complexType name="MapVersionHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="MapVersionMaintenanceService" type="MapVersionMaintenanceService"/>
+	<xs:complexType name="MapVersionMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="MapVersionQueryService" type="MapVersionQueryService"/>
+	<xs:complexType name="MapVersionQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence>
+					<xs:element name="knownCodeSystem" type="core:CodeSystemReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="knownCodeSystemVersion" type="core:CodeSystemVersionReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="knownValueSet" type="core:ValueSetReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="knownValueSetDefinition" type="core:ValueSetDefinitionReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="supportedTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="mapVersions" type="core:MapVersionDirectoryURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="MapVersionReadService" type="MapVersionReadService"/>
+	<xs:complexType name="MapVersionReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="MapResolutionService">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>A service that interprets and resolves maps
+				</xs:documentation>
+			</xs:annotation>
+			<xs:complexContent>
+				<xs:extension base="coreservice:BaseService">
+					<xs:sequence />
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

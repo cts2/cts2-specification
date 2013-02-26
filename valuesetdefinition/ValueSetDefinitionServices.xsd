@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+		xmlns:valuesetdefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
+		xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+		xmlns="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices"
+		targetNamespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices" elementFormDefault="qualified">
+		<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+		<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" schemaLocation="ValueSetDefinition.xsd"/>
+		<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+		
+	<xs:element name="ValueSetDefinitionHistoryService" type="ValueSetDefinitionHistoryService"/>
+	<xs:complexType name="ValueSetDefinitionHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ValueSetDefinitionMaintenanceService" type="ValueSetDefinitionMaintenanceService"/>
+	<xs:complexType name="ValueSetDefinitionMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ValueSetDefinitionQueryService" type="ValueSetDefinitionQueryService"/>
+	<xs:complexType name="ValueSetDefinitionQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ValueSetDefinitionReadService" type="ValueSetDefinitionReadService"/>
+	<xs:complexType name="ValueSetDefinitionReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence>
+					<xs:element name="knownTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ResolvedValueSetLoader" type="ResolvedValueSetLoader"/>
+	<xs:complexType name="ResolvedValueSetLoader">
+		<xs:sequence>
+			<xs:element name="knownValueSet" type="valuesetdefinition:ResolvedValueSetSummary" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="ValueSetDefinitionResolution" type="ValueSetDefinitionResolution"/>
+	<xs:complexType name="ValueSetDefinitionResolution">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

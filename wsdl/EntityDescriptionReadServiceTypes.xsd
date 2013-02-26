@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:entityDescription="http://schema.omg.org/spec/CTS2/1.0/Entity"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/EntityDescriptionReadServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/EntityDescriptionReadServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Entity" schemaLocation="../entity/Entity.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="getKnownCodeSystem" type="tns:getKnownCodeSystem"/>
+  <xs:complexType name="getKnownCodeSystem"/>
+  <xs:element name="getKnownCodeSystemResponse" type="tns:getKnownCodeSystemResponse"/>
+  <xs:complexType name="getKnownCodeSystemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="core:CodeSystemReference"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getKnownCodeSystemVersion" type="tns:getKnownCodeSystemVersion"/>
+  <xs:complexType name="getKnownCodeSystemVersion"/>
+  <xs:element name="getKnownCodeSystemVersionResponse" type="tns:getKnownCodeSystemVersionResponse"/>
+  <xs:complexType name="getKnownCodeSystemVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="core:CodeSystemVersionReference"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getSupportedVersionTag" type="tns:getSupportedVersionTag"/>
+  <xs:complexType name="getSupportedVersionTag"/>
+  <xs:element name="getSupportedVersionTagResponse" type="tns:getSupportedVersionTagResponse"/>
+  <xs:complexType name="getSupportedVersionTagResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="return" type="core:VersionTagReference"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="read" type="tns:read"/>
+  <xs:complexType name="read">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readResponse" type="tns:readResponse"/>
+  <xs:complexType name="readResponse">
+    <xs:sequence>
+      <xs:element name="return" type="entityDescription:EntityDescription"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsInCodeSystem" type="tns:existsInCodeSystem"/>
+  <xs:complexType name="existsInCodeSystem">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsInCodeSystemResponse" type="tns:existsInCodeSystemResponse"/>
+  <xs:complexType name="existsInCodeSystemResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="exists" type="tns:exists"/>
+  <xs:complexType name="exists">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsResponse" type="tns:existsResponse"/>
+  <xs:complexType name="existsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readByCodeSystem" type="tns:readByCodeSystem"/>
+  <xs:complexType name="readByCodeSystem">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readByCodeSystemResponse" type="tns:readByCodeSystemResponse"/>
+  <xs:complexType name="readByCodeSystemResponse">
+    <xs:sequence>
+      <xs:element name="return" type="entityDescription:EntityDescription"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readEntityDescriptions" type="tns:readEntityDescriptions"/>
+  <xs:complexType name="readEntityDescriptions">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readEntityDescriptionsResponse" type="tns:readEntityDescriptionsResponse"/>
+  <xs:complexType name="readEntityDescriptionsResponse">
+    <xs:sequence>
+      <xs:element ref="entityDescription:EntityList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="availableDescriptions" type="tns:availableDescriptions"/>
+  <xs:complexType name="availableDescriptions">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityId" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="availableDescriptionsResponse" type="tns:availableDescriptionsResponse"/>
+  <xs:complexType name="availableDescriptionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:EntityReference"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

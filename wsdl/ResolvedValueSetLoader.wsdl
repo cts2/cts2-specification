@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetLoaderServices"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+name="ResolvedValueSetLoaderServices"
+targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetLoaderServices">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetLoaderServices"
+      schemaLocation="ResolvedValueSetLoaderTypes.xsd" />
+    </xsd:schema>
+
+  </wsdl:types>
+
+  <!-- BaseService Messages -->
+  <wsdl:message name="getServiceDescription">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescription" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProvider">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProvider" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceNameResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceNameResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProviderResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProviderResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersion">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationTypeResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationTypeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfileResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfileResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceDescriptionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescriptionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationType">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationType" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceName">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceName" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespace">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespace" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespaceResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespaceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfile">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfile" />
+  </wsdl:message>
+
+  <!-- End BaseService Messages -->
+  <wsdl:message name="getKnownValueSets">
+    <wsdl:part name="parameters" element="tns:getKnownValueSets" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownValueSetsResponse">
+    <wsdl:part name="parameters" element="tns:getKnownValueSetsResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="contains">
+    <wsdl:part name="parameters" element="tns:contains" />
+  </wsdl:message>
+
+  <wsdl:message name="containsResponse">
+    <wsdl:part name="parameters" element="tns:containsResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="load">
+    <wsdl:part name="parameters" element="tns:load" />
+  </wsdl:message>
+
+  <wsdl:message name="loadResponse">
+    <wsdl:part name="parameters" element="tns:loadResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="delete">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+
+  <wsdl:message name="deleteResponse">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+
+  <wsdl:portType name="ResolvedValueSetLoaderServicePortType">
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <wsdl:input name="getSupportedFormat" message="tns:getSupportedFormat" />
+      <wsdl:output name="getSupportedFormatResponse" message="tns:getSupportedFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <wsdl:input name="getServiceVersion" message="tns:getServiceVersion" />
+      <wsdl:output name="getServiceVersionResponse" message="tns:getServiceVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <wsdl:input name="getDefaultFormat" message="tns:getDefaultFormat" />
+      <wsdl:output name="getDefaultFormatResponse" message="tns:getDefaultFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <wsdl:input name="getKnownNamespace" message="tns:getKnownNamespace" />
+      <wsdl:output name="getKnownNamespaceResponse" message="tns:getKnownNamespaceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <wsdl:input name="getSupportedProfile" message="tns:getSupportedProfile" />
+      <wsdl:output name="getSupportedProfileResponse" message="tns:getSupportedProfileResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <wsdl:input name="getServiceProvider" message="tns:getServiceProvider" />
+      <wsdl:output name="getServiceProviderResponse" message="tns:getServiceProviderResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <wsdl:input name="getServiceName" message="tns:getServiceName" />
+      <wsdl:output name="getServiceNameResponse" message="tns:getServiceNameResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <wsdl:input name="getServiceDescription" message="tns:getServiceDescription" />
+      <wsdl:output name="getServiceDescriptionResponse"
+      message="tns:getServiceDescriptionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <wsdl:input name="getImplementationType" message="tns:getImplementationType" />
+      <wsdl:output name="getImplementationTypeResponse"
+      message="tns:getImplementationTypeResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseService -->
+    <wsdl:operation name="getKnownValueSets">
+      <wsdl:input name="getKnownValueSets" message="tns:getKnownValueSets" />
+      <wsdl:output name="getKnownValueSetsResponse" message="tns:getKnownValueSetsResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="contains">
+      <wsdl:input name="contains" message="tns:contains" />
+      <wsdl:output name="containsResponse" message="tns:containsResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="load">
+      <wsdl:input name="load" message="tns:load" />
+      <wsdl:output name="loadResponse" message="tns:loadResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="delete">
+      <wsdl:input name="delete" message="tns:delete" />
+      <wsdl:output name="deleteResponse" message="tns:deleteResponse" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="ResolvedValueSetLoaderServiceSoapBinding"
+  type="tns:ResolvedValueSetLoaderServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">alist of the representation formats
+      supported by the service. Example: text/html, text/xml, application/json</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the version or release identifier of
+      the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the default format used by the
+      service unless otherwise specified</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getDefaultFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getDefaultFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of namespaces recognized by
+      this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal
+      URL's, etc.), &lt;i&gt;knownNamespace&lt;/i&gt; includes the namespace name, an optional URI
+      \emph{and} a place to provide textual detail describing what the namespace references. Note
+      that namespace names must be unique across an entire CTS2 implementation - the same
+      namespace name cannot represent one namespace in code system A and a second in code system B.
+      Note also that namespace names are \emph{local} to a service instance. Information that is
+      communicated between service instances, recorded in data tables or client software
+      \emph{must} use full URIs.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownNamespace">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownNamespaceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a reference to the individual or
+      organization that provides the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceProvider">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceProviderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of service profiles that are
+      supported by this service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedProfile">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedProfileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a description of the service, its
+      use, etc.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceDescription">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceDescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a short name that identifies the
+      particular service and implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceName">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the particular implementation type(s)
+      supported by this profile</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getImplementationType">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getImplementationTypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- EndBaseService -->
+    <wsdl:operation name="getKnownValueSets">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownValueSets">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownValueSetsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="contains">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Intersect the supplied entity list
+      with what the entities in the resolved set and return those that are in
+      common.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="contains">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="containsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="load">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Load the resolved value set into the
+      local resolution list and return a URI that references it.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="load">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="loadResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="delete">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">remove the referenced set from the
+      service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="delete">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="deleteResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="ResolvedValueSetLoaderService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ResolvedValueSetLoaderServicePort"
+    binding="tns:ResolvedValueSetLoaderServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ResolvedValueSetLoaderService" />
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ReasoningServices"
+xmlns:baseQueryService="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServices"
+xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+name="ReasoningService"
+targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ReasoningServices">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ReasoningServices"
+      schemaLocation="ReasoningServiceTypes.xsd" />
+    </xsd:schema>
+
+  </wsdl:types>
+
+  <!-- BaseService Messages -->
+  <wsdl:message name="getServiceDescription">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescription" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProvider">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProvider" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceNameResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceNameResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProviderResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProviderResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersion">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationTypeResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationTypeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfileResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfileResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceDescriptionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescriptionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationType">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationType" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceName">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceName" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespace">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespace" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespaceResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespaceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfile">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfile" />
+  </wsdl:message>
+
+  <!-- End BaseService Messages -->
+  <!-- BaseQueryService Messages -->
+  <wsdl:message name="getSupportedMatchAlgorithmResponse">
+    <wsdl:part name="parameters"
+    element="baseQueryServiceTypes:getSupportedMatchAlgorithmResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedMatchAlgorithm">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getSupportedMatchAlgorithm" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedModelAttributeResponse">
+    <wsdl:part name="parameters"
+    element="baseQueryServiceTypes:getSupportedModelAttributeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedModelAttribute">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getSupportedModelAttribute" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownPropertyResponse">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getKnownPropertyResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownProperty">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getKnownProperty" />
+  </wsdl:message>
+
+  <!-- End BaseQueryService Messages -->
+  <wsdl:message name="getAllAssociations">
+    <wsdl:part name="parameters" element="tns:getAllAssociations" />
+  </wsdl:message>
+
+  <wsdl:message name="getAllAssociationsResponse">
+    <wsdl:part name="parameters" element="tns:getAllAssociationsResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownCodeSystem">
+    <wsdl:part name="parameters" element="tns:getKnownCodeSystem" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownCodeSystemResponse">
+    <wsdl:part name="parameters" element="tns:getKnownCodeSystemResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownCodeSystemVersion">
+    <wsdl:part name="parameters" element="tns:getKnownCodeSystemVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownCodeSystemVersionResponse">
+    <wsdl:part name="parameters" element="tns:getKnownCodeSystemVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveAsListResponse">
+    <wsdl:part name="parameters" element="tns:resolveAsListResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveResponse">
+    <wsdl:part name="parameters" element="tns:resolveResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getAllSourceAndTargetEntitiesResponse">
+    <wsdl:part name="parameters" element="tns:getAllSourceAndTargetEntitiesResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetLiteralResponse">
+    <wsdl:part name="parameters" element="tns:restrictToTargetLiteralResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getPredicatesResponse">
+    <wsdl:part name="parameters" element="tns:getPredicatesResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveAsList">
+    <wsdl:part name="parameters" element="tns:resolveAsList" />
+  </wsdl:message>
+
+  <wsdl:message name="count">
+    <wsdl:part name="parameters" element="tns:count" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToSourceOrTargetEntity">
+    <wsdl:part name="parameters" element="tns:restrictToSourceOrTargetEntity" />
+  </wsdl:message>
+
+  <wsdl:message name="getTargetEntitiesResponse">
+    <wsdl:part name="parameters" element="tns:getTargetEntitiesResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToSourceEntityResponse">
+    <wsdl:part name="parameters" element="tns:restrictToSourceEntityResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetExpression">
+    <wsdl:part name="parameters" element="tns:restrictToTargetExpression" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictResponse">
+    <wsdl:part name="parameters" element="tns:restrictResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSourceEntities">
+    <wsdl:part name="parameters" element="tns:getSourceEntities" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetExpressionResponse">
+    <wsdl:part name="parameters" element="tns:restrictToTargetExpressionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetEntityResponse">
+    <wsdl:part name="parameters" element="tns:restrictToTargetEntityResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getTargetEntities">
+    <wsdl:part name="parameters" element="tns:getTargetEntities" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToSourceEntity">
+    <wsdl:part name="parameters" element="tns:restrictToSourceEntity" />
+  </wsdl:message>
+
+  <wsdl:message name="countResponse">
+    <wsdl:part name="parameters" element="tns:countResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="resolve">
+    <wsdl:part name="parameters" element="tns:resolve" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetEntity">
+    <wsdl:part name="parameters" element="tns:restrictToTargetEntity" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToPredicate">
+    <wsdl:part name="parameters" element="tns:restrictToPredicate" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToPredicateResponse">
+    <wsdl:part name="parameters" element="tns:restrictToPredicateResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToSourceOrTargetEntityResponse">
+    <wsdl:part name="parameters" element="tns:restrictToSourceOrTargetEntityResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToTargetLiteral">
+    <wsdl:part name="parameters" element="tns:restrictToTargetLiteral" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToCodeSystemVersionResponse">
+    <wsdl:part name="parameters" element="tns:restrictToCodeSystemVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictToCodeSystemVersion">
+    <wsdl:part name="parameters" element="tns:restrictToCodeSystemVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="restrict">
+    <wsdl:part name="parameters" element="tns:restrict" />
+  </wsdl:message>
+
+  <wsdl:message name="getAllSourceAndTargetEntities">
+    <wsdl:part name="parameters" element="tns:getAllSourceAndTargetEntities" />
+  </wsdl:message>
+
+  <wsdl:message name="getSourceEntitiesResponse">
+    <wsdl:part name="parameters" element="tns:getSourceEntitiesResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getPredicates">
+    <wsdl:part name="parameters" element="tns:getPredicates" />
+  </wsdl:message>
+
+  <wsdl:message name="differenceResponse">
+    <wsdl:part name="parameters" element="tns:differenceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="difference">
+    <wsdl:part name="parameters" element="tns:difference" />
+  </wsdl:message>
+
+  <wsdl:message name="intersectResponse">
+    <wsdl:part name="parameters" element="tns:intersectResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="intersect">
+    <wsdl:part name="parameters" element="tns:intersect" />
+  </wsdl:message>
+
+  <wsdl:message name="unionResponse">
+    <wsdl:part name="parameters" element="tns:unionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="union">
+    <wsdl:part name="parameters" element="tns:union" />
+  </wsdl:message>
+
+  <wsdl:message name="classify">
+    <wsdl:part name="parameters" element="tns:classify" />
+  </wsdl:message>
+
+  <wsdl:message name="classifyResponse">
+    <wsdl:part name="parameters" element="tns:classifyResponse" />
+  </wsdl:message>
+
+  <wsdl:portType name="ReasoningServicePortType">
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <wsdl:input name="getSupportedFormat" message="tns:getSupportedFormat" />
+      <wsdl:output name="getSupportedFormatResponse" message="tns:getSupportedFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <wsdl:input name="getServiceVersion" message="tns:getServiceVersion" />
+      <wsdl:output name="getServiceVersionResponse" message="tns:getServiceVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <wsdl:input name="getDefaultFormat" message="tns:getDefaultFormat" />
+      <wsdl:output name="getDefaultFormatResponse" message="tns:getDefaultFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <wsdl:input name="getKnownNamespace" message="tns:getKnownNamespace" />
+      <wsdl:output name="getKnownNamespaceResponse" message="tns:getKnownNamespaceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <wsdl:input name="getSupportedProfile" message="tns:getSupportedProfile" />
+      <wsdl:output name="getSupportedProfileResponse" message="tns:getSupportedProfileResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <wsdl:input name="getServiceProvider" message="tns:getServiceProvider" />
+      <wsdl:output name="getServiceProviderResponse" message="tns:getServiceProviderResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <wsdl:input name="getServiceName" message="tns:getServiceName" />
+      <wsdl:output name="getServiceNameResponse" message="tns:getServiceNameResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <wsdl:input name="getServiceDescription" message="tns:getServiceDescription" />
+      <wsdl:output name="getServiceDescriptionResponse"
+      message="tns:getServiceDescriptionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <wsdl:input name="getImplementationType" message="tns:getImplementationType" />
+      <wsdl:output name="getImplementationTypeResponse"
+      message="tns:getImplementationTypeResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseService -->
+    <!-- BaseQueryService -->
+    <wsdl:operation name="getSupportedMatchAlgorithm">
+      <wsdl:input name="getSupportedMatchAlgorithm" message="tns:getSupportedMatchAlgorithm" />
+      <wsdl:output name="getSupportedMatchAlgorithmResponse"
+      message="tns:getSupportedMatchAlgorithmResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedModelAttribute">
+      <wsdl:input name="getSupportedModelAttribute" message="tns:getSupportedModelAttribute" />
+      <wsdl:output name="getSupportedModelAttributeResponse"
+      message="tns:getSupportedModelAttributeResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownProperty">
+      <wsdl:input name="getKnownProperty" message="tns:getKnownProperty" />
+      <wsdl:output name="getKnownPropertyResponse" message="tns:getKnownPropertyResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseQueryService -->
+    <wsdl:operation name="getKnownCodeSystem">
+      <wsdl:input name="getKnownCodeSystem" message="tns:getKnownCodeSystem" />
+      <wsdl:output name="getKnownCodeSystemResponse" message="tns:getKnownCodeSystemResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownCodeSystemVersion">
+      <wsdl:input name="getKnownCodeSystemVersion" message="tns:getKnownCodeSystemVersion" />
+      <wsdl:output name="getKnownCodeSystemVersionResponse"
+      message="tns:getKnownCodeSystemVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getAllAssociations">
+      <wsdl:input name="getAllAssociations" message="tns:getAllAssociations" />
+      <wsdl:output name="getAllAssociationsResponse" message="tns:getAllAssociationsResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="resolve">
+      <wsdl:input name="resolve" message="tns:resolve" />
+      <wsdl:output name="resolveResponse" message="tns:resolveResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetExpression">
+      <wsdl:input name="restrictToTargetExpression" message="tns:restrictToTargetExpression" />
+      <wsdl:output name="restrictToTargetExpressionResponse"
+      message="tns:restrictToTargetExpressionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToCodeSystemVersion">
+      <wsdl:input name="restrictToCodeSystemVersion" message="tns:restrictToCodeSystemVersion" />
+      <wsdl:output name="restrictToCodeSystemVersionResponse"
+      message="tns:restrictToCodeSystemVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="count">
+      <wsdl:input name="count" message="tns:count" />
+      <wsdl:output name="countResponse" message="tns:countResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="resolveAsList">
+      <wsdl:input name="resolveAsList" message="tns:resolveAsList" />
+      <wsdl:output name="resolveAsListResponse" message="tns:resolveAsListResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getTargetEntities">
+      <wsdl:input name="getTargetEntities" message="tns:getTargetEntities" />
+      <wsdl:output name="getTargetEntitiesResponse" message="tns:getTargetEntitiesResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSourceEntities">
+      <wsdl:input name="getSourceEntities" message="tns:getSourceEntities" />
+      <wsdl:output name="getSourceEntitiesResponse" message="tns:getSourceEntitiesResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToSourceEntity">
+      <wsdl:input name="restrictToSourceEntity" message="tns:restrictToSourceEntity" />
+      <wsdl:output name="restrictToSourceEntityResponse"
+      message="tns:restrictToSourceEntityResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToPredicate">
+      <wsdl:input name="restrictToPredicate" message="tns:restrictToPredicate" />
+      <wsdl:output name="restrictToPredicateResponse" message="tns:restrictToPredicateResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getAllSourceAndTargetEntities">
+      <wsdl:input name="getAllSourceAndTargetEntities"
+      message="tns:getAllSourceAndTargetEntities" />
+      <wsdl:output name="getAllSourceAndTargetEntitiesResponse"
+      message="tns:getAllSourceAndTargetEntitiesResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToSourceOrTargetEntity">
+      <wsdl:input name="restrictToSourceOrTargetEntity"
+      message="tns:restrictToSourceOrTargetEntity" />
+      <wsdl:output name="restrictToSourceOrTargetEntityResponse"
+      message="tns:restrictToSourceOrTargetEntityResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrict">
+      <wsdl:input name="restrict" message="tns:restrict" />
+      <wsdl:output name="restrictResponse" message="tns:restrictResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetLiteral">
+      <wsdl:input name="restrictToTargetLiteral" message="tns:restrictToTargetLiteral" />
+      <wsdl:output name="restrictToTargetLiteralResponse"
+      message="tns:restrictToTargetLiteralResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getPredicates">
+      <wsdl:input name="getPredicates" message="tns:getPredicates" />
+      <wsdl:output name="getPredicatesResponse" message="tns:getPredicatesResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetEntity">
+      <wsdl:input name="restrictToTargetEntity" message="tns:restrictToTargetEntity" />
+      <wsdl:output name="restrictToTargetEntityResponse"
+      message="tns:restrictToTargetEntityResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="difference">
+      <wsdl:input name="difference" message="tns:difference" />
+      <wsdl:output name="differenceResponse" message="tns:differenceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="intersect">
+      <wsdl:input name="intersect" message="tns:intersect" />
+      <wsdl:output name="intersectResponse" message="tns:intersectResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="union">
+      <wsdl:input name="union" message="tns:union" />
+      <wsdl:output name="unionResponse" message="tns:unionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="classify">
+      <wsdl:input name="classify" message="tns:classify" />
+      <wsdl:output name="classifyResponse" message="tns:classifyResponse" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="ReasoningServiceSoapBinding" type="tns:ReasoningServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">alist of the representation formats
+      supported by the service. Example: text/html, text/xml, application/json</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the version or release identifier of
+      the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the default format used by the
+      service unless otherwise specified</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getDefaultFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getDefaultFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of namespaces recognized by
+      this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal
+      URL's, etc.), &lt;i&gt;knownNamespace&lt;/i&gt; includes the namespace name, an optional URI
+      \emph{and} a place to provide textual detail describing what the namespace references. Note
+      that namespace names must be unique across an entire CTS2 implementation - the same
+      namespace name cannot represent one namespace in code system A and a second in code system B.
+      Note also that namespace names are \emph{local} to a service instance. Information that is
+      communicated between service instances, recorded in data tables or client software
+      \emph{must} use full URIs.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownNamespace">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownNamespaceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a reference to the individual or
+      organization that provides the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceProvider">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceProviderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of service profiles that are
+      supported by this service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedProfile">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedProfileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a description of the service, its
+      use, etc.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceDescription">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceDescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a short name that identifies the
+      particular service and implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceName">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the particular implementation type(s)
+      supported by this profile</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getImplementationType">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getImplementationTypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- EndBaseService -->
+    <!-- BaseQueryService -->
+    <wsdl:operation name="getSupportedMatchAlgorithm">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the match algorithms that can be used
+      in filters for this service instance</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedMatchAlgorithm">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedMatchAlgorithmResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedModelAttribute">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of model attributes that can
+      be referenced in filter instances for the given service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedModelAttribute">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedModelAttributeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownProperty">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">The set of properties that are used
+      in one or more instances of the resource represented by this service. This list includes all
+      properties that can be used in queries in this service, independent of the
+      &lt;i&gt;entryState &lt;/i&gt;or temporal state of the resource(s) being
+      searched.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownProperty">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownPropertyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- EndBaseQueryService -->
+    <wsdl:operation name="resolve">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve a change set as an iterable
+      resource - a handy function for viewing large change sets</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolve">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetExpression">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
+      &lt;i&gt;DirectoryURI&lt;/i&gt; that represents the subset of the associations in
+      &lt;i&gt;directory&lt;/i&gt; whose target matches the supplied expression.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToTargetExpression">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToTargetExpressionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToCodeSystemVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return an
+      &lt;i&gt;EntityDirectoryURI&lt;/i&gt; that references only the EntityReferences in
+      &lt;i&gt;directory&lt;/i&gt; that have assertions about the (EntityDescriptions) in the named
+      code system version.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToCodeSystemVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToCodeSystemVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="count">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
+      currently represented by the supplied directory URI.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="count">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="countResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="resolveAsList">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve a &lt;i&gt;DirectoryURI
+      &lt;/i&gt; that references a set of code system catalog entries and return the set of
+      corresponding catalog entries</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolveAsList">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveAsListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSourceEntities">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
+      to the set of entities that occur in the &lt;i&gt;source&lt;/i&gt; position of the resolution
+      of the supplied association directory</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSourceEntities">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSourceEntitiesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getTargetEntities">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
+      to the set of entities that occur in the &lt;i&gt;target&lt;/i&gt; position or as the target
+      of a BNODE in the resolution of the supplied association directory</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getTargetEntities">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getTargetEntitiesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToSourceEntity">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a &lt;i&gt;DirectoryURI
+      &lt;/i&gt;that represents the subset of the associations in &lt;i&gt;directory&lt;/i&gt;
+      whose subject is &lt;i&gt;sourceEntity.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToSourceEntity">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToSourceEntityResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToPredicate">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a &lt;i&gt;DirectoryURI
+      &lt;/i&gt;that represents the subset of the associations in &lt;i&gt;directory&lt;/i&gt;
+      whose predicate is &lt;i&gt;predicate.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToPredicate">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToPredicateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getAllSourceAndTargetEntities">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
+      to the set of entities that occur in either the &lt;i&gt;source&lt;/i&gt; or the
+      &lt;i&gt;target &lt;/i&gt;position of the resolution of the supplied association
+      directory</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAllSourceAndTargetEntities">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getAllSourceAndTargetEntitiesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToSourceOrTargetEntity">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
+      &lt;i&gt;DirectoryURI&lt;/i&gt; that represents the subset of the associations having either
+      a &lt;i&gt;source&lt;/i&gt; or a &lt;i&gt;target&lt;/i&gt; matching the supplied entity. This
+      is equivalent to the union of &lt;i&gt;restrictToSourceEntity &lt;/i&gt;and
+      &lt;i&gt;restrictToTargetEntity&lt;/i&gt; with &lt;i&gt;source&lt;/i&gt; and
+      &lt;i&gt;target&lt;/i&gt; being the same</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToSourceOrTargetEntity">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToSourceOrTargetEntityResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrict">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
+      &lt;i&gt;DirectoryURI&lt;/i&gt; that references the set of all elements represented by
+      &lt;i&gt;directory&lt;/i&gt; that match the criteria specified in
+      &lt;i&gt;filter.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrict">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetLiteral">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
+      &lt;i&gt;DirectoryURI&lt;/i&gt; that represents the subset of the associations in
+      &lt;i&gt;directory&lt;/i&gt; having a string literal that matches
+      &lt;i&gt;target&lt;/i&gt;.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToTargetLiteral">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToTargetLiteralResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getPredicates">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
+      to the set of entities that occur in the &lt;i&gt;predicate&lt;/i&gt; position of the
+      resolution of the supplied association directory</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPredicates">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getPredicatesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrictToTargetEntity">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a &lt;i&gt;DirectoryURI
+      &lt;/i&gt;that represents the subset of the associations in &lt;i&gt;directory&lt;/i&gt;
+      having a target directly matching &lt;i&gt;target&lt;/i&gt; or containing one or more bnodes
+      who reference &lt;i&gt;target&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrictToTargetEntity">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictToTargetEntityResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="difference">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove any of the elements in
+      &lt;i&gt;elementsToRemove&lt;/i&gt; from &lt;i&gt;initialSet &lt;/i&gt;if present. Elements
+      in &lt;i&gt;elementsToRemove&lt;/i&gt; that are not in &lt;i&gt;initialSet&lt;/i&gt; are
+      ignored.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="difference">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="differenceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="intersect">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory that represents
+      the set of elements that are common to the two supplied directories. Note that both
+      DirectoryURIs must represent resources of the same type.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="intersect">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="intersectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="union">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory that represents
+      the combination of the contents of the supplied two supplied directories, with duplicate
+      entries removed. Note that both of the directory URIs must resolve to entries of the same
+      type.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="union">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="unionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownCodeSystem">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the name and URI of a code system
+      that is known to this service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownCodeSystem">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownCodeSystemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownCodeSystemVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the name and URI of the code system
+      version that are recognized by this service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownCodeSystemVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownCodeSystemVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getAllAssociations">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">A &lt;i&gt;DirectoryURI
+      &lt;/i&gt;that resolves to all &lt;i&gt;Associations&lt;/i&gt; known to the
+      service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAllAssociations">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getAllAssociationsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="classify">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">The set of new assertions that can be
+      inferred from the combination of the assertions in &lt;i&gt;associationList&lt;/i&gt; and the
+      set that are &lt;i&gt;assertedBy&lt;/i&gt; &lt;i&gt;codeSystemVersion&lt;/i&gt;.The set of
+      new assertions that can be inferred from the combination of the assertions in
+      &lt;i&gt;associationList&lt;/i&gt; and the set that are &lt;i&gt;assertedBy&lt;/i&gt;
+      &lt;i&gt;codeSystemVersion&lt;/i&gt;.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="classify">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="classifyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
+        <documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InferenceNotSupported">
+        <documentation>Inference is not supported for the supplied
+        codeSystemVersion</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InferenceNotSupported" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
+        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+        implementation</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="ReasoningService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">An extension to the
+    &lt;i&gt;AssociationQueryService&lt;/i&gt; that allows the posing of "what if"
+    questions.</documentation>
+
+    <wsdl:port name="ReasoningServicePort" binding="tns:ReasoningServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ReasoningServicePort" />
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

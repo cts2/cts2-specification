@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
+	xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+	xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	elementFormDefault="qualified">
+
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd" />
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd" />
+
+	<element name="readChangeSet" type="tns:readChangeSet" />
+	<complexType name="readChangeSet">
+		<sequence>
+			<element minOccurs="1" name="changeSetURI" type="core:ChangeSetURI" />
+		</sequence>
+	</complexType>
+  
+	<element name="readChangeSetResponse" type="tns:readChangeSetResponse" />
+	<complexType name="readChangeSetResponse">
+		<sequence>
+			<element name="return" type="updates:ChangeSet" />
+		</sequence>
+	</complexType>
+	
+	<element name="getChangeHistory" type="tns:getChangeHistory" />
+	<complexType name="getChangeHistory"/>
+	
+  <element name="getChangeHistoryResponse" type="tns:getChangeHistoryResponse" />
+	<complexType name="getChangeHistoryResponse">
+		<sequence>
+			<element name="return" type="core:ChangeSetDirectoryURI" />
+		</sequence>
+	</complexType>
+	
+	<element name="getEarliestChange" type="tns:getEarliestChange" />
+	<complexType name="getEarliestChange"/>	
+  
+	<element name="getEarliestChangeResponse" type="tns:getEarliestChangeResponse" />
+	<complexType name="getEarliestChangeResponse">
+		<sequence>
+			<element name="return" type="core:DateAndTime" />
+		</sequence>
+	</complexType>
+	
+	<element name="getLatestChange" type="tns:getLatestChange" />
+	<complexType name="getLatestChange"/>
+	
+	<element name="getLatestChangeResponse" type="tns:getLatestChangeResponse" />
+	<complexType name="getLatestChangeResponse">
+		<sequence>
+			<element name="return" type="core:DateAndTime" />
+		</sequence>
+	</complexType>
+  
+  <element name="resolve" type="tns:resolve"/>
+  <complexType name="resolve">
+    <sequence>
+      <element name="changeSet" type="core:ChangeSetURI"/>
+      <element name="queryControl" type="coreService:QueryControl"/>
+    </sequence>
+  </complexType>
+  
+  <element name="resolveResponse" type="tns:resolveResponse"/>
+  <complexType name="resolveResponse">
+    <sequence>
+      <element ref="updates:IteratableChangeSet"/>
+    </sequence>    
+  </complexType>
+  
+</schema>

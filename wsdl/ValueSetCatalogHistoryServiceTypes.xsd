@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:entityDescription="http://schema.omg.org/spec/CTS2/1.0/Entity"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:valueSet="http://schema.omg.org/spec/CTS2/1.0/ValueSet"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogHistoryServices"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogHistoryServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes" schemaLocation="HistoryServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  
+  <!-- BaseQueryService Types -->
+  <xs:element name="count" type="tns:count"/>
+  <xs:complexType name="count">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:MapVersionDirectoryURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="timeout" type="core:NaturalNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="countResponse" type="tns:countResponse"/>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:NaturalNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrict" type="tns:restrict"/>
+  <xs:complexType name="restrict">
+    <xs:sequence>
+      <xs:element name="directory" type="core:MapVersionDirectoryURI"/>
+      <xs:element name="filter" type="core:Filter"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictResponse" type="tns:restrictResponse"/>
+  <xs:complexType name="restrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="difference" type="tns:restrict"/>
+  <xs:complexType name="difference">
+    <xs:sequence>
+      <xs:element name="initialSet" type="core:MapVersionDirectoryURI"/>
+      <xs:element name="elementsToRemove" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="differenceResponse" type="tns:differenceResponse"/>
+  <xs:complexType name="differenceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="intersect" type="tns:intersect"/>
+  <xs:complexType name="intersect">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:MapVersionDirectoryURI"/>
+      <xs:element name="directory2" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="intersectResponse" type="tns:intersectResponse"/>
+  <xs:complexType name="intersectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="union" type="tns:union"/>
+  <xs:complexType name="union">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:MapVersionDirectoryURI"/>
+      <xs:element name="directory2" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="unionResponse" type="tns:unionResponse"/>
+  <xs:complexType name="unionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- End BaseQueryService Types -->
+  <xs:element name="readChangeSet" type="tns:readChangeSet"/>
+  <xs:complexType name="readChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="URI" type="core:ChangeSetURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readChangeSetResponse" type="tns:readChangeSetResponse"/>
+  <xs:complexType name="readChangeSetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="updates:ChangeSet"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getChangeHistoryFor" type="tns:getChangeHistoryFor"/>
+  <xs:complexType name="getChangeHistoryFor">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="fromDate" type="core:DateAndTime"/>
+      <xs:element minOccurs="0" name="toDate" type="core:DateAndTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getChangeHistoryForResponse" type="tns:getChangeHistoryForResponse"/>
+  <xs:complexType name="getChangeHistoryForResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:MapVersionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getEarliestChangeFor" type="tns:getEarliestChangeFor"/>
+  <xs:complexType name="getEarliestChangeFor">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getEarliestChangeForResponse" type="tns:getEarliestChangeForResponse"/>
+  <xs:complexType name="getEarliestChangeForResponse">
+    <xs:sequence>
+      <xs:element name="return" type="valueSet:ValueSetCatalogEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getLastChangeFor" type="tns:getLastChangeFor"/>
+  <xs:complexType name="getLastChangeFor">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getLastChangeForResponse" type="tns:getLastChangeForResponse"/>
+  <xs:complexType name="getLastChangeForResponse">
+    <xs:sequence>
+      <xs:element name="return" type="valueSet:ValueSetCatalogEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

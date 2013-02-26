@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:entityDescription="http://schema.omg.org/spec/CTS2/1.0/Entity"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/EntityDescriptionTransformServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/EntityDescriptionTransformServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Entity" schemaLocation="../entity/Entity.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="getKnownCodeSystemVersion" type="tns:getKnownCodeSystemVersion"/>
+  <xs:complexType name="getKnownCodeSystemVersion"/>
+  
+  <xs:element name="getKnownCodeSystemVersionResponse" type="tns:getKnownCodeSystemVersionResponse"/>
+  <xs:complexType name="getKnownCodeSystemVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="core:CodeSystemVersionReference"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="getSupportedOntologyLanguageAndSyntax" type="tns:getSupportedOntologyLanguageAndSyntax"/>
+  <xs:complexType name="getSupportedOntologyLanguageAndSyntax"/>
+  
+  <xs:element name="getSupportedOntologyLanguageAndSyntaxResponse" type="tns:getSupportedOntologyLanguageAndSyntaxResponse"/>
+  <xs:complexType name="getSupportedOntologyLanguageAndSyntaxResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="return" type="core:OntologyLanguageAndSyntax"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="fromEntityDescriptionList" type="tns:fromEntityDescriptionList"/>
+  <xs:complexType name="fromEntityDescriptionList">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="toLanguageAndSyntax" type="core:OntologyLanguageAndSyntax"/>
+      <xs:element minOccurs="1" ref="entityDescription:EntityList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="fromEntityDescriptionListResponse" type="tns:fromEntityDescriptionListResponse"/>
+  <xs:complexType name="fromEntityDescriptionListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="return" type="core:EntityExpression"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="fromEntityDirectory" type="tns:fromEntityDirectory"/>
+  <xs:complexType name="fromEntityDirectory">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="toLanguageAndSyntax" type="core:OntologyLanguageAndSyntax"/>
+      <xs:element minOccurs="1" name="directory" type="core:EntityDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="fromEntityDirectoryResponse" type="tns:fromEntityDirectoryResponse"/>
+  <xs:complexType name="fromEntityDirectoryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="return" type="core:EntityExpression"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="toEntityDescriptions" type="tns:toEntityDescriptions"/>
+  <xs:complexType name="toEntityDescriptions">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entityExpression" type="core:EntityExpression"/>
+      <xs:element minOccurs="0" name="codeSystemVersion" type="coreService:NameOrURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="toEntityDescriptionsResponse" type="tns:toEntityDescriptionsResponse"/>
+  <xs:complexType name="toEntityDescriptionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" ref="entityDescription:EntityList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

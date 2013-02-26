@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" 
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Association" schemaLocation="Association.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="BaseAssociationService" type="BaseAssociationService"/>
+	<xs:complexType name="BaseAssociationService">
+		<xs:sequence>
+			<xs:element name="knownCodeSystemVersion" type="core:CodeSystemVersionReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="knownPredicate" type="core:PredicateReference" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="AssociationMaintenanceService" type="AssociationMaintenanceService"/>
+	<xs:complexType name="AssociationMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="UpdateAssociationRequest" type="UpdateAssociationRequest"/>
+	<xs:complexType name="UpdateAssociationRequest">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="updatedAssociationQualifiers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="associationQualifier" type="core:Property" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedTargets">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="target" type="core:StatementTarget" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>			
+			<xs:element minOccurs="0" name="updatedDerivation">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="derivation" type="association:AssociationDerivation" minOccurs="1" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedDerivationReasoningAlgorithm">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="derivationReasoningAlgorithm" type="core:ReasoningAlgorithmReference" minOccurs="1" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="AdvancedAssociationQueryService" type="AdvancedAssociationQueryService"/>
+	<xs:complexType name="AdvancedAssociationQueryService">
+		<xs:complexContent>
+			<xs:extension base="AssociationQueryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="AssociationQueryService" type="AssociationQueryService"/>
+	<xs:complexType name="AssociationQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence>
+					<xs:element name="supportedCodeSystemVersion" type="core:CodeSystemVersionReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="supportedSourceAndNotation" type="core:SourceAndNotation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="associations" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="AssociationReadService" type="AssociationReadService"/>
+	<xs:complexType name="AssociationReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="ReasoningService" type="ReasoningService"/>
+	<xs:complexType name="ReasoningService">
+		<xs:complexContent>
+			<xs:extension base="BaseAssociationService">
+				<xs:sequence>
+					<xs:element name="defaultSyntaxAndNotation" type="core:OntologyLanguageAndSyntax" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="supportedSyntaxAndNotation" type="core:OntologyLanguageAndSyntax" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="listChanges" type="tns:listChanges"/>
+  <xs:complexType name="listChanges">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fromDate" type="core:DateAndTime"/>
+      <xs:element minOccurs="0" name="toDate" type="core:DateAndTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="listChangesResponse" type="tns:listChangesResponse"/>
+  <xs:complexType name="listChangesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:ChangeSetEntryList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="putChangeSet" type="tns:putChangeSet"/>
+  <xs:complexType name="putChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="updates:ChangeSet"/>
+      <xs:element minOccurs="0" name="errorResponse" type="coreService:ErrorResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="putChangeSetResponse" type="tns:putChangeSetResponse"/>
+  <xs:complexType name="putChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:SuccessIndicator"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="validateChangeSet" type="tns:validateChangeSet"/>
+  <xs:complexType name="validateChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="validationLevel" type="coreService:ValidationLevel"/>
+      <xs:element minOccurs="1" name="changeSet" type="updates:ChangeSet"/>      
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="validateChangeSetResponse" type="tns:validateChangeSetResponse"/>
+  <xs:complexType name="validateChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:ValidationResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getSupportedStructures" type="tns:getSupportedStructures"/>
+  <xs:complexType name="getSupportedStructures"/>
+  
+  <xs:element name="getSupportedStructuresResponse" type="tns:getSupportedStructuresResponse"/>
+  <xs:complexType name="getSupportedStructuresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="coreService:StructuralProfile"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

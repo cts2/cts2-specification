@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/StatementServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/StatementServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="StatementHistoryService" type="StatementHistoryService"/>
+	<xs:complexType name="StatementHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="StatementMaintenanceService" type="StatementMaintenanceService"/>
+	<xs:complexType name="StatementMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="StatementReadService" type="StatementReadService"/>
+	<xs:complexType name="StatementReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="StatementQueryService" type="StatementQueryService"/>
+	<xs:complexType name="StatementQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="StatementService" type="StatementService"/>
+	<xs:complexType name="StatementService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingQueryServices"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:conceptDomainBinding="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingQueryServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding" schemaLocation="../conceptdomainbinding/ConceptDomainBinding.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  
+  <xs:element name="getConceptDomainBindings" type="tns:getConceptDomainBindings"/>
+  <xs:complexType name="getConceptDomainBindings">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="getConceptDomainBindingsResponse" type="tns:getConceptDomainBindingsResponse"/>
+  <xs:complexType name="getConceptDomainBindingsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="resolveAsList" type="tns:resolveAsList"/>
+  <xs:complexType name="resolveAsList">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="resolveAsListResponse" type="tns:resolveAsListResponse"/>
+  <xs:complexType name="resolveAsListResponse">
+    <xs:sequence>
+      <xs:element ref="conceptDomainBinding:ConceptDomainBindingList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrict" type="tns:restrict"/>
+  <xs:complexType name="restrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="0" name="filter" type="core:Filter"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictResponse" type="tns:restrictResponse"/>
+  <xs:complexType name="restrictResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="resolve" type="tns:resolve"/>
+  <xs:complexType name="resolve">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="resolveResponse" type="tns:resolveResponse"/>
+  <xs:complexType name="resolveResponse">
+    <xs:sequence>
+      <xs:element ref="conceptDomainBinding:ConceptDomainBinding"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="count" type="tns:count"/>
+  <xs:complexType name="count">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="timeout" type="core:NaturalNumber"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="countResponse" type="tns:countResponse"/>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:NaturalNumber"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="difference" type="tns:difference"/>
+  <xs:complexType name="difference">
+    <xs:sequence>
+      <xs:element name="initialSet" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element name="elementsToRemove" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="differenceResponse" type="tns:differenceResponse"/>
+  <xs:complexType name="differenceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="union" type="tns:union"/>
+  <xs:complexType name="union">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element name="directory2" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="unionResponse" type="tns:unionResponse"/>
+  <xs:complexType name="unionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="intersect" type="tns:intersect"/>
+  <xs:complexType name="intersect">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element name="directory2" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="intersectResponse" type="tns:intersectResponse"/>
+  <xs:complexType name="intersectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSets" type="tns:restrictToValueSets"/>
+  <xs:complexType name="restrictToValueSets">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="1" name="valueSets" type="coreService:NameOrURIList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSetsResponse" type="tns:restrictToValueSetsResponse"/>
+  <xs:complexType name="restrictToValueSetsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToContexts" type="tns:restrictToContexts"/>
+  <xs:complexType name="restrictToContexts">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="1" name="contexts" type="coreService:NameOrURIList"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToContextsResponse" type="tns:restrictToContextsResponse"/>
+  <xs:complexType name="restrictToContextsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToConceptDomain" type="tns:restrictToConceptDomain"/>
+  <xs:complexType name="restrictToConceptDomain">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ConceptDomainBindingDirectoryURI"/>
+      <xs:element minOccurs="1" name="conceptDomain" type="coreService:NameOrURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="restrictToConceptDomainResponse" type="tns:restrictToConceptDomainResponse"/>
+  <xs:complexType name="restrictToConceptDomainResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ConceptDomainBindingDirectoryURI"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

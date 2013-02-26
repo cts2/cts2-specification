@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetLoaderServices"
+  xmlns:valueSetDefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
+  xmlns:valueSetDefinitionService="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetLoaderServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices" schemaLocation="../valuesetdefinition/ValueSetDefinitionServices.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="getKnownValueSets" type="tns:getKnownValueSets"/>
+  <xs:complexType name="getKnownValueSets"/>
+  
+  <xs:element name="getKnownValueSetsResponse" type="tns:getKnownValueSetsResponse"/>
+  <xs:complexType name="getKnownValueSetsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="valueSetDefinition:ResolvedValueSetSummary"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="contains" type="tns:contains"/>
+  <xs:complexType name="contains">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="resolvedValueSetURI" type="core:LocalURI"/>
+      <xs:element minOccurs="1" name="entityList" type="coreService:EntityNameOrURIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="containsResponse" type="tns:containsResponse"/>
+  <xs:complexType name="containsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:EntityReferenceList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="load" type="tns:load"/>
+  <xs:complexType name="load">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="resolvedValueSet" type="valueSetDefinition:ResolvedValueSet"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="loadResponse" type="tns:loadResponse"/>
+  <xs:complexType name="loadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:LocalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="delete" type="tns:delete"/>
+  <xs:complexType name="delete">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="resolvedSet" type="core:LocalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="deleteResponse" type="tns:deleteResponse"/>
+  <xs:complexType name="deleteResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+</xs:schema>

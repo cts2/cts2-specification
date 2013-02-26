@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersionServices" 
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersionServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="CodeSystemVersionHistoryService" type="CodeSystemVersionHistoryService"/>
+	<xs:complexType name="CodeSystemVersionHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemVersionMaintenanceService" type="CodeSystemVersionMaintenanceService"/>
+	<xs:complexType name="CodeSystemVersionMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="UpdateCodeSystemVersionRequest" type="UpdateCodeSystemVersionRequest"/>
+	<xs:complexType name="UpdateCodeSystemVersionRequest">
+		<xs:complexContent>
+			<xs:extension base="coreservice:UpdateResourceVersionDescription">
+				<xs:sequence>
+					<xs:element name="updatedDefaultLanguage" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="defaultLanguage" type="coreservice:NameOrURI" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedImports" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="imports" type="coreservice:NameOrURI" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedUtilizes" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="utilizes" type="coreservice:NameOrURI" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemVersionQueryService" type="CodeSystemVersionQueryService"/>
+	<xs:complexType name="CodeSystemVersionQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence>
+					<xs:element name="supportedTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="codeSystemVersions" type="core:CodeSystemVersionCatalogEntryDirectoryURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemVersionReadService" type="CodeSystemVersionReadService"/>
+	<xs:complexType name="CodeSystemVersionReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence>
+					<xs:element name="supportedTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

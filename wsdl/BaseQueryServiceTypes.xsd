@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+	xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	elementFormDefault="qualified">
+
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/Core"
+		schemaLocation="../core/Core.xsd" />
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+		schemaLocation="../core/CoreService.xsd" />
+
+	<element name="getSupportedMatchAlgorithm" type="tns:getSupportedMatchAlgorithm" />
+	<complexType name="getSupportedMatchAlgorithm" />
+	<element name="getSupportedMatchAlgorithmResponse" type="tns:getSupportedMatchAlgorithmResponse" />
+	<complexType name="getSupportedMatchAlgorithmResponse">
+		<sequence>
+			<element minOccurs="1" maxOccurs="unbounded" name="return"
+				type="core:MatchAlgorithmReference" />
+		</sequence>
+	</complexType>
+
+	<element name="getSupportedModelAttribute" type="tns:getSupportedModelAttribute" />
+	<complexType name="getSupportedModelAttribute" />
+	<element name="getSupportedModelAttributeResponse" type="tns:getSupportedModelAttributeResponse" />
+	<complexType name="getSupportedModelAttributeResponse">
+		<sequence>
+			<element minOccurs="1" maxOccurs="unbounded" name="return"
+				type="core:ModelAttributeReference" />
+		</sequence>
+	</complexType>
+
+	<element name="getKnownProperty" type="tns:getKnownProperty" />
+	<complexType name="getKnownProperty" />
+	<element name="getKnownPropertyResponse" type="tns:getKnownPropertyResponse" />
+	<complexType name="getKnownPropertyResponse">
+		<sequence>
+			<element minOccurs="0" maxOccurs="unbounded" name="return"
+				type="core:PredicateReference" />
+		</sequence>
+	</complexType>
+  
+  <element name="count" type="tns:count" />
+  <complexType name="count">
+    <sequence>
+      <element minOccurs="1" name="directory" type="core:DirectoryURI" />
+      <element minOccurs="0" name="context" type="coreService:ReadContext" />
+      <element minOccurs="0" name="timeout" type="core:NaturalNumber" />
+    </sequence>
+  </complexType>
+  
+  <element name="countResponse" type="tns:countResponse" />
+  <complexType name="countResponse">
+    <sequence>
+      <element name="return" type="core:NaturalNumber" />
+    </sequence>
+  </complexType>
+  
+  <element name="restrict" type="tns:restrict" />
+  <complexType name="restrict">
+    <sequence>
+      <element minOccurs="1" name="directory" type="core:DirectoryURI" />
+      <element name="matchAlgorithm" type="coreService:NameOrURI" minOccurs="0"/>
+	  <element name="matchValue" type="core:String" minOccurs="0"/>
+	  <element name="filterComponent" type="coreService:NameOrURIList" minOccurs="0"/>
+    </sequence>
+  </complexType>
+  
+  <element name="restrictResponse" type="tns:restrictResponse" />
+  <complexType name="restrictResponse">
+    <sequence>
+      <element name="return" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="difference" type="tns:restrict" />
+  <complexType name="difference">
+    <sequence>
+      <element name="initialSet" type="core:DirectoryURI" />
+      <element name="elementsToRemove" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="differenceResponse" type="tns:differenceResponse" />
+  <complexType name="differenceResponse">
+    <sequence>
+      <element name="return" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="intersect" type="tns:intersect" />
+  <complexType name="intersect">
+    <sequence>
+      <element name="directory1" type="core:DirectoryURI" />
+      <element name="directory2" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="intersectResponse" type="tns:intersectResponse" />
+  <complexType name="intersectResponse">
+    <sequence>
+      <element name="return" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="union" type="tns:union" />
+  <complexType name="union">
+    <sequence>
+      <element name="directory1" type="core:DirectoryURI" />
+      <element name="directory2" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+  <element name="unionResponse" type="tns:unionResponse" />
+  <complexType name="unionResponse">
+    <sequence>
+      <element name="return" type="core:DirectoryURI" />
+    </sequence>
+  </complexType>
+  
+</schema>

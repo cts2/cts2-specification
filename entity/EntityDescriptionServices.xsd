@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:entity="http://schema.omg.org/spec/CTS2/1.0/Entity" xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/EntityDescriptionServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/EntityDescriptionServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core"	schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Entity" schemaLocation="Entity.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+
+	<xs:element name="EntityDescriptionHistoryService" type="EntityDescriptionHistoryService"/>
+	<xs:complexType name="EntityDescriptionHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="EntityDescriptionMaintenanceService" type="EntityDescriptionMaintenanceService"/>
+	<xs:complexType name="EntityDescriptionMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="UpdateEntityDescriptionRequest" type="UpdateEntityDescriptionRequest"/>
+	<xs:complexType name="UpdateEntityDescriptionRequest">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="updatedAlternateEntityIds">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="alternateEntityId" type="core:ScopedEntityName" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedDefinitions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="definition" type="core:Definition" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedDesignations">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="designation" type="entity:Designation" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedComments">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="note" type="core:Comment" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedParents">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="parent" type="coreservice:EntityNameOrURI" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedProperties">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="property" type="core:Property" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="updatedResourceTypes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="resourceType" type="coreservice:EntityNameOrURI" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="EntityDescriptionReadService" type="EntityDescriptionReadService"/>
+	<xs:complexType name="EntityDescriptionReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence>
+					<xs:element name="knownCodeSystem" type="core:CodeSystemReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="knownCodeSystemVersion" type="core:CodeSystemVersionReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="supportedVersionTag" type="core:VersionTagReference" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="EntityDescriptionQueryService" type="EntityDescriptionQueryService"/>
+	<xs:complexType name="EntityDescriptionQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence>
+					<xs:element name="knownCodeSystem" type="core:CodeSystemReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="knownCodeSystemVersion" type="core:CodeSystemVersionReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="supportedVersionTag" type="core:VersionTagReference" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="entities" type="core:EntityDirectoryURI" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

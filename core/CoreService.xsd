@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core" xmlns:entity="http://schema.omg.org/spec/CTS2/1.0/Entity" xmlns="http://schema.omg.org/spec/CTS2/1.0/CoreService" targetNamespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	
+	<xs:element name="Query" type="Query"/>
+	<xs:complexType name="Query">
+		<xs:annotation>
+			<xs:documentation>
+			Message structure for packaging and sending complex queries.
+			
+			A Query may contain a Filter, a Set Operation, or Both.
+			</xs:documentation>
+			<xs:appinfo>PSM</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="matchAlgorithm" type="NameOrURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					The match algorithm of the filter to be applied. If a 'setOperation' is specified, 
+					the filter will apply to the resulting aggregate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="matchValue" type="core:String" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					The match value of the filter to be applied. If a 'setOperation' is specified, 
+					the filter will apply to the resulting aggregate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="filterComponent" type="NameOrURIList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					The target components of the filter to be applied. If a 'setOperation' is specified, 
+					the filter will apply to the resulting aggregate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="setOperation" type="core:SetOperator" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					The Set Operation to be applied to the two DirectoryURIs.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					Either a 'DirectoryURI' or a 'Query' may participate in a Set Operation.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="query1" type="Query" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+						The left-hand side of the Set Operation.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="directoryUri1" type="core:DirectoryURI" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+						The left-hand side of the Set Operation.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:choice minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					Either a 'DirectoryURI' or a 'Query' may participate in a Set Operation.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="query2" type="Query" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+						The right-hand side of the Set Operation.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="directoryUri2" type="core:DirectoryURI" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+						The right-hand side of the Set Operation.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- Implementation Profiles -->
+	<xs:simpleType name="StructuralProfile">
+		<xs:annotation>
+			<xs:documentation>The CTS<sub>2</sub> specification defines eleven distinct structural profiles. CTS<sub>2</sub> compliant implementations may elect to implement any combination of these profiles to meet their individual requirements and use cases.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SP_CODE_SYSTEM">
+				<xs:annotation>
+					<xs:documentation>The <b>CODE_SYSTEM </b>profile provides a catalog of classification systems, code systems, ontologies, thesauri, etc. known to the service and may also carry information about their publisher, release cycles, purpose, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_CODE_SYSTEM_VERSION">
+				<xs:annotation>
+					<xs:documentation>The <b>CODE_SYSTEM_VERSION </b>profile carries information about the various versions of a code system, including when the release date, release format, contact information, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_ENTITY_DESCRIPTION">
+				<xs:annotation>
+					<xs:documentation>The <b>ENTITY DESCRIPTION</b> profile provides a representation of a collection of descriptions about classes, roles or individuals along with links to the code system version(s) in which these descriptions originate. An entity description provides the "lexical" or "non-semantic" components of a description, while the <b>ASSOCIATION </b> profile provides the logic-based "semantic" counterpart.The service supports the <i>EntityDescription </i>structural
+						model, which means that it can represent sets of lexical assertions about classes, roles and/or individuals as asserted by a specific code system version</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_ASSOCIATION">
+				<xs:annotation>
+					<xs:documentation>The <b>ASSOCIATION</b> profile represents a collection of structured, "semantic" assertions about classes, roles and/or individuals along with links to the code system version(s) that were the source of these assertions.The service supports the <i>Association </i>structural model, which means that it can represent sets of semantic assertions about classes, roles and/or individuals as asserted by a specific code system version</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_VALUE_SET">
+				<xs:annotation>
+					<xs:documentation>The <b>VALUE_SET </b>profile provides a catalog of value sets that are known to the service along with information about their publisher, release cycles, purpose, etc. Note that "Value Set" in this context represents an abstraction (e.g. the HL7 Administrative Gender Value Set, the SNOMED-CT core anatomic types) that may be coupled with different sets of possible values at different periods in time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_VALUE_SET_DEFINITION">
+				<xs:annotation>
+					<xs:documentation>The <b>VALUE_SET_DEFINITION</b> structural profile provides definitions that, when interpreted using specified code system versions, result in a set of entity descriptions. Definitions are associated with value sets and can vary and evolve over time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_VALUE_SET_RESOLUTION">
+				<xs:annotation>
+					<xs:documentation>The <b>VALUE_SET_RESOLUTION</b> profile describes rules for ordering and associating additional properties with the result of interpreting a value set definition. <b>VALUE_SET_RESOLUTION</b> allows resolved definitions to be rendered in a given language and context, sorted and filtered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_CONCEPT_DOMAIN">
+				<xs:annotation>
+					<xs:documentation>A <b>CONCEPT_DOMAIN</b> profile describes the equivalent of a 11179 Data Element Concept. It identifies an abstract unit of information that can appear on a message, form or database along with metadata about its use, author, purpose, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_CONCEPT_DOMAIN_BINDING">
+				<xs:annotation>
+					<xs:documentation>A <b>CONCEPT_DOMAIN_BINDING </b>profile describes the equivalent of the 11179 Data Element, associating a <b>CONCEPT_DOMAIN</b> with a value set and describing the context and rules where the association applies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_MAP">
+				<xs:annotation>
+					<xs:documentation>The <b>MAP</b> profile defines collections of rules for transforming information represented using one code system into information represented in a section. <b>MAP</b> describes abstract collections such as "The SNOMED-CT to ICD-10 map", along with the creators, intended use, code systems involved, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_MAP_VERSION">
+				<xs:annotation>
+					<xs:documentation>The <b>MAP_VERSION </b>profile represents the actual content of a <b>MAP</b> at a given point in time. It carries the from and to components as well as a representation of the rules and process for the conversion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_MAP_ENTRY">
+				<xs:annotation>
+					<xs:documentation>The <b>Map_Entry</b> profile represents individual entries in a <b>Map_Version</b></xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SP_STATEMENT">
+				<xs:annotation>
+					<xs:documentation>The <b>Statement</b> profile provides a bridge between the CTS2 model structure and the underlying RDF/XML/etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="FunctionalProfile">
+		<xs:annotation>
+			<xs:documentation>An enumeration of the possible functional profiles, some or all of which can be implemented by a conformant CTS<sub>2</sub> service</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="FP_READ"/>
+			<xs:enumeration value="FP_QUERY"/>
+			<xs:enumeration value="FP_IMPORT"/>
+			<xs:enumeration value="FP_EXPORT"/>
+			<xs:enumeration value="FP_UPDATE"/>
+			<xs:enumeration value="FP_MAINTENANCE"/>
+			<xs:enumeration value="FP_TEMPORAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ImplementationProfile">
+		<xs:annotation>
+			<xs:documentation>Indicates what PSM(s) are supported by the given service implementation.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="IP_REST"/>
+			<xs:enumeration value="IP_SOAP"/>
+			<xs:enumeration value="IP_CRDF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="FunctionalProfileEntry">
+		<xs:annotation>
+			<xs:documentation>The combination of a <b>FunctionalProfile</b> and a link to the service description that describes the function/structure</xs:documentation>
+			<xs:appinfo>PSM</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="FunctionalProfile">
+				<xs:attribute name="href" type="core:ServiceURI" use="optional">
+					<xs:annotation>
+						<xs:documentation>A link to the service description for this particular function. The href must reference an instance of <b>BaseService</b></xs:documentation>
+						<xs:appinfo>PSM</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="ProfileElement">
+		<xs:sequence>
+			<xs:element name="structuralProfile" type="StructuralProfile" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A resource that is implemented by a service instance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="functionalProfile"  type="FunctionalProfileEntry" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A functional profile that the service instance supports for the corresponding structure</xs:documentation>
+					<xs:appinfo>PSM</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<!-- BaseService subset -->
+	<xs:complexType name="DocumentedNamespaceReference">
+		<xs:annotation>
+			<xs:documentation>
+			A namespace reference that may include additional documentation about the scope of the namespace.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="core:NamespaceReference">
+				<xs:attribute name="description" type="core:String" use="optional">
+					<xs:annotation>
+						<xs:documentation>
+						Documentation about the scope and origin of the namespace.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="BaseService" type="BaseService"/>
+	<xs:complexType name="BaseService">
+		<xs:annotation>
+			<xs:documentation><i>BaseService</i> contains the components that are common to any CTS<sub>2</sub> service implementation. It includes information about the service itself, the namespaces and formats that are known to the service and the structural, functional and representation profiles that are supported by the service instance.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="serviceName" type="core:String" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A short name that identifies the particular service and implementation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceDescription" type="core:OpaqueData" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A description of the service, its use, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceVersion" type="core:String" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The version or release identifier of the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceProvider" type="core:SourceReference" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A reference to the individual or organization that provides the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supportedFormat" type="core:FormatReference" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A list of the representation formats supported by the service. Example: text/html, text/xml, application/json</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="defaultFormat" type="core:FormatReference" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The default format used by the service unless otherwise specified.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supportedProfile" type="ProfileElement" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The set of service profiles that are supported by this service implementation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="implementationType" type="ImplementationProfile" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The particular implementation type(s) supported by this profile</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="knownNamespace" type="DocumentedNamespaceReference" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The set of namespaces recognized by this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal URL's, etc.), <i>knownNamespace</i> includes the namespace name, an optional URI \emph{and} a place to provide textual detail describing what the namespace references. Note that namespace names must be unique across an entire CTS<sub>2</sub> implementation - the same namespace name cannot represent one namespace in code system A
+						and a second in code system B. Note also that namespace names are \emph{local} to a service instance. Information that is communicated between service instances, recorded in data tables or client software \emph{must} use full URIs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--Functional Profile/ Authoring Service/ Base Authoring Service subset -->
+	<xs:element name="BaseMaintenanceService" type="BaseMaintenanceService"/>
+	<xs:complexType name="BaseMaintenanceService">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	
+	<!-- Functional Profile/ Authoring Service/ Resource Authoring subset -->
+	<xs:element name="UpdateAbstractResourceDescription" type="UpdateAbstractResourceDescription"/>
+	<xs:complexType name="UpdateAbstractResourceDescription">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="UpdateResourceDescription">
+				<xs:sequence>
+					<xs:element name="updatedReleaseDocumentation" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="releaseDocumentation" type="core:OpaqueData" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedReleaseFormats" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="releaseFormat" type="core:SourceAndNotation" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	
+	<xs:element name="UpdateResourceDescription" type="UpdateResourceDescription"/>
+	<xs:complexType name="UpdateResourceDescription" abstract="true">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="updatedAdditionalDocumentation" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="uri" type="core:URI" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedKeywords" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="keyword" type="core:String" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedSources" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="source" type="core:SourceAndRoleReference" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedNotes" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="note" type="core:Comment" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedProperties" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="property" type="core:Property" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedResourceSynopsis" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="resourceSynopsis" type="core:EntryDescription" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedResourceTypes" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="resourceType" type="core:EntityReference" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedRights" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="rights" type="core:OpaqueData" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="updatedFormalName" type="core:String" use="optional"/>
+	</xs:complexType>
+	
+	
+	<xs:element name="UpdateResourceVersionDescription" type="UpdateResourceVersionDescription"/>
+	<xs:complexType name="UpdateResourceVersionDescription">
+		<xs:annotation>
+			<xs:documentation>The set of attributes that can be changed whenever an instance of a <i>ResourceVersionDescription</i> is updated.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="UpdateResourceDescription">
+				<xs:sequence>
+					<xs:element name="updatedPredecessor" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="predecessor" type="NameOrURI" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedSourceAndNotation"  minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="sourceAndNotation" type="core:SourceAndNotation" minOccurs="1" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="updatedState" type="core:FinalizableState" use="optional"/>
+				<xs:attribute name="updatedOfficialActivationDate" type="core:DateAndTime" use="optional"/>
+				<xs:attribute name="updatedOfficialReleaseDate" type="core:DateAndTime" use="optional"/>
+				<xs:attribute name="updatedOfficialResourceVersionId" type="core:DateAndTime" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	
+	<!--Functional Profile/ History subset -->
+	<xs:element name="HistoryService" type="HistoryService"/>
+	<xs:complexType name="HistoryService" abstract="true">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence>
+					<xs:element name="changeHistory" type="core:ChangeSetDirectoryURI" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="earliestChange" type="core:DateAndTime" use="required"/>
+				<xs:attribute name="latestChange" type="core:DateAndTime" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Import Functional Profile/ Export subset -->
+	<!-- Import Functional Profile/ Export /Export subset -->
+	<xs:element name="BaseExportService" type="BaseExportService"/>
+	<xs:complexType name="BaseExportService" abstract="true">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ImportExportBase">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ExportStatus" type="ExportStatus"/>
+	<xs:complexType name="ExportStatus">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ProcessStatus">
+				<xs:sequence>
+
+					<xs:element name="errorHandling" type="ErrorResponse" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="exportedIRIs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="overwriteRule" type="OverwriteRule" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="resourcesToExport" type="core:DirectoryEntry" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="synchronicity" type="SyncOrAsync" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="destination" type="core:URI" use="required">
+					<xs:annotation>
+						<xs:documentation>The export destination</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="numElementsExported" type="core:NaturalNumber" use="required">
+					<xs:annotation>
+						<xs:documentation>The number of elements that have been exported so far</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="OverwriteRule">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="OVERWRITE_IF_EXISTS"/>
+			<xs:enumeration value="FAIL_IF_EXISTS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Import Functional Profile/ Export /Import subset -->
+	<xs:simpleType name="ErrorResponse">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="CONTINUE_ON_ERROR"/>
+			<xs:enumeration value="STOP_ON_ERROR"/>
+			<xs:enumeration value="STOP_ON_WARNING"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="ImportExportBase" type="ImportExportBase"/>
+	<xs:complexType name="ImportExportBase" abstract="true">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence>
+					<xs:element name="supportedSourceAndNotation" type="core:SourceAndNotation" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="SyncOrAsync">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="SYNCHRONOUS"/>
+			<xs:enumeration value="ASYNCHRONOUS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ValidationLevel">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="VL_WARN"/>
+			<xs:enumeration value="VL_ERROR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ValidationResponse">
+		<xs:annotation>
+			<xs:documentation>The result of a change set validation call</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="message" type="core:OpaqueData" minOccurs="0"/>
+			<xs:element name="validationResponse">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation/>
+					</xs:annotation>
+					<xs:restriction base="core:Enumeration">
+						<xs:enumeration value="VALID"/>
+						<xs:enumeration value="INVALID"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SuccessIndicator">
+		<xs:annotation>
+			<xs:documentation>An indicator that determines whether a change set was successfully added or not.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="message" type="core:OpaqueData" minOccurs="0"/>
+			<xs:element name="successIndicator">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation/>
+					</xs:annotation>
+					<xs:restriction base="core:Enumeration">
+						<xs:enumeration value="SUCCESS"/>
+						<xs:enumeration value="FAILURE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="BaseImportService" type="BaseImportService"/>
+	<xs:complexType name="BaseImportService">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ImportExportBase">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ImportStatus" type="ImportStatus"/>
+	<xs:complexType name="ImportStatus">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ProcessStatus">
+				<xs:sequence>
+					<xs:element name="languageAndSyntax" type="core:OntologyLanguageAndSyntax" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="validation" type="ValidationLevel" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="metadata" type="core:URI" use="optional"/>
+				<xs:attribute name="source" type="core:URI" use="required"/>
+				<xs:attribute name="loadedURI" type="core:RenderingURI" use="optional"/>
+				<xs:attribute name="synchronicity" type="SyncOrAsync" use="required">
+					<xs:annotation>
+						<xs:documentation>The CTS2 URI(s) of the resulting resources</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="numElementsImported" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Import Functional Profile/ Export /LogEntry subset -->
+	<xs:element name="LogEntries" type="LogEntries"/>
+	<xs:complexType name="LogEntries">
+		<xs:annotation>
+			<xs:documentation>A ordered sequence of log entries. The order of the entries is determined by the specific CTS<sub>2</sub> service implementation and should not be assumed by client applications.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="LogEntry" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="LogEntry" type="LogEntry"/>
+	<xs:complexType name="LogEntry">
+		<xs:annotation>
+			<xs:documentation>An entry in sequence of messages related to a process or task</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+
+			<xs:element name="logLevel" type="LoggingLevel" minOccurs="1" maxOccurs="1"> </xs:element>
+
+			<xs:element name="messageID" type="core:String" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>An external identifier that uniquely names the message. <i>ExternalURI</i> is present to enable automated processing of log entries where appropriate. The significance and use of <i>messageID</i> is not addressed within the context of the CTS<sub>2</sub> specification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="processUID" type="core:String" minOccurs="1" maxOccurs="1"> </xs:element>
+
+		</xs:sequence>
+		<xs:attribute name="entryTime" type="core:DateAndTime" use="required">
+			<xs:annotation>
+				<xs:documentation>The time the entry was made</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="message" type="core:String" use="required">
+			<xs:annotation>
+				<xs:documentation>The text of the message</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="programName" type="core:String" use="optional">
+			<xs:annotation>
+				<xs:documentation>The name of the program or application that created the entry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="LoggingLevel">
+		<xs:annotation>
+			<xs:documentation>The <i>LoggingLevel</i> entries are modeled after the corresponding levels in the <a href="$inet://http://logging.apache.org/log4j/"><font color="#0000ff"><u>Apache log4j package. As with the </u></font></a>log4j package, each level includes the entries in the lower level. In particular, levels are ordered. For the standard levels, we have DEBUG &amp;lt; INFO &amp;lt; WARN &amp;lt; ERROR &amp;lt; FATAL.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="DEBUG">
+				<xs:annotation>
+					<xs:documentation>Detailed (verbose) information about the process or operation that allows a user to determine exactly what transpired</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="INFO">
+				<xs:annotation>
+					<xs:documentation>Informative messages about the progress of or results of a requested operation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WARN">
+				<xs:annotation>
+					<xs:documentation>Represents potential problems that do will not prevent completion of the requested operation, but may require attention or intervention.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ERROR">
+				<xs:annotation>
+					<xs:documentation>Represents an error that, while serious, may under circumstances be ignored and processing may continue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FATAL">
+				<xs:annotation>
+					<xs:documentation>Represents an error that prevents further processing. FATAL errors cannot be ignored or overridden.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Import Functional Profile/ Export /ProcessStatus subset -->
+	<xs:element name="ProcessStatus" type="ProcessStatus"/>
+	<xs:complexType name="ProcessStatus">
+		<xs:annotation>
+			<xs:documentation>The state of a running or completed load or export process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+
+			<xs:element name="log" type="LogEntry" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The set of log records created by the process</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+		<xs:attribute name="completionMessage" type="core:String" use="optional">
+			<xs:annotation>
+				<xs:documentation>A message summarizing the final results of the process</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="endTime" type="core:DateAndTime" use="optional">
+			<xs:annotation>
+				<xs:documentation>The date and time that the process finished execution if it isn't still running</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="numErrors" type="core:NaturalNumber" use="required">
+			<xs:annotation>
+				<xs:documentation>The number of errors (<i>LoggingLevel</i> = <i>ERROR</i> or <i>FATAL</i>) encountered by the process so far</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="numWarnings" type="core:NaturalNumber" use="required">
+			<xs:annotation>
+				<xs:documentation>The number of warnings (<i>LoggingLevel = WARN</i>) encountered by the process so far</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="startTime" type="core:DateAndTime" use="required">
+			<xs:annotation>
+				<xs:documentation>The date and time that the process began execution</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- Functional Profile/ Query subset -->
+	<xs:element name="BaseQueryService" type="BaseQueryService"/>
+	<xs:complexType name="BaseQueryService" abstract="true">
+		<xs:annotation>
+			<xs:documentation><i>BaseQueryService</i> represents the set of attributes and operations that are common across all query service implementations. It includes generic directory manipulation functions as well as enumerations of the permissible values for query parameters in the given service context.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence>
+					<xs:element name="knownProperty" type="core:PredicateReference" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The set of properties that are used in one or more instances of the resource represented by this service. This list includes all properties that are can be used in queries in this service, independent of the entryState or temporal state of the resource(s) being searched. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supportedMatchAlgorithm" type="core:MatchAlgorithmReference" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The match algorithms that can be used in filters for this service instance.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supportedModelAttribute" type="core:ModelAttributeReference" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The set of model attributes that can be referenced in filter instances for the given service implementation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Functional Profile/ Read subset -->
+	<xs:element name="BaseReadService" type="BaseReadService"/>
+	<xs:complexType name="BaseReadService">
+		<xs:annotation>
+			<xs:documentation>The common metadata about a CTS<sub>2</sub> service instance that is shared among all service instances.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Functional Profile/ Update subset -->
+	<xs:complexType name="ChangeSetEntry">
+		<xs:annotation>
+			<xs:documentation>A change set URI along with the date and time it was applied to a particular service implementation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="applicationDate" type="core:DateAndTime" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date and time that a change set was applied to a given service instance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="changeSetURI" type="core:ChangeSetURI" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The URI of the change set that was applied</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="entryOrder" type="core:NaturalNumber" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ChangeSetEntryList">
+		<xs:annotation>
+			<xs:documentation>An ordered list of <i>ChangeSetEntrys. </i>The order of the list reflects the order in which the change sets were applied to the service instance</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="ChangeSetEntry" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="BaseUpdateService" type="BaseUpdateService"/>
+	<xs:complexType name="BaseUpdateService">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- ===============================================
+		InterfaceElements package
+		=============================================== -->
+	<xs:element name="EntityNameOrURI" type="EntityNameOrURI"/>
+	<xs:complexType name="EntityNameOrURI">
+		<xs:annotation>
+			<xs:documentation>A reference to a class, property or individual that is described in some Code System. <i>EntityNameOrURI</i> may either reference an entity that is known locally to the service or an entity that is described elsewhere. If the entity is known to the service, it is possible to use the <i>entityName</i> variant, but note that <u>neither</u><i> scopingNamespace</i> nor the <i>entityName</i> are guaranteed to be the same in different CTS<sub>2</sub> implementations. The
+					<i>entityName</i> variant is intended for use in human/browser interactions and should not be hard-coded into data tables or applications.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entityName" type="core:ScopedEntityName" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A combination of a namespace identifier and a local name that, together, uniquely references an entity known to the service</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uri" type="core:String" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>An <i>ExternalURI</i> that references a class, property or individual</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="EntityNameOrURIList" type="EntityNameOrURIList"/>
+	<xs:complexType name="EntityNameOrURIList">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="EntityNameOrURI" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="PropertyNameOrURI" type="PropertyNameOrURI"/>
+	<xs:complexType name="PropertyNameOrURI">
+		<xs:annotation>
+			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>PropertyReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="EntityNameOrURI">
+				<xs:attribute name="referenceType" type="core:TargetReferenceType" use="required">
+					<xs:annotation>
+						<xs:documentation>the type of thing being referenced</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>	
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="NameOrURI" type="NameOrURI"/>
+	<xs:complexType name="NameOrURI">
+		<xs:annotation>
+			<xs:documentation>Carries either a local identifier (<i>name</i>) or a URI (<i>uri</i>) that references a resource in the service. <i>NameOrURI</i> is only used as an input parameter and its type is always defined by the usage context. Note that service calls that use the <i>name</i> option may not be portable across implementations, as there is no guarantee that any two CTS<sub>2</sub> service implementations will use the same local identifiers for the same
+				resources.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="core:String" use="optional">
+			<xs:annotation>
+				<xs:documentation>a <i>LocalIdentifier</i> that references a unique resource within the context of the service implementation and type of resource being accessed</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="uri" type="core:String" use="optional">
+			<xs:annotation>
+				<xs:documentation>an <i>ExternalURI</i> that references a unique resource within the context of the resource type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:element name="NameOrURIList" type="NameOrURIList"/>
+	<xs:complexType name="NameOrURIList">
+		<xs:annotation>
+			<xs:documentation>A set of zero or more <i>NameOrURI</i> elements</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="NameOrURI" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="RestrictionType">
+		<xs:annotation>
+			<xs:documentation>A parameter used in queries where multiple elements are provided. It determines whether a candidate element must satisfy all restrictions or just one or more restriction in order to be considered as satisfying the restriction composite</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="ALL">
+				<xs:annotation>
+					<xs:documentation>the candidate passes only if all of the elements are present</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AT_LEAST_ONE">
+				<xs:annotation>
+					<xs:documentation>the candidate passes if any of the supplied elements are present</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Interface Elements/ Query Control subset -->
+	<xs:element name="QueryControl" type="QueryControl"/>
+	<xs:complexType name="QueryControl">
+		<xs:annotation>
+			<xs:documentation>Parameters that control the return format, number of elements and amount of time that can be taken for a query to complete.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maxToReturn" type="core:NaturalNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The maximum number of <i>entries</i> that may be present in a return <i>Directory</i>. Note that a service may choose to return less than <i>maxToReturn</i> entries - this is simply an upper limit. If <i>maxToReturn</i> is not supplied, the service may use whatever return block size it determines to be most appropriate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeLimit" type="core:AmountOfTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The maximum amount of time that may be taken to process a query before a time out exception occurs. If not present, the service determines the maximum query time out.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="format" type="NameOrURI" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The local identifier or URI of the return format for query results.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sortCriteria" type="SortCriteria" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The local identifier or URI of the sort criteria for query results.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- Interface Elements/ Read Context subset -->
+	<xs:simpleType name="ActiveOrAll">
+		<xs:annotation>
+			<xs:documentation>An indicator that determines whether the given service access request applies only to elements that are currently marked as <i>ACTIVE</i> in the context of the particular query or to both <i>ACTIVE</i> and <i>INACTIVE</i> entries.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="ACTIVE_ONLY">
+				<xs:annotation>
+					<xs:documentation>The inquiry only applies to <i>ACTIVE elements.</i></xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ACTIVE_AND_INACTIVE">
+				<xs:annotation>
+					<xs:documentation>The inquiry applies to both <i>ACTIVE</i> and <i>INACTIVE</i> entries</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<xs:element name="ReadContext" type="ReadContext"/>
+	<xs:complexType name="ReadContext">
+		<xs:annotation>
+			<xs:documentation>The context that controls the behavior of a read or query. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="active" type="ActiveOrAll" minOccurs="0" maxOccurs="1" default="ACTIVE_ONLY">
+				<xs:annotation>
+					<xs:documentation>Determines whether the query only applies to only active or all entries. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="referenceLanguage" type="NameOrURI" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The spoken or written language that should be used for the results of the inquiry, where appropriate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="changeSetContext" type="core:ChangeSetURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The URI of an open change set whose contents should be included in the results of the access request. <i>changeSetContext</i> is only applicable in services that support the <b>Authoring</b> profile</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="referenceTime" type="core:DateAndTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The contextual date and time of the query. <i>referenceTime</i> is may only be present in services that support the <b>Temporal</b> profile.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- Interface Elements/ Sort Criteria subset -->
+	<xs:element name="SortCriteria" type="SortCriteria"/>
+	<xs:complexType name="SortCriteria">
+		<xs:annotation>
+			<xs:documentation>An ordered list of sort criterion. The first entry in the list identifies the primary sort order, the second entry the sub sort order, etc. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="SortCriterion" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="SortCriterion" type="SortCriterion"/>
+	<xs:complexType name="SortCriterion">
+		<xs:annotation>
+			<xs:documentation>The particular attribute, property or special element to be sorted along with the sort direction</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sortDirection" type="SortDirection" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The sort order to be applied to the element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sortElement" type="PropertyNameOrURI" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The type and name of the attribute, property or special element to be sorted</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="SortDirection">
+		<xs:annotation>
+			<xs:documentation>The collating order of a sort.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:Enumeration">
+			<xs:enumeration value="ASCENDING">
+				<xs:annotation>
+					<xs:documentation>Sort in ascending collation order.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DESCENDING">
+				<xs:annotation>
+					<xs:documentation>Sort in descending collation order.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- URI Resolution subsest -->
+	<xs:element name="URIResolutionService" type="URIResolutionService"/>
+	<xs:complexType name="URIResolutionService">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:attribute name="lastUpdated" type="core:DateAndTime" use="required"/>
+	</xs:complexType>
+	
+	<xs:element name="VersionResolutionService" type="VersionResolutionService"/>
+	<xs:complexType name="VersionResolutionService">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:complexType>
+	
+	<xs:complexType name="URIList">
+		<xs:sequence>
+			<xs:element name="member" type="core:URI" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="UpdateChangeableMetadataRequest" type="UpdateChangeableMetadataRequest"/>
+	<xs:complexType name="UpdateChangeableMetadataRequest">
+		<xs:sequence>
+			<xs:element name="updatedStatus" minOccurs="0"> 
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="status" type="NameOrURI" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedEntryState" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="entryState" type="core:EntryState"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedEffectiveDate" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="effectiveDate" type="core:DateAndTime" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedChangeNotes" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="changeNotes" type="core:OpaqueData" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedChangeSource" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="changeSource" type="core:SourceReference" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="UpdateChangeSetMetadataRequest" type="UpdateChangeSetMetadataRequest"/>
+	<xs:complexType name="UpdateChangeSetMetadataRequest">
+		<xs:sequence>
+			<xs:element name="updatedState" minOccurs="0"> 
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="state" type="core:FinalizableState"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedCreator" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="creator" minOccurs="0" type="NameOrURI"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedChangeInstructions" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="changeInstructions" minOccurs="0" type="core:OpaqueData"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedOfficialEffectiveDate" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="officialEffectiveDate" minOccurs="0" type="core:DateAndTime"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+	xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	elementFormDefault="qualified">
+
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/Core"
+		schemaLocation="../core/Core.xsd" />
+	<import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+		schemaLocation="../core/CoreService.xsd" />
+
+	<element name="getSupportedFormat" type="tns:getSupportedFormat" />
+	<complexType name="getSupportedFormat">
+		<sequence />
+	</complexType>
+	<element name="getSupportedFormatResponse" type="tns:getSupportedFormatResponse" />
+	<complexType name="getSupportedFormatResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="return"
+				type="core:FormatReference" />
+		</sequence>
+	</complexType>
+	<element name="getServiceVersion" type="tns:getServiceVersion" />
+	<complexType name="getServiceVersion">
+		<sequence />
+	</complexType>
+	<element name="getServiceVersionResponse" type="tns:getServiceVersionResponse" />
+	<complexType name="getServiceVersionResponse">
+		<sequence>
+			<element minOccurs="1" name="return" type="string" />
+		</sequence>
+	</complexType>
+	<element name="getDefaultFormat" type="tns:getDefaultFormat" />
+	<complexType name="getDefaultFormat">
+		<sequence />
+	</complexType>
+	<element name="getDefaultFormatResponse" type="tns:getDefaultFormatResponse" />
+	<complexType name="getDefaultFormatResponse">
+		<sequence>
+			<element minOccurs="1" name="return" type="core:FormatReference" />
+		</sequence>
+	</complexType>
+
+	<element name="getKnownNamespace" type="tns:getKnownNamespace" />
+	<complexType name="getKnownNamespace">
+		<sequence />
+	</complexType>
+	<element name="getKnownNamespaceResponse" type="tns:getKnownNamespaceResponse" />
+	<complexType name="getKnownNamespaceResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="return"
+				type="coreService:DocumentedNamespaceReference" />
+		</sequence>
+	</complexType>
+	<element name="getSupportedProfile" type="tns:getSupportedProfile" />
+	<complexType name="getSupportedProfile">
+		<sequence />
+	</complexType>
+	<element name="getSupportedProfileResponse" type="tns:getSupportedProfileResponse" />
+	<complexType name="getSupportedProfileResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="return"
+				type="coreService:ProfileElement" />
+		</sequence>
+	</complexType>
+
+	<element name="getServiceProvider" type="tns:getServiceProvider" />
+	<complexType name="getServiceProvider">
+		<sequence />
+	</complexType>
+	<element name="getServiceProviderResponse" type="tns:getServiceProviderResponse" />
+	<complexType name="getServiceProviderResponse">
+		<sequence>
+			<element minOccurs="1" name="return" type="core:SourceReference" />
+		</sequence>
+	</complexType>
+	<element name="getServiceName" type="tns:getServiceName" />
+	<complexType name="getServiceName">
+		<sequence />
+	</complexType>
+	<element name="getServiceNameResponse" type="tns:getServiceNameResponse" />
+	<complexType name="getServiceNameResponse">
+		<sequence>
+			<element minOccurs="1" name="return" type="string" />
+		</sequence>
+	</complexType>
+	<element name="getServiceDescription" type="tns:getServiceDescription" />
+	<complexType name="getServiceDescription">
+		<sequence />
+	</complexType>
+	<element name="getServiceDescriptionResponse" type="tns:getServiceDescriptionResponse" />
+	<complexType name="getServiceDescriptionResponse">
+		<sequence>
+			<element minOccurs="1" name="return" type="core:OpaqueData" />
+		</sequence>
+	</complexType>
+
+	<element name="getImplementationType" type="tns:getImplementationType" />
+	<complexType name="getImplementationType">
+		<sequence />
+	</complexType>
+	<element name="getImplementationTypeResponse" type="tns:getImplementationTypeResponse" />
+	<complexType name="getImplementationTypeResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="return"
+				type="coreService:ImplementationProfile" />
+		</sequence>
+	</complexType>
+
+</schema>

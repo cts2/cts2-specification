@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:map="http://schema.omg.org/spec/CTS2/1.0/MapCatalog"
+  xmlns:mapVersion="http://schema.omg.org/spec/CTS2/1.0/MapVersion"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/MapEntryReadServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/MapEntryReadServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/MapCatalog" schemaLocation="../map/Map.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/MapVersion" schemaLocation="../mapversion/MapVersion.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="exists" type="tns:exists"/>
+  <xs:complexType name="exists">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="mapVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="mapFrom" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsResponse" type="tns:existsResponse"/>
+  <xs:complexType name="existsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="read" type="tns:read"/>
+  <xs:complexType name="read">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="mapVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="mapFrom" type="coreService:EntityNameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readResponse" type="tns:readResponse"/>
+  <xs:complexType name="readResponse">
+    <xs:sequence>
+      <xs:element ref="mapVersion:MapEntry"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

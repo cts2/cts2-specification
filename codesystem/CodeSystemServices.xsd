@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:codesystem="http://schema.omg.org/spec/CTS2/1.0/CodeSystem"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/CodeSystemServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystemServices" elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystem" schemaLocation="CodeSystem.xsd"/>
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	
+	<xs:element name="CodeSystemHistoryService" type="CodeSystemHistoryService"/>
+	<xs:complexType name="CodeSystemHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemMaintenanceService" type="CodeSystemMaintenanceService"/>
+	<xs:complexType name="CodeSystemMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="UpdateCodeSystemCatalogEntry" type="UpdateCodeSystemCatalogEntry"/>
+	<xs:complexType name="UpdateCodeSystemCatalogEntry">
+		<xs:complexContent>
+			<xs:extension base="coreservice:UpdateAbstractResourceDescription">
+				<xs:sequence>
+					<xs:element name="updatedCodeSystemCatagory" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="codeSystemCatagory" type="core:CodeSystemCategoryReference" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedDesignedForOntologyTasks" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="designedForOntologyTask" type="core:OntologyTaskReference" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedHasOntologyLanguage" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="hasOntologyLanguage" type="core:OntologyLanguageReference" minOccurs="0" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedOntologyDomains" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ontologyDomain" type="core:OntologyDomainReference" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedOntologyType" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ontologyType" type="core:OntologyTypeReference" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="updatedUsedOntologyEngineeringTools" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="usedOntologyEngineeringTool" type="core:OntologyEngineeringToolReference" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemQueryService" type="CodeSystemQueryService"/>
+	<xs:complexType name="CodeSystemQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence>
+					<xs:element name="allCodeSystems" type="core:CodeSystemCatalogEntryDirectoryURI" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="CodeSystemReadService" type="CodeSystemReadService"/>
+	<xs:complexType name="CodeSystemReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

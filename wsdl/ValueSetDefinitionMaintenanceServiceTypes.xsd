@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  xmlns:valueSet="http://schema.omg.org/spec/CTS2/1.0/ValueSet"
+  xmlns:valueSetDefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:valueSetService="http://schema.omg.org/spec/CTS2/1.0/ValueSetServices"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices">
+  
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetServices" schemaLocation="../valueset/ValueSetServices.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
+  
+      <xs:element name="updateChangeSetMetadata" type="tns:updateChangeSetMetadata"/>
+      <xs:complexType name="updateChangeSetMetadata">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+   	      <xs:element minOccurs="1" name="request" type="coreService:UpdateChangeSetMetadataRequest"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="updateChangeSetMetadataResponse" type="tns:updateChangeSetMetadataResponse"/>
+      <xs:complexType name="updateChangeSetMetadataResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:Changeable"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="commitChangeSet" type="tns:commitChangeSet"/>
+      <xs:complexType name="commitChangeSet">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="commitChangeSetResponse" type="tns:commitChangeSetResponse"/>
+      <xs:complexType name="commitChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="coreService:ValidationResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="updateChangeableMetadata" type="tns:updateChangeableMetadata"/>
+      <xs:complexType name="updateChangeableMetadata">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="entryId" type="core:PersistentURI"/>
+     	  <xs:element minOccurs="1" name="request" type="coreService:UpdateChangeableMetadataRequest"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="updateChangeableMetadataResponse" type="tns:updateChangeableMetadataResponse"/>
+      <xs:complexType name="updateChangeableMetadataResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:Changeable"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="deleteChangeable" type="tns:deleteChangeable"/>
+      <xs:complexType name="deleteChangeable">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="target" type="core:Changeable"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="deleteChangeableResponse" type="tns:deleteChangeableResponse"/>
+      <xs:complexType name="deleteChangeableResponse">
+        <xs:sequence/>
+      </xs:complexType>
+
+      <xs:element name="rollbackChangeSet" type="tns:rollbackChangeSet"/>
+      <xs:complexType name="rollbackChangeSet">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="rollbackChangeSetResponse" type="tns:rollbackChangeSetResponse"/>
+      <xs:complexType name="rollbackChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="coreService:ValidationResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="validateChangeSet" type="tns:validateChangeSet"/>
+      <xs:complexType name="validateChangeSet">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="validationLevel" type="coreService:ValidationLevel"></xs:element>
+          <xs:element minOccurs="1" name="changeSet" type="updates:ChangeSet"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="validateChangeSetResponse" type="tns:validateChangeSetResponse"/>
+      <xs:complexType name="validateChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="coreService:ValidationResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="readChangeSet" type="tns:readChangeSet"/>
+      <xs:complexType name="readChangeSet">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="readChangeSetResponse" type="tns:readChangeSetResponse"/>
+      <xs:complexType name="readChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="updates:ChangeSet"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="listChanges" type="tns:listChanges"/>
+      <xs:complexType name="listChanges">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fromDate" type="core:DateAndTime"/>
+          <xs:element minOccurs="0" name="toDate" type="core:DateAndTime"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="listChangesResponse" type="tns:listChangesResponse"/>
+      <xs:complexType name="listChangesResponse">
+        <xs:sequence>
+          <xs:element name="return" type="coreService:ChangeSetEntryList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createChangeSet" type="tns:createChangeSet"/>
+      <xs:complexType name="createChangeSet">
+        <xs:sequence/>
+      </xs:complexType>
+
+      <xs:element name="createChangeSetResponse" type="tns:createChangeSetResponse"/>
+      <xs:complexType name="createChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="updates:ChangeSet"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="putChangeSet" type="tns:putChangeSet"/>
+      <xs:complexType name="putChangeSet">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="updates:ChangeSet"/>
+          <xs:element minOccurs="0" name="errorResponse" type="coreService:ErrorResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="putChangeSetResponse" type="tns:putChangeSetResponse"/>
+      <xs:complexType name="putChangeSetResponse">
+        <xs:sequence>
+          <xs:element name="return" type="coreService:SuccessIndicator"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addPropertyQueryReference" type="addPropertyQueryReference"/>
+      <xs:complexType name="addPropertyQueryReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="referenceType" type="core:TargetReferenceType"/>
+          <xs:element minOccurs="1" name="property" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="matchAlgorithm" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="matchValue" type="core:String"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addPropertyQueryReferenceResponse" type="addPropertyQueryReferenceResponse"/>
+      <xs:complexType name="addPropertyQueryReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createCompleteCodeSystemReference" type="createCompleteCodeSystemReference"/>
+      <xs:complexType name="createCompleteCodeSystemReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="codeSystemVersion" type="coreService:NameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createCompleteCodeSystemReferenceResponse" type="createCompleteCodeSystemReferenceResponse"/>
+      <xs:complexType name="createCompleteCodeSystemReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createCompleteValueSetReference" type="createCompleteValueSetReference"/>
+      <xs:complexType name="createCompleteValueSetReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="referenceValueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="referenceValueSetDefinition" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="referenceCodeSystemVersions" type="coreService:NameOrURIList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createCompleteValueSetReferenceResponse" type="createCompleteValueSetReferenceResponse"/>
+      <xs:complexType name="createCompleteValueSetReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addSpecificEntityListDefinition" type="addSpecificEntityListDefinition"/>
+      <xs:complexType name="addSpecificEntityListDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="referencedEntities" type="coreService:EntityNameOrURIList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addSpecificEntityListDefinitionResponse" type="addSpecificEntityListDefinitionResponse"/>
+      <xs:complexType name="addSpecificEntityListDefinitionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createAssociatedEntitiesReference" type="createAssociatedEntitiesReference"/>
+      <xs:complexType name="createAssociatedEntitiesReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="referencedEntity" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="predicate" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="direction" type="core:AssociationDirection"/>
+          <xs:element minOccurs="0" name="transitivity" type="valueSetDefinition:TransitiveClosure"/>
+          <xs:element minOccurs="0" name="leafOnly" type="valueSetDefinition:LeafOrAll"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createAssociatedEntitiesReferenceResponse" type="createAssociatedEntitiesReferenceResponse"/>
+      <xs:complexType name="createAssociatedEntitiesReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addCompleteValueSetReference" type="addCompleteValueSetReference"/>
+      <xs:complexType name="addCompleteValueSetReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="referenceValueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="referenceValueSetDefinition" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="referenceCodeSystemVersions" type="coreService:NameOrURIList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addCompleteValueSetReferenceResponse" type="addCompleteValueSetReferenceResponse"/>
+      <xs:complexType name="addCompleteValueSetReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createSpecificEntityListDefinition" type="createSpecificEntityListDefinition"/>
+      <xs:complexType name="createSpecificEntityListDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="referencedEntities" type="coreService:EntityNameOrURIList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createSpecificEntityListDefinitionResponse" type="createSpecificEntityListDefinitionResponse"/>
+      <xs:complexType name="createSpecificEntityListDefinitionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createExternalValueSetDefinition" type="createExternalValueSetDefinition"/>
+      <xs:complexType name="createExternalValueSetDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="definition" type="core:OpaqueData"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createExternalValueSetDefinitionResponse" type="createExternalValueSetDefinitionResponse"/>
+      <xs:complexType name="createExternalValueSetDefinitionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="removeDefinitionEntry" type="removeDefinitionEntry"/>
+      <xs:complexType name="removeDefinitionEntry">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="entryToRemove" type="core:NaturalNumber"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="removeDefinitionEntryResponse" type="removeDefinitionEntryResponse"/>
+      <xs:complexType name="removeDefinitionEntryResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addExternalValueSetDefinition" type="addExternalValueSetDefinition"/>
+      <xs:complexType name="addExternalValueSetDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="definition" type="core:OpaqueData"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addExternalValueSetDefinitionResponse" type="addExternalValueSetDefinitionResponse"/>
+      <xs:complexType name="addExternalValueSetDefinitionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addAssociatedEntitiesReference" type="addAssociatedEntitiesReference"/>
+      <xs:complexType name="addAssociatedEntitiesReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="referencedEntity" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="predicate" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="direction" type="core:AssociationDirection"/>
+          <xs:element minOccurs="0" name="transitivity" type="valueSetDefinition:TransitiveClosure"/>
+          <xs:element minOccurs="0" name="leafOnly" type="valueSetDefinition:LeafOrAll"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addAssociatedEntitiesReferenceResponse" type="addAssociatedEntitiesReferenceResponse"/>
+      <xs:complexType name="addAssociatedEntitiesReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createPropertyQueryReference" type="createPropertyQueryReference"/>
+      <xs:complexType name="createPropertyQueryReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="referenceType" type="core:TargetReferenceType"/>
+          <xs:element minOccurs="1" name="property" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="matchAlgorithm" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="1" name="matchValue" type="core:String"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="createPropertyQueryReferenceResponse" type="createPropertyQueryReferenceResponse"/>
+      <xs:complexType name="createPropertyQueryReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addCompleteCodeSystemReference" type="addCompleteCodeSystemReference"/>
+      <xs:complexType name="addCompleteCodeSystemReference">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+          <xs:element minOccurs="1" name="valueSetDefinition" type="core:DocumentURI"/>
+          <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
+          <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+          <xs:element minOccurs="0" name="codeSystemVersion" type="coreService:NameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="addCompleteCodeSystemReferenceResponse" type="addCompleteCodeSystemReferenceResponse"/>
+      <xs:complexType name="addCompleteCodeSystemReferenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="valueSetDefinition:ValueSetDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+
+  <xs:element name="readIteratableChangeSet" type="tns:readIteratableChangeSet"/>
+  <xs:complexType name="readIteratableChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readIteratableChangeSetResponse" type="tns:readIteratableChangeSetResponse"/>
+  <xs:complexType name="readIteratableChangeSetResponse">
+    <xs:sequence>
+      <xs:element ref="updates:IteratableChangeSet"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newProperty" type="tns:newProperty"/>
+  <xs:complexType name="newProperty">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newPropertyResponse" type="tns:newPropertyResponse"/>
+  <xs:complexType name="newPropertyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Property"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newResourceTarget" type="tns:newResourceTarget"/>
+  <xs:complexType name="newResourceTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="resource" type="core:ExternalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newResourceTargetResponse" type="tns:newResourceTargetResponse"/>
+  <xs:complexType name="newResourceTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newLiteralTarget" type="tns:newLiteralTarget"/>
+  <xs:complexType name="newLiteralTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="literal" type="core:OpaqueData"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newLiteralTargetResponse" type="tns:newLiteralTargetResponse"/>
+  <xs:complexType name="newLiteralTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newEntityReferenceTarget" type="tns:newEntityReferenceTarget"/>
+  <xs:complexType name="newEntityReferenceTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entity" type="coreService:EntityNameOrURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newEntityReferenceTargetResponse" type="tns:newEntityReferenceTargetResponse"/>
+  <xs:complexType name="newEntityReferenceTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+
+    </xs:schema>

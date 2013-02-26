@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:baseHistoryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
+xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogHistoryServices"
+xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+xmlns:historyService="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServices"
+xmlns:historyServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+name="ValueSetCatalogHistoryService"
+targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogHistoryServices">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetCatalogHistoryServices"
+      schemaLocation="ValueSetCatalogHistoryServiceTypes.xsd" />
+    </xsd:schema>
+
+  </wsdl:types>
+
+  <!-- BaseService Messages -->
+  <wsdl:message name="getServiceDescription">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescription" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProvider">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProvider" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceNameResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceNameResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProviderResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProviderResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersion">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationTypeResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationTypeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfileResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfileResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceDescriptionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescriptionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationType">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationType" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceName">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceName" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespace">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespace" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespaceResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespaceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfile">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfile" />
+  </wsdl:message>
+
+  <!-- End BaseService Messages -->
+  <!-- BaseQueryService Messages -->
+  <wsdl:message name="getSupportedMatchAlgorithmResponse">
+    <wsdl:part name="parameters"
+    element="baseQueryServiceTypes:getSupportedMatchAlgorithmResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedMatchAlgorithm">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getSupportedMatchAlgorithm" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedModelAttributeResponse">
+    <wsdl:part name="parameters"
+    element="baseQueryServiceTypes:getSupportedModelAttributeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedModelAttribute">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getSupportedModelAttribute" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownPropertyResponse">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getKnownPropertyResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownProperty">
+    <wsdl:part name="parameters" element="baseQueryServiceTypes:getKnownProperty" />
+  </wsdl:message>
+
+  <wsdl:message name="count">
+    <wsdl:part name="parameters" element="tns:count" />
+  </wsdl:message>
+
+  <wsdl:message name="countResponse">
+    <wsdl:part name="parameters" element="tns:countResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrictResponse">
+    <wsdl:part name="parameters" element="tns:restrictResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="restrict">
+    <wsdl:part name="parameters" element="tns:restrict" />
+  </wsdl:message>
+
+  <wsdl:message name="differenceResponse">
+    <wsdl:part name="parameters" element="tns:differenceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="difference">
+    <wsdl:part name="parameters" element="tns:difference" />
+  </wsdl:message>
+
+  <wsdl:message name="intersectResponse">
+    <wsdl:part name="parameters" element="tns:intersectResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="intersect">
+    <wsdl:part name="parameters" element="tns:intersect" />
+  </wsdl:message>
+
+  <wsdl:message name="unionResponse">
+    <wsdl:part name="parameters" element="tns:unionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="union">
+    <wsdl:part name="parameters" element="tns:union" />
+  </wsdl:message>
+
+  <!-- End BaseQueryService Messages -->
+  <!-- Start BaseHistoryService Messages -->
+  <wsdl:message name="getLatestChange">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getLatestChange" />
+  </wsdl:message>
+
+  <wsdl:message name="getLatestChangeResponse">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getLatestChangeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getEarliestChange">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getEarliestChange" />
+  </wsdl:message>
+
+  <wsdl:message name="getEarliestChangeResponse">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getEarliestChangeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getChangeHistory">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getChangeHistory" />
+  </wsdl:message>
+
+  <wsdl:message name="getChangeHistoryResponse">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:getChangeHistoryResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="resolve">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:resolve" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveResponse">
+    <wsdl:part name="parameters" element="baseHistoryServiceTypes:resolveResponse" />
+  </wsdl:message>
+
+  <!-- End BaseHistoryService Messages -->
+  <wsdl:message name="getLastChangeFor">
+    <wsdl:part name="parameters" element="tns:getLastChangeFor" />
+  </wsdl:message>
+
+  <wsdl:message name="getEarliestChangeForResponse">
+    <wsdl:part name="parameters" element="tns:getEarliestChangeForResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getChangeHistoryFor">
+    <wsdl:part name="parameters" element="tns:getChangeHistoryFor" />
+  </wsdl:message>
+
+  <wsdl:message name="getLastChangeForResponse">
+    <wsdl:part name="parameters" element="tns:getLastChangeForResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getEarliestChangeFor">
+    <wsdl:part name="parameters" element="tns:getEarliestChangeFor" />
+  </wsdl:message>
+
+  <wsdl:message name="getChangeHistoryForResponse">
+    <wsdl:part name="parameters" element="tns:getChangeHistoryForResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceHistoryForResponse">
+    <wsdl:part name="parameters" element="tns:getChangeHistoryForResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readChangeSetResponse">
+    <wsdl:part name="parameters" element="tns:readChangeSetResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readChangeSet">
+    <wsdl:part name="parameters" element="tns:readChangeSet" />
+  </wsdl:message>
+
+  <wsdl:portType name="ValueSetCatalogHistoryServicePortType">
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <wsdl:input name="getSupportedFormat" message="tns:getSupportedFormat" />
+      <wsdl:output name="getSupportedFormatResponse" message="tns:getSupportedFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <wsdl:input name="getServiceVersion" message="tns:getServiceVersion" />
+      <wsdl:output name="getServiceVersionResponse" message="tns:getServiceVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <wsdl:input name="getDefaultFormat" message="tns:getDefaultFormat" />
+      <wsdl:output name="getDefaultFormatResponse" message="tns:getDefaultFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <wsdl:input name="getKnownNamespace" message="tns:getKnownNamespace" />
+      <wsdl:output name="getKnownNamespaceResponse" message="tns:getKnownNamespaceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <wsdl:input name="getSupportedProfile" message="tns:getSupportedProfile" />
+      <wsdl:output name="getSupportedProfileResponse" message="tns:getSupportedProfileResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <wsdl:input name="getServiceProvider" message="tns:getServiceProvider" />
+      <wsdl:output name="getServiceProviderResponse" message="tns:getServiceProviderResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <wsdl:input name="getServiceName" message="tns:getServiceName" />
+      <wsdl:output name="getServiceNameResponse" message="tns:getServiceNameResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <wsdl:input name="getServiceDescription" message="tns:getServiceDescription" />
+      <wsdl:output name="getServiceDescriptionResponse"
+      message="tns:getServiceDescriptionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <wsdl:input name="getImplementationType" message="tns:getImplementationType" />
+      <wsdl:output name="getImplementationTypeResponse"
+      message="tns:getImplementationTypeResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseService -->
+    <!-- BaseQueryService -->
+    <wsdl:operation name="getSupportedMatchAlgorithm">
+      <wsdl:input name="getSupportedMatchAlgorithm" message="tns:getSupportedMatchAlgorithm" />
+      <wsdl:output name="getSupportedMatchAlgorithmResponse"
+      message="tns:getSupportedMatchAlgorithmResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedModelAttribute">
+      <wsdl:input name="getSupportedModelAttribute" message="tns:getSupportedModelAttribute" />
+      <wsdl:output name="getSupportedModelAttributeResponse"
+      message="tns:getSupportedModelAttributeResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownProperty">
+      <wsdl:input name="getKnownProperty" message="tns:getKnownProperty" />
+      <wsdl:output name="getKnownPropertyResponse" message="tns:getKnownPropertyResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="count">
+      <wsdl:input name="count" message="tns:count" />
+      <wsdl:output name="countResponse" message="tns:countResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="restrict">
+      <wsdl:input name="restrict" message="tns:restrict" />
+      <wsdl:output name="restrictResponse" message="tns:restrictResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="difference">
+      <wsdl:input name="difference" message="tns:difference" />
+      <wsdl:output name="differenceResponse" message="tns:differenceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="intersect">
+      <wsdl:input name="intersect" message="tns:intersect" />
+      <wsdl:output name="intersectResponse" message="tns:intersectResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="union">
+      <wsdl:input name="union" message="tns:union" />
+      <wsdl:output name="unionResponse" message="tns:unionResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseQueryService -->
+    <!-- Start BaseHistoryService -->
+    <wsdl:operation name="getLatestChange">
+      <wsdl:input name="getLatestChange" message="tns:getLatestChange" />
+      <wsdl:output name="getLatestChangeResponse" message="tns:getLatestChangeResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getChangeHistory">
+      <wsdl:input name="getChangeHistory" message="tns:getChangeHistory" />
+      <wsdl:output name="getChangeHistoryResponse" message="tns:getChangeHistoryResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getEarliestChange">
+      <wsdl:input name="getEarliestChange" message="tns:getEarliestChange" />
+      <wsdl:output name="getEarliestChangeResponse" message="tns:getEarliestChangeResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="resolve">
+      <wsdl:input name="resolve" message="tns:resolve" />
+      <wsdl:output name="resolveResponse" message="tns:resolveResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseHistoryService -->
+    <wsdl:operation name="readChangeSet">
+      <wsdl:input name="readChangeSet" message="tns:readChangeSet" />
+      <wsdl:output name="readChangeSetResponse" message="tns:readChangeSetResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getChangeHistoryFor">
+      <wsdl:input name="getChangeHistoryFor" message="tns:getChangeHistoryFor" />
+      <wsdl:output name="getChangeHistoryForResponse" message="tns:getChangeHistoryForResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getEarliestChangeFor">
+      <wsdl:input name="getEarliestChangeFor" message="tns:getEarliestChangeFor" />
+      <wsdl:output name="getEarliestChangeForResponse"
+      message="tns:getEarliestChangeForResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getLastChangeFor">
+      <wsdl:input name="getLastChangeFor" message="tns:getLastChangeFor" />
+      <wsdl:output name="getLastChangeForResponse" message="tns:getLastChangeForResponse" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="ValueSetCatalogHistoryServicesoapBinding"
+  type="tns:ValueSetCatalogHistoryServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">alist of the representation formats
+      supported by the service. Example: text/html, text/xml, application/json</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the version or release identifier of
+      the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the default format used by the
+      service unless otherwise specified</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getDefaultFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getDefaultFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of namespaces recognized by
+      this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal
+      URL's, etc.), &lt;i&gt;knownNamespace&lt;/i&gt; includes the namespace name, an optional URI
+      \emph{and} a place to provide textual detail describing what the namespace references. Note
+      that namespace names must be unique across an entire CTS2 implementation - the same
+      namespace name cannot represent one namespace in code system A and a second in code system B.
+      Note also that namespace names are \emph{local} to a service instance. Information that is
+      communicated between service instances, recorded in data tables or client software
+      \emph{must} use full URIs.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownNamespace">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownNamespaceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a reference to the individual or
+      organization that provides the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceProvider">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceProviderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of service profiles that are
+      supported by this service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedProfile">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedProfileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a description of the service, its
+      use, etc.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceDescription">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceDescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a short name that identifies the
+      particular service and implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceName">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the particular implementation type(s)
+      supported by this profile</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getImplementationType">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getImplementationTypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- EndBaseService -->
+    <!-- BaseQueryService -->
+    <wsdl:operation name="getSupportedMatchAlgorithm">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the match algorithms that can be used
+      in filters for this service instance</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedMatchAlgorithm">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedMatchAlgorithmResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedModelAttribute">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of model attributes that can
+      be referenced in filter instances for the given service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedModelAttribute">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedModelAttributeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownProperty">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">The set of properties that are used
+      in one or more instances of the resource represented by this service. This list includes all
+      properties that can be used in queries in this service, independent of the
+      &lt;i&gt;entryState &lt;/i&gt;or temporal state of the resource(s) being
+      searched.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownProperty">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownPropertyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="count">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
+      currently represented by the supplied directory URI.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="count">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="countResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="restrict">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
+      &lt;i&gt;DirectoryURI&lt;/i&gt; that references the set of all elements represented by
+      &lt;i&gt;directory&lt;/i&gt; that match the criteria specified in
+      &lt;i&gt;filter.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="restrict">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="restrictResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="difference">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove any of the elements in
+      &lt;i&gt;elementsToRemove&lt;/i&gt; from &lt;i&gt;initialSet &lt;/i&gt;if present. Elements
+      in &lt;i&gt;elementsToRemove&lt;/i&gt; that are not in &lt;i&gt;initialSet&lt;/i&gt; are
+      ignored.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="difference">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="differenceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="intersect">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory that represents
+      the set of elements that are common to the two supplied directories. Note that both
+      DirectoryURIs must represent resources of the same type.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="intersect">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="intersectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="union">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory that represents
+      the combination of the contents of the supplied two supplied directories, with duplicate
+      entries removed. Note that both of the directory URIs must resolve to entries of the same
+      type.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="union">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="unionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!-- End BaseQueryService -->
+    <!--  Start BaseHistryService -->
+    <wsdl:operation name="getLatestChange">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the date and time that the last
+      change was applied to the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getLatestChange">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getLatestChangeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getChangeHistory">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a &lt;i&gt;DirectoryURI&lt;/i&gt;
+      that resolves to the set of all changes that have been applied to the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChangeHistory">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getChangeHistoryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getEarliestChange">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the date and time of the first change
+      that occurred in the service. Note that the granularity of "change" is the application of an
+      import operation or the submission of a change set, so the first change might encompass the
+      loading of an entire ontology or even a complete ontology with history.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getEarliestChange">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getEarliestChangeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="resolve">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve a change set as an iterable
+      resource - a handy function for viewing large change sets</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolve">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <!--  End BaseHistryService -->
+    <wsdl:operation name="readChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the change set referenced by
+      the supplied URI.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="readChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="readChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getChangeHistoryFor">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a list of
+      &lt;i&gt;ValueSetCatalogEntries&lt;/i&gt; that reflect the various states that the
+      &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt; went through between &lt;i&gt;fromDate&lt;/i&gt; and
+      &lt;i&gt;toDate.&lt;/i&gt;Return a list of records that reflects the change in the catalog
+      entry over the specified time span. Records will be sorted from earliest to latest if (a)
+      &lt;i&gt;fromDate&lt;/i&gt; is omitted or (b) &lt;i&gt;toDate&lt;/i&gt; is omitted, or (c)
+      &lt;i&gt;fromDate &lt;/i&gt; is earlier than &lt;i&gt;toDate&lt;/i&gt;. In all other cases,
+      records will be sorted from latest to earliest.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChangeHistoryFor">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getChangeHistoryForResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownValueSet">
+        <documentation>The value set name or URI is not recognized by the service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownValueSet" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getEarliestChangeFor">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the first known state of the
+      specified &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Return an catalog entry that reflects the
+      state of the entry when it first appeared in the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getEarliestChangeFor">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getEarliestChangeForResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownValueSet">
+        <documentation>The value set name or URI is not recognized by the service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownValueSet" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getLastChangeFor">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the last known change to the
+      specified &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Return an entry that reflects the result of
+      the last change that was made to the catalog.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getLastChangeFor">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getLastChangeForResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownValueSet">
+        <documentation>The value set name or URI is not recognized by the service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownValueSet" />
+      </fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="ValueSetCatalogHistoryService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ValueSetCatalogHistoryServicePort"
+    binding="tns:ValueSetCatalogHistoryServicesoapBinding">
+      <soap:address location="http://localhost:9090/ValueSetCatalogHistoryServicePort" />
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

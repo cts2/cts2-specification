@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBindingServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBindingServices"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd" />
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+
+	<xs:element name="UpdateConceptDomainBindingRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="updatedBoundValueSetDefinition" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="boundValueSetDefinition" type="core:DocumentURI" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>the specific value set definition to be used in
+										this binding</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="updatedUseCodeSystemVersion" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="useCodeSystemVersion" type="coreservice:NameOrURIList" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>the local identifiers for or URIs of a set of
+										code system versions to be used in the binding</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ConceptDomainBindingMaintenanceService">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>A service that allows the creation, update and
+					deletion of concept domain bindings</xs:documentation>
+			</xs:annotation>
+			<xs:complexContent>
+				<xs:extension base="coreservice:BaseMaintenanceService">
+					<xs:sequence />
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ConceptDomainBindingQueryService">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>A service that allows the enumeration, query and
+					filtering of the concept domain bindings known to the system
+				</xs:documentation>
+			</xs:annotation>
+			<xs:complexContent>
+				<xs:extension base="coreservice:BaseQueryService">
+					<xs:sequence>
+						<xs:element name="conceptDomainBindings"
+							type="core:ConceptDomainBindingDirectoryURI" minOccurs="1"
+							maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>a DirectoryURI that resolves to the set of all
+									concept domain bindings known to the service</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ConceptDomainBindingReadService">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>A service that provides direct read access to
+					bindings that are asserted between concept domains and value sets.
+				</xs:documentation>
+			</xs:annotation>
+			<xs:complexContent>
+				<xs:extension base="coreservice:BaseReadService">
+					<xs:sequence>
+						<xs:element name="supportedTag" type="core:VersionTagReference"
+							minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>the set of version tags known to the service.
+									All services must recognize the tag, CURRENT, the
+									interpretation of which is service specific.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

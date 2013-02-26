@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogReadServices"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:codeSystemVersion="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogReadServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion" schemaLocation="../codesystemversion/CodeSystemVersion.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="exists" type="tns:exists"/>
+  <xs:complexType name="exists">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsResponse" type="tns:existsResponse"/>
+  <xs:complexType name="existsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getCodeSystemVersionForCodeSystem" type="tns:getCodeSystemVersionForCodeSystem"/>
+  <xs:complexType name="getCodeSystemVersionForCodeSystem">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getCodeSystemVersionForCodeSystemResponse" type="tns:getCodeSystemVersionForCodeSystemResponse"/>
+  <xs:complexType name="getCodeSystemVersionForCodeSystemResponse">
+    <xs:sequence>
+      <xs:element name="return" type="codeSystemVersion:CodeSystemVersionCatalogEntry"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="read" type="tns:read"/>
+  <xs:complexType name="read">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readResponse" type="tns:readResponse"/>
+  <xs:complexType name="readResponse">
+    <xs:sequence>
+      <xs:element name="return" type="codeSystemVersion:CodeSystemVersionCatalogEntry"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsCodeSystemVersionForCodeSystem" type="tns:existsCodeSystemVersionForCodeSystem"/>
+  <xs:complexType name="existsCodeSystemVersionForCodeSystem">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsCodeSystemVersionForCodeSystemResponse" type="tns:existsCodeSystemVersionForCodeSystemResponse"/>
+  <xs:complexType name="existsCodeSystemVersionForCodeSystemResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getCodeSystemByVersionId" type="tns:getCodeSystemByVersionId"/>
+  <xs:complexType name="getCodeSystemByVersionId">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="officialResourceVersionId" type="core:String"/>
+      <xs:element minOccurs="0" name="readContext" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getCodeSystemByVersionIdResponse" type="tns:getCodeSystemByVersionIdResponse"/>
+  <xs:complexType name="getCodeSystemByVersionIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="codeSystemVersion:CodeSystemVersionCatalogEntry"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsVersionId" type="tns:existsVersionId"/>
+  <xs:complexType name="existsVersionId">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="officialResourceVersionID" type="core:String"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsVersionIdResponse" type="tns:existsVersionIdResponse"/>
+  <xs:complexType name="existsVersionIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="getSupportedTag" type="tns:getSupportedTag"/>
+  <xs:complexType name="getSupportedTag">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="getSupportedTagResponse" type="tns:getSupportedTagResponse"/>
+  <xs:complexType name="getSupportedTagResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:VersionTagReference" maxOccurs="unbounded"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

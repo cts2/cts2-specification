@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:conceptDomain="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain"
+  xmlns:conceptDomainService="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainServices"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainCatalogMaintenanceServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainCatalogMaintenanceServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain" schemaLocation="../conceptdomain/ConceptDomain.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainServices" schemaLocation="../conceptdomain/ConceptDomainServices.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="putChangeSet" type="tns:putChangeSet"/>
+  <xs:complexType name="putChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="errorResponse" type="coreService:ErrorResponse"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="putChangeSetResponse" type="tns:putChangeSetResponse"/>
+  <xs:complexType name="putChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:SuccessIndicator"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="deleteChangeable" type="tns:deleteChangeable"/>
+  <xs:complexType name="deleteChangeable">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="changeableResource" type="core:Changeable"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="deleteChangeableResponse" type="tns:deleteChangeableResponse"/>
+  <xs:complexType name="deleteChangeableResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="createChangeSet" type="tns:createChangeSet"/>
+  <xs:complexType name="createChangeSet">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="createChangeSetResponse" type="tns:createChangeSetResponse"/>
+  <xs:complexType name="createChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="updates:ChangeSet"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="rollbackChangeSet" type="tns:rollbackChangeSet"/>
+  <xs:complexType name="rollbackChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="rollbackChangeSetResponse" type="tns:rollbackChangeSetResponse"/>
+  <xs:complexType name="rollbackChangeSetResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="updateChangeSetMetadata" type="tns:updateChangeSetMetadata"/>
+  <xs:complexType name="updateChangeSetMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="request" type="coreService:UpdateChangeSetMetadataRequest"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="updateChangeSetMetadataResponse" type="tns:updateChangeSetMetadataResponse"/>
+  <xs:complexType name="updateChangeSetMetadataResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="listChanges" type="tns:listChanges"/>
+  <xs:complexType name="listChanges">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fromDate" type="core:DateAndTime"/>
+      <xs:element minOccurs="0" name="toDate" type="core:DateAndTime"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="listChangesResponse" type="tns:listChangesResponse"/>
+  <xs:complexType name="listChangesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:ChangeSetEntryList"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="readChangeSet" type="tns:readChangeSet"/>
+  <xs:complexType name="readChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="readChangeSetResponse" type="tns:readChangeSetResponse"/>
+  <xs:complexType name="readChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="updates:ChangeSet"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="createConceptDomain" type="tns:createConceptDomain"/>
+  <xs:complexType name="createConceptDomain">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="uri" type="core:ExternalURI"/>
+      <xs:element minOccurs="1" name="name" type="core:ConceptDomainName"/>
+      <xs:element minOccurs="0" name="definingEntity" type="coreService:EntityNameOrURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="createConceptDomainResponse" type="tns:createConceptDomainResponse"/>
+  <xs:complexType name="createConceptDomainResponse">
+    <xs:sequence>
+      <xs:element name="return" type="conceptDomain:ConceptDomainCatalogEntry"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="commitChangeSet" type="tns:commitChangeSet"/>
+  <xs:complexType name="commitChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="commitChangeSetResponse" type="tns:commitChangeSetResponse"/>
+  <xs:complexType name="commitChangeSetResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="updateConceptDomain" type="tns:updateConceptDomain"/>
+  <xs:complexType name="updateConceptDomain">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="conceptDomain" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="request" type="conceptDomainService:UpdateConceptDomainCatalogEntryRequest"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="updateConceptDomainResponse" type="tns:updateConceptDomainResponse"/>
+  <xs:complexType name="updateConceptDomainResponse">
+    <xs:sequence>
+      <xs:element name="return" type="conceptDomain:ConceptDomainCatalogEntry"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="validateChangeSet" type="tns:validateChangeSet"/>
+  <xs:complexType name="validateChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="validationLevel" type="coreService:ValidationLevel"/>
+      <xs:element minOccurs="1" name="changeSet" type="core:DocumentURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="validateChangeSetResponse" type="tns:validateChangeSetResponse"/>
+  <xs:complexType name="validateChangeSetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:ValidationResponse"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="updateChangeableMetadata" type="tns:updateChangeableMetadata"/>
+  <xs:complexType name="updateChangeableMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="target" type="core:PersistentURI"/>
+      <xs:element minOccurs="1" name="request" type="coreService:UpdateChangeableMetadataRequest"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="updateChangeableMetadataResponse" type="tns:updateChangeableMetadataResponse"/>
+  <xs:complexType name="updateChangeableMetadataResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Changeable"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readIteratableChangeSet" type="tns:readIteratableChangeSet"/>
+  <xs:complexType name="readIteratableChangeSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="readIteratableChangeSetResponse" type="tns:readIteratableChangeSetResponse"/>
+  <xs:complexType name="readIteratableChangeSetResponse">
+    <xs:sequence>
+      <xs:element ref="updates:IteratableChangeSet"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newProperty" type="tns:newProperty"/>
+  <xs:complexType name="newProperty">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newPropertyResponse" type="tns:newPropertyResponse"/>
+  <xs:complexType name="newPropertyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:Property"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newResourceTarget" type="tns:newResourceTarget"/>
+  <xs:complexType name="newResourceTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="resource" type="core:ExternalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newResourceTargetResponse" type="tns:newResourceTargetResponse"/>
+  <xs:complexType name="newResourceTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newLiteralTarget" type="tns:newLiteralTarget"/>
+  <xs:complexType name="newLiteralTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="literal" type="core:OpaqueData"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newLiteralTargetResponse" type="tns:newLiteralTargetResponse"/>
+  <xs:complexType name="newLiteralTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newEntityReferenceTarget" type="tns:newEntityReferenceTarget"/>
+  <xs:complexType name="newEntityReferenceTarget">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="entity" type="coreService:EntityNameOrURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="newEntityReferenceTargetResponse" type="tns:newEntityReferenceTargetResponse"/>
+  <xs:complexType name="newEntityReferenceTargetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:StatementTarget"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

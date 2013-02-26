@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseImportServices"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseImportServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  
+  <xs:element name="validate" type="tns:validate"/>
+  <xs:complexType name="validate">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="languageAndSyntax" type="core:OntologyLanguageAndSyntax"/>
+      <xs:element minOccurs="1" name="source" type="core:DocumentURI"/>
+      <xs:element minOccurs="0" name="metadata" type="core:DocumentURI"/>
+      <xs:element minOccurs="1" name="validationLevel" type="coreService:ValidationLevel"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="validateResponse" type="tns:validateResponse"/>
+  <xs:complexType name="validateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:LogEntry"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="getLog" type="tns:getLog"/>
+  <xs:complexType name="getLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="level" type="coreService:LoggingLevel"/>
+      <xs:element minOccurs="0" name="processId" type="core:LocalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="getLogResponse" type="tns:getLogResponse"/>
+  <xs:complexType name="getLogResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:LogEntries"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="import" type="tns:import"/>
+  <xs:complexType name="import">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="languageAndSyntax" type="core:OntologyLanguageAndSyntax"/>
+      <xs:element minOccurs="1" name="source" type="core:DocumentURI"/>
+      <xs:element minOccurs="0" name="metadata" type="core:DocumentURI"/>
+      <xs:element minOccurs="1" name="errorResponse" type="coreService:ErrorResponse"/>
+      <xs:element minOccurs="1" name="synchronicity" type="coreService:SyncOrAsync"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="importResponse" type="tns:importResponse"/>
+  <xs:complexType name="importResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:LocalURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="clearLog" type="tns:clearLog"/>
+  <xs:complexType name="clearLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="processId" type="core:LocalURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="clearLogResponse" type="tns:clearLogResponse"/>
+  <xs:complexType name="clearLogResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  
+  <xs:element name="getStatus" type="tns:getStatus"/>
+  <xs:complexType name="getStatus">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="processId" type="core:LocalURI"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="getStatusResponse" type="tns:getStatusResponse"/>
+  <xs:complexType name="getStatusResponse">
+    <xs:sequence>
+      <xs:element name="return" type="coreService:ImportStatus"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:element name="getSupportedLanguageAndSyntax" type="tns:getSupportedLanguageAndSyntax"/>
+  <xs:complexType name="getSupportedLanguageAndSyntax"/>
+  <xs:element name="getSupportedLanguageAndSyntaxResponse" type="tns:getSupportedLanguageAndSyntaxResponse"/>
+  <xs:complexType name="getSupportedLanguageAndSyntaxResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="return" type="core:OntologyLanguageAndSyntax"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+</xs:schema>

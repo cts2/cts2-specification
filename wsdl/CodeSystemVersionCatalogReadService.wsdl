@@ -1,0 +1,766 @@
+<?xml version="1.0"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogReadServices"
+xmlns:baseReadService="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+name="CodeSystemVersionCatalogReadService"
+targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogReadServices">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogReadServices"
+      schemaLocation="CodeSystemVersionCatalogReadServiceTypes.xsd" />
+    </xsd:schema>
+
+  </wsdl:types>
+
+  <!-- BaseService Messages -->
+  <wsdl:message name="getServiceDescription">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescription" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProvider">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProvider" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceNameResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceNameResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceProviderResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceProviderResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersion">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceVersionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceVersionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormatResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormatResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationTypeResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationTypeResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfileResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfileResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceDescriptionResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceDescriptionResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getImplementationType">
+    <wsdl:part name="parameters" element="baseServiceTypes:getImplementationType" />
+  </wsdl:message>
+
+  <wsdl:message name="getServiceName">
+    <wsdl:part name="parameters" element="baseServiceTypes:getServiceName" />
+  </wsdl:message>
+
+  <wsdl:message name="getDefaultFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getDefaultFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespace">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespace" />
+  </wsdl:message>
+
+  <wsdl:message name="getKnownNamespaceResponse">
+    <wsdl:part name="parameters" element="baseServiceTypes:getKnownNamespaceResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedFormat">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedProfile">
+    <wsdl:part name="parameters" element="baseServiceTypes:getSupportedProfile" />
+  </wsdl:message>
+
+  <!-- End BaseService Messages -->
+  <wsdl:message name="getSupportedTag">
+    <wsdl:part name="parameters" element="tns:getSupportedTag" />
+  </wsdl:message>
+
+  <wsdl:message name="getSupportedTagResponse">
+    <wsdl:part name="parameters" element="tns:getSupportedTagResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="readResponse">
+    <wsdl:part name="parameters" element="tns:readResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="exists">
+    <wsdl:part name="parameters" element="tns:exists" />
+  </wsdl:message>
+
+  <wsdl:message name="read">
+    <wsdl:part name="parameters" element="tns:read" />
+  </wsdl:message>
+
+  <wsdl:message name="getCodeSystemVersionForCodeSystem">
+    <wsdl:part name="parameters" element="tns:getCodeSystemVersionForCodeSystem" />
+  </wsdl:message>
+
+  <wsdl:message name="existsVersionId">
+    <wsdl:part name="parameters" element="tns:existsVersionId" />
+  </wsdl:message>
+
+  <wsdl:message name="getCodeSystemVersionForCodeSystemResponse">
+    <wsdl:part name="parameters" element="tns:getCodeSystemVersionForCodeSystemResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="existsResponse">
+    <wsdl:part name="parameters" element="tns:existsResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="existsCodeSystemVersionForCodeSystem">
+    <wsdl:part name="parameters" element="tns:existsCodeSystemVersionForCodeSystem" />
+  </wsdl:message>
+
+  <wsdl:message name="existsVersionIdResponse">
+    <wsdl:part name="parameters" element="tns:existsVersionIdResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getCodeSystemByVersionIdResponse">
+    <wsdl:part name="parameters" element="tns:getCodeSystemByVersionIdResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="existsCodeSystemVersionForCodeSystemResponse">
+    <wsdl:part name="parameters" element="tns:existsCodeSystemVersionForCodeSystemResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="getCodeSystemByVersionId">
+    <wsdl:part name="parameters" element="tns:getCodeSystemByVersionId" />
+  </wsdl:message>
+
+  <wsdl:portType name="CodeSystemVersionCatalogReadServicePortType">
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <wsdl:input name="getSupportedFormat" message="tns:getSupportedFormat" />
+      <wsdl:output name="getSupportedFormatResponse" message="tns:getSupportedFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <wsdl:input name="getServiceVersion" message="tns:getServiceVersion" />
+      <wsdl:output name="getServiceVersionResponse" message="tns:getServiceVersionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <wsdl:input name="getDefaultFormat" message="tns:getDefaultFormat" />
+      <wsdl:output name="getDefaultFormatResponse" message="tns:getDefaultFormatResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <wsdl:input name="getKnownNamespace" message="tns:getKnownNamespace" />
+      <wsdl:output name="getKnownNamespaceResponse" message="tns:getKnownNamespaceResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <wsdl:input name="getSupportedProfile" message="tns:getSupportedProfile" />
+      <wsdl:output name="getSupportedProfileResponse" message="tns:getSupportedProfileResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <wsdl:input name="getServiceProvider" message="tns:getServiceProvider" />
+      <wsdl:output name="getServiceProviderResponse" message="tns:getServiceProviderResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <wsdl:input name="getServiceName" message="tns:getServiceName" />
+      <wsdl:output name="getServiceNameResponse" message="tns:getServiceNameResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <wsdl:input name="getServiceDescription" message="tns:getServiceDescription" />
+      <wsdl:output name="getServiceDescriptionResponse"
+      message="tns:getServiceDescriptionResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <wsdl:input name="getImplementationType" message="tns:getImplementationType" />
+      <wsdl:output name="getImplementationTypeResponse"
+      message="tns:getImplementationTypeResponse" />
+    </wsdl:operation>
+
+    <!-- End BaseService -->
+    <wsdl:operation name="getSupportedTag">
+      <wsdl:input name="getSupportedTag" message="tns:getSupportedTag" />
+      <wsdl:output name="getSupportedTagResponse" message="tns:getSupportedTagResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="exists">
+      <wsdl:input name="exists" message="tns:exists" />
+      <wsdl:output name="existsResponse" message="tns:existsResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getCodeSystemVersionForCodeSystem">
+      <wsdl:input name="getCodeSystemVersionForCodeSystem"
+      message="tns:getCodeSystemVersionForCodeSystem" />
+      <wsdl:output name="getCodeSystemVersionForCodeSystemResponse"
+      message="tns:getCodeSystemVersionForCodeSystemResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="read">
+      <wsdl:input name="read" message="tns:read" />
+      <wsdl:output name="readResponse" message="tns:readResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="existsCodeSystemVersionForCodeSystem">
+      <wsdl:input name="existsCodeSystemVersionForCodeSystem"
+      message="tns:existsCodeSystemVersionForCodeSystem" />
+      <wsdl:output name="existsCodeSystemVersionForCodeSystemResponse"
+      message="tns:existsCodeSystemVersionForCodeSystemResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="getCodeSystemByVersionId">
+      <wsdl:input name="getCodeSystemByVersionId" message="tns:getCodeSystemByVersionId" />
+      <wsdl:output name="getCodeSystemByVersionIdResponse"
+      message="tns:getCodeSystemByVersionIdResponse" />
+    </wsdl:operation>
+
+    <wsdl:operation name="existsVersionId">
+      <wsdl:input name="existsVersionId" message="tns:existsVersionId" />
+      <wsdl:output name="existsVersionIdResponse" message="tns:existsVersionIdResponse" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+  <wsdl:binding name="CodeSystemVersionCatalogReadServiceSoapBinding"
+  type="tns:CodeSystemVersionCatalogReadServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <!-- BaseService -->
+    <wsdl:operation name="getSupportedFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">alist of the representation formats
+      supported by the service. Example: text/html, text/xml, application/json</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceVersion">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the version or release identifier of
+      the service</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceVersion">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceVersionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getDefaultFormat">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the default format used by the
+      service unless otherwise specified</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getDefaultFormat">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getDefaultFormatResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getKnownNamespace">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of namespaces recognized by
+      this service. Because many namespace identifiers tend to be cryptic (i.e. HL7 OIDs, BioPortal
+      URL's, etc.), &lt;i&gt;knownNamespace&lt;/i&gt; includes the namespace name, an optional URI
+      \emph{and} a place to provide textual detail describing what the namespace references. Note
+      that namespace names must be unique across an entire CTS2 implementation - the same
+      namespace name cannot represent one namespace in code system A and a second in code system B.
+      Note also that namespace names are \emph{local} to a service instance. Information that is
+      communicated between service instances, recorded in data tables or client software
+      \emph{must} use full URIs.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getKnownNamespace">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getKnownNamespaceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceProvider">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a reference to the individual or
+      organization that provides the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceProvider">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceProviderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedProfile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the set of service profiles that are
+      supported by this service implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedProfile">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedProfileResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceDescription">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a description of the service, its
+      use, etc.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceDescription">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceDescriptionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getServiceName">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">a short name that identifies the
+      particular service and implementation</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceName">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getServiceNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getImplementationType">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">the particular implementation type(s)
+      supported by this profile</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getImplementationType">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getImplementationTypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <!-- EndBaseService -->
+    </wsdl:operation>
+
+    <wsdl:operation name="getSupportedTag">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">The set of version tags known to the
+      service. All services must recognize the "CURRENT" tag, although interpretation is service
+      specific.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSupportedTag">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getSupportedTagResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="exists">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return TRUE if the a
+      &lt;i&gt;CodeSystemVersion&lt;/i&gt; is known to the service with a matching name or
+      URI.Determine whether a catalog entry exists that has an &lt;i&gt;about&lt;/i&gt; or
+      &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or that has a
+      &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was) applicable in
+      the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="exists">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="existsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getCodeSystemVersionForCodeSystem">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified code system
+      version details for the specified code system from the service.Retrieve the specified code
+      system version details for the specified code system from the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCodeSystemVersionForCodeSystem">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getCodeSystemVersionForCodeSystemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedVersionTag">
+        <documentation>The &lt;i&gt;versionTag&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedVersionTag" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystem">
+        <documentation>The referenced &lt;i&gt;CodeSystem&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystem" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
+        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+        implementation</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
+        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+        implementation</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="read">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified code system
+      version details from the service.Return the catalog entry that has an
+      &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or
+      that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was)
+      applicable in the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="read">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="readResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystem">
+        <documentation>The referenced &lt;i&gt;CodeSystem&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystem" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
+        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+        implementation</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="existsCodeSystemVersionForCodeSystem">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine if the specified version of
+      the code system exists for the specified code system on the service.Determine if the
+      specified version of the code system exists for the specified code system on the
+      service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="existsCodeSystemVersionForCodeSystem">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="existsCodeSystemVersionForCodeSystemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedVersionTag">
+        <documentation>The &lt;i&gt;versionTag&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedVersionTag" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="getCodeSystemByVersionId">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified version of the
+      code system exists for the specified external identifier.Retrieve the specified version of
+      the code system exists for the specified external identifier.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCodeSystemByVersionId">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="getCodeSystemByVersionIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
+        <documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystem">
+        <documentation>The referenced &lt;i&gt;CodeSystem&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystem" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="existsVersionId">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine if the specified version of
+      the code system exists for the specified external identifier.Determine if the specified
+      version of the code system exists for the specified external identifier.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="existsVersionId">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="existsVersionIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystem">
+        <documentation>The referenced &lt;i&gt;CodeSystem&lt;/i&gt; is not recognized by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystem" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <documentation>The change set specified could either not be read or located by the
+        service.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </fault>
+
+      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</documentation>
+
+        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </fault>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+  <wsdl:service name="CodeSystemVersionCatalogReadService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">A service that provides direct read
+    access to metadata about specific versions of code systems.</documentation>
+
+    <wsdl:port name="CodeSystemVersionCatalogReadServicePort"
+    binding="tns:CodeSystemVersionCatalogReadServiceSoapBinding">
+      <soap:address location="http://localhost:9090/CodeSystemVersionCatalogReadServicePort" />
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/AssociationReadServices"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:associationService="http://schema.omg.org/spec/CTS2/1.0/AssociationServices"
+  xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/AssociationReadServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Association" schemaLocation="../association/Association.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" schemaLocation="../association/AssociationServices.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:element name="readByExternalStatementId" type="tns:readByExternalStatementId"/>
+  
+  <xs:complexType name="readByExternalStatementId">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="externalStatementId" type="core:String"/>
+      <xs:element minOccurs="1" name="scopingNamespace" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readByExternalStatementIdResponse" type="tns:readByExternalStatementIdResponse"/>
+  <xs:complexType name="readByExternalStatementIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="association:Association"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="read" type="tns:read"/>
+  <xs:complexType name="read">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="associationID" type="core:URI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="readResponse" type="tns:readResponse"/>
+  <xs:complexType name="readResponse">
+    <xs:sequence>
+      <xs:element name="return" type="association:Association"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="exists" type="tns:exists"/>
+  <xs:complexType name="exists">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="associationID" type="core:URI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsResponse" type="tns:existsResponse"/>
+  <xs:complexType name="existsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsByExternalStatementId" type="tns:existsByExternalStatementId"/>
+  <xs:complexType name="existsByExternalStatementId">
+    <xs:sequence>  
+      <xs:element minOccurs="1" name="externalStatementId" type="core:String"/>
+      <xs:element minOccurs="1" name="scopingNamespace" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+  <xs:element name="existsByExternalStatementIdResponse" type="tns:existsByExternalStatementIdResponse"/>
+  <xs:complexType name="existsByExternalStatementIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+    
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:valueSetDefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetQueryServices"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ResolvedValueSetQueryServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  
+  <xs:element name="count" type="tns:count"/>
+  <xs:complexType name="count">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="timeout" type="core:NaturalNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="countResponse" type="tns:countResponse"/>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:NaturalNumber"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveAsList" type="tns:resolveAsList"/>
+  <xs:complexType name="resolveAsList">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveAsListResponse" type="tns:resolveAsListResponse"/>
+  <xs:complexType name="resolveAsListResponse">
+    <xs:sequence>
+      <xs:element ref="valueSetDefinition:ValueSetDefinitionList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToCodeSystems" type="tns:restrictToCodeSystems"/>
+  <xs:complexType name="restrictToCodeSystems">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionDirectory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="1" name="codeSystems" type="coreService:NameOrURIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToCodeSystemVersions" type="tns:restrictToCodeSystemVersions"/>
+  <xs:complexType name="restrictToCodeSystemVersions">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionDirectory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="1" name="codeSystems" type="coreService:NameOrURIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSets" type="tns:restrictToValueSets"/>
+  <xs:complexType name="restrictToValueSets">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionDirectory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="1" name="valueSets" type="coreService:NameOrURIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSetDefinitions" type="tns:restrictToValueSetDefinitions"/>
+  <xs:complexType name="restrictToValueSetDefinitions">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionDirectory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="1" name="valueSets" type="coreService:URIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToEntities" type="tns:restrictToEntities"/>
+  <xs:complexType name="restrictToEntities">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="valueSetDefinitionDirectory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="1" name="entities" type="coreService:EntityNameOrURIList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToCodeSystemsResponse" type="tns:restrictToCodeSystemsResponse"/>
+  <xs:complexType name="restrictToCodeSystemsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToCodeSystemVersionsResponse" type="tns:restrictToCodeSystemVersionsResponse"/>
+  <xs:complexType name="restrictToCodeSystemVersionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSetsResponse" type="tns:restrictToValueSetsResponse"/>
+  <xs:complexType name="restrictToValueSetsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToValueSetDefinitionsResponse" type="tns:restrictToValueSetDefinitionsResponse"/>
+  <xs:complexType name="restrictToValueSetDefinitionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictToEntitiesResponse" type="tns:restrictToEntitiesResponse"/>
+  <xs:complexType name="restrictToEntitiesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolve" type="tns:resolve"/>
+  <xs:complexType name="resolve">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="directory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveResponse" type="tns:resolveResponse"/>
+  <xs:complexType name="resolveResponse">
+    <xs:sequence>
+      <xs:element ref="valueSetDefinition:ValueSetDefinitionDirectory"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrict" type="tns:restrict"/>
+  <xs:complexType name="restrict">
+    <xs:sequence>
+      <xs:element name="directory" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element name="filter" type="core:Filter"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="restrictResponse" type="tns:restrictResponse"/>
+  <xs:complexType name="restrictResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="difference" type="tns:restrict"/>
+  <xs:complexType name="difference">
+    <xs:sequence>
+      <xs:element name="initialSet" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element name="elementsToRemove" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="differenceResponse" type="tns:differenceResponse"/>
+  <xs:complexType name="differenceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="union" type="tns:union"/>
+  <xs:complexType name="union">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element name="directory2" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="unionResponse" type="tns:unionResponse"/>
+  <xs:complexType name="unionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="intersect" type="tns:intersect"/>
+  <xs:complexType name="intersect">
+    <xs:sequence>
+      <xs:element name="directory1" type="core:ValueSetDefinitionDirectoryURI"/>
+      <xs:element name="directory2" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="intersectResponse" type="tns:intersectResponse"/>
+  <xs:complexType name="intersectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:ValueSetDefinitionDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

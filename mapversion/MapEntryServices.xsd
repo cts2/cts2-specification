@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	xmlns:mapversion="http://schema.omg.org/spec/CTS2/1.0/MapVersion"
+	xmlns="http://schema.omg.org/spec/CTS2/1.0/MapEntryServices"
+	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/MapEntryServices"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core"	schemaLocation="../core/Core.xsd" />
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/MapVersion" schemaLocation="MapVersion.xsd" />
+	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+
+	<xs:element name="MapEntryReadService" type="MapEntryReadService" />
+	<xs:complexType name="MapEntryReadService">
+		<xs:annotation>
+			<xs:documentation>A service providing direct access to entries in map
+				versions.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="MapEntryQueryService" type="MapEntryQueryService" />
+	<xs:complexType name="MapEntryQueryService">
+		<xs:annotation>
+			<xs:documentation>Services that allow the filtering and query of
+				entries in a MapVersion. These services allow the filtering of
+				entries by rule and target content.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:sequence />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="MapEntryHistoryService" type="MapEntryHistoryService" />
+	<xs:complexType name="MapEntryHistoryService">
+		<xs:annotation>
+			<xs:documentation>A service that allows the evolution of a map entry
+				to be retrieved and viewed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="MapTargetRequest" type="MapTargetRequest" />
+	<xs:complexType name="MapTargetRequest">
+		<xs:annotation>
+			<xs:documentation>A set of parameters that are used to create or
+				update a map target</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="updatedCorrelation" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="correlation" type="core:MapCorrelationReference"
+							minOccurs="0" maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>the name or URI of a correlation factor
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedExternalEntryId" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="externalEntryId" type="core:String"
+							minOccurs="0" maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>an external identifier assigned to this target
+									entry by an outside body</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedMapRule" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="mapRule" type="mapversion:MapRule" minOccurs="0"
+							maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>the map rule for the target. If omitted, the rule
+									always evaluates to TRUE</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedMapTo" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="mapTo" type="coreservice:EntityNameOrURI" minOccurs="0"
+							maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>the entity name or URI to map to
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedTargetDescription" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="targetDescription" type="core:OpaqueData"
+							minOccurs="0" maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>the description of the rule and/or target
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedTargetExpression" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="targetExpression" type="core:EntityExpression"
+							minOccurs="0" maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>an expression that, when evaluated, produces a
+									complex target</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="UpdateMapEntryRequest" type="UpdateMapEntryRequest" />
+	<xs:complexType name="UpdateMapEntryRequest">
+		<xs:annotation>
+			<xs:documentation>The set of parameters that can be updated in a map
+				entry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="updatedProcessingRule" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="processingRule" type="mapversion:MapProcessingRule"
+							minOccurs="1" maxOccurs="1">
+							<xs:annotation>
+								<xs:documentation>the rule for processing the member sets
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="updatedSource" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="source" type="core:SourceAndRoleReference" minOccurs="0"
+							maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>a source and the role they played in creating the
+									entry</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="MapEntryMaintenanceService" type="MapEntryMaintenanceService" />
+	<xs:complexType name="MapEntryMaintenanceService">
+		<xs:annotation>
+			<xs:documentation>A service that allows the creation, update and
+				deletion of MapEntries within a MapVersion</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="MapTargetListList" type="MapTargetListList" />
+	<xs:complexType name="MapTargetListList">
+		<xs:annotation>
+			<xs:documentation>A list of map target lists, one per input entity
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="MapTargetList" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="MapTargetList" type="MapTargetList" />
+	<xs:complexType name="MapTargetList">
+		<xs:annotation>
+			<xs:documentation>An ordered list of map targets </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="mapversion:MapTarget" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="MapResolutionService" type="MapResolutionService" />
+	<xs:complexType name="MapResolutionService">
+		<xs:annotation>
+			<xs:documentation>A service that interprets and resolves maps
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseService">
+				<xs:sequence />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

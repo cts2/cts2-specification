@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:associationService="http://schema.omg.org/spec/CTS2/1.0/AssociationServices"
+  xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
+  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ReasoningServices"
+  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ReasoningServices">
+  
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Association" schemaLocation="../association/Association.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" schemaLocation="../association/AssociationServices.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  
+      <xs:element name="classify" type="tns:classify"/>
+      <xs:complexType name="classify">
+        <xs:sequence>
+          <xs:element minOccurs="1" ref="association:AssociationList"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="core:CodeSystemVersionReference"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+        </xs:sequence>
+      </xs:complexType>
+  
+      <xs:element name="classifyResponse" type="tns:classifyResponse"/>
+      <xs:complexType name="classifyResponse">
+        <xs:sequence>
+          <xs:element ref="association:AssociationList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="resolve" type="tns:resolve"/>
+      <xs:complexType name="resolve">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="resolveResponse" type="tns:resolveResponse"/>
+      <xs:complexType name="resolveResponse">
+        <xs:sequence>
+          <xs:element ref="association:AssociationDirectory"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetExpression" type="tns:restrictToTargetExpression"/>
+      <xs:complexType name="restrictToTargetExpression">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="target" type="core:EntityExpression"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetExpressionResponse" type="tns:restrictToTargetExpressionResponse"/>
+      <xs:complexType name="restrictToTargetExpressionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToCodeSystemVersion" type="tns:restrictToCodeSystemVersion"/>
+      <xs:complexType name="restrictToCodeSystemVersion">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToCodeSystemVersionResponse" type="tns:restrictToCodeSystemVersionResponse"/>
+      <xs:complexType name="restrictToCodeSystemVersionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="count" type="tns:count"/>
+      <xs:complexType name="count">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+          <xs:element minOccurs="0" name="timeout" type="core:NaturalNumber"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="countResponse" type="tns:countResponse"/>
+      <xs:complexType name="countResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:NaturalNumber"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="union" type="tns:union"/>
+      <xs:complexType name="union">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory1" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="directory2" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="unionResponse" type="tns:unionResponse"/>
+      <xs:complexType name="unionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="intersect" type="tns:intersect"/>
+      <xs:complexType name="intersect">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory1" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="directory2" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="intersectResponse" type="tns:intersectResponse"/>
+      <xs:complexType name="intersectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="difference" type="tns:restrict"/>
+      <xs:complexType name="difference">
+        <xs:sequence>
+          <xs:element name="initialSet" type="core:AssociationDirectoryURI"/>
+          <xs:element name="elementsToRemove" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="differenceResponse" type="tns:differenceResponse"/>
+      <xs:complexType name="differenceResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="resolveAsList" type="tns:resolveAsList"/>
+      <xs:complexType name="resolveAsList">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="resolveAsListResponse" type="tns:resolveAsListResponse"/>
+      <xs:complexType name="resolveAsListResponse">
+        <xs:sequence>
+          <xs:element ref="association:AssociationList"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getTargetEntities" type="tns:getTargetEntities"/>
+      <xs:complexType name="getTargetEntities">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getTargetEntitiesResponse" type="tns:getTargetEntitiesResponse"/>
+      <xs:complexType name="getTargetEntitiesResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:EntityDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getSourceEntities" type="tns:getSourceEntities"/>
+      <xs:complexType name="getSourceEntities">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getSourceEntitiesResponse" type="tns:getSourceEntitiesResponse"/>
+      <xs:complexType name="getSourceEntitiesResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:EntityDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToSourceEntity" type="tns:restrictToSourceEntity"/>
+      <xs:complexType name="restrictToSourceEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="sourceEntity" type="coreService:EntityNameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToSourceEntityResponse" type="tns:restrictToSourceEntityResponse"/>
+      <xs:complexType name="restrictToSourceEntityResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToPredicate" type="tns:restrictToPredicate"/>
+      <xs:complexType name="restrictToPredicate">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="predicate" type="coreService:EntityNameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToPredicateResponse" type="tns:restrictToPredicateResponse"/>
+      <xs:complexType name="restrictToPredicateResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getAllSourceAndTargetEntities" type="tns:getAllSourceAndTargetEntities"/>
+      <xs:complexType name="getAllSourceAndTargetEntities">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:EntityDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getAllSourceAndTargetEntitiesResponse" type="tns:getAllSourceAndTargetEntitiesResponse"/>
+      <xs:complexType name="getAllSourceAndTargetEntitiesResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:EntityDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToSourceOrTargetEntity" type="tns:restrictToSourceOrTargetEntity"/>
+      <xs:complexType name="restrictToSourceOrTargetEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="entity" type="coreService:EntityNameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToSourceOrTargetEntityResponse" type="tns:restrictToSourceOrTargetEntityResponse"/>
+      <xs:complexType name="restrictToSourceOrTargetEntityResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrict" type="tns:restrict"/>
+      <xs:complexType name="restrict">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:DirectoryURI"/>
+          <xs:element minOccurs="1" name="filter" type="core:Filter"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictResponse" type="tns:restrictResponse"/>
+      <xs:complexType name="restrictResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetLiteral" type="tns:restrictToTargetLiteral"/>
+      <xs:complexType name="restrictToTargetLiteral">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="target" type="core:String"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetLiteralResponse" type="tns:restrictToTargetLiteralResponse"/>
+      <xs:complexType name="restrictToTargetLiteralResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getPredicates" type="tns:getPredicates"/>
+      <xs:complexType name="getPredicates">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+          <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getPredicatesResponse" type="tns:getPredicatesResponse"/>
+      <xs:complexType name="getPredicatesResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:EntityDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetEntity" type="tns:restrictToTargetEntity"/>
+      <xs:complexType name="restrictToTargetEntity">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="directory" type="core:AssociationDirectoryURI"/>
+          <xs:element minOccurs="1" name="target" type="coreService:EntityNameOrURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="restrictToTargetEntityResponse" type="tns:restrictToTargetEntityResponse"/>
+      <xs:complexType name="restrictToTargetEntityResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getAllAssociations" type="tns:getAllAssociations"/>
+      <xs:complexType name="getAllAssociations">
+        <xs:sequence/>
+      </xs:complexType>
+
+      <xs:element name="getAllAssociationsResponse" type="tns:getAllAssociationsResponse"/>
+      <xs:complexType name="getAllAssociationsResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:AssociationDirectoryURI"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getKnownCodeSystem" type="tns:getKnownCodeSystem"/>
+      <xs:complexType name="getKnownCodeSystem">
+        <xs:sequence/>
+      </xs:complexType>
+
+      <xs:element name="getKnownCodeSystemResponse" type="tns:getKnownCodeSystemResponse"/>
+      <xs:complexType name="getKnownCodeSystemResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:CodeSystemReference"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:element name="getKnownCodeSystemVersion" type="tns:getKnownCodeSystemVersion"/>
+      <xs:complexType name="getKnownCodeSystemVersion">
+        <xs:sequence/>
+      </xs:complexType>
+
+      <xs:element name="getKnownCodeSystemVersionResponse" type="tns:getKnownCodeSystemVersionResponse"/>
+      <xs:complexType name="getKnownCodeSystemVersionResponse">
+        <xs:sequence>
+          <xs:element name="return" type="core:CodeSystemVersionReference"/>
+        </xs:sequence>
+      </xs:complexType>
+
+</xs:schema>

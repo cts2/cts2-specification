@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+		xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+		xmlns="http://schema.omg.org/spec/CTS2/1.0/MapServices"
+		targetNamespace="http://schema.omg.org/spec/CTS2/1.0/MapServices" elementFormDefault="qualified">
+		<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+		<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+		
+	<xs:element name="MapCatalogHistoryService" type="MapCatalogHistoryService"/>
+	<xs:complexType name="MapCatalogHistoryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:HistoryService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="MapCatalogMaintenanceService" type="MapCatalogMaintenanceService"/>
+	<xs:complexType name="MapCatalogMaintenanceService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseMaintenanceService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		
+	<xs:element name="UpdateMapCatalogRequest" type="UpdateMapCatalogRequest"/>
+	<xs:complexType name="UpdateMapCatalogRequest">
+		<xs:complexContent>
+			<xs:extension base="coreservice:UpdateAbstractResourceDescription">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		
+	<xs:element name="MapCatalogQueryService" type="MapCatalogQueryService"/>
+	<xs:complexType name="MapCatalogQueryService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseQueryService">
+				<xs:attribute name="allMaps" type="core:MapCatalogEntryDirectoryURI" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		
+	<xs:element name="MapCatalogReadService" type="MapCatalogReadService"/>
+	<xs:complexType name="MapCatalogReadService">
+		<xs:complexContent>
+			<xs:extension base="coreservice:BaseReadService">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>
