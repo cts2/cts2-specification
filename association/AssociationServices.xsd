@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-	xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
-	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
-	xmlns="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" 
-	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/AssociationServices" elementFormDefault="qualified">
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Association" schemaLocation="Association.xsd"/>
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+	xmlns:association="http://www.omg.org/spec/CTS2/1.1/Association"
+	xmlns:coreservice="http://www.omg.org/spec/CTS2/1.1/CoreService"
+	xmlns="http://www.omg.org/spec/CTS2/1.1/AssociationServices" 
+	targetNamespace="http://www.omg.org/spec/CTS2/1.1/AssociationServices" elementFormDefault="qualified">
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Association" schemaLocation="Association.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd" />
 	
 	<xs:element name="BaseAssociationService" type="BaseAssociationService"/>
 	<xs:complexType name="BaseAssociationService">

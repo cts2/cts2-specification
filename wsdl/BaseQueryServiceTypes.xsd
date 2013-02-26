@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
-	xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
-	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-	xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
+	xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
+	xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+	xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
 	elementFormDefault="qualified">
 
-	<import namespace="http://schema.omg.org/spec/CTS2/1.0/Core"
+	<import namespace="http://www.omg.org/spec/CTS2/1.1/Core"
 		schemaLocation="../core/Core.xsd" />
-	<import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+	<import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService"
 		schemaLocation="../core/CoreService.xsd" />
 
 	<element name="getSupportedMatchAlgorithm" type="tns:getSupportedMatchAlgorithm" />

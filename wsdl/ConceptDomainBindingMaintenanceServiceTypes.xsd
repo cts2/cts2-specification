@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingMaintenanceServices"
-  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:conceptDomainBinding="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding"
-  xmlns:conceptDomainBindingService="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBindingServices"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingMaintenanceServices"
+  xmlns:updates="http://www.omg.org/spec/CTS2/1.1/Updates"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:conceptDomainBinding="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding"
+  xmlns:conceptDomainBindingService="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBindingServices"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingMaintenanceServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingMaintenanceServices">
   
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding" schemaLocation="../conceptdomainbinding/ConceptDomainBinding.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBindingServices" schemaLocation="../conceptdomainbinding/ConceptDomainBindingServices.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding" schemaLocation="../conceptdomainbinding/ConceptDomainBinding.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBindingServices" schemaLocation="../conceptdomainbinding/ConceptDomainBindingServices.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="putChangeSet" type="tns:putChangeSet"/>
   <xs:complexType name="putChangeSet">

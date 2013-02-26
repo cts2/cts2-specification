@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogHistoryServices"
-  xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:codeSystemVersion="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogHistoryServices"
+  xmlns:updates="http://www.omg.org/spec/CTS2/1.1/Updates"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:codeSystemVersion="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogHistoryServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogHistoryServices">
   
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Updates" schemaLocation="../updates/Updates.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion" schemaLocation="../codesystemversion/CodeSystemVersion.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes" schemaLocation="HistoryServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Updates" schemaLocation="../updates/Updates.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion" schemaLocation="../codesystemversion/CodeSystemVersion.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServiceTypes" schemaLocation="HistoryServiceTypes.xsd"/>
     
   <!-- BaseQueryService Types -->
   <xs:element name="count" type="tns:count"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain" xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core" targetNamespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.omg.org/spec/CTS2/1.1/ConceptDomain" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" targetNamespace="http://www.omg.org/spec/CTS2/1.1/ConceptDomain"
 	elementFormDefault="qualified">
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
 
 	<!-- ====================================================
         ConceptDomainCatalogEntry

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingQueryServices"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:conceptDomainBinding="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingQueryServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:conceptDomainBinding="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainBindingQueryServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingQueryServices">
   
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding" schemaLocation="../conceptdomainbinding/ConceptDomainBinding.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding" schemaLocation="../conceptdomainbinding/ConceptDomainBinding.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
   
   <xs:element name="getConceptDomainBindings" type="tns:getConceptDomainBindings"/>
   <xs:complexType name="getConceptDomainBindings">

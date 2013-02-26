@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseImportServices"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseImportServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
   
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="validate" type="tns:validate"/>
   <xs:complexType name="validate">

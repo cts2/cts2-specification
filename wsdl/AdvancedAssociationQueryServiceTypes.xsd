@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/AdvancedAssociationQueryServices"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
-  xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/AdvancedAssociationQueryServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+  xmlns:association="http://www.omg.org/spec/CTS2/1.1/Association"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/AdvancedAssociationQueryServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AdvancedAssociationQueryServices">
   
-      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Association" schemaLocation="../association/Association.xsd"/>
-      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-      <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Association" schemaLocation="../association/Association.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
   
       <xs:element name="resolve" type="tns:resolve"/>
       <xs:complexType name="resolve">

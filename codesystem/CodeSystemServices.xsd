@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-	xmlns:codesystem="http://schema.omg.org/spec/CTS2/1.0/CodeSystem"
-	xmlns:coreservice="http://schema.omg.org/spec/CTS2/1.0/CoreService"
-	xmlns="http://schema.omg.org/spec/CTS2/1.0/CodeSystemServices"
-	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystemServices" elementFormDefault="qualified">
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CodeSystem" schemaLocation="CodeSystem.xsd"/>
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd" />
+	xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+	xmlns:codesystem="http://www.omg.org/spec/CTS2/1.1/CodeSystem"
+	xmlns:coreservice="http://www.omg.org/spec/CTS2/1.1/CoreService"
+	xmlns="http://www.omg.org/spec/CTS2/1.1/CodeSystemServices"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.1/CodeSystemServices" elementFormDefault="qualified">
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CodeSystem" schemaLocation="CodeSystem.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd" />
 	
 	<xs:element name="CodeSystemHistoryService" type="CodeSystemHistoryService"/>
 	<xs:complexType name="CodeSystemHistoryService">

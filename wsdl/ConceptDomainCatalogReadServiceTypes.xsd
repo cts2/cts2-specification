@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-  xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
-  xmlns:conceptDomain="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain"
-  xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainCatalogReadServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+  xmlns:conceptDomain="http://www.omg.org/spec/CTS2/1.1/ConceptDomain"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ConceptDomainCatalogReadServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadServices">
   
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain" schemaLocation="../conceptdomain/ConceptDomain.xsd"/>
-  <xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ConceptDomain" schemaLocation="../conceptdomain/ConceptDomain.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="existsDefiningEntity" type="tns:existsDefiningEntity"/>
   <xs:complexType name="existsDefiningEntity">

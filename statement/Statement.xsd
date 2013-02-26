@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stmt="http://schema.omg.org/spec/CTS2/1.0/Statement" xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core" xmlns="http://schema.omg.org/spec/CTS2/1.0/Statement"
-	targetNamespace="http://schema.omg.org/spec/CTS2/1.0/Statement" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stmt="http://www.omg.org/spec/CTS2/1.1/Statement" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns="http://www.omg.org/spec/CTS2/1.1/Statement"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.1/Statement" elementFormDefault="qualified">
 
-	<xs:import namespace="http://schema.omg.org/spec/CTS2/1.0/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
 
 	<xs:element name="Statement" type="Statement">
 		<xs:annotation>
