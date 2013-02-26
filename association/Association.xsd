@@ -319,6 +319,11 @@
 							a nested BNODE will be represented by a different <i>GraphNode</i>.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
+				<xs:attribute name="depth" type="core:NaturalNumber" use="optional">
+					<xs:annotation>
+						<xs:documentation>The one based distance in hops between the nodeEntity and the graph focus.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
