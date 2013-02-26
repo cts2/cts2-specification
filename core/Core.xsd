@@ -1808,7 +1808,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="documentURI" type="DocumentURI" use="required">
+				<xs:attribute name="documentURI" type="DocumentURI" use="optional">
 					<xs:annotation>
 						<xs:documentation>a URI that identifies the specific version, language and notation of the <i>about</i> resource</xs:documentation>
 					</xs:annotation>
@@ -1853,7 +1853,7 @@
 		<xs:complexContent>
 			<xs:extension base="ResourceDescription">
 				<xs:sequence>
-					<xs:element name="sourceAndNotation" type="SourceAndNotation" minOccurs="1">
+					<xs:element name="sourceAndNotation" type="SourceAndNotation" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>a description of where the (or a) source of the version may be found, what format and language it is available in, etc. </xs:documentation>
 						</xs:annotation>
@@ -1879,7 +1879,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="documentURI" type="DocumentURI" use="required">
+				<xs:attribute name="documentURI" type="DocumentURI" use="optional">
 					<xs:annotation>
 						<xs:documentation>a URI that identifies the specific version, language and notation of the <i>about</i> resource. This URI needs to be constructed in such a way that, if necessary, it will be possible to
 							differentiate resource versions that were loaded from different document syntaxes. As an example, if an image of a the wine ontology was loaded from a resource that was in Manchester Syntax, it should be given a
