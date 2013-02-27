@@ -294,7 +294,7 @@
 		<xs:complexContent>
 			<xs:extension base="AssociationDirectoryEntry">
 				<xs:sequence>
-					<xs:element name="nodeEntity" type="core:EntitySynopsis" minOccurs="1">
+					<xs:element name="nodeEntity" type="core:URIAndEntityName" minOccurs="1">
 						<xs:annotation>
 							<xs:documentation>the URI, name and a designation for the <i>EntityReference</i> represented by this node. <i>nodeEntity</i> represents the association <i>subject</i> when <i>direction</i> is
 									<i>SOURCE_TO_TARGET</i> and (one of the) targets when <i>direction</i> is <i>TARGET_TO_SOURCE.</i></xs:documentation>

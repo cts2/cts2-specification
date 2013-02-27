@@ -665,23 +665,6 @@
 	<!-- ===============================================
 		EntityReference
 		=============================================== -->
-	<xs:complexType name="EntitySynopsis">
-		<xs:annotation>
-			<xs:documentation>The URI, local namespace and name and optional designation of an <i>EntityDescription</i>. <i>EntitySynopsis</i> represents entities when they are referenced from the context of a single code system, such as
-				the resolution of value sets and association graphs.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="URIAndEntityName">
-				<xs:sequence>
-					<xs:element name="designation" type="String" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>a designation considered appropriate for the entity in the specific context of use</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 
 	<xs:complexType name="EntityReference">
 		<xs:annotation>
@@ -825,7 +808,7 @@
 
 	<xs:complexType name="URIAndEntityName">
 		<xs:annotation>
-			<xs:documentation>The combination of a URI and/or and ScopedEntityName. </xs:documentation>
+			<xs:documentation>The combination of a URI and an optional ScopedEntityName and an optional designation for a resource. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="namespace" type="NamespaceIdentifier" minOccurs="0">
@@ -833,9 +816,14 @@
 					<xs:documentation>an identifier that references a unique namespace URI within the context of the service</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="name" type="String" minOccurs="0">
+			<xs:element name="name" type="String" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>the local entity name within the context of the namespace. What is chosen for the entity name is service specific</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="designation" type="String" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>a designation considered appropriate for the entity in the specific context of use</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
