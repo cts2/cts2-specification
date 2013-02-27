@@ -57,7 +57,7 @@
 							<xs:documentation>references to the realm, context or other external factor that determines the applicability of this particular map version</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="versionTag" type="core:MapVersionReference" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="versionTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>a version tag assigned to this <i>MapVersion</i> instance by the implementing service</xs:documentation>
 						</xs:annotation>
