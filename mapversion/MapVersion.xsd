@@ -124,7 +124,7 @@
 							<xs:documentation>a reference to the map that this is a version of</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="versionTag" type="core:MapVersionReference" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="versionTag" type="core:VersionTagReference" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>a reference to a version tag assigned to this entry by the implementing service</xs:documentation>
 						</xs:annotation>
