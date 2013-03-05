@@ -29,6 +29,11 @@
 							<xs:documentation>a reference to the definition associated with the CURRENT tag, if any </xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="currentResolution" type="core:RenderingURI" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>a URI that resolves to the resolution of this value set using the CURRENT tag for both the definition and the code system versions</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 				<xs:attribute name="valueSetName" type="core:ValueSetName" use="required">
 					<xs:annotation>
