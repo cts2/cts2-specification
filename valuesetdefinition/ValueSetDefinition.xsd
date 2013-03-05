@@ -413,7 +413,7 @@
 							CTS<sub>2</sub> service instance that contains all of the necessary definitions and code system versions.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="member" type="core:URIAndEntityName" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="entry" type="core:URIAndEntityName" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>a synopsis of the <i>EntityDescription</i> that has been determined to be a member of the value set named in <i>resolutionInfo</i> according to the stated criteria or "bindings"</xs:documentation>
 				</xs:annotation>
