@@ -37,6 +37,18 @@
 							<xs:documentation>the purpose for which the ontology was originally designed</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="hasOntologyLanguage" type="core:OntologyLanguageReference" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the formal ontology language</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="includes" type="core:CodeSystemReference" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>a reference to an external code system that is included as a component of the referenced code system. The Wine Ontology,
+								as an example, includes the Food Ontology as one of its components.  Similarly, the US Edition of SNOMED-CT includes the international edition.					
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="versions" type="core:CodeSystemVersionCatalogEntryDirectoryURI" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>a <i>DirectoryURI</i> that references the known versions of this code system. </xs:documentation>
