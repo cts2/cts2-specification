@@ -816,12 +816,12 @@
 					<xs:documentation>an identifier that references a unique namespace URI within the context of the service</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="name" type="String" minOccurs="0" maxOccurs="1">
+			<xs:element name="name" type="String" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>the local entity name within the context of the namespace. What is chosen for the entity name is service specific</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="designation" type="String" minOccurs="0" maxOccurs="1">
+			<xs:element name="designation" type="String" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>a designation considered appropriate for the entity in the specific context of use</xs:documentation>
 				</xs:annotation>
