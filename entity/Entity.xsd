@@ -126,6 +126,12 @@
 						example, some of the Open Biomedical Ontologies (OBO) use a mixture of subClassOf and partOf relationships. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="parents" type="core:EntityDirectoryURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>a <i>DirectoryURI</i> that resolves to the list of direct "parents" asserted by <i>describingCodeSystemVersion</i>. This returns the 
+					<i>parent</i> elements above.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ancestors" type="core:EntityDirectoryURI" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>a <i>DirectoryURI</i> that resolves to the transitive closure of the "parents" relationship(s). The primary purpose for this attribute is to provide a handle for subsumption queries. As an example, to
