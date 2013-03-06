@@ -14,24 +14,12 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="exceptionType" type="ExceptionType"
-				minOccurs="1" maxOccurs="1" />
 			<xs:element name="message" type="core:OpaqueData"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="severity" type="coreService:LoggingLevel"
 				minOccurs="1" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
-
-	<xs:simpleType name="ExceptionType">
-		<xs:restriction base="core:Enumeration">
-			<xs:enumeration value="INVALID_SERVICE_INPUT" />
-			<xs:enumeration value="INVALID_SORT_CRITERION" />
-			<xs:enumeration value="INVALID_QUERY_CONTROL" />
-			<xs:enumeration value="INVALID_URI_RESOLUTION" />
-			<xs:enumeration value="INVALID_READ_CONTEXT" />
-		</xs:restriction>
-	</xs:simpleType>
 
 	<!-- Exception Model (Core/InterfaceElements/InterfaceElementExceptions) -->
 	<xs:element name="UnknownValueSet">
