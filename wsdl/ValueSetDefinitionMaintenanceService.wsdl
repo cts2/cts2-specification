@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<wsdl:definitions xmlns:baseMaintenanceService="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseMaintenanceServices"
-xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
-xmlns:updateServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices"
+<wsdl:definitions xmlns:baseMaintenanceService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseMaintenanceServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ValueSetDefinitionMaintenanceService"
-targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/ValueSetDefinitionMaintenanceServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices"
       schemaLocation="ValueSetDefinitionMaintenanceServiceTypes.xsd" />
     </xsd:schema>
 

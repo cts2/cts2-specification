@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/MapVersionMaintenanceServices"
-xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
-xmlns:updateServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/UpdateServices"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionMaintenanceServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
+xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="MapVersionMaintenanceService"
-targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/MapVersionMaintenanceServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionMaintenanceServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/MapVersionMaintenanceServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionMaintenanceServices"
       schemaLocation="MapVersionMaintenanceServiceTypes.xsd" />
     </xsd:schema>
 

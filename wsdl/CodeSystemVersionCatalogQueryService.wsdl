@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogQueryServices"
-xmlns:baseQueryService="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServices"
-xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogQueryServices"
+xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="CodeSystemVersionCatalogQueryService"
-targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogQueryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogQueryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/CodeSystemVersionCatalogQueryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogQueryServices"
       schemaLocation="CodeSystemVersionCatalogQueryServiceTypes.xsd" />
     </xsd:schema>
 
