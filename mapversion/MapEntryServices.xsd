@@ -187,19 +187,55 @@
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:element name="MapTargetListList" type="MapTargetListList" />
+	<xs:element name="MapTargetListListMsg" type="MapTargetListListMsg"/>
+	<xs:complexType name="MapTargetListListMsg">
+		<xs:annotation>
+			<xs:documentation>A list of map target lists, one per input entity
+			</xs:documentation>
+			<xs:appinfo>PSM</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="core:Message">
+				<xs:sequence>
+					<xs:element name="mapTargetListList" type="MapTargetListList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
 	<xs:complexType name="MapTargetListList">
 		<xs:annotation>
 			<xs:documentation>A list of map target lists, one per input entity
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="entry" type="MapTargetList" minOccurs="1"
-				maxOccurs="unbounded" />
+			<xs:element name="entry" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="MapTargetList">
+							<xs:attributeGroup ref="core:Ordered"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:element name="MapTargetList" type="MapTargetList" />
+	<xs:element name="MapTargetListMsg" type="MapTargetListMsg"/>
+	<xs:complexType name="MapTargetListMsg">
+		<xs:annotation>
+			<xs:documentation>An ordered list of map targets </xs:documentation>
+			<xs:appinfo>PSM</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="core:Message">
+				<xs:sequence>
+					<xs:element name="mapTargetList" type="MapTargetList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
 	<xs:complexType name="MapTargetList">
 		<xs:annotation>
 			<xs:documentation>An ordered list of map targets </xs:documentation>
