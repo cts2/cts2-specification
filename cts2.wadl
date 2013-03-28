@@ -1,58 +1,58 @@
 <?xml version="1.0"?>
 <application xmlns="http://wadl.dev.java.net/2009/02"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-xmlns:association="http://schema.omg.org/spec/CTS2/1.0/Association"
-xmlns:codeSystem="http://schema.omg.org/spec/CTS2/1.0/CodeSystem"
-xmlns:codeSystemService="http://schema.omg.org/spec/CTS2/1.0/CodeSystemServices"
-xmlns:codeSystemVersion="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion"
-xmlns:codeSystemVersionService="http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersionServices"
-xmlns:conceptDomain="http://schema.omg.org/spec/CTS2/1.0/ConceptDomain"
-xmlns:conceptDomainService="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainServices"
-xmlns:conceptDomainBinding="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding"
-xmlns:conceptDomainBindingService="http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBindingServices"
-xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
-xmlns:coreService="http://schema.omg.org/spec/CTS2/1.0/CoreService"
-xmlns:exceptions="http://schema.omg.org/spec/CTS2/1.0/Exceptions"
-xmlns:mapEntryService="http://schema.omg.org/spec/CTS2/1.0/MapEntryServices"
-xmlns:entity="http://schema.omg.org/spec/CTS2/1.0/Entity"
-xmlns:entityService="http://schema.omg.org/spec/CTS2/1.0/EntityDescriptionServices"
-xmlns:associationService="http://schema.omg.org/spec/CTS2/1.0/AssociationServices"
-xmlns:map="http://schema.omg.org/spec/CTS2/1.0/MapCatalog"
-xmlns:mapService="http://schema.omg.org/spec/CTS2/1.0/MapServices"
-xmlns:mapVersion="http://schema.omg.org/spec/CTS2/1.0/MapVersion"
-xmlns:mapVersionService="http://schema.omg.org/spec/CTS2/1.0/MapVersionServices"
-xmlns:statement="http://schema.omg.org/spec/CTS2/1.0/Statement"
-xmlns:statementService="http://schema.omg.org/spec/CTS2/1.0/StatementServices"
-xmlns:updates="http://schema.omg.org/spec/CTS2/1.0/Updates"
-xmlns:valueSet="http://schema.omg.org/spec/CTS2/1.0/ValueSet"
-xmlns:valueSetService="http://schema.omg.org/spec/CTS2/1.0/ValueSetServices"
-xmlns:valueSetDefinition="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition"
-xmlns:valueSetDefinitionService="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices"
+xmlns:association="http://www.omg.org/spec/CTS2/1.1/Association"
+xmlns:codeSystem="http://www.omg.org/spec/CTS2/1.1/CodeSystem"
+xmlns:codeSystemService="http://www.omg.org/spec/CTS2/1.1/CodeSystemServices"
+xmlns:codeSystemVersion="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion"
+xmlns:codeSystemVersionService="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersionServices"
+xmlns:conceptDomain="http://www.omg.org/spec/CTS2/1.1/ConceptDomain"
+xmlns:conceptDomainService="http://www.omg.org/spec/CTS2/1.1/ConceptDomainServices"
+xmlns:conceptDomainBinding="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding"
+xmlns:conceptDomainBindingService="http://www.omg.org/spec/CTS2/1.1/ConceptDomainBindingServices"
+xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:mapEntryService="http://www.omg.org/spec/CTS2/1.1/MapEntryServices"
+xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+xmlns:entityService="http://www.omg.org/spec/CTS2/1.1/EntityDescriptionServices"
+xmlns:associationService="http://www.omg.org/spec/CTS2/1.1/AssociationServices"
+xmlns:map="http://www.omg.org/spec/CTS2/1.1/MapCatalog"
+xmlns:mapService="http://www.omg.org/spec/CTS2/1.1/MapServices"
+xmlns:mapVersion="http://www.omg.org/spec/CTS2/1.1/MapVersion"
+xmlns:mapVersionService="http://www.omg.org/spec/CTS2/1.1/MapVersionServices"
+xmlns:statement="http://www.omg.org/spec/CTS2/1.1/Statement"
+xmlns:statementService="http://www.omg.org/spec/CTS2/1.1/StatementServices"
+xmlns:updates="http://www.omg.org/spec/CTS2/1.1/Updates"
+xmlns:valueSet="http://www.omg.org/spec/CTS2/1.1/ValueSet"
+xmlns:valueSetService="http://www.omg.org/spec/CTS2/1.1/ValueSetServices"
+xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+xmlns:valueSetDefinitionService="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices"
 xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submission/wadl/wadl.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Core core/Core.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/CodeSystem codesystem/CodeSystem.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/CodeSystemVersion codesystemversion/CodeSystemVersion.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Association association/Association.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Updates updates/Updates.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ConceptDomain conceptdomain/ConceptDomain.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ConceptDomainBinding conceptdomainbinding/ConceptDomainBinding.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/MapCatalog map/Map.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/MapVersion mapversion/MapVersion.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Statement statement/Statement.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Entity entity/Entity.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ValueSet valueset/ValueSet.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition valuesetdefinition/ValueSetDefinition.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/EntityDescriptionServices entity/EntityDescriptionServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/AssociationServices association/AssociationServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/CoreService core/CoreService.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/Exceptions core/Exceptions.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/CodeSystemService codesystem/CodeSystemServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ValueSetServices valueset/ValueSetServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/MapServices map/MapServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/MapVersionServices mapversion/MapVersionServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/StatementServices statement/StatementServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ValueSetServices valueset/ValueSetServices.xsd 
-                    http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinitionServices valuesetdefinition/ValueSetDefinitionServices.xsd">
+                    http://www.omg.org/spec/CTS2/1.1/Core core/Core.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/CodeSystem codesystem/CodeSystem.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion codesystemversion/CodeSystemVersion.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/Association association/Association.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/Updates updates/Updates.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ConceptDomain conceptdomain/ConceptDomain.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ConceptDomainBinding conceptdomainbinding/ConceptDomainBinding.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/MapCatalog map/Map.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/MapVersion mapversion/MapVersion.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/Statement statement/Statement.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/Entity entity/Entity.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ValueSet valueset/ValueSet.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition valuesetdefinition/ValueSetDefinition.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/EntityDescriptionServices entity/EntityDescriptionServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/AssociationServices association/AssociationServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/CoreService core/CoreService.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/Exceptions core/Exceptions.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/CodeSystemService codesystem/CodeSystemServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ValueSetServices valueset/ValueSetServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/MapServices map/MapServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/MapVersionServices mapversion/MapVersionServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/StatementServices statement/StatementServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ValueSetServices valueset/ValueSetServices.xsd 
+                    http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices valuesetdefinition/ValueSetDefinitionServices.xsd">
 
   <doc title="CTS2 OMG&#169; REST Platform Specific Model">This document contains Representational
   State Transfer (REST) Bindings to the CTS2 OMG Specification. Certain patterns are used
@@ -31414,6 +31414,122 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </resource>
 
+		<resource path="mapentrybyuri">
+			<method name="GET">
+				<request>
+					<param name="uri" required="true" type="xsd:string" style="query">
+						<doc>the URI of the requested resource</doc>
+	
+					</param>
+	
+				</request>
+	
+			</method>
+	
+		</resource>
+		
+		  <resource path="resolution">
+              <method name="GET">
+                <doc title="MapResolutionService:resolve">Evaluate the supplied entity in the
+                context of the map version and return the resulting set of map targets and/or
+                exceptions.</doc>
+
+                <request>
+                  <param name="resolutioncontext" required="false" type="xsd:string"
+                  style="query" />
+				  <param name="entity" type="xsd:string" style="query" repeating="true">
+					<doc title="Restriction:restrictToEntities" />
+					<doc title="EntityNameOrURIList">A set of zero or more
+						&lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
+				  </param>
+                  <param name="list" required="false" type="xsd:boolean" style="query"
+                  default="false">
+                    <doc>whether to return the results in 'List' or 'Directory' format. 'true'
+                    indicates that results will be returned as a 'List.' 'false' indicates that
+                    results will be returned as a 'Directory'</doc>
+
+                  </param>
+
+                </request>
+
+                <response>
+                  <representation element="mapEntryService:MapTargetList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
+                    ordered list of map targets</doc>
+
+                  </representation>
+
+                  <representation element="mapEntryService:MapTargetListList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
+                    list of map target lists, one per input entity</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+              <method name="POST">
+                <doc title="MapResolutionService:resolve">Evaluate the supplied entity in the
+                context of the map version and return the resulting set of map targets and/or
+                exceptions.</doc>
+
+                <request>
+                  <param name="entity" type="xsd:string" style="query" repeating="true">
+					<doc title="Restriction:restrictToEntities" />
+					<doc title="EntityNameOrURIList">A set of zero or more
+						&lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
+				  </param>
+				  
+                  <param name="list" required="false" type="xsd:boolean" style="query"
+                  default="false">
+                    <doc>whether to return the results in 'List' or 'Directory' format. 'true'
+                    indicates that results will be returned as a 'List.' 'false' indicates that
+                    results will be returned as a 'Directory'</doc>
+
+                  </param>
+
+                  <representation element="core:OpaqueData">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">
+                    Opaque data is the equivalent of an ASN.1 External Type \footnote{ISO/IEC
+                    8824-1:2008 Information technology -- Abstract Syntax Notation One (ASN.1):
+                    Specification of basic notion. Clause 37 - Notation for the external type} or
+                    the XML Schema &lt;a
+                    href="$inet://http://www.w3.org/TR/xmlschema-0/\#anyType"&gt;&lt;font
+                    color="#0000ff"&gt;&lt;u&gt;anyType&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;. An
+                    &lt;i&gt;OpaqueData&lt;/i&gt; instance may represent text with an optional
+                    spoken or written language code or a formal structure such as embedded HTML,
+                    XML or MIME encoded data. When a formal structure is included, its type should
+                    be specified in the &lt;i&gt;format&lt;/i&gt; attribute and, when the type is
+                    an XML variant, the corresponding schema (or DTD) should be included in the
+                    &lt;i&gt;schema&lt;/i&gt; parameter. The &lt;i&gt;OpaqueData&lt;/i&gt; data
+                    type must be encoded in such a way that the content can be represented by a
+                    character string. Binary data is not permitted, although hyperlinks \emph{to}
+                    binary data are.</doc>
+
+                  </representation>
+
+                </request>
+
+                <response>
+                  <representation element="mapEntryService:MapTargetList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
+                    ordered list of map targets</doc>
+
+                  </representation>
+
+                  <representation element="mapEntryService:MapTargetListList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
+                    list of map target lists, one per input entity</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+            </resource>
+
           <resource path="entities">
             <doc>This URL Path represents: a &lt;i&gt;DirectoryURI &lt;/i&gt;that references a set
             of &lt;i&gt;EntityDescriptionDirectory&lt;/i&gt;</doc>
@@ -31934,6 +32050,20 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
       </resource>
 
+		<resource path="mapversionbyuri">
+			<method name="GET">
+				<request>
+					<param name="uri" required="true" type="xsd:string" style="query">
+						<doc>the URI of the requested resource</doc>
+	
+					</param>
+	
+				</request>
+	
+			</method>
+	
+		</resource>
+		
       <resource path="mapentry">
         <method name="POST">
           <doc title="MapEntryMaintenanceService:createMapEntry">Create a new map entry</doc>
