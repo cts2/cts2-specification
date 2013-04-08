@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseHistoryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
-xmlns:baseQueryServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseQueryServiceTypes"
-xmlns:tns="http://schema.omg.org/spec/CTS2/1.0/wsdl/StatementHistoryServices"
-xmlns:baseServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/BaseServiceTypes"
-xmlns:historyService="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServices"
-xmlns:historyServiceTypes="http://schema.omg.org/spec/CTS2/1.0/wsdl/HistoryServiceTypes"
+xmlns:baseHistoryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementHistoryServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:historyService="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServices"
+xmlns:historyServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="StatementHistoryService"
-targetNamespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/StatementHistoryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementHistoryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://schema.omg.org/spec/CTS2/1.0/wsdl/StatementHistoryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementHistoryServices"
       schemaLocation="StatementHistoryServiceTypes.xsd" />
     </xsd:schema>
 
