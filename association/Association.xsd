@@ -78,7 +78,7 @@
 						<xs:appinfo>PSM</xs:appinfo>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="derivation" type="AssociationDerivation" default="ASSERTED">
+				<xs:attribute name="derivation" type="AssociationDerivation" use="optional">
 					<xs:annotation>
 						<xs:documentation>how this association was derived. <i>ASSERTED </i>takes precedence over <i>DERIVED </i>, meaning that an assertion that is both asserted and derived is marked as asserted.</xs:documentation>
 					</xs:annotation>
@@ -185,7 +185,7 @@
 							identify which Association instance is being updated or deleted.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="derivation" type="AssociationDerivation" default="ASSERTED">
+				<xs:attribute name="derivation" type="AssociationDerivation" use="optional">
 					<xs:annotation>
 						<xs:documentation>how this association was derived. <i>ASSERTED </i>takes precedence over <i>DERIVED </i>, meaning that an assertion that is both asserted and derived is marked as asserted.</xs:documentation>
 					</xs:annotation>
