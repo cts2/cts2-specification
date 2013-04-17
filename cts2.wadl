@@ -34168,6 +34168,10 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                   &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
                   return block size it determines to be most appropriate.</doc>
 
+				  <doc>
+				  If ommitted, assume 'resolveAsCompleteSet' is requested and return the 
+				  ResolvedValueSet representation
+				  </doc>
                 </param>
 
                 <param name="timelimit" type="xsd:positiveInteger" style="query">
@@ -34212,8 +34216,19 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                   directory entries that allows iteration.</doc>
 
                 </representation>
-
               </response>
+              
+              <response>
+             	 <representation element="valueSetDefinition:ResolvedValueSetMsg">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The
+                    result of resolving a specific value set definition against a known set of code
+                    system versions. &lt;i&gt;ResolvedValueSet&lt;/i&gt; consists of a header that
+                    carries sufficient information that the resolution operation would be
+                    repeatable and the result of the resolution, which consists of set of
+                    EntityReferences.</doc>
+
+                  </representation>
+			  </response>
 
               <response status="400">
                 <representation element="exceptions:UnsupportedVersionTag">
@@ -34317,139 +34332,6 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
               </response>
 
             </method>
-
-            <resource path="complete">
-              <method name="GET">
-                <doc title="ResolvedValueSetResolution:resolveAsCompleteSet">Return the
-                &lt;i&gt;ResolvedValueSet&lt;/i&gt; in a form that can be transferred and loaded
-                into other systems.</doc>
-
-                <request>
-                  <param name="format" type="xsd:string" style="query">
-                    <doc title="QueryControl:format">the local identifier or URI of the return
-                    format for query results. This parameter defaults to the
-                    &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt;
-                    interface if not supplied.</doc>
-
-                  </param>
-
-                  <param name="timelimit" type="xsd:positiveInteger" style="query">
-                    <doc title="QueryControl:timeLimit">the maximum amount of time that may be
-                    taken to process a query before a time out exception occurs. If not present,
-                    the service determines the maximum query time out.</doc>
-
-                  </param>
-
-                </request>
-
-                <response>
-                  <representation element="valueSetDefinition:ResolvedValueSetMsg">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The
-                    result of resolving a specific value set definition against a known set of code
-                    system versions. &lt;i&gt;ResolvedValueSet&lt;/i&gt; consists of a header that
-                    carries sufficient information that the resolution operation would be
-                    repeatable and the result of the resolution, which consists of set of
-                    EntityReferences.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownValueSetDefinition">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;valueSetDefinition&lt;/i&gt; URI isn't recognized by the
-                    service.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownCodeSystemVersion">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The referenced
-                    &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedVersionTag">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;versionTag&lt;/i&gt;
-                    is not recognized by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedLanguage">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownChangeSet">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
-                    either not be read or located by the service.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:ChangeSetIsNotOpen">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
-                    is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedContext">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-                    &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="500">
-                  <representation element="exceptions:SortAndFilterException">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
-                    and/or filter parameters</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedFormat">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
-                    not supported by the service implementation</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="408">
-                  <representation element="exceptions:QueryTimeout">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
-                    was exceeded by the service.</doc>
-
-                  </representation>
-
-                </response>
-
-              </method>
-
-            </resource>
 
             <resource path="entities">
               <doc>This URL Path represents: a &lt;i&gt;DirectoryURI &lt;/i&gt;that references a
@@ -35334,6 +35216,11 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                   &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
                   &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
                   return block size it determines to be most appropriate.</doc>
+                  
+                  <doc>
+				  If ommitted, assume 'resolveAsCompleteSet' is requested and return the 
+				  ResolvedValueSet representation
+				  </doc>
 
                 </param>
 
@@ -35370,6 +35257,19 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                   directory entries that allows iteration.</doc>
 
                 </representation>
+
+              </response>
+              
+              <response>
+                  <representation element="valueSetDefinition:ResolvedValueSetMsg">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The
+                    result of resolving a specific value set definition against a known set of code
+                    system versions. &lt;i&gt;ResolvedValueSet&lt;/i&gt; consists of a header that
+                    carries sufficient information that the resolution operation would be
+                    repeatable and the result of the resolution, which consists of set of
+                    EntityReferences.</doc>
+
+                  </representation>
 
               </response>
 
@@ -35475,189 +35375,6 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
               </response>
 
             </method>
-
-            <resource path="complete">
-              <method name="GET">
-                <doc title="ValueSetDefinitionResolution:resolveAsCompleteSet">Resolve the value
-                set definition against the supplied code system versions and/or tags and return a
-                &lt;i&gt;ResolvedValueSet&lt;/i&gt; that can be transferred and loaded into other
-                systems.</doc>
-
-                <request>
-                  <param name="active" type="xsd:string" style="query">
-                    <doc title="ReadContext:active">determines whether the query only applies to
-                    only active or all entries.</doc>
-
-                  </param>
-
-                  <param name="changesetcontext" type="xsd:string" style="query">
-                    <doc title="ReadContext:changeSetContext">the URI of an open change set whose
-                    contents should be included in the results of the access request.
-                    &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support
-                    the &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is
-                    supplied in the service call.</doc>
-
-                  </param>
-
-                  <param name="referencelanguage" type="xsd:string" style="query">
-                    <doc title="ReadContext:referenceLanguage">the spoken or written language that
-                    should be used for the results of the inquiry, where appropriate. Should
-                    default to the default reference language of the service if omitted.</doc>
-
-                  </param>
-
-                  <param name="referencetime" type="xsd:dateTime" style="query">
-                    <doc title="ReadContext:referenceTime">the contextual date and time of the
-                    query. &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that
-                    support the &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted,
-                    &lt;i&gt;referenceTime&lt;/i&gt; defaults to the current system date and
-                    time.</doc>
-
-                  </param>
-
-                  <param name="format" type="xsd:string" style="query">
-                    <doc title="QueryControl:format">the local identifier or URI of the return
-                    format for query results. This parameter defaults to the
-                    &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt;
-                    interface if not supplied.</doc>
-
-                  </param>
-
-                  <param name="timelimit" type="xsd:positiveInteger" style="query">
-                    <doc title="QueryControl:timeLimit">the maximum amount of time that may be
-                    taken to process a query before a time out exception occurs. If not present,
-                    the service determines the maximum query time out.</doc>
-
-                  </param>
-
-                  <param name="codesystemversion" type="xsd:string" repeating="true" style="query">
-                    <doc title="NameOrURI">Carries either a local identifier
-                    (&lt;i&gt;name&lt;/i&gt;) or a URI (&lt;i&gt;uri&lt;/i&gt;) that references a
-                    resource in the service. &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input
-                    parameter and its type is always defined by the usage context. Note that
-                    service calls that use the &lt;i&gt;name&lt;/i&gt; option may not be portable
-                    across implementations, as there is no guarantee that any two CTS2 service
-                    implementations will use the same local identifiers for the same
-                    resources.</doc>
-
-                  </param>
-
-                  <param name="tag" type="xsd:string" repeating="true" style="query">
-                    <doc title="VersionTagReference">a reference to a tag that can be assigned to
-                    versionable resources within the context of a service implementation</doc>
-
-                  </param>
-
-                </request>
-
-                <response>
-                  <representation element="valueSetDefinition:ResolvedValueSetMsg">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The
-                    result of resolving a specific value set definition against a known set of code
-                    system versions. &lt;i&gt;ResolvedValueSet&lt;/i&gt; consists of a header that
-                    carries sufficient information that the resolution operation would be
-                    repeatable and the result of the resolution, which consists of set of
-                    EntityReferences.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownValueSetDefinition">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;valueSetDefinition&lt;/i&gt; URI isn't recognized by the
-                    service.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownCodeSystemVersion">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The referenced
-                    &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedVersionTag">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;versionTag&lt;/i&gt;
-                    is not recognized by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedLanguage">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="404">
-                  <representation element="exceptions:UnknownChangeSet">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
-                    either not be read or located by the service.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:ChangeSetIsNotOpen">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                    &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
-                    is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedContext">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-                    &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="500">
-                  <representation element="exceptions:SortAndFilterException">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
-                    and/or filter parameters</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="400">
-                  <representation element="exceptions:UnsupportedFormat">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
-                    not supported by the service implementation</doc>
-
-                  </representation>
-
-                </response>
-
-                <response status="408">
-                  <representation element="exceptions:QueryTimeout">
-                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
-                    was exceeded by the service.</doc>
-
-                  </representation>
-
-                </response>
-
-              </method>
-
-            </resource>
 
             <resource path="entities">
               <doc>This URL Path represents: a &lt;i&gt;DirectoryURI &lt;/i&gt;that references a
