@@ -7155,515 +7155,515 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
         </resource>
 
-      </resource>
-
-      <resource path="graph">
-        <doc>This URL Path represents: An augmented rendering of a set of &lt;i&gt;Associations
-        &lt;/i&gt;where the linkage between subject and target nodes has been normalized for easier
-        traversal.</doc>
-
-        <param name="active" type="xsd:string" style="query">
-          <doc title="ReadContext:active">determines whether the query only applies to only active
-          or all entries.</doc>
-
-        </param>
-
-        <param name="changesetcontext" type="xsd:string" style="query">
-          <doc title="ReadContext:changeSetContext">the URI of an open change set whose contents
-          should be included in the results of the access request.
-          &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support the
-          &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is supplied in
-          the service call.</doc>
-
-        </param>
-
-        <param name="referencelanguage" type="xsd:string" style="query">
-          <doc title="ReadContext:referenceLanguage">the spoken or written language that should be
-          used for the results of the inquiry, where appropriate. Should default to the default
-          reference language of the service if omitted.</doc>
-
-        </param>
-
-        <param name="referencetime" type="xsd:dateTime" style="query">
-          <doc title="ReadContext:referenceTime">the contextual date and time of the query.
-          &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support the
-          &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted, &lt;i&gt;referenceTime&lt;/i&gt;
-          defaults to the current system date and time.</doc>
-
-        </param>
-
-        <param name="format" type="xsd:string" style="query">
-          <doc title="QueryControl:format">the local identifier or URI of the return format for
-          query results. This parameter defaults to the &lt;i&gt;defaultFormat&lt;/i&gt; in the
-          &lt;i&gt;BaseService&lt;/i&gt; interface if not supplied.</doc>
-
-        </param>
-
-        <param name="page" type="xsd:nonNegativeInteger" style="query">
-          <doc>the 0-based page number used for paging result sets</doc>
-
-        </param>
-
-        <param name="maxtoreturn" type="xsd:string" style="query">
-          <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
-          that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
-          choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
-          upper limit. If &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use
-          whatever return block size it determines to be most appropriate.</doc>
-
-        </param>
-
-        <param name="timelimit" type="xsd:positiveInteger" style="query">
-          <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken to
-          process a query before a time out exception occurs. If not present, the service
-          determines the maximum query time out.</doc>
-
-        </param>
-
-        <param name="filtercomponent" type="xsd:string" style="query">
-          <doc title="FilterComponent:filterComponent">the name or URI of the property or model
-          element to be filtered. Properties are referenced by their predicate and model elements
-          all have URI's that are established by this specification.</doc>
-
-        </param>
-
-        <param name="matchalgorithm" type="xsd:string" style="query">
-          <doc title="FilterComponent:matchAlgorithm">the algorithm to be used for testing the
-          referenced component. Examples might include "starts with", "regular expression match",
-          "exists", "inRange", etc. NOTE: The CTS2 specification needs to establish a core set
-          of match algorithms that all compliant implementations must support.</doc>
-
-        </param>
-
-        <param name="matchvalue" type="xsd:string" style="query">
-          <doc title="FilterComponent:matchValue">the value to be used in comparison. The structure
-          and format of &lt;i&gt;matchValue&lt;/i&gt; depends on the specific
-          &lt;i&gt;matchAlgorithm&lt;/i&gt;. As an example, a "startsWith" algorithm would be plain
-          text, a "regularExpression" algorithm would have a regular expression while an "exists"
-          algorithm would have nothing in the &lt;i&gt;matchValue&lt;/i&gt; attribute.</doc>
-
-        </param>
-
-        <param name="focus" type="xsd:string" style="query">
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <param name="graphfocus" type="xsd:string" style="query">
-          <doc title="GraphFocus">Identifies the root of an association graph</doc>
-
-        </param>
-
-        <param name="focusentity" type="xsd:string" style="query">
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <param name="resolvedirection" type="xsd:string" style="query">
-          <doc title="GraphDirection">An indicator that states whether the graph represents a graph
-          at which the focus is in the subject role, the target role or both.</doc>
-
-        </param>
-
-        <param name="resolvedepth" type="xsd:integer" style="query">
-          <doc title="NaturalNumber">a non-negative integer ($\nat$).
-          &lt;i&gt;NaturalNumber&lt;/i&gt; is used exclusively for representing quantities in this
-          specification.</doc>
-
-        </param>
-
-        <!-- restrictions -->
-        <!-- restrictToCodeSystemVersion -->
-        <param name="codesystemversion" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToCodeSystemVersion" />
-          <doc title="NameOrURI">Carries either a local identifier (&lt;i&gt;name&lt;/i&gt;) or a
-          URI (&lt;i&gt;uri&lt;/i&gt;) that references a resource in the service.
-          &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input parameter and its type is always
-          defined by the usage context. Note that service calls that use the
-          &lt;i&gt;name&lt;/i&gt; option may not be portable across implementations, as there is no
-          guarantee that any two CTS2 service implementations will use the same local
-          identifiers for the same resources.</doc>
-
-        </param>
-
-        <!-- end restrictToCodeSystemVersion -->
-        <!-- restrictToPredicate -->
-        <param name="predicate" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToPredicate" />
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <!-- end restrictToPredicate -->
-        <!-- restrictToSourceEntity -->
-        <param name="sourceentity" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToSourceEntity" />
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <!-- end restrictToSourceEntity -->
-        <!-- restrictToSourceOrTargetEntity -->
-        <param name="sourceortargetentity" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToSourceOrTargetEntity" />
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <!-- end restrictToSourceOrTargetEntity -->
-        <!-- restrictToTargetEntity -->
-        <param name="targetentity" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToTargetEntity" />
-          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
-          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
-          entity that is known locally to the service or an entity that is described elsewhere. If
-          the entity is known to the service, it is possible to use the
-          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
-          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
-          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
-          intended for use in human/browser interactions and should not be hard-coded into data
-          tables or applications.</doc>
-
-        </param>
-
-        <!-- end restrictToTargetEntity -->
-        <!-- restrictToTargetExpression -->
-        <param name="targetexpression" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToTargetExpression" />
-          <doc title="AssociationRendering" />
-        </param>
-
-        <!-- end restrictToTargetExpression -->
-        <!-- restrictToTargetLiteral -->
-        <param name="targetliteral" type="xsd:string" style="query">
-          <doc title="Restriction:restrictToTargetLiteral" />
-          <doc title="String">a non-empty sequence of characters. As terminological resources are
-          often multilingual, it is expected that most CTS2 Platform Specific Models (PSMs) will
-          require that the &lt;i&gt;String &lt;/i&gt;implementation support international character
-          sets.</doc>
-
-        </param>
-
-        <!-- end restrictToTargetLiteral -->
-        <!-- end restrictions -->
-        <method name="GET">
-          <doc title="AdvancedAssociationQueryService:resolveAsGraph">Resolve the set of
-          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
-
-          <request>
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
-              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
-              that results will be returned as a 'List.' 'false' indicates that results will be
-              returned as a 'Directory'</doc>
-
-            </param>
-
-          </request>
-
-          <response>
-            <representation element="association:AssociationGraph">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
-              augmented rendering of a set of &lt;i&gt;Associations &lt;/i&gt;where the linkage
-              between subject and target nodes has been normalized for easier traversal.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownFocusEntity">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">either (a) the
-              &lt;i&gt;focusEntity&lt;/i&gt; is not reachable in
-              &lt;i&gt;associationDirectory&lt;/i&gt; or (b) &lt;i&gt;graphFocus&lt;/i&gt; was not
-              set to SPECIFIC_ENTITY but &lt;i&gt;focusEntity&lt;/i&gt; was supplied</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:InvalidDirectoryURI">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
-              &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:InvalidDirectoryType">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the supplied
-              &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the service
-              invocation.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="500">
-            <representation element="exceptions:SortAndFilterException">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort and/or
-              filter parameters</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedFormat">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is not
-              supported by the service implementation</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="408">
-            <representation element="exceptions:QueryTimeout">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt; was
-              exceeded by the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedLanguage">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-              &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownChangeSet">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could either
-              not be read or located by the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:ChangeSetIsNotOpen">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;changeSetContext&lt;/i&gt;
-              is recognized by the service, but its state is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedContext">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-              &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedNamespaceName">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is not one
-              that is known to the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownEntity">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;EntityNameOrURI&lt;/i&gt;
-              is not known to the service</doc>
-
-            </representation>
-
-          </response>
-
-        </method>
-
-        <method name="POST">
-          <doc title="AdvancedAssociationQueryService:resolveAsGraph">Resolve the set of
-          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
-
-          <request>
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
-              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
-              that results will be returned as a 'List.' 'false' indicates that results will be
-              returned as a 'Directory'</doc>
-
-            </param>
-
-            <representation element="coreService:Query">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type" />
-            </representation>
-
-          </request>
-
-          <response>
-            <representation element="association:AssociationGraph">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
-              augmented rendering of a set of &lt;i&gt;Associations &lt;/i&gt;where the linkage
-              between subject and target nodes has been normalized for easier traversal.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownFocusEntity">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">either (a) the
-              &lt;i&gt;focusEntity&lt;/i&gt; is not reachable in
-              &lt;i&gt;associationDirectory&lt;/i&gt; or (b) &lt;i&gt;graphFocus&lt;/i&gt; was not
-              set to SPECIFIC_ENTITY but &lt;i&gt;focusEntity&lt;/i&gt; was supplied</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:InvalidDirectoryURI">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
-              &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:InvalidDirectoryType">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the supplied
-              &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the service
-              invocation.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="500">
-            <representation element="exceptions:SortAndFilterException">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort and/or
-              filter parameters</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedFormat">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is not
-              supported by the service implementation</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="408">
-            <representation element="exceptions:QueryTimeout">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt; was
-              exceeded by the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedLanguage">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-              &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownChangeSet">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could either
-              not be read or located by the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:ChangeSetIsNotOpen">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;changeSetContext&lt;/i&gt;
-              is recognized by the service, but its state is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedContext">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-              &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedNamespaceName">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is not one
-              that is known to the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownEntity">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;EntityNameOrURI&lt;/i&gt;
-              is not known to the service</doc>
-
-            </representation>
-
-          </response>
-
-        </method>
-
+	      <resource path="graph">
+	        <doc>This URL Path represents: An augmented rendering of a set of &lt;i&gt;Associations
+	        &lt;/i&gt;where the linkage between subject and target nodes has been normalized for easier
+	        traversal.</doc>
+	
+	        <param name="active" type="xsd:string" style="query">
+	          <doc title="ReadContext:active">determines whether the query only applies to only active
+	          or all entries.</doc>
+	
+	        </param>
+	
+	        <param name="changesetcontext" type="xsd:string" style="query">
+	          <doc title="ReadContext:changeSetContext">the URI of an open change set whose contents
+	          should be included in the results of the access request.
+	          &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support the
+	          &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is supplied in
+	          the service call.</doc>
+	
+	        </param>
+	
+	        <param name="referencelanguage" type="xsd:string" style="query">
+	          <doc title="ReadContext:referenceLanguage">the spoken or written language that should be
+	          used for the results of the inquiry, where appropriate. Should default to the default
+	          reference language of the service if omitted.</doc>
+	
+	        </param>
+	
+	        <param name="referencetime" type="xsd:dateTime" style="query">
+	          <doc title="ReadContext:referenceTime">the contextual date and time of the query.
+	          &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support the
+	          &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted, &lt;i&gt;referenceTime&lt;/i&gt;
+	          defaults to the current system date and time.</doc>
+	
+	        </param>
+	
+	        <param name="format" type="xsd:string" style="query">
+	          <doc title="QueryControl:format">the local identifier or URI of the return format for
+	          query results. This parameter defaults to the &lt;i&gt;defaultFormat&lt;/i&gt; in the
+	          &lt;i&gt;BaseService&lt;/i&gt; interface if not supplied.</doc>
+	
+	        </param>
+	
+	        <param name="page" type="xsd:nonNegativeInteger" style="query">
+	          <doc>the 0-based page number used for paging result sets</doc>
+	
+	        </param>
+	
+	        <param name="maxtoreturn" type="xsd:string" style="query">
+	          <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
+	          that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
+	          choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
+	          upper limit. If &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use
+	          whatever return block size it determines to be most appropriate.</doc>
+	
+	        </param>
+	
+	        <param name="timelimit" type="xsd:positiveInteger" style="query">
+	          <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken to
+	          process a query before a time out exception occurs. If not present, the service
+	          determines the maximum query time out.</doc>
+	
+	        </param>
+	
+	        <param name="filtercomponent" type="xsd:string" style="query">
+	          <doc title="FilterComponent:filterComponent">the name or URI of the property or model
+	          element to be filtered. Properties are referenced by their predicate and model elements
+	          all have URI's that are established by this specification.</doc>
+	
+	        </param>
+	
+	        <param name="matchalgorithm" type="xsd:string" style="query">
+	          <doc title="FilterComponent:matchAlgorithm">the algorithm to be used for testing the
+	          referenced component. Examples might include "starts with", "regular expression match",
+	          "exists", "inRange", etc. NOTE: The CTS2 specification needs to establish a core set
+	          of match algorithms that all compliant implementations must support.</doc>
+	
+	        </param>
+	
+	        <param name="matchvalue" type="xsd:string" style="query">
+	          <doc title="FilterComponent:matchValue">the value to be used in comparison. The structure
+	          and format of &lt;i&gt;matchValue&lt;/i&gt; depends on the specific
+	          &lt;i&gt;matchAlgorithm&lt;/i&gt;. As an example, a "startsWith" algorithm would be plain
+	          text, a "regularExpression" algorithm would have a regular expression while an "exists"
+	          algorithm would have nothing in the &lt;i&gt;matchValue&lt;/i&gt; attribute.</doc>
+	
+	        </param>
+	
+	        <param name="focus" type="xsd:string" style="query">
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <param name="graphfocus" type="xsd:string" style="query">
+	          <doc title="GraphFocus">Identifies the root of an association graph</doc>
+	
+	        </param>
+	
+	        <param name="focusentity" type="xsd:string" style="query">
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <param name="resolvedirection" type="xsd:string" style="query">
+	          <doc title="GraphDirection">An indicator that states whether the graph represents a graph
+	          at which the focus is in the subject role, the target role or both.</doc>
+	
+	        </param>
+	
+	        <param name="resolvedepth" type="xsd:integer" style="query">
+	          <doc title="NaturalNumber">a non-negative integer ($\nat$).
+	          &lt;i&gt;NaturalNumber&lt;/i&gt; is used exclusively for representing quantities in this
+	          specification.</doc>
+	
+	        </param>
+	
+	        <!-- restrictions -->
+	        <!-- restrictToCodeSystemVersion -->
+	        <param name="codesystemversion" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToCodeSystemVersion" />
+	          <doc title="NameOrURI">Carries either a local identifier (&lt;i&gt;name&lt;/i&gt;) or a
+	          URI (&lt;i&gt;uri&lt;/i&gt;) that references a resource in the service.
+	          &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input parameter and its type is always
+	          defined by the usage context. Note that service calls that use the
+	          &lt;i&gt;name&lt;/i&gt; option may not be portable across implementations, as there is no
+	          guarantee that any two CTS2 service implementations will use the same local
+	          identifiers for the same resources.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToCodeSystemVersion -->
+	        <!-- restrictToPredicate -->
+	        <param name="predicate" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToPredicate" />
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToPredicate -->
+	        <!-- restrictToSourceEntity -->
+	        <param name="sourceentity" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToSourceEntity" />
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToSourceEntity -->
+	        <!-- restrictToSourceOrTargetEntity -->
+	        <param name="sourceortargetentity" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToSourceOrTargetEntity" />
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToSourceOrTargetEntity -->
+	        <!-- restrictToTargetEntity -->
+	        <param name="targetentity" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToTargetEntity" />
+	          <doc title="EntityNameOrURI">A reference to a class, property or individual that is
+	          described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may either reference an
+	          entity that is known locally to the service or an entity that is described elsewhere. If
+	          the entity is known to the service, it is possible to use the
+	          &lt;i&gt;entityName&lt;/i&gt; variant, but note that &lt;u&gt;neither&lt;/u&gt;&lt;i&gt;
+	          scopingNamespace&lt;/i&gt; nor the &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the
+	          same in different CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is
+	          intended for use in human/browser interactions and should not be hard-coded into data
+	          tables or applications.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToTargetEntity -->
+	        <!-- restrictToTargetExpression -->
+	        <param name="targetexpression" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToTargetExpression" />
+	          <doc title="AssociationRendering" />
+	        </param>
+	
+	        <!-- end restrictToTargetExpression -->
+	        <!-- restrictToTargetLiteral -->
+	        <param name="targetliteral" type="xsd:string" style="query">
+	          <doc title="Restriction:restrictToTargetLiteral" />
+	          <doc title="String">a non-empty sequence of characters. As terminological resources are
+	          often multilingual, it is expected that most CTS2 Platform Specific Models (PSMs) will
+	          require that the &lt;i&gt;String &lt;/i&gt;implementation support international character
+	          sets.</doc>
+	
+	        </param>
+	
+	        <!-- end restrictToTargetLiteral -->
+	        <!-- end restrictions -->
+	        <method name="GET">
+	          <doc title="AdvancedAssociationQueryService:resolveAsGraph">Resolve the set of
+	          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
+	
+	          <request>
+	            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+	              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
+	              that results will be returned as a 'List.' 'false' indicates that results will be
+	              returned as a 'Directory'</doc>
+	
+	            </param>
+	
+	          </request>
+	
+	          <response>
+	            <representation element="association:AssociationGraph">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
+	              augmented rendering of a set of &lt;i&gt;Associations &lt;/i&gt;where the linkage
+	              between subject and target nodes has been normalized for easier traversal.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownFocusEntity">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">either (a) the
+	              &lt;i&gt;focusEntity&lt;/i&gt; is not reachable in
+	              &lt;i&gt;associationDirectory&lt;/i&gt; or (b) &lt;i&gt;graphFocus&lt;/i&gt; was not
+	              set to SPECIFIC_ENTITY but &lt;i&gt;focusEntity&lt;/i&gt; was supplied</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:InvalidDirectoryURI">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+	              &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:InvalidDirectoryType">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the supplied
+	              &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the service
+	              invocation.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="500">
+	            <representation element="exceptions:SortAndFilterException">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort and/or
+	              filter parameters</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedFormat">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is not
+	              supported by the service implementation</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="408">
+	            <representation element="exceptions:QueryTimeout">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt; was
+	              exceeded by the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedLanguage">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+	              &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownChangeSet">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could either
+	              not be read or located by the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:ChangeSetIsNotOpen">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;changeSetContext&lt;/i&gt;
+	              is recognized by the service, but its state is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedContext">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+	              &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedNamespaceName">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is not one
+	              that is known to the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownEntity">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;EntityNameOrURI&lt;/i&gt;
+	              is not known to the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	        </method>
+	
+	        <method name="POST">
+	          <doc title="AdvancedAssociationQueryService:resolveAsGraph">Resolve the set of
+	          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
+	
+	          <request>
+	            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+	              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
+	              that results will be returned as a 'List.' 'false' indicates that results will be
+	              returned as a 'Directory'</doc>
+	
+	            </param>
+	
+	            <representation element="coreService:Query">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type" />
+	            </representation>
+	
+	          </request>
+	
+	          <response>
+	            <representation element="association:AssociationGraph">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
+	              augmented rendering of a set of &lt;i&gt;Associations &lt;/i&gt;where the linkage
+	              between subject and target nodes has been normalized for easier traversal.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownFocusEntity">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">either (a) the
+	              &lt;i&gt;focusEntity&lt;/i&gt; is not reachable in
+	              &lt;i&gt;associationDirectory&lt;/i&gt; or (b) &lt;i&gt;graphFocus&lt;/i&gt; was not
+	              set to SPECIFIC_ENTITY but &lt;i&gt;focusEntity&lt;/i&gt; was supplied</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:InvalidDirectoryURI">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+	              &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:InvalidDirectoryType">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the supplied
+	              &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the service
+	              invocation.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="500">
+	            <representation element="exceptions:SortAndFilterException">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort and/or
+	              filter parameters</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedFormat">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is not
+	              supported by the service implementation</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="408">
+	            <representation element="exceptions:QueryTimeout">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt; was
+	              exceeded by the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedLanguage">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+	              &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownChangeSet">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could either
+	              not be read or located by the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:ChangeSetIsNotOpen">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;changeSetContext&lt;/i&gt;
+	              is recognized by the service, but its state is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedContext">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+	              &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="400">
+	            <representation element="exceptions:UnsupportedNamespaceName">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is not one
+	              that is known to the service.</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	          <response status="404">
+	            <representation element="exceptions:UnknownEntity">
+	              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;EntityNameOrURI&lt;/i&gt;
+	              is not known to the service</doc>
+	
+	            </representation>
+	
+	          </response>
+	
+	        </method>
+	
+	      </resource>
+      
       </resource>
 
       <resource path="codesystems">
@@ -13236,326 +13236,6 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </resource>
 
-          </resource>
-
-          <resource path="association/{associationid}">
-            <param name="associationid" type="xsd:string" style="template">
-              <doc>the External Identifier of the Association</doc>
-
-            </param>
-
-            <method name="GET">
-              <doc title="AssociationReadService:read">Retrieve the association instance identified
-              by the &lt;i&gt;entryID&lt;/i&gt; URI</doc>
-
-              <request>
-                <param name="active" type="xsd:string" style="query">
-                  <doc title="ReadContext:active">determines whether the query only applies to only
-                  active or all entries.</doc>
-
-                </param>
-
-                <param name="changesetcontext" type="xsd:string" style="query">
-                  <doc title="ReadContext:changeSetContext">the URI of an open change set whose
-                  contents should be included in the results of the access request.
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support
-                  the &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is
-                  supplied in the service call.</doc>
-
-                </param>
-
-                <param name="referencelanguage" type="xsd:string" style="query">
-                  <doc title="ReadContext:referenceLanguage">the spoken or written language that
-                  should be used for the results of the inquiry, where appropriate. Should default
-                  to the default reference language of the service if omitted.</doc>
-
-                </param>
-
-                <param name="referencetime" type="xsd:dateTime" style="query">
-                  <doc title="ReadContext:referenceTime">the contextual date and time of the query.
-                  &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support
-                  the &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted,
-                  &lt;i&gt;referenceTime&lt;/i&gt; defaults to the current system date and
-                  time.</doc>
-
-                </param>
-
-                <param name="format" type="xsd:string" style="query">
-                  <doc title="QueryControl:format">the local identifier or URI of the return format
-                  for query results. This parameter defaults to the
-                  &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt; interface
-                  if not supplied.</doc>
-
-                </param>
-
-                <param name="timelimit" type="xsd:positiveInteger" style="query">
-                  <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken
-                  to process a query before a time out exception occurs. If not present, the
-                  service determines the maximum query time out.</doc>
-
-                </param>
-
-              </request>
-
-              <response>
-                <representation element="association:AssociationMsg">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
-                  "semantic" assertion about a relationship between a &lt;i&gt;subject&lt;/i&gt;
-                  entity and a target entity, literal or compound expression as represented by an
-                  unnamed blank node ("bnode").</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownAssociation">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The referenced
-                  &lt;i&gt;Association&lt;/i&gt; is not recognized by the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedLanguage">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownChangeSet">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
-                  either not be read or located by the service.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:ChangeSetIsNotOpen">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
-                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedContext">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="500">
-                <representation element="exceptions:SortAndFilterException">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
-                  and/or filter parameters</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedFormat">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
-                  not supported by the service implementation</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="408">
-                <representation element="exceptions:QueryTimeout">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
-                  was exceeded by the service.</doc>
-
-                </representation>
-
-              </response>
-
-            </method>
-
-            <method name="PUT">
-              <doc title="AssociationMaintenanceService:updateAssociation">Update an existing
-              Association resource</doc>
-
-              <request>
-                <param name="changeseturi" type="xsd:string" style="query">
-                  <doc title="ChangeSetURI">the unique identifier of a set of change instructions
-                  that can potentially transform the contents of CTS2 service instance from one
-                  state to another.</doc>
-
-                </param>
-
-                <representation element="association:Association">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
-                  "semantic" assertion about a relationship between a &lt;i&gt;subject&lt;/i&gt;
-                  entity and a target entity, literal or compound expression as represented by an
-                  unnamed blank node ("bnode").</doc>
-
-                </representation>
-
-              </request>
-
-              <response status="404">
-                <representation element="exceptions:UnknownAssociationQualifierNamespaceName">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
-                  &lt;i&gt;predicate&lt;/i&gt; identifier is not known to or supported by the
-                  service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownChangeSet">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
-                  either not be read or located by the service.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownTargetEntity">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The target
-                  &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedAssociationQualifier">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The predicate of an association
-                  qualifier is not recognized by the service or is not considered to be a valid
-                  association qualifier.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownPredicateNamespaceName">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
-                  &lt;i&gt;predicate&lt;/i&gt; identifier is not known to or supported by the
-                  service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedSubjectNamespaceName">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
-                  &lt;i&gt;subject&lt;/i&gt; identifier is not known to or supported by the
-                  service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:ChangeSetIsNotOpen">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
-                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownSubjectEntity">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownTargetNamespaceName">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in a &lt;i&gt;target
-                  &lt;/i&gt;entity identifier is not known to or supported by the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedPredicate">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The predicate name or URI is not
-                  recognized by the service</doc>
-
-                </representation>
-
-              </response>
-
-            </method>
-
-            <method name="HEAD">
-              <doc title="AssociationReadService:exists">Determine whether an association
-              identified by the &lt;i&gt;entryID&lt;/i&gt; URI is accessible from the service in
-              the specified (optional) context</doc>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedLanguage">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="404">
-                <representation element="exceptions:UnknownChangeSet">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
-                  either not be read or located by the service.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:ChangeSetIsNotOpen">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
-                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-                </representation>
-
-              </response>
-
-              <response status="400">
-                <representation element="exceptions:UnsupportedContext">
-                  <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-                  &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-                </representation>
-
-              </response>
-
-            </method>
-
-            <method name="DELETE">
-              <doc title="AssociationMaintenanceService:deleteChangeable" />
-              <request>
-                <param name="changeseturi" required="true" type="xsd:string" style="query" />
-              </request>
-
-            </method>
-
-          </resource>
-
           <resource path="graph">
             <doc>This URL Path represents: An augmented rendering of a set of &lt;i&gt;Associations
             &lt;/i&gt;where the linkage between subject and target nodes has been normalized for
@@ -13912,8 +13592,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
               associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
 
               <request>
-                <param name="list" required="false" type="xsd:boolean" style="query"
-                default="false">
+                <param name="list" required="false" type="xsd:boolean" style="query" default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
                   results will be returned as a 'Directory'</doc>
@@ -14050,7 +13729,327 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </method>
 
+          </resource></resource>
+
+          <resource path="association/{associationid}">
+            <param name="associationid" type="xsd:string" style="template">
+              <doc>the External Identifier of the Association</doc>
+
+            </param>
+
+            <method name="GET">
+              <doc title="AssociationReadService:read">Retrieve the association instance identified
+              by the &lt;i&gt;entryID&lt;/i&gt; URI</doc>
+
+              <request>
+                <param name="active" type="xsd:string" style="query">
+                  <doc title="ReadContext:active">determines whether the query only applies to only
+                  active or all entries.</doc>
+
+                </param>
+
+                <param name="changesetcontext" type="xsd:string" style="query">
+                  <doc title="ReadContext:changeSetContext">the URI of an open change set whose
+                  contents should be included in the results of the access request.
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support
+                  the &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is
+                  supplied in the service call.</doc>
+
+                </param>
+
+                <param name="referencelanguage" type="xsd:string" style="query">
+                  <doc title="ReadContext:referenceLanguage">the spoken or written language that
+                  should be used for the results of the inquiry, where appropriate. Should default
+                  to the default reference language of the service if omitted.</doc>
+
+                </param>
+
+                <param name="referencetime" type="xsd:dateTime" style="query">
+                  <doc title="ReadContext:referenceTime">the contextual date and time of the query.
+                  &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support
+                  the &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted,
+                  &lt;i&gt;referenceTime&lt;/i&gt; defaults to the current system date and
+                  time.</doc>
+
+                </param>
+
+                <param name="format" type="xsd:string" style="query">
+                  <doc title="QueryControl:format">the local identifier or URI of the return format
+                  for query results. This parameter defaults to the
+                  &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt; interface
+                  if not supplied.</doc>
+
+                </param>
+
+                <param name="timelimit" type="xsd:positiveInteger" style="query">
+                  <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken
+                  to process a query before a time out exception occurs. If not present, the
+                  service determines the maximum query time out.</doc>
+
+                </param>
+
+              </request>
+
+              <response>
+                <representation element="association:AssociationMsg">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
+                  "semantic" assertion about a relationship between a &lt;i&gt;subject&lt;/i&gt;
+                  entity and a target entity, literal or compound expression as represented by an
+                  unnamed blank node ("bnode").</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownAssociation">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The referenced
+                  &lt;i&gt;Association&lt;/i&gt; is not recognized by the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedLanguage">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownChangeSet">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                  either not be read or located by the service.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:ChangeSetIsNotOpen">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedContext">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="500">
+                <representation element="exceptions:SortAndFilterException">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
+                  and/or filter parameters</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedFormat">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
+                  not supported by the service implementation</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="408">
+                <representation element="exceptions:QueryTimeout">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
+                  was exceeded by the service.</doc>
+
+                </representation>
+
+              </response>
+
+            </method>
+
+            <method name="PUT">
+              <doc title="AssociationMaintenanceService:updateAssociation">Update an existing
+              Association resource</doc>
+
+              <request>
+                <param name="changeseturi" type="xsd:string" style="query">
+                  <doc title="ChangeSetURI">the unique identifier of a set of change instructions
+                  that can potentially transform the contents of CTS2 service instance from one
+                  state to another.</doc>
+
+                </param>
+
+                <representation element="association:Association">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
+                  "semantic" assertion about a relationship between a &lt;i&gt;subject&lt;/i&gt;
+                  entity and a target entity, literal or compound expression as represented by an
+                  unnamed blank node ("bnode").</doc>
+
+                </representation>
+
+              </request>
+
+              <response status="404">
+                <representation element="exceptions:UnknownAssociationQualifierNamespaceName">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
+                  &lt;i&gt;predicate&lt;/i&gt; identifier is not known to or supported by the
+                  service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownChangeSet">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                  either not be read or located by the service.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownTargetEntity">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The target
+                  &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedAssociationQualifier">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The predicate of an association
+                  qualifier is not recognized by the service or is not considered to be a valid
+                  association qualifier.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownPredicateNamespaceName">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
+                  &lt;i&gt;predicate&lt;/i&gt; identifier is not known to or supported by the
+                  service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedSubjectNamespaceName">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in the
+                  &lt;i&gt;subject&lt;/i&gt; identifier is not known to or supported by the
+                  service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:ChangeSetIsNotOpen">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownSubjectEntity">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownTargetNamespaceName">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The namespace in a &lt;i&gt;target
+                  &lt;/i&gt;entity identifier is not known to or supported by the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedPredicate">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The predicate name or URI is not
+                  recognized by the service</doc>
+
+                </representation>
+
+              </response>
+
+            </method>
+
+            <method name="HEAD">
+              <doc title="AssociationReadService:exists">Determine whether an association
+              identified by the &lt;i&gt;entryID&lt;/i&gt; URI is accessible from the service in
+              the specified (optional) context</doc>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedLanguage">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="404">
+                <representation element="exceptions:UnknownChangeSet">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                  either not be read or located by the service.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:ChangeSetIsNotOpen">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                  is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                </representation>
+
+              </response>
+
+              <response status="400">
+                <representation element="exceptions:UnsupportedContext">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+
+                </representation>
+
+              </response>
+
+            </method>
+
+            <method name="DELETE">
+              <doc title="AssociationMaintenanceService:deleteChangeable" />
+              <request>
+                <param name="changeseturi" required="true" type="xsd:string" style="query" />
+              </request>
+
+            </method>
+
           </resource>
+
+          
 
           <method name="DELETE">
             <doc title="CodeSystemVersionCatalogMaintenanceService:deleteChangeable" />
