@@ -81,6 +81,20 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
   any parameters that are allowed by the 'read by name' requests. For example,
   '/codesystembyuri?uri=http://some/cs' must accept the same parameters as the equivalent 'read by
   name' request, such as '/codesystem/CS'.</doc>
+  
+  <doc title="Query Parameter Synonyms">
+  The following Query Parameter Synonyms will be supported for CTS2 Version 1.1:
+  
+  Current Name          Synonym
+  -----------------------------
+  'maxtoreturn'       -> 'max'
+  'referencelanguage' -> 'lang'
+  'matchvalue'        -> 'q'
+  
+  Assume the old parameter values to be deprecated for Version 1.1, to be
+  replaced with the synonyms as the official values in the next release.
+  For Version 1.1, both the 'Current Name' or the 'Synonym' can be used.
+  </doc>
 
   <grammars>
     <include href="association/Association.xsd" />
