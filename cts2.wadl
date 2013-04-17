@@ -72,7 +72,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
   &lt;li&gt;Creating a Resource&lt;/li&gt; CTS2 Resources are created via a 'POST' request to the
   &lt;code&gt; /{resourceType} &lt;/code&gt; URL path. The request will retrun a reference to the
   created Resource in the form of the 'Location' HTTP Header. &lt;li&gt;Updating a
-  Resource&lt;/li&gt; CTS2 Resources are created via a 'PUT' request to the the actaul 'Location'
+  Resource&lt;/li&gt; CTS2 Resources are created via a 'PUT' request to the the actual 'Location'
   of the Resource. This in effect completely replaces the existing Resource with the new Resource.
   &lt;li&gt;Deleting a Resource&lt;/li&gt; A DELETE request is similar to a UPDATE request,
   exception that the 'DELETE' HTTP method is used. &lt;/ul&gt; &lt;br/&gt; &lt;br/&gt; For more
@@ -114,7 +114,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
     <include href="codesystem/CodeSystemServices.xsd" />
     <include href="codesystemversion/CodeSystemVersionServices.xsd" />
     <include href="conceptdomainbinding/ConceptDomainBindingServices.xsd" />
-    <include href="conceptdomaini/ConceptDomainServices.xsd" />
+    <include href="conceptdomain/ConceptDomainServices.xsd" />
     <include href="core/CoreService.xsd" />
     <include href="entity/EntityDescriptionServices.xsd" />
     <include href="core/Exceptions.xsd" />
@@ -1552,192 +1552,16 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
       </resource>
 
       <resource path="entitybyuri">
-        <method name="GET">
-          <doc title="EntityDescriptionReadService:readEntityDescriptions">retrieve all of the
-          &lt;i&gt;EntityDescriptions&lt;/i&gt; for the supplied &lt;i&gt;entityId&lt;/i&gt;. This
-          function will return the current &lt;i&gt;EntityDescription&lt;/i&gt; for every
-          describing code system version that makes non-semantic assertions about the referenced
-          entity.</doc>
-
-          <doc title="EntityDescriptionReadService:availableDescriptions">Return the available
-          &lt;i&gt;EntityDescriptions&lt;/i&gt; for the referenced entity. This returns a list of
-          the latest versions of all of the code systems that make assertions about the referenced
-          entity.</doc>
-
+         <method name="GET">
           <request>
-            <param name="uri" type="xsd:string" style="query">
+            <param name="uri" required="true" type="xsd:string" style="query">
               <doc>the URI of the requested resource</doc>
 
             </param>
 
-            <param name="active" type="xsd:string" style="query">
-              <doc title="ReadContext:active">determines whether the query only applies to only
-              active or all entries.</doc>
-
-            </param>
-
-            <param name="changesetcontext" type="xsd:string" style="query">
-              <doc title="ReadContext:changeSetContext">the URI of an open change set whose
-              contents should be included in the results of the access request.
-              &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support the
-              &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is supplied
-              in the service call.</doc>
-
-            </param>
-
-            <param name="referencelanguage" type="xsd:string" style="query">
-              <doc title="ReadContext:referenceLanguage">the spoken or written language that should
-              be used for the results of the inquiry, where appropriate. Should default to the
-              default reference language of the service if omitted.</doc>
-
-            </param>
-
-            <param name="referencetime" type="xsd:dateTime" style="query">
-              <doc title="ReadContext:referenceTime">the contextual date and time of the query.
-              &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support the
-              &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted, &lt;i&gt;referenceTime&lt;/i&gt;
-              defaults to the current system date and time.</doc>
-
-            </param>
-
-            <param name="format" type="xsd:string" style="query">
-              <doc title="QueryControl:format">the local identifier or URI of the return format for
-              query results. This parameter defaults to the &lt;i&gt;defaultFormat&lt;/i&gt; in the
-              &lt;i&gt;BaseService&lt;/i&gt; interface if not supplied.</doc>
-
-            </param>
-
-            <param name="page" type="xsd:nonNegativeInteger" style="query">
-              <doc>the 0-based page number used for paging result sets</doc>
-
-            </param>
-
-            <param name="maxtoreturn" type="xsd:string" style="query">
-              <doc title="QueryControl:maxToReturn">the maximum number of
-              &lt;i&gt;entries&lt;/i&gt; that may be present in a return
-              &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
-              &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
-              &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever return
-              block size it determines to be most appropriate.</doc>
-
-            </param>
-
-            <param name="timelimit" type="xsd:positiveInteger" style="query">
-              <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken to
-              process a query before a time out exception occurs. If not present, the service
-              determines the maximum query time out.</doc>
-
-            </param>
-
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
-              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
-              that results will be returned as a 'List.' 'false' indicates that results will be
-              returned as a 'Directory'</doc>
-
-            </param>
-
           </request>
-
-          <response>
-            <representation element="core:EntityReference">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The URI,
-              namespace/name (if known) and a list of code systems that make assertions about the
-              entity.</doc>
-
-            </representation>
-
-          </response>
-
-          <response>
-            <representation element="entity:EntityList">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">a
-              collection of complete &lt;i&gt;Entity&lt;/i&gt; resources that meet a specified
-              criteria</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedNamespaceName">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is not one
-              that is known to the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownEntity">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;EntityNameOrURI&lt;/i&gt;
-              is not known to the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedLanguage">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The
-              &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="404">
-            <representation element="exceptions:UnknownChangeSet">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could either
-              not be read or located by the service.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:ChangeSetIsNotOpen">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;changeSetContext&lt;/i&gt;
-              is recognized by the service, but its state is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedContext">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
-              &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="500">
-            <representation element="exceptions:SortAndFilterException">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort and/or
-              filter parameters</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="400">
-            <representation element="exceptions:UnsupportedFormat">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is not
-              supported by the service implementation</doc>
-
-            </representation>
-
-          </response>
-
-          <response status="408">
-            <representation element="exceptions:QueryTimeout">
-              <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt; was
-              exceeded by the service.</doc>
-
-            </representation>
-
-          </response>
+          
+          <response status="303"/>
 
         </method>
 
@@ -2651,6 +2475,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             <param name="tag" required="false" type="xsd:string" default="CURRENT" style="query" />
           </request>
+          
+          <response status="303"/>
 
         </method>
 
@@ -3094,6 +2920,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             </param>
 
           </request>
+          
+          <response status="303"/>
 
         </method>
 
@@ -3512,6 +3340,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             </param>
 
           </request>
+          
+          <response status="303"/>
 
         </method>
 
@@ -8235,6 +8065,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             </param>
 
           </request>
+          
+          <response status="303"/>
 
         </method>
 
@@ -27061,6 +26893,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </request>
 
+		  <response status="303"/>
+
         </method>
 
       </resource>
@@ -29514,6 +29348,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </request>
 
+		  <response status="303"/>
+        
         </method>
 
       </resource>
@@ -31437,6 +31273,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 					</param>
 	
 				</request>
+				
+				<response status="303"/>
 	
 			</method>
 	
@@ -32074,6 +31912,8 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 	
 				</request>
 	
+				<response status="303"/>
+	
 			</method>
 	
 		</resource>
@@ -32161,7 +32001,9 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             </param>
 
           </request>
-
+          
+          <response status="303"/>
+          
         </method>
 
       </resource>
