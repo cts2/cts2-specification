@@ -8296,6 +8296,20 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
           <doc title="CodeSystemVersionCatalogReadService:getCodeSystemVersionForCodeSystem">
           Retrieve the specified code system version details for the specified code system from the
           service.</doc>
+          
+          <doc title="Sub-Resources Resolution">
+          A call of:
+          'codesystem/{cs}?tag=CURRENT'
+          
+          will contain the full set of sub-resources equivalent to:
+          'codesystem/{cs}/version/{ver}'
+          
+          For example, this is allowed:
+          'codesystem/{cs}/entities?tag=CURRENT'
+          
+          Please refer to the 'codesystem/{codesystemid}' resource for all allowed
+          sub-resources.
+          </doc>
 
           <request>
             <param name="active" type="xsd:string" style="query">
@@ -32573,6 +32587,20 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
         <method name="GET">
           <doc title="ValueSetDefinitionReadService:readDefinitionForValueSet">Return the
           definition for the supplied value set and version tag</doc>
+          
+          <doc title="Sub-Resources Resolution">
+          A call of:
+          'valueset/{vs}?tag=CURRENT'
+          
+          will contain the full set of sub-resources equivalent to:
+          'valueset/{vs}/definition/{def}'
+          
+          For example, this is allowed:
+          'valueset/{vs}/resolution?tag=CURRENT'
+          
+          Please refer to the 'valueset/{valuesetid}' resource for all allowed
+          sub-resources.
+          </doc>
 
           <request>
             <param name="active" type="xsd:string" style="query">
