@@ -1303,7 +1303,7 @@
 			<xs:documentation>A restriction on an attribute, property or special field</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="PropertyReference">
+			<xs:extension base="ComponentReference">
 				<xs:sequence>
 					<xs:element name="matchAlgorithm" type="MatchAlgorithmReference" minOccurs="1">
 						<xs:annotation>
@@ -1327,7 +1327,7 @@
 			<xs:documentation>The particular attribute, property or special element to be sorted along with the sort direction</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="sortElement" type="PropertyReference" minOccurs="1">
+			<xs:element name="sortElement" type="ComponentReference" minOccurs="1">
 				<xs:annotation>
 					<xs:documentation>the type and name of the attribute, property or special element to be sorted</xs:documentation>
 				</xs:annotation>
@@ -1388,43 +1388,28 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:complexType name="PropertyReference">
+	<xs:complexType name="ComponentReference">
 		<xs:annotation>
-			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>PropertyReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
+			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>ComponentReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="referenceTarget" type="URIAndEntityName"/>
-		</xs:sequence>
-		<xs:attribute name="referenceType" type="TargetReferenceType" use="required">
-			<xs:annotation>
-				<xs:documentation>the type of thing being referenced</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>	
-	</xs:complexType>
-
-	<xs:simpleType name="TargetReferenceType">
-		<xs:annotation>
-			<xs:documentation>the possible types of property references</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="Enumeration">
-			<xs:enumeration value="ATTRIBUTE">
+		<xs:choice minOccurs="1" maxOccurs="1">
+			<xs:element name="attributeReference" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>a reference to an attribute in a CTS<sub>2</sub> model such as <i>formalName</i>, <i>designation</i>, etc.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="PROPERTY">
+			</xs:element>
+			<xs:element name="propertyReference" type="URIAndEntityName">
 				<xs:annotation>
-					<xs:documentation>a reference to a model <i>Property</i>. The reference target carries the namespace/name or URI of the property predicate. </xs:documentation>
+					<xs:documentation>a reference to a model <i>Property</i>. The reference target carries the URI and, optionally, namespace and name of the property predicate. </xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="SPECIAL">
+			</xs:element>
+			<xs:element name="specialReference" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>the target of the reference is a special element such as the match strength of a search</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
 
 	<!-- ===============================================
 		Naming
