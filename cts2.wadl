@@ -1668,10 +1668,14 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
-              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
-              that results will be returned as a 'List.' 'false' indicates that results will be
-              returned as a 'Directory'</doc>
+            <param name="resolve" required="false" type="xsd:string" style="query" default="primary">
+              <doc>A resolve type of either 'primary,' 'refs,' or 'list.'
+              
+              	The following values are accepted:
+              		- 'primary' - redirect to the one EntityDescription from the Primary CodeSystemVersion.
+              		- 'refs' - resolve to the EntityReference representation.
+              		- 'list' - resolve to the EntityList representation.              
+              </doc>
 
             </param>
 
@@ -1695,6 +1699,11 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </representation>
 
+          </response>
+          
+          <response status="303">
+          	<doc>Redirect to the Entity in the 'PRIMARY' CodeSystemVersion, if the 'resolve' parameter is 
+          		set to 'primary.' This will then redirect to the appropriate Entity READ Service URL.</doc>
           </response>
 
           <response status="400">
