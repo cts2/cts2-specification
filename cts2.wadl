@@ -9347,6 +9347,34 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </method>
 
+          <method name="POST">
+            <doc title="CodeSystemVersionCatalogMaintenanceService:clone">Clone
+            an existing code system version catalog entry.</doc>
+
+            <request>
+              <param name="changeseturi" required="true" type="xsd:string" style="query">
+                <doc title="ChangeSetURI">the unique identifier of a set of change instructions
+                that can potentially transform the contents of CTS2 service instance from one
+                state to another.</doc>
+
+              </param>
+              
+              <param name="identifier" required="false" type="xsd:string" style="query">
+                <doc title="LocalIdentifier">the identifier to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+              <param name="uri" required="false" type="xsd:string" style="query">
+                <doc title="DocumentURI">the uri to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+            </request>
+
+            <response status="201"/>
+   
+          </method>
+
           <method name="PUT">
             <doc title="CodeSystemVersionCatalogMaintenanceService:updateCodeSystemVersion">Update
             an existing code system version catalog entry.</doc>
@@ -30807,6 +30835,34 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             </request>
 
           </method>
+          
+          <method name="POST">
+            <doc title="MapVersionMaintenanceService:clone">Clone
+            an existing map version.</doc>
+
+            <request>
+              <param name="changeseturi" required="true" type="xsd:string" style="query">
+                <doc title="ChangeSetURI">the unique identifier of a set of change instructions
+                that can potentially transform the contents of CTS2 service instance from one
+                state to another.</doc>
+
+              </param>
+              
+              <param name="identifier" required="false" type="xsd:string" style="query">
+                <doc title="LocalIdentifier">the identifier to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+              <param name="uri" required="false" type="xsd:string" style="query">
+                <doc title="DocumentURI">the uri to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+            </request>
+
+            <response status="201"/>
+   
+          </method>
 
           <method name="PUT">
             <doc title="MapVersionMaintenanceService:updateMapVersion">Modify the attributes of an
@@ -34157,6 +34213,34 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </request>
 
+          </method>
+          
+          <method name="POST">
+            <doc title="ValueSetDefinitionMaintenanceService:clone">Clone
+            an existing value set definition.</doc>
+
+            <request>
+              <param name="changeseturi" required="true" type="xsd:string" style="query">
+                <doc title="ChangeSetURI">the unique identifier of a set of change instructions
+                that can potentially transform the contents of CTS2 service instance from one
+                state to another.</doc>
+
+              </param>
+              
+              <param name="identifier" required="false" type="xsd:string" style="query">
+                <doc title="LocalIdentifier">the identifier to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+              <param name="uri" required="false" type="xsd:string" style="query">
+                <doc title="DocumentURI">the uri to assign the new cloned resource.
+                If omitted, the service will generate one.</doc>
+              </param>
+
+            </request>
+
+            <response status="201"/>
+   
           </method>
 
           <method name="DELETE">

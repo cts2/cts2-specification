@@ -147,6 +147,23 @@
     <xs:sequence/>
   </xs:complexType>
   
+  <xs:element name="clone" type="tns:clone"/>
+  <xs:complexType name="clone">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="changeSet" type="core:ChangeSetURI"/>
+      <xs:element minOccurs="1" name="resourceToClone" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="1" name="versionIdentifier" type="core:LocalIdentifier"/>
+      <xs:element minOccurs="0" name="versionURI" type="core:DocumentURI"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="cloneResponse" type="tns:cloneResponse"/>
+  <xs:complexType name="cloneResponse">
+    <xs:sequence>
+      <xs:element name="return" type="mapVersion:MapVersion"/>
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:element name="listChanges" type="tns:listChanges"/>
   <xs:complexType name="listChanges">
     <xs:sequence>

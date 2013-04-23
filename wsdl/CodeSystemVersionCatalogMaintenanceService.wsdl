@@ -143,6 +143,14 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogM
   <wsdl:message name="deleteChangeable">
     <wsdl:part name="parameters" element="tns:deleteChangeable" />
   </wsdl:message>
+  
+  <wsdl:message name="clone">
+    <wsdl:part name="parameters" element="tns:clone" />
+  </wsdl:message>
+  
+  <wsdl:message name="cloneResponse">
+    <wsdl:part name="parameters" element="tns:cloneResponse" />
+  </wsdl:message>
 
   <wsdl:message name="commitChangeSetResponse">
     <wsdl:part name="parameters" element="tns:commitChangeSetResponse" />
@@ -320,6 +328,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogM
     <wsdl:operation name="deleteChangeable">
       <wsdl:input name="deleteChangeable" message="tns:deleteChangeable" />
       <wsdl:output name="deleteChangeableResponse" message="tns:deleteChangeableResponse" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="clone">
+      <wsdl:input name="clone" message="tns:clone" />
+      <wsdl:output name="cloneResponse" message="tns:cloneResponse" />
     </wsdl:operation>
 
     <wsdl:operation name="rollbackChangeSet">
@@ -668,6 +681,21 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogM
       </wsdl:input>
 
       <wsdl:output name="deleteChangeableResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+    </wsdl:operation>
+    
+    <wsdl:operation name="clone">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Clone the
+      &lt;i&gt;changeAble&lt;/i&gt; resource.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="clone">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="cloneResponse">
         <soap:body use="literal" />
       </wsdl:output>
 
