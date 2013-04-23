@@ -1651,7 +1651,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -1931,7 +1931,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -2031,7 +2031,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -2179,7 +2179,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -2622,7 +2622,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -2770,7 +2770,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3026,7 +3026,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3184,7 +3184,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3478,7 +3478,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3558,7 +3558,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3762,7 +3762,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -3909,7 +3909,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -4356,7 +4356,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -4496,7 +4496,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -4690,7 +4690,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </param>
 
-          <param name="maxtoreturn" type="xsd:string" style="query">
+          <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
             <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
             that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
             choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
@@ -4873,7 +4873,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -5023,7 +5023,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -5323,7 +5323,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </param>
 
-          <param name="maxtoreturn" type="xsd:string" style="query">
+          <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
             <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
             that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
             choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
@@ -5506,7 +5506,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -5656,7 +5656,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -5957,7 +5957,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </param>
 
-          <param name="maxtoreturn" type="xsd:string" style="query">
+          <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
             <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
             that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
             choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
@@ -6140,7 +6140,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -6290,7 +6290,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -6591,7 +6591,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </param>
 
-          <param name="maxtoreturn" type="xsd:string" style="query">
+          <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
             <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
             that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
             choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
@@ -6774,7 +6774,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -6924,7 +6924,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -7211,7 +7211,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 	
 	        </param>
 	
-	        <param name="maxtoreturn" type="xsd:string" style="query">
+	        <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
 	          <doc title="QueryControl:maxToReturn">the maximum number of &lt;i&gt;entries&lt;/i&gt;
 	          that may be present in a return &lt;i&gt;Directory&lt;/i&gt;. Note that a service may
 	          choose to return less than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an
@@ -7769,7 +7769,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -7926,7 +7926,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -8793,7 +8793,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -8942,7 +8942,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -9443,7 +9443,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -9544,7 +9544,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -9696,7 +9696,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -10078,7 +10078,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -10383,7 +10383,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -10534,7 +10534,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -10732,7 +10732,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -10919,7 +10919,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -11072,7 +11072,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -11375,7 +11375,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -11562,7 +11562,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -11715,7 +11715,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -12019,7 +12019,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -12206,7 +12206,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -12359,7 +12359,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -12663,7 +12663,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -12850,7 +12850,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -13003,7 +13003,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -13292,7 +13292,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -14478,7 +14478,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -14580,7 +14580,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -14733,7 +14733,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -15061,7 +15061,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -15163,7 +15163,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -15316,7 +15316,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -15706,7 +15706,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -15857,7 +15857,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -16142,7 +16142,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -16245,7 +16245,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -16398,7 +16398,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -16788,7 +16788,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -16891,7 +16891,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -17044,7 +17044,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -17435,7 +17435,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -17538,7 +17538,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -17691,7 +17691,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -18103,7 +18103,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -18254,7 +18254,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -18539,7 +18539,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -18642,7 +18642,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -18795,7 +18795,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -19185,7 +19185,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -19288,7 +19288,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -19441,7 +19441,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -19901,7 +19901,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -20054,7 +20054,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -20445,7 +20445,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -20548,7 +20548,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -20701,7 +20701,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -21117,7 +21117,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -21268,7 +21268,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -21553,7 +21553,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -21656,7 +21656,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -21809,7 +21809,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -22200,7 +22200,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -22303,7 +22303,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -22456,7 +22456,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -22847,7 +22847,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -22950,7 +22950,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -23103,7 +23103,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -23433,7 +23433,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -23535,7 +23535,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -23688,7 +23688,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -23992,7 +23992,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -24139,7 +24139,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -24410,7 +24410,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -24513,7 +24513,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -24666,7 +24666,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -25056,7 +25056,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -25159,7 +25159,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -25312,7 +25312,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -25772,7 +25772,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -25925,7 +25925,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="maxtoreturn" type="xsd:string" style="query">
+                    <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                       <doc title="QueryControl:maxToReturn">the maximum number of
                       &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                       &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -26188,7 +26188,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -26778,7 +26778,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -27050,7 +27050,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -27204,7 +27204,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -27688,7 +27688,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -27843,7 +27843,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -28660,7 +28660,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -28814,7 +28814,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -29085,7 +29085,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -29234,7 +29234,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -29910,7 +29910,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -30059,7 +30059,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -30705,7 +30705,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -30773,7 +30773,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -31533,7 +31533,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -31634,7 +31634,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -31740,7 +31740,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -32176,7 +32176,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -32333,7 +32333,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="maxtoreturn" type="xsd:string" style="query">
+            <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
               <doc title="QueryControl:maxToReturn">the maximum number of
               &lt;i&gt;entries&lt;/i&gt; that may be present in a return
               &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -33109,7 +33109,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="maxtoreturn" type="xsd:string" style="query">
+              <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                 <doc title="QueryControl:maxToReturn">the maximum number of
                 &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                 &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -33941,7 +33941,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -34022,7 +34022,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -34168,7 +34168,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -34485,7 +34485,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -34587,7 +34587,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -34740,7 +34740,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -35066,7 +35066,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -35217,7 +35217,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="maxtoreturn" type="xsd:string" style="query">
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                   <doc title="QueryControl:maxToReturn">the maximum number of
                   &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                   &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
@@ -35545,7 +35545,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -35647,7 +35647,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
@@ -35800,7 +35800,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="maxtoreturn" type="xsd:string" style="query">
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
                     <doc title="QueryControl:maxToReturn">the maximum number of
                     &lt;i&gt;entries&lt;/i&gt; that may be present in a return
                     &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
