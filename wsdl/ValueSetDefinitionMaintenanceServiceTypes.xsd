@@ -174,8 +174,7 @@
           <xs:element minOccurs="1" name="operator" type="core:SetOperator"/>
           <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
           <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
-          <xs:element minOccurs="1" name="referenceType" type="core:TargetReferenceType"/>
-          <xs:element minOccurs="1" name="property" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="component" type="core:ComponentReference"/>
           <xs:element minOccurs="1" name="matchAlgorithm" type="coreService:NameOrURI"/>
           <xs:element minOccurs="1" name="matchValue" type="core:String"/>
         </xs:sequence>
@@ -376,8 +375,7 @@
           <xs:element minOccurs="1" name="valueSet" type="coreService:NameOrURI"/>
           <xs:element minOccurs="1" name="codeSystem" type="coreService:NameOrURI"/>
           <xs:element minOccurs="1" name="codeSystemVersion" type="coreService:NameOrURI"/>
-          <xs:element minOccurs="1" name="referenceType" type="core:TargetReferenceType"/>
-          <xs:element minOccurs="1" name="property" type="coreService:EntityNameOrURI"/>
+          <xs:element minOccurs="1" name="component" type="core:ComponentReference"/>
           <xs:element minOccurs="1" name="matchAlgorithm" type="coreService:NameOrURI"/>
           <xs:element minOccurs="1" name="matchValue" type="core:String"/>
         </xs:sequence>

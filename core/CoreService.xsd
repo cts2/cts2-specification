@@ -849,22 +849,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:element name="PropertyNameOrURI" type="PropertyNameOrURI"/>
-	<xs:complexType name="PropertyNameOrURI">
-		<xs:annotation>
-			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>PropertyReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="EntityNameOrURI">
-				<xs:attribute name="referenceType" type="core:TargetReferenceType" use="required">
-					<xs:annotation>
-						<xs:documentation>the type of thing being referenced</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>	
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	
 	<xs:element name="NameOrURI" type="NameOrURI"/>
 	<xs:complexType name="NameOrURI">
 		<xs:annotation>
@@ -1012,7 +996,7 @@
 					<xs:documentation>The sort order to be applied to the element.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="sortElement" type="PropertyNameOrURI" minOccurs="1" maxOccurs="1">
+			<xs:element name="sortElement" type="core:ComponentReference" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The type and name of the attribute, property or special element to be sorted</xs:documentation>
 				</xs:annotation>
