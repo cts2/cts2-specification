@@ -35,7 +35,8 @@
     <xs:sequence>
       <xs:element minOccurs="1" name="directory" type="core:ValueSetDefinitionDirectoryURI"/>
       <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
-      <xs:element minOccurs="1" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="returnFilter" type="core:ComponentReferenceList"/>
     </xs:sequence>
   </xs:complexType>
   

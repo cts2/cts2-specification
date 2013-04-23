@@ -2041,7 +2041,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -2189,7 +2194,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -2632,7 +2642,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -2780,7 +2795,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -3036,7 +3056,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" type="xsd:string" style="query" required="false" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -3194,7 +3219,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" type="xsd:string" style="query" required="false" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -3772,7 +3802,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -3919,7 +3954,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -4366,7 +4406,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" type="xsd:string" style="query" required="false" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -4506,7 +4551,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -4883,7 +4933,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -5033,7 +5088,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -5516,7 +5576,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -5666,7 +5731,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -6150,7 +6220,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -6300,7 +6375,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -6784,7 +6864,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -6934,7 +7019,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -7398,7 +7488,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 	          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
 	
 	          <request>
-	            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+	                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
 	              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
 	              that results will be returned as a 'List.' 'false' indicates that results will be
 	              returned as a 'Directory'</doc>
@@ -7535,7 +7630,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 	          associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
 	
 	          <request>
-	            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+	                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
 	              <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
 	              that results will be returned as a 'List.' 'false' indicates that results will be
 	              returned as a 'Directory'</doc>
@@ -7779,7 +7879,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -7936,7 +8041,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -8803,7 +8913,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -8952,7 +9067,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -9554,7 +9674,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -9706,7 +9831,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -10393,7 +10523,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" type="xsd:string" style="query" required="false"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -10544,7 +10679,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -10929,7 +11069,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -11082,7 +11227,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -11572,7 +11722,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -11725,7 +11880,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -12216,7 +12376,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -12369,7 +12534,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -12860,7 +13030,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -13013,7 +13188,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -13601,7 +13781,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
               associations referenced by &lt;i&gt;associationDirectory&lt;/i&gt; as a graph.</doc>
 
               <request>
-                <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
                   results will be returned as a 'Directory'</doc>
@@ -14430,7 +14615,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -14590,7 +14780,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -14743,7 +14938,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -15173,7 +15373,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -15326,7 +15531,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -15716,7 +15926,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" type="xsd:string" style="query" required="false"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -15867,7 +16082,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -16255,7 +16475,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -16408,7 +16633,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -16901,7 +17131,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -17054,7 +17289,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -17548,7 +17788,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -17701,7 +17946,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -18113,7 +18363,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" type="xsd:string" style="query" required="false"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -18264,7 +18519,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -18652,7 +18912,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -18805,7 +19070,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -19298,7 +19568,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -19451,7 +19726,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -19911,7 +20191,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -20064,7 +20349,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -20558,7 +20848,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -20711,7 +21006,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -21127,7 +21427,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" type="xsd:string" style="query" required="false"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:boolean" style="query" required="false"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -21278,7 +21583,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -21666,7 +21976,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -21819,7 +22134,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -22313,7 +22633,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -22466,7 +22791,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -22960,7 +23290,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -23113,7 +23448,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -23545,7 +23885,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -23698,7 +24043,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -24009,7 +24359,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" type="xsd:string" style="query" required="false" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -24149,7 +24504,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" type="xsd:string" style="query" required="false"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -24523,7 +24883,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -24676,7 +25041,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -25169,7 +25539,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -25322,7 +25697,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -25782,7 +26162,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -25935,7 +26320,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                     </param>
 
-                    <param name="list" required="false" type="xsd:boolean" style="query"
+                                <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                     default="false">
                       <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                       indicates that results will be returned as a 'List.' 'false' indicates that
@@ -26198,7 +26588,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -27060,7 +27455,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -27214,7 +27614,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -27609,7 +28014,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
           </param>
 
-          <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                      <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
             <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
             that results will be returned as a 'List.' 'false' indicates that results will be
             returned as a 'Directory'</doc>
@@ -27698,7 +28108,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -27853,7 +28268,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -28670,7 +29090,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -28824,7 +29249,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -29095,7 +29525,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -29244,7 +29679,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -29920,7 +30360,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -30069,7 +30514,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -30715,7 +31165,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -30783,7 +31238,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -30838,7 +31298,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                 <request>
                   <param name="resolutioncontext" required="false" type="xsd:string"
                   style="query" />
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -30871,7 +31336,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
                 exceptions.</doc>
 
                 <request>
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -31326,7 +31796,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 					<doc title="EntityNameOrURIList">A set of zero or more
 						&lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
 				  </param>
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -31365,7 +31840,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 						&lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
 				  </param>
 				  
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -31644,7 +32124,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -31750,7 +32235,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                 </param>
 
-                <param name="list" required="false" type="xsd:boolean" style="query"
+                            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                 default="false">
                   <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                   indicates that results will be returned as a 'List.' 'false' indicates that
@@ -32186,7 +32676,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" type="xsd:string" style="query" required="false" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -32343,7 +32838,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" type="xsd:string" style="query" required="false" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:string" style="query" required="false" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -33126,7 +33626,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
               </param>
 
-              <param name="list" type="xsd:string" style="query" required="false" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:boolean" style="query" required="false" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -33326,7 +33831,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
             referenced definitions.</doc>
 
             <request>
-              <param name="list" type="xsd:string" style="query" required="false" default="false">
+                          <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" type="xsd:boolean" style="query" required="false" default="false">
                 <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                 indicates that results will be returned as a 'List.' 'false' indicates that results
                 will be returned as a 'Directory'</doc>
@@ -34597,7 +35107,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -34750,7 +35265,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -35657,7 +36177,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -35810,7 +36335,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
                   </param>
 
-                  <param name="list" required="false" type="xsd:boolean" style="query"
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
                   default="false">
                     <doc>whether to return the results in 'List' or 'Directory' format. 'true'
                     indicates that results will be returned as a 'List.' 'false' indicates that
@@ -36181,7 +36711,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+                        <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>
@@ -36339,7 +36874,12 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 
             </param>
 
-            <param name="list" required="false" type="xsd:boolean" style="query" default="false">
+            <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+			<param name="list" required="false" type="xsd:boolean" style="query" default="false">
               <doc>whether to return the results in 'List' or 'Directory' format. 'true' indicates
               that results will be returned as a 'List.' 'false' indicates that results will be
               returned as a 'Directory'</doc>

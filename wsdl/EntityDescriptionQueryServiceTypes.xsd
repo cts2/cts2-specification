@@ -198,6 +198,7 @@
       <xs:element minOccurs="0" name="resolveOnlyCodeSystem" type="coreService:NameOrURI"/>
       <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
       <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+      <xs:element minOccurs="0" name="returnFilter" type="core:ComponentReferenceList"/>
     </xs:sequence>    
   </xs:complexType>
   

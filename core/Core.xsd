@@ -1410,6 +1410,15 @@
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
+	
+	<xs:complexType name="ComponentReferenceList">
+		<xs:annotation>
+			<xs:documentation>A list (set) of zero or more component references</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="entry" type="ComponentReference" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 
 	<!-- ===============================================
 		Naming
