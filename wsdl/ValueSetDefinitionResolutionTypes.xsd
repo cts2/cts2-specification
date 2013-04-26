@@ -45,7 +45,7 @@
   <xs:element name="resolveResponse" type="tns:resolveResponse"/>
   <xs:complexType name="resolveResponse">
     <xs:sequence>
-      <xs:element ref="valueSetDefinition:ResolvedValueSetDirectory"/>
+      <xs:element ref="valueSetDefinition:IteratableResolvedValueSet"/>
     </xs:sequence>
   </xs:complexType>
   
