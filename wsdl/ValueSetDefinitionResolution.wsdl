@@ -103,6 +103,14 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
   <wsdl:message name="resolveResponse">
     <wsdl:part name="parameters" element="tns:resolveResponse" />
   </wsdl:message>
+  
+  <wsdl:message name="resolveConceptDomain">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomain" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveConceptDomainResponse">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomainResponse" />
+  </wsdl:message>
 
   <wsdl:message name="resolveAsCompleteSet">
     <wsdl:part name="parameters" element="tns:resolveAsCompleteSet" />
@@ -112,12 +120,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
     <wsdl:part name="parameters" element="tns:resolveAsCompleteSetResponse" />
   </wsdl:message>
 
+  <wsdl:message name="resolveConceptDomainAsCompleteSet">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomainAsCompleteSet" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveConceptDomainAsCompleteSetResponse">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomainAsCompleteSetResponse" />
+  </wsdl:message>
+  
   <wsdl:message name="resolveAsEntityDirectory">
     <wsdl:part name="parameters" element="tns:resolveAsEntityDirectory" />
   </wsdl:message>
 
   <wsdl:message name="resolveAsEntityDirectoryResponse">
     <wsdl:part name="parameters" element="tns:resolveAsEntityDirectoryResponse" />
+  </wsdl:message>
+  
+  <wsdl:message name="resolveConceptDomainAsEntityDirectory">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomainAsEntityDirectory" />
+  </wsdl:message>
+
+  <wsdl:message name="resolveConceptDomainAsEntityDirectoryResponse">
+    <wsdl:part name="parameters" element="tns:resolveConceptDomainAsEntityDirectoryResponse" />
   </wsdl:message>
 
   <wsdl:portType name="ValueSetDefinitionResolutionServicePortType">
@@ -179,6 +203,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
       <wsdl:input name="resolve" message="tns:resolve" />
       <wsdl:output name="resolveResponse" message="tns:resolveResponse" />
     </wsdl:operation>
+    
+    <wsdl:operation name="resolveConceptDomain">
+      <wsdl:input name="resolveConceptDomain" message="tns:resolveConceptDomain" />
+      <wsdl:output name="resolveConceptDomainResponse" message="tns:resolveConceptDomainResponse" />
+    </wsdl:operation>
 
     <wsdl:operation name="resolveAsCompleteSet">
       <wsdl:input name="resolveAsCompleteSet" message="tns:resolveAsCompleteSet" />
@@ -186,10 +215,22 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
       message="tns:resolveAsCompleteSetResponse" />
     </wsdl:operation>
 
+    <wsdl:operation name="resolveConceptDomainAsCompleteSet">
+      <wsdl:input name="resolveConceptDomainAsCompleteSet" message="tns:resolveConceptDomainAsCompleteSet" />
+      <wsdl:output name="resolveConceptDomainAsCompleteSetResponse"
+      message="tns:resolveConceptDomainAsCompleteSetResponse" />
+    </wsdl:operation>
+    
     <wsdl:operation name="resolveAsEntityDirectory">
       <wsdl:input name="resolveAsEntityDirectory" message="tns:resolveAsEntityDirectory" />
       <wsdl:output name="resolveAsEntityDirectoryResponse"
       message="tns:resolveAsEntityDirectoryResponse" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="resolveConceptDomainAsEntityDirectory">
+      <wsdl:input name="resolveConceptDomainAsEntityDirectory" message="tns:resolveConceptDomainAsEntityDirectory" />
+      <wsdl:output name="resolveConceptDomainAsEntityDirectoryResponse"
+      message="tns:resolveConceptDomainAsEntityDirectoryResponse" />
     </wsdl:operation>
 
   </wsdl:portType>
@@ -400,6 +441,20 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
       </fault>
 
     </wsdl:operation>
+    
+     <wsdl:operation name="resolveConceptDomain">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/"></documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolveConceptDomain">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveConceptDomainResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+    </wsdl:operation>
 
     <wsdl:operation name="resolve">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve the value set definition
@@ -491,6 +546,20 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
       </fault>
 
     </wsdl:operation>
+    
+     <wsdl:operation name="resolveConceptDomainAsCompleteSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/"></documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolveConceptDomainAsCompleteSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveConceptDomainAsCompleteSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+    </wsdl:operation>
 
     <wsdl:operation name="resolveAsCompleteSet">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve the value set definition
@@ -577,6 +646,20 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionResolut
         <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
       </fault>
 
+    </wsdl:operation>
+    
+    <wsdl:operation name="resolveConceptDomainAsEntityDirectory">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/"></documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="resolveConceptDomainAsEntityDirectory">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="resolveConceptDomainAsEntityDirectoryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
     </wsdl:operation>
 
     <wsdl:operation name="resolveAsEntityDirectory">

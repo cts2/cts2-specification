@@ -49,6 +49,24 @@
     </xs:sequence>
   </xs:complexType>
   
+  <xs:element name="resolveConceptDomain" type="tns:resolveConceptDomain"/>
+  <xs:complexType name="resolveConceptDomain">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="conceptDomain" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contexts" type="coreService:NameOrURIList"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveConceptDomainResponse" type="tns:resolveConceptDomainResponse"/>
+  <xs:complexType name="resolveConceptDomainResponse">
+    <xs:sequence>
+      <xs:element ref="valueSetDefinition:IteratableResolvedValueSet"/>
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:element name="resolveAsCompleteSet" type="tns:resolveAsCompleteSet"/>
   <xs:complexType name="resolveAsCompleteSet">
     <xs:sequence>
@@ -64,6 +82,24 @@
   <xs:complexType name="resolveAsCompleteSetResponse">
     <xs:sequence>
       <xs:element name="return" type="valueSetDefinition:ResolvedValueSet"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveConceptDomainAsCompleteSet" type="tns:resolveConceptDomainAsCompleteSet"/>
+  <xs:complexType name="resolveConceptDomainAsCompleteSet">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="conceptDomain" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contexts" type="coreService:NameOrURIList"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveConceptDomainAsCompleteSetResponse" type="tns:resolveConceptDomainAsCompleteSetResponse"/>
+  <xs:complexType name="resolveConceptDomainAsCompleteSetResponse">
+    <xs:sequence>
+      <xs:element ref="valueSetDefinition:IteratableResolvedValueSet"/>
     </xs:sequence>
   </xs:complexType>
   
@@ -85,4 +121,21 @@
     </xs:sequence>
   </xs:complexType>
   
+  <xs:element name="resolveConceptDomainAsEntityDirectory" type="tns:resolveConceptDomainAsEntityDirectory"/>
+  <xs:complexType name="resolveConceptDomainAsEntityDirectory">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="conceptDomain" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contexts" type="coreService:NameOrURIList"/>
+      <xs:element minOccurs="0" name="tag" type="coreService:NameOrURI"/>
+      <xs:element minOccurs="0" name="queryControl" type="coreService:QueryControl"/>
+      <xs:element minOccurs="0" name="context" type="coreService:ReadContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="resolveConceptDomainAsEntityDirectoryResponse" type="tns:resolveConceptDomainAsEntityDirectoryResponse"/>
+  <xs:complexType name="resolveConceptDomainAsEntityDirectoryResponse">
+    <xs:sequence>
+      <xs:element name="return" type="core:EntityDirectoryURI"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

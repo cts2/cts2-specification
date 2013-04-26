@@ -28878,6 +28878,792 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
           </request>
 
         </method>
+          
+          <resource path="resolution">
+
+            <method name="GET">
+              <doc title="ValueSetDefinitionResolution:resolveConceptDomain"></doc>
+
+              <request>
+                <param name="active" type="xsd:string" style="query">
+                  <doc title="ReadContext:active">determines whether the query only applies to only
+                  active or all entries.</doc>
+
+                </param>
+
+                <param name="changesetcontext" type="xsd:string" style="query">
+                  <doc title="ReadContext:changeSetContext">the URI of an open change set whose
+                  contents should be included in the results of the access request.
+                  &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support
+                  the &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is
+                  supplied in the service call.</doc>
+
+                </param>
+
+                <param name="referencelanguage" type="xsd:string" style="query">
+                  <doc title="ReadContext:referenceLanguage">the spoken or written language that
+                  should be used for the results of the inquiry, where appropriate. Should default
+                  to the default reference language of the service if omitted.</doc>
+
+                </param>
+
+                <param name="referencetime" type="xsd:dateTime" style="query">
+                  <doc title="ReadContext:referenceTime">the contextual date and time of the query.
+                  &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support
+                  the &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted,
+                  &lt;i&gt;referenceTime&lt;/i&gt; defaults to the current system date and
+                  time.</doc>
+
+                </param>
+
+                <param name="format" type="xsd:string" style="query">
+                  <doc title="QueryControl:format">the local identifier or URI of the return format
+                  for query results. This parameter defaults to the
+                  &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt; interface
+                  if not supplied.</doc>
+
+                </param>
+
+                <param name="page" type="xsd:nonNegativeInteger" style="query">
+                  <doc>the 0-based page number used for paging result sets</doc>
+
+                </param>
+
+                <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
+                  <doc title="QueryControl:maxToReturn">the maximum number of
+                  &lt;i&gt;entries&lt;/i&gt; that may be present in a return
+                  &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less than
+                  &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
+                  &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
+                  return block size it determines to be most appropriate.</doc>
+                  
+                  <doc>
+				  If ommitted, assume 'resolveAsCompleteSet' is requested and return the 
+				  ResolvedValueSet representation
+				  </doc>
+
+                </param>
+
+                <param name="timelimit" type="xsd:positiveInteger" style="query">
+                  <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken
+                  to process a query before a time out exception occurs. If not present, the
+                  service determines the maximum query time out.</doc>
+
+                </param>
+
+                <param name="contexts" type="xsd:string" repeating="true" style="query">
+                  <doc title="NameOrURIList">Carries either a local identifier
+                  (&lt;i&gt;name&lt;/i&gt;) or a URI (&lt;i&gt;uri&lt;/i&gt;) that references a
+                  resource in the service. &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input
+                  parameter and its type is always defined by the usage context. Note that service
+                  calls that use the &lt;i&gt;name&lt;/i&gt; option may not be portable across
+                  implementations, as there is no guarantee that any two CTS2 service
+                  implementations will use the same local identifiers for the same resources.</doc>
+
+                </param>
+
+                <param name="tag" type="xsd:string" repeating="true" style="query">
+                  <doc title="NameOrURI">a reference to a tag that can be assigned to
+                  versionable resources within the context of a service implementation</doc>
+
+                </param>
+
+              </request>
+
+              <response>
+                <representation element="valueSetDefinition:IterableResolvedValueSet">
+                  <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A
+                  &lt;i&gt;ResolvedValueSet &lt;/i&gt;whose contents are available as a set of
+                  directory entries that allows iteration.</doc>
+
+                </representation>
+
+              </response>
+              
+              <response>
+                  <representation element="valueSetDefinition:ResolvedValueSetMsg">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">The
+                    result of resolving a specific value set definition against a known set of code
+                    system versions. &lt;i&gt;ResolvedValueSet&lt;/i&gt; consists of a header that
+                    carries sufficient information that the resolution operation would be
+                    repeatable and the result of the resolution, which consists of set of
+                    EntityReferences.</doc>
+
+                  </representation>
+
+              </response>
+
+            </method>
+
+            <resource path="entities">
+              <doc>This URL Path represents: a &lt;i&gt;DirectoryURI &lt;/i&gt;that references a
+              set of &lt;i&gt;EntityDescriptionDirectory&lt;/i&gt;</doc>
+
+              <param name="codesystemversion" type="xsd:string" repeating="true" style="query">
+                <doc title="NameOrURI">Carries either a local identifier (&lt;i&gt;name&lt;/i&gt;)
+                or a URI (&lt;i&gt;uri&lt;/i&gt;) that references a resource in the service.
+                &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input parameter and its type is
+                always defined by the usage context. Note that service calls that use the
+                &lt;i&gt;name&lt;/i&gt; option may not be portable across implementations, as there
+                is no guarantee that any two CTS2 service implementations will use the same
+                local identifiers for the same resources.</doc>
+
+              </param>
+
+              <param name="tag" type="xsd:string" repeating="true" style="query">
+                <doc title="VersionTagReference">a reference to a tag that can be assigned to
+                versionable resources within the context of a service implementation</doc>
+
+              </param>
+
+              <param name="active" type="xsd:string" style="query">
+                <doc title="ReadContext:active">determines whether the query only applies to only
+                active or all entries.</doc>
+
+              </param>
+
+              <param name="changesetcontext" type="xsd:string" style="query">
+                <doc title="ReadContext:changeSetContext">the URI of an open change set whose
+                contents should be included in the results of the access request.
+                &lt;i&gt;changeSetContext&lt;/i&gt; is only applicable in services that support the
+                &lt;b&gt;Authoring&lt;/b&gt; profile. If omitted, no change set context is supplied
+                in the service call.</doc>
+
+              </param>
+
+              <param name="referencelanguage" type="xsd:string" style="query">
+                <doc title="ReadContext:referenceLanguage">the spoken or written language that
+                should be used for the results of the inquiry, where appropriate. Should default to
+                the default reference language of the service if omitted.</doc>
+
+              </param>
+
+              <param name="referencetime" type="xsd:dateTime" style="query">
+                <doc title="ReadContext:referenceTime">the contextual date and time of the query.
+                &lt;i&gt;referenceTime&lt;/i&gt; is may only be present in services that support
+                the &lt;b&gt;Temporal&lt;/b&gt; profile. If omitted,
+                &lt;i&gt;referenceTime&lt;/i&gt; defaults to the current system date and
+                time.</doc>
+
+              </param>
+
+              <param name="timelimit" type="xsd:positiveInteger" style="query">
+                <doc title="QueryControl:timeLimit">the maximum amount of time that may be taken to
+                process a query before a time out exception occurs. If not present, the service
+                determines the maximum query time out.</doc>
+
+              </param>
+
+              <param name="filtercomponent" type="xsd:string" style="query">
+                <doc title="FilterComponent:filterComponent">the name or URI of the property or
+                model element to be filtered. Properties are referenced by their predicate and
+                model elements all have URI's that are established by this specification.</doc>
+
+              </param>
+
+              <param name="matchalgorithm" type="xsd:string" style="query">
+                <doc title="FilterComponent:matchAlgorithm">the algorithm to be used for testing
+                the referenced component. Examples might include "starts with", "regular expression
+                match", "exists", "inRange", etc. NOTE: The CTS2 specification needs to
+                establish a core set of match algorithms that all compliant implementations must
+                support.</doc>
+
+              </param>
+
+              <param name="matchvalue" type="xsd:string" style="query">
+                <doc title="FilterComponent:matchValue">the value to be used in comparison. The
+                structure and format of &lt;i&gt;matchValue&lt;/i&gt; depends on the specific
+                &lt;i&gt;matchAlgorithm&lt;/i&gt;. As an example, a "startsWith" algorithm would be
+                plain text, a "regularExpression" algorithm would have a regular expression while
+                an "exists" algorithm would have nothing in the &lt;i&gt;matchValue&lt;/i&gt;
+                attribute.</doc>
+
+              </param>
+
+              <!-- restrictions -->
+              <!-- restrictToCodeSystem -->
+              <param name="codesystem" type="xsd:string" style="query">
+                <doc title="Restriction:restrictToCodeSystem" />
+                <doc title="NameOrURI">Carries either a local identifier (&lt;i&gt;name&lt;/i&gt;)
+                or a URI (&lt;i&gt;uri&lt;/i&gt;) that references a resource in the service.
+                &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input parameter and its type is
+                always defined by the usage context. Note that service calls that use the
+                &lt;i&gt;name&lt;/i&gt; option may not be portable across implementations, as there
+                is no guarantee that any two CTS2 service implementations will use the same
+                local identifiers for the same resources.</doc>
+
+              </param>
+
+              <param name="tag" type="xsd:string" style="query">
+                <doc title="Restriction:restrictToCodeSystem" />
+                <doc title="VersionTagReference">a reference to a tag that can be assigned to
+                versionable resources within the context of a service implementation</doc>
+
+              </param>
+
+              <!-- end restrictToCodeSystem -->
+              <!-- restrictToCodeSystemVersion -->
+              <param name="codesystemversion" type="xsd:string" style="query">
+                <doc title="Restriction:restrictToCodeSystemVersion" />
+                <doc title="NameOrURI">Carries either a local identifier (&lt;i&gt;name&lt;/i&gt;)
+                or a URI (&lt;i&gt;uri&lt;/i&gt;) that references a resource in the service.
+                &lt;i&gt;NameOrURI&lt;/i&gt; is only used as an input parameter and its type is
+                always defined by the usage context. Note that service calls that use the
+                &lt;i&gt;name&lt;/i&gt; option may not be portable across implementations, as there
+                is no guarantee that any two CTS2 service implementations will use the same
+                local identifiers for the same resources.</doc>
+
+              </param>
+
+              <!-- end restrictToCodeSystemVersion -->
+              <!-- restrictToEntities -->
+              <param name="entity" type="xsd:string" style="query" repeating="true">
+                <doc title="Restriction:restrictToEntities" />
+                <doc title="EntityNameOrURIList">A set of zero or more
+                &lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
+
+              </param>
+
+              <!-- end restrictToEntities -->
+              <!-- end restrictions -->
+              <method name="GET">
+                <doc title="EntityDescriptionTransformService:fromEntityDirectory">Transform the
+                list of entity descriptions referenced in &lt;i&gt;entityDirectory &lt;/i&gt;into
+                the semantics and syntax specified in &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.</doc>
+
+                <request>
+                  <param name="format" type="xsd:string" style="query">
+                    <doc title="QueryControl:format">the local identifier or URI of the return
+                    format for query results. This parameter defaults to the
+                    &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt;
+                    interface if not supplied.</doc>
+
+                  </param>
+
+                  <param name="sort" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortElement">the type and name of the attribute,
+                    property or special element to be sorted</doc>
+
+                  </param>
+
+                  <param name="sortdirection" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortDirection">the sort order</doc>
+
+                  </param>
+
+                  <param name="page" type="xsd:nonNegativeInteger" style="query">
+                    <doc>the 0-based page number used for paging result sets</doc>
+
+                  </param>
+
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
+                    <doc title="QueryControl:maxToReturn">the maximum number of
+                    &lt;i&gt;entries&lt;/i&gt; that may be present in a return
+                    &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
+                    than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
+                    &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
+                    return block size it determines to be most appropriate.</doc>
+
+                  </param>
+
+                  <param name="languageandsyntax" required="true" type="xsd:string" style="query">
+                    <doc title="LanguageAndSyntax" />
+                  </param>
+
+                  <param name="asexpressions" required="true" fixed="true" type="xsd:string"
+                  style="query">
+                    <doc title="LanguageAndSyntax" />
+                  </param>
+
+                </request>
+
+                <response>
+                  <representation element="core:EntityExpression">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">An
+                    expression in a given ontology language and syntax that describes or defines an
+                    entity. Examples might include descriptions of entities in Manchester OWL
+                    Syntax, RDF, SNOMED Concept Expression, etc.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedOntologyLanguage">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied ontology language is
+                    not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedOntologySyntax">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied ontology syntax is
+                    not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryURI">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+                    &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryType">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the
+                    supplied &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the
+                    service invocation.</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+              <method name="GET">
+                <doc title="EntityDescriptionQueryService:resolve">Return an
+                &lt;i&gt;EntityDirectory&lt;/i&gt; that contains the set of
+                &lt;i&gt;EntityReference&lt;/i&gt;s identified by
+                &lt;i&gt;directory&lt;/i&gt;.</doc>
+
+                <request>
+                  <param name="format" type="xsd:string" style="query">
+                    <doc title="QueryControl:format">the local identifier or URI of the return
+                    format for query results. This parameter defaults to the
+                    &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt;
+                    interface if not supplied.</doc>
+
+                  </param>
+
+                  <param name="sort" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortElement">the type and name of the attribute,
+                    property or special element to be sorted</doc>
+
+                  </param>
+
+                  <param name="sortdirection" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortDirection">the sort order</doc>
+
+                  </param>
+
+                  <param name="page" type="xsd:nonNegativeInteger" style="query">
+                    <doc>the 0-based page number used for paging result sets</doc>
+
+                  </param>
+
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
+                    <doc title="QueryControl:maxToReturn">the maximum number of
+                    &lt;i&gt;entries&lt;/i&gt; that may be present in a return
+                    &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
+                    than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
+                    &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
+                    return block size it determines to be most appropriate.</doc>
+
+                  </param>
+
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
+                  default="false">
+                    <doc>whether to return the results in 'List' or 'Directory' format. 'true'
+                    indicates that results will be returned as a 'List.' 'false' indicates that
+                    results will be returned as a 'Directory'</doc>
+
+                  </param>
+
+                </request>
+
+                <response>
+                  <representation element="entity:EntityDirectory">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">a
+                    directory of &lt;i&gt;Entity&lt;/i&gt; resources that meet a specified
+                    criteria</doc>
+
+                  </representation>
+
+                  <representation element="entity:EntityList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">a
+                    collection of complete &lt;i&gt;Entity&lt;/i&gt; resources that meet a
+                    specified criteria</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedLanguage">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="404">
+                  <representation element="exceptions:UnknownChangeSet">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                    either not be read or located by the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:ChangeSetIsNotOpen">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                    is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedContext">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="500">
+                  <representation element="exceptions:SortAndFilterException">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
+                    and/or filter parameters</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedFormat">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
+                    not supported by the service implementation</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="408">
+                  <representation element="exceptions:QueryTimeout">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
+                    was exceeded by the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryURI">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+                    &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryType">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the
+                    supplied &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the
+                    service invocation.</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+              <method name="POST">
+                <doc title="EntityDescriptionQueryService:resolve">Return an
+                &lt;i&gt;EntityDirectory&lt;/i&gt; that contains the set of
+                &lt;i&gt;EntityReference&lt;/i&gt;s identified by
+                &lt;i&gt;directory&lt;/i&gt;.</doc>
+
+                <request>
+                  <param name="format" type="xsd:string" style="query">
+                    <doc title="QueryControl:format">the local identifier or URI of the return
+                    format for query results. This parameter defaults to the
+                    &lt;i&gt;defaultFormat&lt;/i&gt; in the &lt;i&gt;BaseService&lt;/i&gt;
+                    interface if not supplied.</doc>
+
+                  </param>
+
+                  <param name="sort" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortElement">the type and name of the attribute,
+                    property or special element to be sorted</doc>
+
+                  </param>
+
+                  <param name="sortdirection" type="xsd:string" style="query">
+                    <doc title="SortCriterion:sortDirection">the sort order</doc>
+
+                  </param>
+
+                  <param name="page" type="xsd:nonNegativeInteger" style="query">
+                    <doc>the 0-based page number used for paging result sets</doc>
+
+                  </param>
+
+                  <param name="maxtoreturn" type="xsd:positiveInteger" style="query">
+                    <doc title="QueryControl:maxToReturn">the maximum number of
+                    &lt;i&gt;entries&lt;/i&gt; that may be present in a return
+                    &lt;i&gt;Directory&lt;/i&gt;. Note that a service may choose to return less
+                    than &lt;i&gt;maxToReturn&lt;/i&gt; entries - this is simply an upper limit. If
+                    &lt;i&gt;maxToReturn&lt;/i&gt; is not supplied, the service may use whatever
+                    return block size it determines to be most appropriate.</doc>
+
+                  </param>
+
+                              <param name="resolvecomponent" required="false" type="xsd:string" style="query" repeating="true">
+              <doc title="ComponentReferenceList">when the 'list' parameter is true, this can be used to limit the resulting content to only
+              elements specified.</doc>
+            </param> 
+
+	<param name="list" required="false" type="xsd:boolean" style="query"
+                  default="false">
+                    <doc>whether to return the results in 'List' or 'Directory' format. 'true'
+                    indicates that results will be returned as a 'List.' 'false' indicates that
+                    results will be returned as a 'Directory'</doc>
+
+                  </param>
+
+                  <representation element="coreService:EntityNameOrURIList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">A set
+                    of zero or more &lt;i&gt;EntityNmeOrURI&lt;/i&gt; elements</doc>
+
+                  </representation>
+
+                  <representation element="coreService:Query">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type" />
+                  </representation>
+
+                </request>
+
+                <response>
+                  <representation element="entity:EntityDirectory">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">a
+                    directory of &lt;i&gt;Entity&lt;/i&gt; resources that meet a specified
+                    criteria</doc>
+
+                  </representation>
+
+                  <representation element="entity:EntityList">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema" title="Representation Type">a
+                    collection of complete &lt;i&gt;Entity&lt;/i&gt; resources that meet a
+                    specified criteria</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedLanguage">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="404">
+                  <representation element="exceptions:UnknownChangeSet">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                    either not be read or located by the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:ChangeSetIsNotOpen">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                    is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedContext">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="500">
+                  <representation element="exceptions:SortAndFilterException">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">Errors that can occur in sort
+                    and/or filter parameters</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedFormat">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;format&lt;/i&gt; is
+                    not supported by the service implementation</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="408">
+                  <representation element="exceptions:QueryTimeout">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The &lt;i&gt;timeLimit&lt;/i&gt;
+                    was exceeded by the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryURI">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+                    &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryType">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the
+                    supplied &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the
+                    service invocation.</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+              <method name="HEAD">
+                <doc title="BaseQueryService:count">Return the number of elements currently
+                represented by the supplied directory URI.</doc>
+
+                <response>
+                  <param style="header" name="count" type="core:NaturalNumber" />
+                </response>
+
+              </method>
+
+              <method name="HEAD">
+                <doc title="EntityDescriptionQueryService:isEntityInSet">Determine whether the
+                supplied entity name or URI is in the set referenced by
+                &lt;i&gt;directory&lt;/i&gt;.</doc>
+
+                <request>
+                  <param name="entityinset" required="true" type="xsd:string" style="query">
+                    <doc title="EntityNameOrURI">A reference to a class, property or individual
+                    that is described in some Code System. &lt;i&gt;EntityNameOrURI&lt;/i&gt; may
+                    either reference an entity that is known locally to the service or an entity
+                    that is described elsewhere. If the entity is known to the service, it is
+                    possible to use the &lt;i&gt;entityName&lt;/i&gt; variant, but note that
+                    &lt;u&gt;neither&lt;/u&gt;&lt;i&gt; scopingNamespace&lt;/i&gt; nor the
+                    &lt;i&gt;entityName&lt;/i&gt; are guaranteed to be the same in different
+                    CTS2 implementations. The &lt;i&gt;entityName&lt;/i&gt; variant is intended
+                    for use in human/browser interactions and should not be hard-coded into data
+                    tables or applications.</doc>
+
+                  </param>
+
+                </request>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedLanguage">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="404">
+                  <representation element="exceptions:UnknownChangeSet">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The change set specified could
+                    either not be read or located by the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:ChangeSetIsNotOpen">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but its state
+                    is not &lt;i&gt;OPEN&lt;/i&gt;.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedContext">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">One or more
+                    &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the service</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryURI">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied
+                    &lt;i&gt;directory&lt;/i&gt; URI is not valid</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:InvalidDirectoryType">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The type represented by the
+                    supplied &lt;i&gt;directory&lt;/i&gt; URI is not the one required by the
+                    service invocation.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="400">
+                  <representation element="exceptions:UnsupportedNamespaceName">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The supplied namespace name is
+                    not one that is known to the service.</doc>
+
+                  </representation>
+
+                </response>
+
+                <response status="404">
+                  <representation element="exceptions:UnknownEntity">
+                    <doc xmlns="http://www.w3.org/2001/XMLSchema">The
+                    &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the service</doc>
+
+                  </representation>
+
+                </response>
+
+              </method>
+
+            </resource>
+
+          </resource>
 
       </resource>
 
