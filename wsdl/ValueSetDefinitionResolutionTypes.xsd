@@ -99,7 +99,7 @@
   <xs:element name="resolveConceptDomainAsCompleteSetResponse" type="tns:resolveConceptDomainAsCompleteSetResponse"/>
   <xs:complexType name="resolveConceptDomainAsCompleteSetResponse">
     <xs:sequence>
-      <xs:element ref="valueSetDefinition:IteratableResolvedValueSet"/>
+      <xs:element ref="valueSetDefinition:ResolvedValueSet"/>
     </xs:sequence>
   </xs:complexType>
   
