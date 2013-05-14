@@ -401,11 +401,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogR
 
     <wsdl:operation name="exists">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return TRUE if the a
-      &lt;i&gt;CodeSystemVersion&lt;/i&gt; is known to the service with a matching name or
-      URI.Determine whether a catalog entry exists that has an &lt;i&gt;about&lt;/i&gt; or
-      &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or that has a
-      &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was) applicable in
-      the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      &lt;i&gt;CodeSystemVersion&lt;/i&gt; is known to the service by the supplied name, 
+      URI, OID or alternateID.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="exists">
@@ -517,11 +514,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogR
     </wsdl:operation>
 
     <wsdl:operation name="read">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified code system
-      version details from the service.Return the catalog entry that has an
-      &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or
-      that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was)
-      applicable in the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">
+      Return the catalog entry by the supplied name, URI, OID or alternateID.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="read">

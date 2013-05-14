@@ -354,11 +354,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionReadServices">
 
     <!-- EndBaseService -->
     <wsdl:operation name="exists">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine if the specified map
-      version is known to the service.Determine whether a catalog entry exists that has an
-      &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or
-      that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was)
-      applicable in the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">
+      Determine whether a catalog entry exists by the supplied name, URI, OID or alternateID.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="exists">
@@ -557,11 +554,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionReadServices">
     </wsdl:operation>
 
     <wsdl:operation name="read">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">retrieve a specific version of a map
-      by name or URIReturn the catalog entry that has an &lt;i&gt;about&lt;/i&gt; or
-      &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or that has a
-      &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was) applicable in
-      the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the catalog entry
+      by the supplied name, URI, OID or alternateID.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="read">

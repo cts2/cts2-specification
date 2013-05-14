@@ -2498,7 +2498,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
         <method name="GET">
           <request>
             <param name="uri" required="true" type="xsd:string" style="query">
-              <doc>the URI of the requested resource</doc>
+              <doc>the URI, OID or alternateID of the requested resource</doc>
 
             </param>
 
@@ -8189,7 +8189,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
         <method name="GET">
           <request>
             <param name="uri" required="true" type="xsd:string" style="query">
-              <doc>the URI of the requested resource</doc>
+              <doc>the URI, OID or alternateID of the requested resource</doc>
 
             </param>
 
@@ -30628,7 +30628,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
         <method name="GET">
           <request>
             <param name="uri" required="true" type="xsd:string" style="query">
-              <doc>the URI of the requested resource</doc>
+              <doc>the URI, OID or alternateID of the requested resource</doc>
 
             </param>
 
@@ -33270,7 +33270,7 @@ xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submissio
 			<method name="GET">
 				<request>
 					<param name="uri" required="true" type="xsd:string" style="query">
-						<doc>the URI of the requested resource</doc>
+						<doc>the URI, OID or alternateID of the requested resource</doc>
 	
 					</param>
 	
