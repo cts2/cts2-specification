@@ -1393,17 +1393,17 @@
 			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>ComponentReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
 		</xs:annotation>
 		<xs:choice minOccurs="1" maxOccurs="1">
-			<xs:element name="referenceAttribute" type="LocalIdentifier">
+			<xs:element name="attributeReference" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>a reference to an attribute in a CTS<sub>2</sub> model such as <i>formalName</i>, <i>designation</i>, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="referenceProperty" type="URIAndEntityName">
+			<xs:element name="propertyReference" type="URIAndEntityName">
 				<xs:annotation>
 					<xs:documentation>a reference to a model <i>Property</i>. The reference target carries the URI and, optionally, namespace and name of the property predicate. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="referenceSpecial" type="LocalIdentifier">
+			<xs:element name="specialReference" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>the target of the reference is a special element such as the match strength of a search</xs:documentation>
 				</xs:annotation>
