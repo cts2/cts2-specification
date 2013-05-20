@@ -343,8 +343,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices">
     <wsdl:operation name="readByExternalStatementId">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the association identified
       by the &lt;i&gt;identifierNamespace &lt;/i&gt;and
-      &lt;i&gt;externalStatementId.&lt;/i&gt;Retrieve the association identified by the
-      &lt;i&gt;identifierNamespace &lt;/i&gt;and
       &lt;i&gt;externalStatementId.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />

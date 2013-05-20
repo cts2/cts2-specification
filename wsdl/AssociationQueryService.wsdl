@@ -1127,9 +1127,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="restrictToPredicate">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a &lt;i&gt;DirectoryURI
       &lt;/i&gt;that represents the subset of the associations in &lt;i&gt;directory&lt;/i&gt;
-      whose predicate is &lt;i&gt;predicate.&lt;/i&gt;Return a &lt;i&gt;DirectoryURI &lt;/i&gt;that
-      represents the subset of the associations in &lt;i&gt;directory&lt;/i&gt; whose predicate is
-      &lt;i&gt;predicate.&lt;/i&gt;</documentation>
+      whose predicate is &lt;i&gt;predicate.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToPredicate">
