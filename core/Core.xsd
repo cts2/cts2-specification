@@ -463,7 +463,7 @@
 			<xs:enumeration value="OPEN">
 				<xs:annotation>
 					<xs:documentation>the contents of a <i>ChangeSet</i> or <i>ResourceVersionDescription </i>may change, meaning that the contents cannot be determined by using the <i>ChangeSetURI </i>or
-						<i>DocumentURI.</i></xs:documentation>
+						<i>about</i>URI</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FINAL">
@@ -1393,17 +1393,17 @@
 			<xs:documentation>A reference to a CTS<sub>2</sub> model element. <i>ComponentReference</i> may reference a model attribute, a <i>Property</i> or a special element such as match strength.</xs:documentation>
 		</xs:annotation>
 		<xs:choice minOccurs="1" maxOccurs="1">
-			<xs:element name="attributeReference" type="LocalIdentifier">
+			<xs:element name="referenceAttribute" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>a reference to an attribute in a CTS<sub>2</sub> model such as <i>formalName</i>, <i>designation</i>, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="propertyReference" type="URIAndEntityName">
+			<xs:element name="referenceProperty" type="URIAndEntityName">
 				<xs:annotation>
 					<xs:documentation>a reference to a model <i>Property</i>. The reference target carries the URI and, optionally, namespace and name of the property predicate. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="specialReference" type="LocalIdentifier">
+			<xs:element name="referenceSpecial" type="LocalIdentifier">
 				<xs:annotation>
 					<xs:documentation>the target of the reference is a special element such as the match strength of a search</xs:documentation>
 				</xs:annotation>
@@ -1816,7 +1816,10 @@
 				</xs:sequence>
 				<xs:attribute name="documentURI" type="DocumentURI" use="optional">
 					<xs:annotation>
-						<xs:documentation>a URI that identifies the specific version, language and notation of the <i>about</i> resource</xs:documentation>
+						<xs:documentation>a URI that identifies the specific version, language and notation of the <i>about</i> resource.  This URI needs to be constructed in such a way that, if necessary, it will be
+						possible to differentiate resource versions that were loaded from different document syntaxes.  As an example, if an image of the wine ontology was loaded from a resource whtat was in
+						Manchester Syntax, it should be given a different URI than the image loaded from the RDF/XML syntax.  The reasoning behind this is, even in cases where different syntaxes are 100%
+						compatible the transformation into the CTS2 model may not be identical.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
