@@ -1218,7 +1218,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintena
 
     <wsdl:operation name="createNamedEntityDescription">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
-      &lt;i&gt;NamedEntityDescription.&lt;/i&gt;Create a new
       &lt;i&gt;NamedEntityDescription.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -1283,7 +1282,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintena
 
     <wsdl:operation name="createNamedIndividualDescription">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
-      &lt;i&gt;NamedIndividualDescription.&lt;/i&gt;Create a new
       &lt;i&gt;NamedIndividualDescription.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -1348,7 +1346,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintena
 
     <wsdl:operation name="createObjectPropertyDescription">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
-      &lt;i&gt;ObjectPropertyDescription.&lt;/i&gt;Create a new
       &lt;i&gt;ObjectPropertyDescription.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -1413,7 +1410,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintena
 
     <wsdl:operation name="createPredicateDescription">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
-      &lt;i&gt;PredicateDescription&lt;/i&gt;.Create a new
       &lt;i&gt;PredicateDescription&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />

@@ -817,9 +817,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryMaintenanceServic
 
     <wsdl:operation name="removeMapSet">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove the referenced
-      &lt;i&gt;MapSet&lt;/i&gt; and any contained &lt;i&gt;MapTargets.&lt;/i&gt;Remove the
-      referenced &lt;i&gt;MapSet&lt;/i&gt; and any contained
-      &lt;i&gt;MapTargets.&lt;/i&gt;</documentation>
+      &lt;i&gt;MapSet&lt;/i&gt; and any contained &lt;i&gt;MapTargets.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="removeMapSet">

@@ -1005,9 +1005,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="getTargetEntities">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
       to the set of entities that occur in the &lt;i&gt;target&lt;/i&gt; position or as the target
-      of a BNODE in the resolution of the supplied association directoryreturn a DirectoryURI that
-      resolves to the set of entities that occur in the &lt;i&gt;target&lt;/i&gt; position or as
-      the target of a BNODE in the resolution of the supplied association directory</documentation>
+      of a BNODE in the resolution of the supplied association directory</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getTargetEntities">
@@ -1175,9 +1173,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
       to the set of entities that occur in either the &lt;i&gt;source&lt;/i&gt; or the
       &lt;i&gt;target &lt;/i&gt;position of the resolution of the supplied association
-      directoryreturn a DirectoryURI that resolves to the set of entities that occur in either the
-      &lt;i&gt;source&lt;/i&gt; or the &lt;i&gt;target &lt;/i&gt;position of the resolution of the
-      supplied association directory</documentation>
+      directory</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getAllSourceAndTargetEntities">
@@ -1257,11 +1253,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       a &lt;i&gt;source&lt;/i&gt; or a &lt;i&gt;target&lt;/i&gt; matching the supplied entity. This
       is equivalent to the union of &lt;i&gt;restrictToSourceEntity &lt;/i&gt;and
       &lt;i&gt;restrictToTargetEntity&lt;/i&gt; with &lt;i&gt;source&lt;/i&gt; and
-      &lt;i&gt;target&lt;/i&gt; being the sameReturn a &lt;i&gt;DirectoryURI&lt;/i&gt; that
-      represents the subset of the associations having either a &lt;i&gt;source&lt;/i&gt; or a
-      &lt;i&gt;target&lt;/i&gt; matching the supplied entity. This is equivalent to the union of
-      &lt;i&gt;restrictToSourceEntity &lt;/i&gt;and &lt;i&gt;restrictToTargetEntity&lt;/i&gt; with
-      &lt;i&gt;source&lt;/i&gt; and &lt;i&gt;target&lt;/i&gt; being the same</documentation>
+      &lt;i&gt;target&lt;/i&gt; being the same</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToSourceOrTargetEntity">
@@ -1322,8 +1314,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
       &lt;i&gt;DirectoryURI&lt;/i&gt; that represents the subset of the associations in
       &lt;i&gt;directory&lt;/i&gt; having a string literal that matches
-      &lt;i&gt;target&lt;/i&gt;.Return a &lt;i&gt;DirectoryURI&lt;/i&gt; that represents the subset
-      of the associations in &lt;i&gt;directory&lt;/i&gt; having a string literal that matches
       &lt;i&gt;target&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -1353,9 +1343,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="getPredicates">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">return a DirectoryURI that resolves
       to the set of entities that occur in the &lt;i&gt;predicate&lt;/i&gt; position of the
-      resolution of the supplied association directoryreturn a DirectoryURI that resolves to the
-      set of entities that occur in the &lt;i&gt;predicate&lt;/i&gt; position of the resolution of
-      the supplied association directory</documentation>
+      resolution of the supplied association directory</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getPredicates">

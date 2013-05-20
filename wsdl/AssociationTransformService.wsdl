@@ -372,9 +372,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
 
     <wsdl:operation name="fromAssociationList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return an expression that represents
-      &lt;i&gt;associationList&lt;/i&gt; in the named &lt;i&gt;languageAndSyntax&lt;/i&gt;.Return
-      an expression that represents &lt;i&gt;associationList&lt;/i&gt; in the named
-      &lt;i&gt;languageAndSyntax&lt;/i&gt;.</documentation>
+      &lt;i&gt;associationList&lt;/i&gt; in the named &lt;i&gt;languageAndSyntax&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="fromAssociationList">
@@ -410,8 +408,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
 
     <wsdl:operation name="toAssociationFormat">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transform
-      &lt;i&gt;entityExpression&lt;/i&gt; into a lot of one or more &lt;i&gt;Associations&lt;/i&gt;
-      in the context of the supplied &lt;i&gt;codeSystemVersion&lt;/i&gt;.Transform
       &lt;i&gt;entityExpression&lt;/i&gt; into a lot of one or more &lt;i&gt;Associations&lt;/i&gt;
       in the context of the supplied &lt;i&gt;codeSystemVersion&lt;/i&gt;.</documentation>
 

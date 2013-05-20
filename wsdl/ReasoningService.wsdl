@@ -1025,10 +1025,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ReasoningServices">
     <wsdl:operation name="classify">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">The set of new assertions that can be
       inferred from the combination of the assertions in &lt;i&gt;associationList&lt;/i&gt; and the
-      set that are &lt;i&gt;assertedBy&lt;/i&gt; &lt;i&gt;codeSystemVersion&lt;/i&gt;.The set of
-      new assertions that can be inferred from the combination of the assertions in
-      &lt;i&gt;associationList&lt;/i&gt; and the set that are &lt;i&gt;assertedBy&lt;/i&gt;
-      &lt;i&gt;codeSystemVersion&lt;/i&gt;.</documentation>
+      set that are &lt;i&gt;assertedBy&lt;/i&gt; &lt;i&gt;codeSystemVersion&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="classify">

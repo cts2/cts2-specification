@@ -564,9 +564,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogQ
 
     <wsdl:operation name="resolveAsList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve the supplied
-      &lt;i&gt;DirectoryURI&lt;/i&gt; and return the set of catalog entries it represents.Resolve a
-      &lt;i&gt;DirectoryURI &lt;/i&gt; that references a set of code system catalog entries and
-      return the set of corresponding catalog entries</documentation>
+      &lt;i&gt;DirectoryURI&lt;/i&gt; and return the set of catalog entries it represents.
+      </documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="resolveAsList">

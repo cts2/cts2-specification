@@ -496,10 +496,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices">
     <wsdl:operation name="exists">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine whether an association
       identified by the &lt;i&gt;entryID&lt;/i&gt; URI is accessible from the service in the
-      specified (optional) contextDetermine whether a catalog entry exists that has an
-      &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or
-      that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was)
-      applicable in the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      specified (optional) context</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="exists">
@@ -544,9 +541,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine whether the association
       identified by the &lt;i&gt;identifierNamespace &lt;/i&gt;and
       &lt;i&gt;externalStatementId&lt;/i&gt; is accessible from the service in the specified
-      (optional) contextDetermine whether the association identified by the
-      &lt;i&gt;identifierNamespace &lt;/i&gt;and &lt;i&gt;externalStatementId&lt;/i&gt; is
-      accessible from the service in the specified (optional) context</documentation>
+      (optional) context</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="existsByExternalStatementId">

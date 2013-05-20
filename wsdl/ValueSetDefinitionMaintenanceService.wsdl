@@ -988,12 +988,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
       system and optional version. A service implementation MAY choose to validate the code system
       URI and/or verify that the supplied version is valid for the code system. The implementation
       MAY, instead, assume the supplied URIs are valid and simply unknown to the service at this
-      point in time.Create a new value set definition consisting of a
-      &lt;i&gt;CompleteCodeSystemReference w&lt;/i&gt;ith the &lt;i&gt;operator&lt;/i&gt; set to
-      &lt;i&gt;UNION&lt;/i&gt; referencing the supplied code system and optional version. A service
-      implementation MAY choose to validate the code system URI and/or verify that the supplied
-      version is valid for the code system. The implementation MAY, instead, assume the supplied
-      URIs are valid and simply unknown to the service at this point in time.</documentation>
+      point in time.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="createCompleteCodeSystemReference">
@@ -1063,14 +1058,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
       MAY, instead, assume the supplied URIs are valid and simply unknown to the service at this
       point in time. The service implementation MAY choose to validate the supplied code system
       versions and/or validate whether the versions are referenced in the supplied (optional) value
-      set definition.Create a new value set definition consisting of a
-      &lt;i&gt;CompleteValueSetReference w&lt;/i&gt;ith the &lt;i&gt;operator&lt;/i&gt; set to
-      &lt;i&gt;UNION&lt;/i&gt; referencing the supplied code system and optional version. A service
-      implementation MAY choose to validate the value set URI and/or verify that the supplied
-      version is valid for the value set. The implementation MAY, instead, assume the supplied URIs
-      are valid and simply unknown to the service at this point in time. The service implementation
-      MAY choose to validate the supplied code system versions and/or validate whether the versions
-      are referenced in the supplied (optional) value set definition.</documentation>
+      set definition.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="createCompleteValueSetReference">
@@ -1344,10 +1332,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
     <wsdl:operation name="createSpecificEntityListDefinition">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new value set definition
       consisting of a &lt;i&gt;SpecificEntityList w&lt;/i&gt;ith the &lt;i&gt;operator&lt;/i&gt;
-      set to &lt;i&gt;UNION&lt;/i&gt; referencing the supplied set of entitiesCreate a new value
-      set definition consisting of a &lt;i&gt;SpecificEntityList w&lt;/i&gt;ith the
-      &lt;i&gt;operator&lt;/i&gt; set to &lt;i&gt;UNION&lt;/i&gt; referencing the supplied set of
-      entities</documentation>
+      set to &lt;i&gt;UNION&lt;/i&gt; referencing the supplied set of entities</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="createSpecificEntityListDefinition">
@@ -1449,8 +1434,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
     <wsdl:operation name="addExternalValueSetDefinition">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add an
       &lt;i&gt;ExternalValueSetDefinition&lt;/i&gt; component to an existing
-      &lt;i&gt;ValueSetDefinition&lt;/i&gt;.Add an &lt;i&gt;ExternalValueSetDefinition&lt;/i&gt;
-      component to an existing &lt;i&gt;ValueSetDefinition&lt;/i&gt;.</documentation>
+      &lt;i&gt;ValueSetDefinition&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="addExternalValueSetDefinition">
@@ -1546,8 +1530,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
     <wsdl:operation name="addAssociatedEntitiesReference">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add an
       &lt;i&gt;AssociatedEntitiesReference&lt;/i&gt; component to an existing
-      &lt;i&gt;ValueSetDefinition.&lt;/i&gt;Add an &lt;i&gt;AssociatedEntitiesReference&lt;/i&gt;
-      component to an existing &lt;i&gt;ValueSetDefinition.&lt;/i&gt;</documentation>
+      &lt;i&gt;ValueSetDefinition.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="addAssociatedEntitiesReference">
@@ -1632,8 +1615,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
     <wsdl:operation name="addCompleteCodeSystemReference">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Add a
       &lt;i&gt;CompleteCodeSystemReference&lt;/i&gt; to an existing
-      &lt;i&gt;ValueSetDefinition&lt;/i&gt;Add a &lt;i&gt;CompleteCodeSystemReference&lt;/i&gt; to
-      an existing &lt;i&gt;ValueSetDefinition&lt;/i&gt;</documentation>
+      &lt;i&gt;ValueSetDefinition&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="addCompleteCodeSystemReference">
@@ -1697,8 +1679,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMainten
 
     <wsdl:operation name="createPropertyQueryReference">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new value set definition
-      consisting of a &lt;i&gt;PropertyQueryReference w&lt;/i&gt;ith the
-      &lt;i&gt;operator&lt;/i&gt; set to &lt;i&gt;UNION&lt;/i&gt;Create a new value set definition
       consisting of a &lt;i&gt;PropertyQueryReference w&lt;/i&gt;ith the
       &lt;i&gt;operator&lt;/i&gt; set to &lt;i&gt;UNION&lt;/i&gt;</documentation>
 

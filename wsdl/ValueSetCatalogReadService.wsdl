@@ -361,10 +361,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetCatalogReadServic
 
     <wsdl:operation name="read">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified value
-      set.Return the catalog entry that has an &lt;i&gt;about&lt;/i&gt; or
-      &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or that has a
-      &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was) applicable in
-      the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      set.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="read">

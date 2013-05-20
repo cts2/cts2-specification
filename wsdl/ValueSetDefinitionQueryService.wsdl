@@ -679,16 +679,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionQuerySe
 
     <wsdl:operation name="restrictToCodeSystem">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Restrict the set of referenced
-      definitions to those which reference the named code system.Return an
-      &lt;i&gt;EntityDirectoryURI&lt;/i&gt; that references only the EntityReferences in
-      &lt;i&gt;directory&lt;/i&gt; that have assertions about the (EntityDescriptions) in the
-      tagged version of the supplied code system. Note that this does not constrain the \\
-      &lt;i&gt;knownEntityDescription&lt;/i&gt; attribute within the
-      &lt;i&gt;EntityReference&lt;/i&gt; itself - an &lt;i&gt;EntityReference&lt;/i&gt; that has
-      assertions in code system A and B would still have two
-      &lt;i&gt;knownEntityDescription&lt;/i&gt; entries even after this restriction is applied.
-      Further constraint can be accomplished via the &lt;i&gt;resolve&lt;/i&gt;
-      functions.</documentation>
+      definitions to those which reference the named code system.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToCodeSystem">

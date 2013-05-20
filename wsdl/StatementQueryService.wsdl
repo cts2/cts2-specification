@@ -704,10 +704,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementQueryServices">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
       &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves to the set of statements in
       &lt;i&gt;directory&lt;/i&gt; that have targets in &lt;i&gt;targets&lt;/i&gt;. This includes
-      both direct and any targets in BNODES.Return a &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves
-      to the set of statements in &lt;i&gt;directory&lt;/i&gt; that have targets in
-      &lt;i&gt;targets&lt;/i&gt;. This includes both direct and any targets in
-      BNODES.</documentation>
+      both direct and any targets in BNODES.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToEntityTargets">
@@ -826,10 +823,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementQueryServices">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
       &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves to the set of statements in
       &lt;i&gt;directory&lt;/i&gt; that have targets in &lt;i&gt;targets&lt;/i&gt;. This includes
-      both direct and any targets in BNODES.Return a &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves
-      to the set of statements in &lt;i&gt;directory&lt;/i&gt; that have targets in
-      &lt;i&gt;targets&lt;/i&gt;. This includes both direct and any targets in
-      BNODES.</documentation>
+      both direct and any targets in BNODES.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToResourceTargets">
@@ -858,10 +852,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementQueryServices">
     <wsdl:operation name="restrictToResourceSubjects">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
       &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves to the set of statements in
-      &lt;i&gt;directory&lt;/i&gt; that have subjects in &lt;i&gt;subjects&lt;/i&gt;Return a
-      &lt;i&gt;DirectoryURI&lt;/i&gt; that resolves to the set of statements in
-      &lt;i&gt;directory&lt;/i&gt; that have subjects in
-      &lt;i&gt;subjects&lt;/i&gt;</documentation>
+      &lt;i&gt;directory&lt;/i&gt; that have subjects in &lt;i&gt;subjects&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToResourceSubjects">
