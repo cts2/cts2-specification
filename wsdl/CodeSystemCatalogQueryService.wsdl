@@ -572,9 +572,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogQuerySer
     </wsdl:operation>
 
     <wsdl:operation name="resolve">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve a &lt;i&gt;DirectoryURI
-      &lt;/i&gt; that references a set of code system catalog entries and return a summary of the
-      references.Retrieve a change set as an iterable resource - a handy function for viewing large
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">
+      Retrieve a change set as an iterable resource - a handy function for viewing large
       change sets</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -652,9 +651,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogQuerySer
     <wsdl:operation name="resolveAsList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve a &lt;i&gt;DirectoryURI
       &lt;/i&gt; that references a set of code system catalog entries and return the set of
-      corresponding catalog entriesResolve a &lt;i&gt;DirectoryURI &lt;/i&gt; that references a set
-      of code system catalog entries and return the set of corresponding catalog
-      entries</documentation>
+      corresponding catalog entries</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="resolveAsList">

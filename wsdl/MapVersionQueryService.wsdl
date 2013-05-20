@@ -766,10 +766,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionQueryServices">
       &lt;i&gt;MapVersions&lt;/i&gt; referenced in &lt;i&gt;directory&lt;/i&gt; that directly \\
       (&lt;i&gt;fromValueSetDefinition&lt;/i&gt;, &lt;i&gt;toValueSetDefinition&lt;/i&gt;) or
       indirectly via value set containment reference entities that are described in the supplied
-      list of value sets.Return a &lt;i&gt;DirectoryURI&lt;/i&gt; that references the subset of the
-      &lt;i&gt;MapVersions&lt;/i&gt; referenced in &lt;i&gt;directory&lt;/i&gt; that directly \\
-      (&lt;i&gt;fromValueSetDefinition&lt;/i&gt;, &lt;i&gt;toValueSetDefinition&lt;/i&gt;) or
-      indirectly via value set containment reference entities that are described in the supplied
       list of value sets.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -811,11 +807,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionQueryServices">
 
     <wsdl:operation name="restrictToCodeSystems">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a
-      &lt;i&gt;DirectoryURI&lt;/i&gt; that references the subset of the
-      &lt;i&gt;MapVersions&lt;/i&gt; referenced in &lt;i&gt;directory&lt;/i&gt; that directly \\
-      (&lt;i&gt;fromCodeSystemVersion&lt;/i&gt;, &lt;i&gt;toCodeSystemVersion&lt;/i&gt;) or
-      indirectly (&lt;i&gt;fromValueSet&lt;/i&gt;, &lt;i&gt;toValueSet&lt;/i&gt;) reference
-      entities that are described in the supplied list of code systems.Return a
       &lt;i&gt;DirectoryURI&lt;/i&gt; that references the subset of the
       &lt;i&gt;MapVersions&lt;/i&gt; referenced in &lt;i&gt;directory&lt;/i&gt; that directly \\
       (&lt;i&gt;fromCodeSystemVersion&lt;/i&gt;, &lt;i&gt;toCodeSystemVersion&lt;/i&gt;) or

@@ -770,10 +770,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationHistoryService
       &lt;i&gt;Association&lt;/i&gt; instance in the &lt;i&gt;ChangeSet&lt;/i&gt; that has the
       latest &lt;i&gt;officialEffectiveDate&lt;/i&gt; and return the last change for the referenced
       &lt;i&gt;Association&lt;/i&gt; in the set. The return value represents the most recent known
-      published state of the &lt;i&gt;Association&lt;/i&gt;.Select from the set of
-      &lt;i&gt;ChangeSet&lt;/i&gt;s that contain one or more changes for the referenced entity the
-      &lt;i&gt;ChangeSet&lt;/i&gt; that has the latest &lt;i&gt;officialEffectiveDate&lt;/i&gt; and
-      return the last change for the named entity in the set.</documentation>
+      published state of the &lt;i&gt;Association&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getLatestChangeFor">
@@ -879,11 +876,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationHistoryService
       service between &lt;i&gt;fromDate &lt;/i&gt;and &lt;i&gt;toDate&lt;/i&gt;. The order of the
       dates controls the return order - if &lt;i&gt;fromDate &lt;/i&gt;is later than
       &lt;i&gt;toDate&lt;/i&gt; the return order is latest to earliest, otherwise it is earliest to
-      latest.Return a directory of &lt;i&gt;EntityDescriptions&lt;/i&gt; matching the supplied
-      namespace/name or URI whose changes became visible in the service between
-      &lt;i&gt;fromDate&lt;/i&gt; and &lt;i&gt;toDate&lt;/i&gt;. The order of the dates controls
-      the return order - if &lt;i&gt;fromDate &lt;/i&gt;is later than &lt;i&gt;toDate&lt;/i&gt; the
-      return order is latest to earliest, otherwise it is earliest to latest.</documentation>
+      latest.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getServiceHistoryFor">

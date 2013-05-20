@@ -808,11 +808,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionHistoryS
       changes became visible in the service between &lt;i&gt;fromDate&lt;/i&gt; and
       &lt;i&gt;toDate&lt;/i&gt;. The order of the dates controls the return order - if
       &lt;i&gt;fromDate &lt;/i&gt;is later than &lt;i&gt;toDate&lt;/i&gt; the return order is
-      latest to earliest, otherwise it is earliest to latest.Return a directory of
-      &lt;i&gt;EntityDescriptions&lt;/i&gt; matching the supplied namespace/name or URI whose
-      changes became visible in the service between &lt;i&gt;fromDate&lt;/i&gt; and
-      &lt;i&gt;toDate&lt;/i&gt;. The order of the dates controls the return order - if
-      &lt;i&gt;fromDate &lt;/i&gt;is later than &lt;i&gt;toDate&lt;/i&gt; the return order is
       latest to earliest, otherwise it is earliest to latest.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -874,7 +869,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionHistoryS
 
     <wsdl:operation name="getEarliestServiceChangeFor">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get the first change that was applied
-      to the named entity from the perspective of the service.Get the first change that was applied
       to the named entity from the perspective of the service.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -906,9 +900,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionHistoryS
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Select from the set of
       &lt;i&gt;ChangeSet&lt;/i&gt;s that contain one or more changes for the referenced entity the
       &lt;i&gt;ChangeSet&lt;/i&gt; that has the latest &lt;i&gt;officialEffectiveDate&lt;/i&gt; and
-      return the last change for the named entity in the set.Select from the set of
-      &lt;i&gt;ChangeSet&lt;/i&gt;s that contain one or more changes for the referenced entity the
-      &lt;i&gt;ChangeSet&lt;/i&gt; that has the latest &lt;i&gt;officialEffectiveDate&lt;/i&gt; and
       return the last change for the named entity in the set.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -938,7 +929,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionHistoryS
 
     <wsdl:operation name="getLatestServiceChangeFor">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Get the last change that was applied
-      to the named entity from the perspective of the service.Get the last change that was applied
       to the named entity from the perspective of the service.</documentation>
 
       <soap:operation soapAction="" style="document" />

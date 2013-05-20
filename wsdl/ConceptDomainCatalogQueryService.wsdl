@@ -491,9 +491,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogQuery
     <!-- EndBaseQueryService -->
     <wsdl:operation name="resolveAsList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a summary of the catalog
-      entries referenced by &lt;i&gt;directory&lt;/i&gt;.Resolve a &lt;i&gt;DirectoryURI &lt;/i&gt;
-      that references a set of code system catalog entries and return the set of corresponding
-      catalog entries</documentation>
+      entries referenced by &lt;i&gt;directory&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="resolveAsList">

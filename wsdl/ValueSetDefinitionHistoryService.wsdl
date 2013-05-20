@@ -727,9 +727,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionHistory
     </wsdl:operation>
 
     <wsdl:operation name="getChangeHistoryFor">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the set of states and changes
-      that occurred to the specified &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt; within the specified
-      time period.Return a list of records that reflects the change in the catalog entry over the
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">
+      Return a list of records that reflects the change in the catalog entry over the
       specified time span. Records will be sorted from earliest to latest if (a)
       &lt;i&gt;fromDate&lt;/i&gt; is omitted or (b) &lt;i&gt;toDate&lt;/i&gt; is omitted, or (c)
       &lt;i&gt;fromDate &lt;/i&gt; is earlier than &lt;i&gt;toDate&lt;/i&gt;. In all other cases,
@@ -754,8 +753,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionHistory
     </wsdl:operation>
 
     <wsdl:operation name="getEarliestChangeFor">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the first known state of the
-      specified &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Return an catalog entry that reflects the
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return an catalog entry that reflects the
       state of the entry when it first appeared in the service.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -777,8 +775,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionHistory
     </wsdl:operation>
 
     <wsdl:operation name="getLastChangeFor">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the last change made to the
-      specified &lt;i&gt;ValueSetCatalogEntry&lt;/i&gt;Return an entry that reflects the result of
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">
+      Return an entry that reflects the result of
       the last change that was made to the catalog.</documentation>
 
       <soap:operation soapAction="" style="document" />

@@ -389,11 +389,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingReadS
       binding exists for the specified domain, value set, realm and context. Note that only the
       &lt;i&gt;conceptDomain&lt;/i&gt; name and/or &lt;i&gt;valueSet&lt;/i&gt; names must be
       validated. A service implementation may choose whether to validate the URI's or simply assume
-      that, if not found in the service, they reference external elements.Determine whether a
-      catalog entry exists that has an &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt;
-      that matches the supplied URI or that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches
-      the supplied name that is (was) applicable in the supplied
-      &lt;i&gt;context.&lt;/i&gt;</documentation>
+      that, if not found in the service, they reference external elements.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="exists">
@@ -461,10 +457,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingReadS
       specified domain, value set, realm and context. Note that only the
       &lt;i&gt;conceptDomain&lt;/i&gt; name and/or &lt;i&gt;valueSet&lt;/i&gt; names must be
       validated. A service implementation may choose whether to validate the URI's or simply assume
-      that, if not found in the service, they reference external elements.Return the catalog entry
-      that has an &lt;i&gt;about&lt;/i&gt; or &lt;i&gt;alternateId&lt;/i&gt; that matches the
-      supplied URI or that has a &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name
-      that is (was) applicable in the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      that, if not found in the service, they reference external elements.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="read">

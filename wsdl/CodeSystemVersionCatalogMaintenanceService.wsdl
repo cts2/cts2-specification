@@ -613,9 +613,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogM
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new code system version
       catalog entry. Note that the &lt;i&gt;versionOf&lt;/i&gt; parameter does not have to be
       validated as there is no service level requirement that code system catalogs be complete or
-      even present.Create a new code system version catalog entry. Note that the
-      &lt;i&gt;versionOf&lt;/i&gt; parameter does not have to be validated as there is no service
-      level requirement that code system catalogs be complete or even present.</documentation>
+      even present.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="createCodeSystemVersion">

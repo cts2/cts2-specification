@@ -637,8 +637,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogR
 
     <wsdl:operation name="getCodeSystemByVersionId">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve the specified version of the
-      code system exists for the specified external identifier.Retrieve the specified version of
-      the code system exists for the specified external identifier.</documentation>
+      code system exists for the specified external identifier.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getCodeSystemByVersionId">
@@ -695,8 +694,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemVersionCatalogR
 
     <wsdl:operation name="existsVersionId">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Determine if the specified version of
-      the code system exists for the specified external identifier.Determine if the specified
-      version of the code system exists for the specified external identifier.</documentation>
+      the code system exists for the specified external identifier.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="existsVersionId">

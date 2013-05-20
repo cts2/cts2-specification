@@ -807,9 +807,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingQuery
     <wsdl:operation name="restrictToContexts">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory URI that
       references all of the concept domain bindings in &lt;i&gt;directory&lt;/i&gt; that apply in
-      one or more of the supplied contexts.Return a directory URI that references all of the
-      concept domain bindings in &lt;i&gt;directory&lt;/i&gt; that apply in one or more of the
-      supplied contexts.</documentation>
+      one or more of the supplied contexts.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictToContexts">
@@ -845,8 +843,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingQuery
     <wsdl:operation name="restrictToConceptDomain">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Restrict the set of bindings
       referenced by &lt;i&gt;directory&lt;/i&gt; to those that are bound to the supplied
-      &lt;i&gt;conceptDomain.&lt;/i&gt;Restrict the set of bindings referenced by
-      &lt;i&gt;directory&lt;/i&gt; to those that are bound to the supplied
       &lt;i&gt;conceptDomain.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />

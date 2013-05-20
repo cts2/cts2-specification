@@ -490,9 +490,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryQueryServices">
 
     <!-- EndBaseQueryService -->
     <wsdl:operation name="resolve">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a directory containing a
-      summary of the map entries referenced by &lt;i&gt;directory&lt;/i&gt; that meet any
-      additional requirements from &lt;i&gt;context&lt;/i&gt;.Retrieve a change set as an iterable
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retrieve a change set as an iterable
       resource - a handy function for viewing large change sets</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -541,9 +539,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryQueryServices">
     <wsdl:operation name="resolveAsList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a list of the entries
       referenced by &lt;i&gt;directory&lt;/i&gt; that meet any additional requirements from
-      &lt;i&gt;context&lt;/i&gt;.Resolve a &lt;i&gt;DirectoryURI &lt;/i&gt; that references a set
-      of code system catalog entries and return the set of corresponding catalog
-      entries</documentation>
+      &lt;i&gt;context&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="resolveAsList">
@@ -558,9 +554,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryQueryServices">
 
     <wsdl:operation name="restrictToTargetEntities">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">A &lt;i&gt;DirectoryURI&lt;/i&gt;
-      that references the subset of &lt;i&gt;directory&lt;/i&gt; that references all
-      (&lt;i&gt;allOrSome &lt;/i&gt;= &lt;i&gt;ALL&lt;/i&gt;) or at least one (&lt;i&gt;allOrSome
-      &lt;/i&gt;= &lt;i&gt;AT_LEAST_ONE&lt;/i&gt;) as a targetA &lt;i&gt;DirectoryURI&lt;/i&gt;
       that references the subset of &lt;i&gt;directory&lt;/i&gt; that references all
       (&lt;i&gt;allOrSome &lt;/i&gt;= &lt;i&gt;ALL&lt;/i&gt;) or at least one (&lt;i&gt;allOrSome
       &lt;/i&gt;= &lt;i&gt;AT_LEAST_ONE&lt;/i&gt;) as a target</documentation>

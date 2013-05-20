@@ -741,9 +741,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionReadServ
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the available
       &lt;i&gt;EntityDescriptions&lt;/i&gt; for the referenced entity. This returns a list of the
       latest versions of all of the code systems that make assertions about the referenced
-      entity.Return the available &lt;i&gt;EntityDescriptions&lt;/i&gt; for the referenced entity.
-      This returns a list of the latest versions of all of the code systems that make assertions
-      about the referenced entity.</documentation>
+      entity.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="availableDescriptions">
@@ -802,11 +800,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionReadServ
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">retrieve all of the
       &lt;i&gt;EntityDescriptions&lt;/i&gt; for the supplied &lt;i&gt;entityId&lt;/i&gt;. This
       function will return the current &lt;i&gt;EntityDescription&lt;/i&gt; for every describing
-      code system version that makes non-semantic assertions about the referenced entity.retrieve
-      all of the &lt;i&gt;EntityDescriptions&lt;/i&gt; for the supplied
-      &lt;i&gt;entityId&lt;/i&gt;. This function will return the current
-      &lt;i&gt;EntityDescription&lt;/i&gt; for every describing code system version that makes
-      non-semantic assertions about the referenced entity.</documentation>
+      code system version that makes non-semantic assertions about the referenced entity.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="readEntityDescriptions">

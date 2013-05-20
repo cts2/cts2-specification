@@ -442,8 +442,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadS
     <wsdl:operation name="readByDefiningEntity">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the
       &lt;i&gt;ConceptDomainCatalogEntry&lt;/i&gt; whose defining entity is represented by the
-      supplied entity URI or namespace and nameReturn the
-      &lt;i&gt;ConceptDomainCatalogEntry&lt;/i&gt; whose defining entity is represented by the
       supplied entity URI or namespace and name</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -524,10 +522,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadS
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the
       &lt;i&gt;ConceptDomainCatalogEntry &lt;/i&gt;referenced by the supplied name or URI. Note
       that the URI may either be the &lt;i&gt;about&lt;/i&gt; URI or one of the
-      &lt;i&gt;alternateIDs&lt;/i&gt;.Return the catalog entry that has an &lt;i&gt;about&lt;/i&gt;
-      or &lt;i&gt;alternateId&lt;/i&gt; that matches the supplied URI or that has a
-      &lt;i&gt;codeSystemName&lt;/i&gt; that matches the supplied name that is (was) applicable in
-      the supplied &lt;i&gt;context.&lt;/i&gt;</documentation>
+      &lt;i&gt;alternateIDs&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="read">

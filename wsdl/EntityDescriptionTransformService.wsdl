@@ -390,8 +390,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransfor
     <wsdl:operation name="fromEntityDescriptionList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transform the list of entity
       descriptions in &lt;i&gt;entityList&lt;/i&gt; into the semantics and syntax specified in
-      &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.Transform the list of entity descriptions in
-      &lt;i&gt;entityList&lt;/i&gt; into the semantics and syntax specified in
       &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
@@ -421,9 +419,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransfor
     <wsdl:operation name="fromEntityDirectory">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transform the list of entity
       descriptions referenced in &lt;i&gt;entityDirectory &lt;/i&gt;into the semantics and syntax
-      specified in &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.Transform the list of entity descriptions
-      referenced in &lt;i&gt;entityDirectory &lt;/i&gt;into the semantics and syntax specified in
-      &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.</documentation>
+      specified in &lt;i&gt;toLanguageAndSyntax&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="fromEntityDirectory">
@@ -466,8 +462,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransfor
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Transform
       &lt;i&gt;entityExpression&lt;/i&gt; into a list of one or more
       &lt;i&gt;EntityDescription&lt;/i&gt;s in the context of the supplied
-      &lt;i&gt;codeSystemVersion&lt;/i&gt;.Transform &lt;i&gt;entityExpression&lt;/i&gt; into a
-      list of one or more &lt;i&gt;EntityDescription&lt;/i&gt;s in the context of the supplied
       &lt;i&gt;codeSystemVersion&lt;/i&gt;.</documentation>
 
       <soap:operation soapAction="" style="document" />

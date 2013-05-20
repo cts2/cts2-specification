@@ -732,11 +732,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementHistoryServices"
       from earliest to latest if (a) &lt;i&gt;fromDate&lt;/i&gt; is omitted or (b)
       &lt;i&gt;toDate&lt;/i&gt; is omitted, or (c) &lt;i&gt;fromDate &lt;/i&gt; is earlier than
       &lt;i&gt;toDate&lt;/i&gt;. In all other cases, records will be sorted from latest to
-      earliest.Return a list of records that reflects the change in the catalog entry over the
-      specified time span. Records will be sorted from earliest to latest if (a)
-      &lt;i&gt;fromDate&lt;/i&gt; is omitted or (b) &lt;i&gt;toDate&lt;/i&gt; is omitted, or (c)
-      &lt;i&gt;fromDate &lt;/i&gt; is earlier than &lt;i&gt;toDate&lt;/i&gt;. In all other cases,
-      records will be sorted from latest to earliest.</documentation>
+      earliest.</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getChangeHistoryFor">

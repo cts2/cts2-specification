@@ -613,10 +613,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapCatalogQueryServices">
     <wsdl:operation name="restrictByCodeSystem">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Restrict the list of catalog entries
       to those that appear in the &lt;i&gt;fromCodeSystem&lt;/i&gt;, the
-      &lt;i&gt;toCodeSystem&lt;/i&gt; or both depending on &lt;i&gt;mapRole.&lt;/i&gt;Restrict the
-      list of catalog entries to those that appear in the &lt;i&gt;fromCodeSystem&lt;/i&gt;, the
-      &lt;i&gt;toCodeSystem&lt;/i&gt; or both depending on
-      &lt;i&gt;mapRole.&lt;/i&gt;</documentation>
+      &lt;i&gt;toCodeSystem&lt;/i&gt; or both depending on &lt;i&gt;mapRole.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictByCodeSystem">
@@ -667,9 +664,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapCatalogQueryServices">
     <wsdl:operation name="resolveAsList">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Resolve a
       &lt;i&gt;MapCatalogDirectoryURI&lt;/i&gt; as a list of
-      &lt;i&gt;MapCatalogEntries&lt;/i&gt;Resolve a &lt;i&gt;DirectoryURI &lt;/i&gt; that
-      references a set of code system catalog entries and return the set of corresponding catalog
-      entries</documentation>
+      &lt;i&gt;MapCatalogEntries&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="resolveAsList">
@@ -746,9 +741,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapCatalogQueryServices">
     <wsdl:operation name="restrictByValueSet">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Restrict the list of catalog entries
       to those that appear in the &lt;i&gt;fromValueSet&lt;/i&gt;, the &lt;i&gt;toValue&lt;/i&gt;
-      or both depending on &lt;i&gt;mapRole.&lt;/i&gt;Restrict the list of catalog entries to those
-      that appear in the &lt;i&gt;fromValueSet&lt;/i&gt;, the &lt;i&gt;toValue&lt;/i&gt; or both
-      depending on &lt;i&gt;mapRole.&lt;/i&gt;</documentation>
+      or both depending on &lt;i&gt;mapRole.&lt;/i&gt;</documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="restrictByValueSet">
