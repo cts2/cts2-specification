@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CTS2 1.1 association without associationID.
+     Test case for issue 119: associationID is mandatory in 1.0 and optional in 1.1
+-->
+<Association xmlns="http://schema.omg.org/spec/CTS2/1.0/Association" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Association http://www.omg.org/spec/cts2/201206/association/Association.xsd" associationID="http://snomed.info/associd/74400008_0" derivation="ASSERTED">
+   <subject uri="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"/>
+   <predicate uri="http://www.w3.org/2002/07/owl#equivalentClass"/>
+   <target>
+      <entity xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://snomed.info/id/18526009"/>
+   </target>
+   <assertedBy>
+      <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+      <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+   </assertedBy>
+</Association>

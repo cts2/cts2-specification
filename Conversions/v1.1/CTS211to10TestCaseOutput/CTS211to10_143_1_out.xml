@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?><!-- CTS2 1.1 to 1.0 conversion test.  
+     Issue 143 - should not strip designations from IterableResolvedValueSet -->
+<IteratableResolvedValueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition http://www.omg.org/spec/cts2/201206/valuesetdefinition/ValueSetDefinition.xsd" numEntries="50" complete="PARTIAL" next="http://informatics.mayo.edu/cts2/services/sct/cts2/resolvedvalueset/sctid:447565001?maxtoreturn=50&amp;page=1">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>resolvedvalueset/sctid:447565001</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/resolvedvalueset/sctid:447565001?maxToReturn=50</resourceURI>
+      <parameter arg="maxtoreturn">
+         <val>50</val>
+      </parameter>
+      <accessDate>2013-06-07T16:46:16Z</accessDate>
+   </heading>
+   <resolutionInfo>
+      <resolutionOf>
+         <valueSetDefinition xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://snomed.info/id/447565001/version/20020131">Virtual_therapeutic_moiety_simple_reference_set_20020131</valueSetDefinition>
+         <valueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://snomed.info/id/447565001">Virtual_therapeutic_moiety_simple_reference_set</valueSet>
+      </resolutionOf>
+      <resolvedUsingCodeSystem>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+      </resolvedUsingCodeSystem>
+   </resolutionInfo>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:211009" uri="http://snomed.info/id/211009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">211009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Norethandrolone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302007" uri="http://snomed.info/id/302007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">302007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Spiramycin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:449005" uri="http://snomed.info/id/449005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">449005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Penicillin G procaine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:544002" uri="http://snomed.info/id/544002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">544002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Melphalan (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:669007" uri="http://snomed.info/id/669007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">669007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Vaccinia virus vaccine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:796001" uri="http://snomed.info/id/796001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">796001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Digoxin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:847003" uri="http://snomed.info/id/847003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">847003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">D-thyroxine preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:922004" uri="http://snomed.info/id/922004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">922004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Pralidoxime (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1039008" uri="http://snomed.info/id/1039008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1039008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Mercaptopurine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1148001" uri="http://snomed.info/id/1148001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1148001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Ticarcillin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1222004" uri="http://snomed.info/id/1222004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1222004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Metronidazole (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1389007" uri="http://snomed.info/id/1389007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1389007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Beclomethasone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1434005" uri="http://snomed.info/id/1434005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1434005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Calamine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1528001" uri="http://snomed.info/id/1528001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1528001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Folinic acid (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1594006" uri="http://snomed.info/id/1594006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1594006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Azatadine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1758005" uri="http://snomed.info/id/1758005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1758005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Motilin preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1842003" uri="http://snomed.info/id/1842003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1842003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Diphemanil (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1878008" uri="http://snomed.info/id/1878008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1878008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Hexachlorophene (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1887004" uri="http://snomed.info/id/1887004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">1887004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Permethrin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2016004" uri="http://snomed.info/id/2016004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2016004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Dextromethorphan (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2183004" uri="http://snomed.info/id/2183004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2183004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Tetrahydrozoline (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2190009" uri="http://snomed.info/id/2190009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2190009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Trihexyphenidyl (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2497003" uri="http://snomed.info/id/2497003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2497003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Hexetidine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2571007" uri="http://snomed.info/id/2571007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2571007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Busulfan (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2596005" uri="http://snomed.info/id/2596005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2596005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Lincomycin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2679000" uri="http://snomed.info/id/2679000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">2679000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Oxandrolone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3037004" uri="http://snomed.info/id/3037004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3037004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Flumethasone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3127006" uri="http://snomed.info/id/3127006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3127006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Fluorouracil (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3221003" uri="http://snomed.info/id/3221003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3221003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Ringer's solution (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3334000" uri="http://snomed.info/id/3334000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3334000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Cefotaxime (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3526007" uri="http://snomed.info/id/3526007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3526007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Rabies vaccine, human (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3814009" uri="http://snomed.info/id/3814009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3814009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Propylthiouracil (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3822002" uri="http://snomed.info/id/3822002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3822002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Succinylcholine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4126008" uri="http://snomed.info/id/4126008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4126008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Fluprednisolone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4194004" uri="http://snomed.info/id/4194004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4194004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Mazindol (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4219002" uri="http://snomed.info/id/4219002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4219002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Penicillamine (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4220008" uri="http://snomed.info/id/4220008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4220008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Tolazoline (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4704002" uri="http://snomed.info/id/4704002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4704002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Iothiouracil (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4741001" uri="http://snomed.info/id/4741001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4741001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Sodium folate preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4865009" uri="http://snomed.info/id/4865009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4865009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Prolactin releasing factor preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4937008" uri="http://snomed.info/id/4937008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">4937008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Cefaclor (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5478006" uri="http://snomed.info/id/5478006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5478006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Trifluperidol (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5720001" uri="http://snomed.info/id/5720001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5720001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Latrodectus mactans antivenin (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5737008" uri="http://snomed.info/id/5737008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5737008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Demeclocycline (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5786005" uri="http://snomed.info/id/5786005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5786005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Chlorothiazide (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5797005" uri="http://snomed.info/id/5797005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5797005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Clotrimazole (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5924003" uri="http://snomed.info/id/5924003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5924003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Isosorbide dinitrate (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5975000" uri="http://snomed.info/id/5975000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">5975000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Niclosamide (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:6028009" uri="http://snomed.info/id/6028009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">6028009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Triamcinolone preparation (product)</designation>
+   </entry>
+   <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:6067003" uri="http://snomed.info/id/6067003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">6067003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Metaproterenol (product)</designation>
+   </entry>
+</IteratableResolvedValueSet>

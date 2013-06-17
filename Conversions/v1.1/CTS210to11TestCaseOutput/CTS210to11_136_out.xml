@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!-- A test of the conversion between CTS2 1.0 and 1.1. This example should add a "parents" element immediately following the last 
+    "parent" element in the data below.  It should also transform all of the namespaces to CTS2/1.1 and change the schemaLocation
+    -->
+<EntityDescriptionMsg xmlns="http://www.omg.org/spec/CTS2/1.1/Entity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Entity http://informatics.mayo.edu/cts2/spec/CTS2/1.1/entity/Entity.xsd">
+   <heading xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+      <resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008</resourceURI>
+      <accessDate>2013-06-05T17:32:12Z</accessDate>
+   </heading>
+   <EntityDescription>
+      <classDescription entryState="ACTIVE" about="http://snomed.info/id/74400008" descriptionState="FULLY_DEFINED">
+         <entityID>
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">sctid</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">74400008</name>
+         </entityID>
+         <alternateEntityID>
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">sctfsn</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Appendicitis (disorder)</name>
+         </alternateEntityID>
+         <alternateEntityID>
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">sctfsn_es</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">apendicitis (trastorno)</name>
+         </alternateEntityID>
+         <describingCodeSystemVersion>
+            <version xmlns="http://www.omg.org/spec/CTS2/1.1/Core" href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT_core/version/20130131" uri="http://snomed.info/id/900000000000207008/version/20130131">SNOMED_CT_core_20130131</version>
+            <codeSystem xmlns="http://www.omg.org/spec/CTS2/1.1/Core" href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT_core" uri="http://snomed.info/id/900000000000207008">SNOMED_CT_core</codeSystem>
+         </describingCodeSystemVersion>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_core_20130131" externalIdentifier="123558018" designationRole="PREFERRED">
+            <value xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Appendicitis</value>
+            <language xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="http://www.omg.org/spec/LNG#en-us">US English</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_core_20130131" externalIdentifier="123558018" designationRole="PREFERRED">
+            <value xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Appendicitis</value>
+            <language xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="http://www.omg.org/spec/LNG#en-gb">GB English</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="módulo_de_la_extensión_de_la_lengua_castellana_para_Latinoamérica_20121031" externalIdentifier="1025274019" designationRole="PREFERRED">
+            <value xmlns="http://www.omg.org/spec/CTS2/1.1/Core">apendicitis</value>
+            <language xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="http://www.omg.org/spec/LNG#es">español</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="módulo_de_la_extensión_de_la_lengua_castellana_para_Latinoamérica_20121031" externalIdentifier="1025275018" designationRole="ALTERNATIVE">
+            <value xmlns="http://www.omg.org/spec/CTS2/1.1/Core">inflamación aguda del apéndice</value>
+            <language xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="http://www.omg.org/spec/LNG#es">español</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <property>
+            <predicate xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="http://snomed.info/field/definitionStatusId">
+               <namespace>field</namespace>
+               <name>definitionStatusId</name>
+            </predicate>
+            <value xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+               <entity href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000073002" uri="http://snomed.info/id/900000000000073002">
+                  <namespace>sctpn</namespace>
+                  <name>Defined</name>
+               </entity>
+            </value>
+         </property>
+         <subjectOf>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof</subjectOf>
+         <predicateOf/>
+         <targetOf>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/targetof</targetOf>
+         <parent href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/302168000" uri="http://snomed.info/id/302168000">
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">sctpn</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Inflammation of large intestine</name>
+         </parent>
+         <parent href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/18526009" uri="http://snomed.info/id/18526009">
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">sctpn</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Disorder of appendix</name>
+         </parent>
+         <parents>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/parents</parents>
+         <ancestors>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/ancestors</ancestors>
+         <children>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/children</children>
+         <descendants>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/descendants</descendants>
+         <entityType uri="http://www.w3.org/2002/07/owl#Class">
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">owl</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Class</name>
+         </entityType>
+      </classDescription>
+   </EntityDescription>
+</EntityDescriptionMsg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityReferenceMsg xmlns="http://schema.omg.org/spec/CTS2/1.0/Entity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Entity http://www.omg.org/spec/cts2/201206/entity/Entity.xsd">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>entity/41320000</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/entity/41320000?fwd=0</resourceURI>
+      <parameter arg="fwd">
+         <val>0</val>
+      </parameter>
+      <accessDate>2013-06-10T16:42:59Z</accessDate>
+   </heading>
+   <entityReference about="http://snomed.info/id/41320000">
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+         <namespace>sctid</namespace>
+         <name>41320000</name>
+      </name>
+      <knownEntityDescription xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/41320000">
+         <describingCodeSystemVersion>
+            <version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+            <codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+         </describingCodeSystemVersion>
+      </knownEntityDescription>
+   </entityReference>
+</EntityReferenceMsg>

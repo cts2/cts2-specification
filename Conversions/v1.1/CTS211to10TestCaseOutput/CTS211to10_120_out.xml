@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssociationGraph xmlns="http://schema.omg.org/spec/CTS2/1.0/Association" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Association http://www.omg.org/spec/cts2/201206/association/Association.xsd" complete="COMPLETE" numEntries="2" graphFocus="SPECIFIC_ENTITY" expansionDirection="FORWARD">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof/graph</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof/graph</resourceURI>
+      <accessDate>2013-06-06T03:03:26Z</accessDate>
+   </heading>
+   <focusEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
+   </focusEntity>
+</AssociationGraph>

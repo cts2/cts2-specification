@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Test to make sure parents get removed -->
+<EntityDescriptionMsg xmlns="http://schema.omg.org/spec/CTS2/1.0/Entity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Entity http://www.omg.org/spec/cts2/201206/entity/Entity.xsd">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/41320000</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/41320000</resourceURI>
+      <accessDate>2013-06-10T16:55:42Z</accessDate>
+   </heading>
+   <EntityDescription>
+      <classDescription entryState="ACTIVE" about="http://snomed.info/id/41320000" descriptionState="PRIMITIVE">
+         <entityID>
+            <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+            <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">41320000</name>
+         </entityID>
+         <describingCodeSystemVersion>
+            <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+            <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+         </describingCodeSystemVersion>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_20130131" externalIdentifier="68926018" designationRole="PREFERRED">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Basset hound</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#en-gb">GB English</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_20130131" externalIdentifier="68926018" designationRole="PREFERRED">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Basset hound</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#en-us">US English</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_20130131" externalIdentifier="778095018" designationRole="ALTERNATIVE">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Basset hound (organism)</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#en-us">US English</language>
+            <designationType href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000003001" uri="http://snomed.info/id/900000000000003001">Fully specified name</designationType>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_20130131" externalIdentifier="778095018" designationRole="ALTERNATIVE">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Basset hound (organism)</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#en-gb">GB English</language>
+            <designationType href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000003001" uri="http://snomed.info/id/900000000000003001">Fully specified name</designationType>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_Spanish_Edition_20121031" externalIdentifier="944802013" designationRole="PREFERRED">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">perro Basset hound</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#es">español</language>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <designation assertedInCodeSystemVersion="SNOMED_CT_Spanish_Edition_20121031" externalIdentifier="944803015" designationRole="ALTERNATIVE">
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">perro Basset hound (organismo)</value>
+            <language xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.omg.org/spec/LNG#es">español</language>
+            <designationType href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000003001" uri="http://snomed.info/id/900000000000003001">Fully specified name</designationType>
+            <caseSignificance href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+         </designation>
+         <property>
+            <predicate xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://snomed.info/field/definitionStatusId">
+               <namespace>field</namespace>
+               <name>definitionStatusId</name>
+            </predicate>
+            <value xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+               <entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:900000000000074008" uri="http://snomed.info/id/900000000000074008">
+                  <namespace>sctpn</namespace>
+                  <name>Primitive</name>
+               </entity>
+            </value>
+         </property>
+         <subjectOf>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/41320000/subjectof</subjectOf>
+         <predicateOf/>
+         <targetOf/>
+         <parent href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:448771007" uri="http://snomed.info/id/448771007">
+            <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctpn</namespace>
+            <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Canis lupus familiaris</name>
+         </parent>
+         <ancestors>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/41320000/ancestors</ancestors>
+         <children/>
+         <descendants/>
+         <entityType uri="http://www.w3.org/2002/07/owl#Class">
+            <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">owl</namespace>
+            <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Class</name>
+         </entityType>
+      </classDescription>
+   </EntityDescription>
+</EntityDescriptionMsg>

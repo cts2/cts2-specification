@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A test of the conversion between CTS2 1.0 and 1.1. This example should NOT add a "parents" element
+    It should also transform all of the namespaces to CTS2/1.1 and change the schemaLocation
+    -->
+<EntityDescriptionMsg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Entity http://www.omg.org/spec/cts2/201206/entity/Entity.xsd"
+ xmlns="http://schema.omg.org/spec/CTS2/1.0/Entity" xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core">
+    <core:heading>
+        <core:resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008</core:resourceURI>
+        <core:accessDate>2013-06-05T17:32:12Z</core:accessDate>
+    </core:heading>
+    <EntityDescription>
+        <classDescription entryState="ACTIVE" about="http://snomed.info/id/74400008" descriptionState="FULLY_DEFINED">
+            <entityID>
+                <core:namespace>sctid</core:namespace>
+                <core:name>74400008</core:name>
+            </entityID>
+            <alternateEntityID>
+                <core:namespace>sctfsn</core:namespace>
+                <core:name>Appendicitis (disorder)</core:name>
+            </alternateEntityID>
+            <alternateEntityID>
+                <core:namespace>sctfsn_es</core:namespace>
+                <core:name>apendicitis (trastorno)</core:name>
+            </alternateEntityID>
+            <describingCodeSystemVersion>
+                <core:version href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT_core/version/20130131" uri="http://snomed.info/id/900000000000207008/version/20130131">SNOMED_CT_core_20130131</core:version>
+                <core:codeSystem href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT_core" uri="http://snomed.info/id/900000000000207008">SNOMED_CT_core</core:codeSystem>
+            </describingCodeSystemVersion>
+            <designation assertedInCodeSystemVersion="SNOMED_CT_core_20130131" externalIdentifier="123558018" designationRole="PREFERRED">
+                <core:value>Appendicitis</core:value>
+                <core:language uri="http://www.omg.org/spec/LNG#en-us">US English</core:language>
+                <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+            </designation>
+            <designation assertedInCodeSystemVersion="SNOMED_CT_core_20130131" externalIdentifier="123558018" designationRole="PREFERRED">
+                <core:value>Appendicitis</core:value>
+                <core:language uri="http://www.omg.org/spec/LNG#en-gb">GB English</core:language>
+                <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+            </designation>
+            <designation assertedInCodeSystemVersion="módulo_de_la_extensión_de_la_lengua_castellana_para_Latinoamérica_20121031" externalIdentifier="1025274019" designationRole="PREFERRED">
+                <core:value>apendicitis</core:value>
+                <core:language uri="http://www.omg.org/spec/LNG#es">español</core:language>
+                <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+            </designation>
+            <designation assertedInCodeSystemVersion="módulo_de_la_extensión_de_la_lengua_castellana_para_Latinoamérica_20121031" externalIdentifier="1025275018" designationRole="ALTERNATIVE">
+                <core:value>inflamación aguda del apéndice</core:value>
+                <core:language uri="http://www.omg.org/spec/LNG#es">español</core:language>
+                <caseSignificance href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000020002" uri="http://snomed.info/id/900000000000020002">Initial character case insensitive</caseSignificance>
+            </designation>
+            <property>
+                <core:predicate uri="http://snomed.info/field/definitionStatusId">
+                    <core:namespace>field</core:namespace>
+                    <core:name>definitionStatusId</core:name>
+                </core:predicate>
+                <core:value>
+                    <core:entity href="http://informatics.mayo.edu/cts2/services/py4cts2/cts2/entity/900000000000073002" uri="http://snomed.info/id/900000000000073002">
+                        <core:namespace>sctpn</core:namespace>
+                        <core:name>Defined</core:name>
+                    </core:entity>
+                </core:value>
+            </property>
+            <subjectOf>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof</subjectOf>
+            <predicateOf/>
+            <targetOf>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/targetof</targetOf>
+            <ancestors>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/ancestors</ancestors>
+            <children>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/children</children>
+            <descendants>http://informatics.mayo.edu/cts2/services/py4cts2/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/descendants</descendants>
+            <entityType uri="http://www.w3.org/2002/07/owl#Class">
+                <core:namespace>owl</core:namespace>
+                <core:name>Class</core:name>
+            </entityType>
+        </classDescription>
+    </EntityDescription>
+</EntityDescriptionMsg>

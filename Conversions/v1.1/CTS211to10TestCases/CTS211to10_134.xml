@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Value set conversion to 1.1 -->
+<ValueSetCatalogEntryMsg xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/ValueSet http://informatics.mayo.edu/cts2/spec/CTS2/1.1/valueset/ValueSet.xsd">
+   <heading xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+      <resourceRoot>valueset/iceci-activity</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity</resourceURI>
+      <accessDate>2013-06-10T13:08:28.642-04:00</accessDate>
+   </heading>
+   <valueSetCatalogEntry entryState="ACTIVE" about="http://purl.bioontology.org/view/iceci-activity" formalName="iceci-activity C.5" valueSetName="iceci-activity">
+      <keyword xmlns="http://www.omg.org/spec/CTS2/1.1/Core">iceci-activity</keyword>
+      <keyword xmlns="http://www.omg.org/spec/CTS2/1.1/Core">2028</keyword>
+      <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+         <value>ICECI ACTIVITY WHEN INJURED(C.5)</value>
+      </resourceSynopsis>
+      <sourceAndRole xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+         <source uri="mailto:swt@stanford.edu">Samson Tu</source>
+         <role>contact</role>
+      </sourceAndRole>
+      <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+         <predicate uri="http://purl.bioontology.org/predicate/isFoundry">
+            <namespace>iceci-activity</namespace>
+            <name>isFoundry</name>
+         </predicate>
+         <value>
+            <literal>
+               <value>0</value>
+            </literal>
+         </value>
+      </property>
+      <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+         <predicate uri="http://id.bioontology.org/predicate/ontologyId">
+            <namespace>ontologyId</namespace>
+            <name>ontologyId</name>
+         </predicate>
+         <value>
+            <literal>
+               <value>2028</value>
+            </literal>
+         </value>
+      </property>
+      <definitions>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity/definitions</definitions>
+      <currentDefinition>
+         <valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/Core">http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity/definition/v1</valueSetDefinition>
+      </currentDefinition>
+      <currentResolution>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity/definition/v1/resolution</currentResolution>
+   </valueSetCatalogEntry>
+</ValueSetCatalogEntryMsg>

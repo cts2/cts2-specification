@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity:EntityReferenceMsg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Entity http://informatics.mayo.edu/cts2/spec/CTS2/1.1/entity/Entity.xsd"
+ xmlns="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+    <heading>
+        <resourceRoot>entity/41320000</resourceRoot>
+        <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/entity/41320000?fwd=0</resourceURI>
+        <parameter arg="fwd">
+            <val>0</val>
+        </parameter>
+        <accessDate>2013-06-10T16:42:59Z</accessDate>
+    </heading>
+    <entity:entityReference about="http://snomed.info/id/41320000">
+        <name>
+            <namespace>sctid</namespace>
+            <name>41320000</name>
+        </name>
+        <knownEntityDescription href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/41320000" codeSystemRole="PRIMARY">
+            <describingCodeSystemVersion>
+                <version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+                <codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+            </describingCodeSystemVersion>
+            <designation>Basset hound (organism)</designation>
+        </knownEntityDescription>
+    </entity:entityReference>
+</entity:EntityReferenceMsg>

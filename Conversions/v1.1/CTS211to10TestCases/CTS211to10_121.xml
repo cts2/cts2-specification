@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<!-- Test of Issue #121 - need to remove hasOntologyLanguage and includes going to 1.0 -->
+<cs:CodeSystemCatalogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/CodeSystem http://informatics.mayo.edu/cts2/spec/CTS2/1.1/codesystem/CodeSystem.xsd"
+ xmlns="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:ns1="http://www.w3.org/1999/xhtml"
+ xmlns:cs="http://www.omg.org/spec/CTS2/1.1/CodeSystem" about="http://www.nlm.nih.gov/research/umls/rxnorm/"
+ codeSystemName="RxNorm" formalName="RxNorm">
+    <keyword>Abstracting and Indexing as Topic</keyword>
+    <keyword>Algorithms</keyword>
+    <keyword>Ambulatory Care Facilities</keyword>
+    <keyword>Anesthesiology</keyword>
+    <keyword>Bibliometrics</keyword>
+    <keyword>Biomedical Research</keyword>
+    <keyword>Community Health Centers</keyword>
+    <keyword>Computer Communication Networks</keyword>
+    <keyword>Data Collection</keyword>
+    <keyword>Decision Support Systems: Clinical</keyword>
+    <keyword>Decision Support Techniques</keyword>
+    <keyword>Dictionaries: Pharmaceutic</keyword>
+    <keyword>Dietary Supplements</keyword>
+    <keyword>Drug Hypersensitivity</keyword>
+    <keyword>Drug Information Services</keyword>
+    <keyword>Drug Labeling</keyword>
+    <keyword>Drug Therapy</keyword>
+    <keyword>Drug Utilization Review</keyword>
+    <keyword>Electronic Prescribing</keyword>
+    <keyword>Epidemiologic Studies</keyword>
+    <keyword>Expert Testimony</keyword>
+    <keyword>Forms and Records Control</keyword>
+    <keyword>Government Regulation</keyword>
+    <keyword>Hospitals: Military</keyword>
+    <keyword>Humans</keyword>
+    <keyword>Information Management</keyword>
+    <keyword>Information Storage and Retrieval</keyword>
+    <keyword>Information Systems</keyword>
+    <keyword>International Classification of Diseases</keyword>
+    <keyword>International Cooperation</keyword>
+    <keyword>Internet</keyword>
+    <keyword>Knowledge Bases</keyword>
+    <keyword>Humans</keyword>
+    <keyword>Management Audit</keyword>
+    <keyword>Medical Audit</keyword>
+    <keyword>Medical Informatics</keyword>
+    <keyword>Medical Informatics Applications</keyword>
+    <keyword>Medical Order Entry Systems</keyword>
+    <keyword>Medical Order Entry Systems</keyword>
+    <keyword>Medical Record Linkage</keyword>
+    <keyword>Medical Records Systems: Computerized</keyword>
+    <keyword>Medically Uninsured</keyword>
+    <keyword>Medication Systems: Hospital</keyword>
+    <keyword>Natural Language Processing</keyword>
+    <keyword>Pharmaceutical Preparations</keyword>
+    <keyword>Pharmacy</keyword>
+    <keyword>Pharmacy Administration</keyword>
+    <keyword>Practice Guidelines as Topic</keyword>
+    <keyword>PubMed</keyword>
+    <keyword>Quality Assurance: Health Care</keyword>
+    <keyword>Safety Management</keyword>
+    <keyword>Semantics</keyword>
+    <keyword>Sensitivity and Specificity</keyword>
+    <keyword>Software</keyword>
+    <keyword>Software Design</keyword>
+    <keyword>Surgery Department: Hospital</keyword>
+    <keyword>Systems Integration</keyword>
+    <keyword>Tennessee</keyword>
+    <keyword>Terminology as Topic</keyword>
+    <keyword>Total Quality Management</keyword>
+    <keyword>Unified Medical Language System</keyword>
+    <keyword>United States</keyword>
+    <keyword>United States Department of Veterans Affairs</keyword>
+    <keyword>United States Food and Drug Administration</keyword>
+    <keyword>United States Government Agencies</keyword>
+    <keyword>User-Computer Interface</keyword>
+    <keyword>Virginia</keyword>
+    <keyword>Vocabulary: Controlled</keyword>
+    <resourceType uri="http://www.w3.org/2004/02/skos/core#ConceptSystem">
+        <namespace>skos</namespace>
+        <name>ConceptSystem</name>
+    </resourceType>
+    <resourceSynopsis>
+        <value>RxNorm, a standardized nomenclature for clinical drugs and drug delivery devices, is produced by the
+            National Library of Medicine (NLM). In this context, a clinical drug is a pharmaceutical product given to
+            (or taken by) a patient with a therapeutic or diagnostic intent. A drug delivery device is a pack that
+            contains multiple clinical drugs or clinical drugs designed to be administered in a specified sequence. In
+            RxNorm, the name of a clinical drug combines its ingredients, strengths, and/or form. While ingredient and
+            strength have straightforward meanings, clarification of what is meant by form may be needed. In RxNorm, the
+            form is the physical form in which the drug is administered or is specified to be administered in a
+            prescription or order. The RxNorm clinical drug name does not refer to the size of the package, the form in
+            which the product was manufactured, its form when it arrived at the dispensary or the intended route.
+            RxNorm's standard names for clinical drugs and drug delivery devices are connected to the varying names of
+            drugs present in many different controlled vocabularies within the Unified Medical Language System (UMLS)
+            Metathesaurus, including those in commercially available drug information sources. These connections are
+            intended to facilitate interoperability among the computerized systems that record or process data dealing
+            with clinical drugs. </value>
+    </resourceSynopsis>
+    <additionalDocumentation>http://www.nlm.nih.gov/research/umls/rxnorm/docs/index.html</additionalDocumentation>
+    <sourceAndRole>
+        <source uri="http://www.nlm.nih.gov">NLM</source>
+        <role uri="http://purl.org/dc/terms/creator">creator</role>
+    </sourceAndRole>
+    <sourceAndRole>
+        <source uri="http://www.va.gov">VA</source>
+        <role uri="http://purl.org/dc/terms/contributor">contributor</role>
+    </sourceAndRole>
+    <sourceAndRole>
+        <source uri="http://www.nlm.nih.gov/research/umls/rxnorm/RxNorm.pdf">RxNorm.pdf</source>
+    </sourceAndRole>
+    <rights>
+        <value>UMLS Metathesaurus License <ns1:a href="http://wwwcf.nlm.nih.gov/umlslicense/snomed/license.cfm">UMLS
+                Metathesaurus License</ns1:a>
+        </value>
+    </rights>
+    <note type="EditorialNote">
+        <value>RxNorm has source vocabularies including:<ul xmlns="http://www.w3.org/1999/xhtml">
+                <li xmlns="http://www.w3.org/1999/xhtml">SAB (Source Name)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">GS (Gold Standard Alchemy)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MDDB (Medi-Span Master Drug Data Base)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MMSL (Multum MediSource Lexicon)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MMX (Micromedex DRUGDEX)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MSH (Medical Subject Headings ;MeSH.)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MTHFDA (FDA National Drug Code Directory)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">MTHSPL (FDA Structured Product Labels)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">NDDF (First DataBank NDDF Plus Source Vocabulary)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">NDFRT (Veterans Health Administration National Drug File -
+                    Reference Terminology)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">SNOMED CT (SNOMED Clinical Terms ;drug information.)</li>
+                <li xmlns="http://www.w3.org/1999/xhtml">VANDF (Veterans Health Administration National Drug File</li>
+            </ul>
+        </value>
+    </note>
+    <note type="ScopeNote">
+        <value>The scope of RxNorm is determined by the combined scope of its source vocabularies. Many relationships
+            (primarily synonymous), concept attributes, and some concept names are added by the NLM during the creation
+            of RxNorm forms. The concepts themselves are derived from the names provided by the source vocabularies.
+            RxNorm reflects and preserves the meanings, concept names, and relationships from its source vocabularies in
+            the same way that the Metathesaurus preserves content and meaning.(reference to<ns1:a
+                href="http://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=nlmumls">UMLS Reference Manual)</ns1:a>
+        </value>
+    </note>
+    <property>
+        <predicate uri="http://omv.ontoware.org/2005/05/ontology/creationDate">
+            <namespace>omv</namespace>
+            <name>creationDate</name>
+        </predicate>
+        <value>
+            <literal>
+                <value>2001</value>
+            </literal>
+        </value>
+    </property>
+    <property>
+        <predicate uri="http://omv.ontoware.org/2005/05/ontology/hasFormalityLevel">
+            <namespace>omv</namespace>
+            <name>hasFormalityLevel</name>
+        </predicate>
+        <value>
+            <entity uri="http://omv.ontoware.org/2005/05/ontology/Taxonomy">
+                <namespace>omv</namespace>
+                <name>Taxonomy</name>
+            </entity>
+        </value>
+    </property>
+    <property>
+        <predicate uri="http://omv.ontoware.org/2005/05/ontology/usedOntologyEngineeringTool">
+            <namespace>omv</namespace>
+            <name>usedOntologyEngineeringTool</name>
+        </predicate>
+        <value>
+            <resource>http://www.apelon.com/Products/TDE/</resource>
+        </value>
+    </property>
+    <alternateID>urn:oid:2.16.840.1.113883.6.88</alternateID>
+    <alternateID>http://purl.bioontology.org/ontology/RXNORM</alternateID>
+    <releaseDocumentation>
+        <value>Versions are bound to <ns1:a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html"
+                >UMLS Metathesaurus releases</ns1:a></value>
+    </releaseDocumentation>
+    <releaseFormat>
+        <sourceLanguage uri="http://www.nlm.nih.gov/umls">umls</sourceLanguage>
+        <sourceDocumentSyntax uri="http://www.nlm.nih.gov/umls/rrf">rrf</sourceDocumentSyntax>
+    </releaseFormat>
+    <cs:codeSystemCategory uri="http://omv.ontoware.org/2005/05/ontology/DescriptionLogics"
+        >DescriptionLogics</cs:codeSystemCategory>
+    <cs:ontologyDomain uri="http://dmoz.org/rdf/457471">Drugs_and_Medications</cs:ontologyDomain>
+    <cs:ontologyType uri="http://omv.ontoware.org/2005/05/ontology/DomainOntology">DomainOntology</cs:ontologyType>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/IndexingTask"
+        >IndexingTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/IntegrationTask"
+        >IntegrationTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/MatchingTask"
+        >MatchingTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/QueryFormulationTask"
+        >QueryFormulationTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/MatchingTask"
+        >MatchingTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/QueryFormulationTask"
+        >QueryFormulationTask</cs:designedForOntologyTask>
+    <cs:designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/FilteringTask"
+        >FilteringTask</cs:designedForOntologyTask>
+    <cs:hasOntologyLanguage uri="http://www.w3.org/2002/07/owl#">owl</cs:hasOntologyLanguage>
+    <cs:includes uri="http://aSample">sample</cs:includes>
+</cs:CodeSystemCatalogEntry>

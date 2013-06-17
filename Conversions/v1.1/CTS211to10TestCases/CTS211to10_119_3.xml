@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AssociationMsg test case.  Theoretically, the situation below can't occur, as we would have had to had an associationID to do the fetch, but
+    we have it for the sake of completeness.  THe transform should add an associationId to the association entry -->
+<AssociationMsg xmlns="http://www.omg.org/spec/CTS2/1.1/Association" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Association http://informatics.mayo.edu/cts2/spec/CTS2/1.1/association/Association.xsd">
+    <heading xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+        <resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008/association/74400008_0</resourceRoot>
+        <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/association/74400008_0</resourceURI>
+        <accessDate>2013-06-06T03:03:26Z</accessDate>
+    </heading>
+    <association>
+        <subject uri="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"/>
+        <predicate uri="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <target>
+            <core:entity uri="http://snomed.info/id/18526009"/>
+        </target>
+        <assertedBy>
+            <core:version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</core:version>
+            <core:codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</core:codeSystem>
+        </assertedBy>
+    </association>
+</AssociationMsg>

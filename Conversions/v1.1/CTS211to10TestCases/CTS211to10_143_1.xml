@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CTS2 1.1 to 1.0 conversion test.  
+     Issue 143 - should not strip designations from IterableResolvedValueSet -->
+<IteratableResolvedValueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition http://informatics.mayo.edu/cts2/spec/CTS2/1.1/valuesetdefinition/ValueSetDefinition.xsd"
+ xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+ numEntries="50" complete="PARTIAL"
+ next="http://informatics.mayo.edu/cts2/services/sct/cts2/resolvedvalueset/sctid:447565001?maxtoreturn=50&amp;page=1">
+    <core:heading>
+        <core:resourceRoot>resolvedvalueset/sctid:447565001</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/resolvedvalueset/sctid:447565001?maxToReturn=50</core:resourceURI>
+        <core:parameter arg="maxtoreturn">
+            <core:val>50</core:val>
+        </core:parameter>
+        <core:accessDate>2013-06-07T16:46:16Z</core:accessDate>
+    </core:heading>
+    <resolutionInfo>
+        <resolutionOf>
+            <core:valueSetDefinition uri="http://snomed.info/id/447565001/version/20020131">Virtual_therapeutic_moiety_simple_reference_set_20020131</core:valueSetDefinition>
+            <core:valueSet uri="http://snomed.info/id/447565001">Virtual_therapeutic_moiety_simple_reference_set</core:valueSet>
+        </resolutionOf>
+        <resolvedUsingCodeSystem>
+            <core:version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</core:version>
+            <core:codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</core:codeSystem>
+        </resolvedUsingCodeSystem>
+    </resolutionInfo>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:211009" uri="http://snomed.info/id/211009">
+        <core:namespace>sctid</core:namespace>
+        <core:name>211009</core:name>
+        <core:designation>Norethandrolone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302007" uri="http://snomed.info/id/302007">
+        <core:namespace>sctid</core:namespace>
+        <core:name>302007</core:name>
+        <core:designation>Spiramycin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:449005" uri="http://snomed.info/id/449005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>449005</core:name>
+        <core:designation>Penicillin G procaine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:544002" uri="http://snomed.info/id/544002">
+        <core:namespace>sctid</core:namespace>
+        <core:name>544002</core:name>
+        <core:designation>Melphalan (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:669007" uri="http://snomed.info/id/669007">
+        <core:namespace>sctid</core:namespace>
+        <core:name>669007</core:name>
+        <core:designation>Vaccinia virus vaccine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:796001" uri="http://snomed.info/id/796001">
+        <core:namespace>sctid</core:namespace>
+        <core:name>796001</core:name>
+        <core:designation>Digoxin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:847003" uri="http://snomed.info/id/847003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>847003</core:name>
+        <core:designation>D-thyroxine preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:922004" uri="http://snomed.info/id/922004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>922004</core:name>
+        <core:designation>Pralidoxime (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1039008" uri="http://snomed.info/id/1039008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1039008</core:name>
+        <core:designation>Mercaptopurine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1148001" uri="http://snomed.info/id/1148001">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1148001</core:name>
+        <core:designation>Ticarcillin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1222004" uri="http://snomed.info/id/1222004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1222004</core:name>
+        <core:designation>Metronidazole (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1389007" uri="http://snomed.info/id/1389007">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1389007</core:name>
+        <core:designation>Beclomethasone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1434005" uri="http://snomed.info/id/1434005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1434005</core:name>
+        <core:designation>Calamine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1528001" uri="http://snomed.info/id/1528001">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1528001</core:name>
+        <core:designation>Folinic acid (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1594006" uri="http://snomed.info/id/1594006">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1594006</core:name>
+        <core:designation>Azatadine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1758005" uri="http://snomed.info/id/1758005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1758005</core:name>
+        <core:designation>Motilin preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1842003" uri="http://snomed.info/id/1842003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1842003</core:name>
+        <core:designation>Diphemanil (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1878008" uri="http://snomed.info/id/1878008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1878008</core:name>
+        <core:designation>Hexachlorophene (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:1887004" uri="http://snomed.info/id/1887004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>1887004</core:name>
+        <core:designation>Permethrin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2016004" uri="http://snomed.info/id/2016004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2016004</core:name>
+        <core:designation>Dextromethorphan (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2183004" uri="http://snomed.info/id/2183004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2183004</core:name>
+        <core:designation>Tetrahydrozoline (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2190009" uri="http://snomed.info/id/2190009">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2190009</core:name>
+        <core:designation>Trihexyphenidyl (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2497003" uri="http://snomed.info/id/2497003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2497003</core:name>
+        <core:designation>Hexetidine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2571007" uri="http://snomed.info/id/2571007">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2571007</core:name>
+        <core:designation>Busulfan (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2596005" uri="http://snomed.info/id/2596005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2596005</core:name>
+        <core:designation>Lincomycin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:2679000" uri="http://snomed.info/id/2679000">
+        <core:namespace>sctid</core:namespace>
+        <core:name>2679000</core:name>
+        <core:designation>Oxandrolone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3037004" uri="http://snomed.info/id/3037004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3037004</core:name>
+        <core:designation>Flumethasone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3127006" uri="http://snomed.info/id/3127006">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3127006</core:name>
+        <core:designation>Fluorouracil (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3221003" uri="http://snomed.info/id/3221003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3221003</core:name>
+        <core:designation>Ringer's solution (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3334000" uri="http://snomed.info/id/3334000">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3334000</core:name>
+        <core:designation>Cefotaxime (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3526007" uri="http://snomed.info/id/3526007">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3526007</core:name>
+        <core:designation>Rabies vaccine, human (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3814009" uri="http://snomed.info/id/3814009">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3814009</core:name>
+        <core:designation>Propylthiouracil (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:3822002" uri="http://snomed.info/id/3822002">
+        <core:namespace>sctid</core:namespace>
+        <core:name>3822002</core:name>
+        <core:designation>Succinylcholine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4126008" uri="http://snomed.info/id/4126008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4126008</core:name>
+        <core:designation>Fluprednisolone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4194004" uri="http://snomed.info/id/4194004">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4194004</core:name>
+        <core:designation>Mazindol (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4219002" uri="http://snomed.info/id/4219002">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4219002</core:name>
+        <core:designation>Penicillamine (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4220008" uri="http://snomed.info/id/4220008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4220008</core:name>
+        <core:designation>Tolazoline (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4704002" uri="http://snomed.info/id/4704002">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4704002</core:name>
+        <core:designation>Iothiouracil (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4741001" uri="http://snomed.info/id/4741001">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4741001</core:name>
+        <core:designation>Sodium folate preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4865009" uri="http://snomed.info/id/4865009">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4865009</core:name>
+        <core:designation>Prolactin releasing factor preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:4937008" uri="http://snomed.info/id/4937008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>4937008</core:name>
+        <core:designation>Cefaclor (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5478006" uri="http://snomed.info/id/5478006">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5478006</core:name>
+        <core:designation>Trifluperidol (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5720001" uri="http://snomed.info/id/5720001">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5720001</core:name>
+        <core:designation>Latrodectus mactans antivenin (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5737008" uri="http://snomed.info/id/5737008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5737008</core:name>
+        <core:designation>Demeclocycline (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5786005" uri="http://snomed.info/id/5786005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5786005</core:name>
+        <core:designation>Chlorothiazide (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5797005" uri="http://snomed.info/id/5797005">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5797005</core:name>
+        <core:designation>Clotrimazole (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5924003" uri="http://snomed.info/id/5924003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5924003</core:name>
+        <core:designation>Isosorbide dinitrate (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:5975000" uri="http://snomed.info/id/5975000">
+        <core:namespace>sctid</core:namespace>
+        <core:name>5975000</core:name>
+        <core:designation>Niclosamide (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:6028009" uri="http://snomed.info/id/6028009">
+        <core:namespace>sctid</core:namespace>
+        <core:name>6028009</core:name>
+        <core:designation>Triamcinolone preparation (product)</core:designation>
+    </entry>
+    <entry href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:6067003" uri="http://snomed.info/id/6067003">
+        <core:namespace>sctid</core:namespace>
+        <core:name>6067003</core:name>
+        <core:designation>Metaproterenol (product)</core:designation>
+    </entry>
+</IteratableResolvedValueSet>

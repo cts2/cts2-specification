@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssociationList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Association http://informatics.mayo.edu/cts2/spec/CTS2/1.1/association/Association.xsd"
+ xmlns="http://www.omg.org/spec/CTS2/1.1/Association" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" numEntries="1"
+ complete="COMPLETE">
+    <core:heading>
+        <core:resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof?list=1</core:resourceURI>
+        <core:parameter arg="list">
+            <core:val>1</core:val>
+        </core:parameter>
+        <core:accessDate>2013-06-07T01:07:30Z</core:accessDate>
+    </core:heading>
+    <entry derivation="ASSERTED">
+        <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
+            <core:namespace>sctid</core:namespace>
+            <core:name>74400008</core:name>
+        </subject>
+        <predicate uri="http://www.w3.org/2002/07/owl#equivalentClass">
+            <core:namespace>owl</core:namespace>
+            <core:name>equivalentClass</core:name>
+        </predicate>
+        <target>
+            <core:bnode>
+                <core:predicate uri="http://www.w3.org/2002/07/owl#intersectionOf">
+                    <core:namespace>owl</core:namespace>
+                    <core:name>intersectionOf</core:name>
+                </core:predicate>
+                <core:target externalIdentifier="4054844028">
+                    <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009" uri="http://snomed.info/id/18526009">
+                        <core:namespace>sctid</core:namespace>
+                        <core:name>18526009</core:name>
+                    </core:entity>
+                </core:target>
+                <core:target externalIdentifier="269009029">
+                    <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000" uri="http://snomed.info/id/302168000">
+                        <core:namespace>sctid</core:namespace>
+                        <core:name>302168000</core:name>
+                    </core:entity>
+                </core:target>
+                <core:target>
+                    <core:bnode>
+                        <core:predicate uri="http://snomed.info/id/group">
+                            <core:namespace>sctid</core:namespace>
+                            <core:name>group</core:name>
+                        </core:predicate>
+                        <core:target>
+                            <core:bnode>
+                                <core:predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                                    <core:namespace>owl</core:namespace>
+                                    <core:name>someValuesFrom</core:name>
+                                </core:predicate>
+                                <core:target>
+                                    <core:bnode>
+                                        <core:predicate uri="http://www.w3.org/2002/07/owl#intersectionOf">
+                                            <core:namespace>owl</core:namespace>
+                                            <core:name>intersectionOf</core:name>
+                                        </core:predicate>
+                                        <core:target externalIdentifier="4367195020">
+                                            <core:bnode>
+                                                <core:predicate href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:116676008" uri="http://snomed.info/id/116676008">
+                                                    <core:namespace>sctid</core:namespace>
+                                                    <core:name>116676008</core:name>
+                                                </core:predicate>
+                                                <core:target>
+                                                    <core:bnode>
+                                                        <core:predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                                                            <core:namespace>owl</core:namespace>
+                                                            <core:name>someValuesFrom</core:name>
+                                                        </core:predicate>
+                                                        <core:target>
+                                                            <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:23583003" uri="http://snomed.info/id/23583003">
+                                                                <core:namespace>sctid</core:namespace>
+                                                                <core:name>23583003</core:name>
+                                                            </core:entity>
+                                                        </core:target>
+                                                    </core:bnode>
+                                                </core:target>
+                                            </core:bnode>
+                                        </core:target>
+                                        <core:target externalIdentifier="4442081021">
+                                            <core:bnode>
+                                                <core:predicate href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:363698007" uri="http://snomed.info/id/363698007">
+                                                    <core:namespace>sctid</core:namespace>
+                                                    <core:name>363698007</core:name>
+                                                </core:predicate>
+                                                <core:target>
+                                                    <core:bnode>
+                                                        <core:predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                                                            <core:namespace>owl</core:namespace>
+                                                            <core:name>someValuesFrom</core:name>
+                                                        </core:predicate>
+                                                        <core:target>
+                                                            <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:66754008" uri="http://snomed.info/id/66754008">
+                                                                <core:namespace>sctid</core:namespace>
+                                                                <core:name>66754008</core:name>
+                                                            </core:entity>
+                                                        </core:target>
+                                                    </core:bnode>
+                                                </core:target>
+                                            </core:bnode>
+                                        </core:target>
+                                    </core:bnode>
+                                </core:target>
+                            </core:bnode>
+                        </core:target>
+                    </core:bnode>
+                </core:target>
+            </core:bnode>
+        </target>
+        <assertedBy>
+            <core:version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</core:version>
+            <core:codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</core:codeSystem>
+        </assertedBy>
+    </entry>
+</AssociationList>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Value set conversion to 1.1 -->
+<ValueSetCatalogEntryMsg
+    xmlns="http://schema.omg.org/spec/CTS2/1.0/ValueSet"
+    xmlns:core="http://schema.omg.org/spec/CTS2/1.0/Core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/ValueSet http://www.omg.org/spec/cts2/201206/valueset/ValueSet.xsd">
+    <core:heading>
+        <core:resourceRoot>valueset/iceci-activity</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity</core:resourceURI>
+        <core:accessDate>2013-06-10T13:08:28.642-04:00</core:accessDate>
+    </core:heading>
+    <valueSetCatalogEntry entryState="ACTIVE"
+        about="http://purl.bioontology.org/view/iceci-activity"
+        formalName="iceci-activity C.5" valueSetName="iceci-activity">
+        <core:keyword>iceci-activity</core:keyword>
+        <core:keyword>2028</core:keyword>
+        <core:resourceSynopsis>
+            <core:value>ICECI ACTIVITY WHEN INJURED(C.5)</core:value>
+        </core:resourceSynopsis>
+        <core:sourceAndRole>
+            <core:source uri="mailto:swt@stanford.edu">Samson Tu</core:source>
+            <core:role>contact</core:role>
+        </core:sourceAndRole>
+        <core:property>
+            <core:predicate uri="http://purl.bioontology.org/predicate/isFoundry">
+                <core:namespace>iceci-activity</core:namespace>
+                <core:name>isFoundry</core:name>
+            </core:predicate>
+            <core:value>
+                <core:literal>
+                    <core:value>0</core:value>
+                </core:literal>
+            </core:value>
+        </core:property>
+        <core:property>
+            <core:predicate uri="http://id.bioontology.org/predicate/ontologyId">
+                <core:namespace>ontologyId</core:namespace>
+                <core:name>ontologyId</core:name>
+            </core:predicate>
+            <core:value>
+                <core:literal>
+                    <core:value>2028</core:value>
+                </core:literal>
+            </core:value>
+        </core:property>
+        <definitions>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity/definitions</definitions>
+    </valueSetCatalogEntry>
+</ValueSetCatalogEntryMsg>

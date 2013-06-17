@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?><!-- IterableResolvedValueSet with multiple includesResolvedValueSets  -->
+<IteratableResolvedValueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/ValueSetDefinition http://www.omg.org/spec/cts2/201206/valuesetdefinition/ValueSetDefinition.xsd" complete="COMPLETE" numEntries="74">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>valueset/2.16.840.1.113883.3.526.3.371/definition/20121025/resolution</resourceRoot>
+      <resourceURI>https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371/definition/20121025/resolution</resourceURI>
+      <parameter arg="maxtoreturn">
+         <val>1000</val>
+      </parameter>
+      <accessDate>2013-06-10T13:31:14.803-04:00</accessDate>
+   </heading>
+   <resolutionInfo>
+      <resolutionOf>
+         <valueSetDefinition xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371/version/20121025" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371/definition/20121025">20121025</valueSetDefinition>
+         <valueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371">2.16.840.1.113883.3.526.3.371</valueSet>
+      </resolutionOf>
+      <resolvedUsingCodeSystem>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT-unknown</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://id.nlm.nih.gov/cui/C1140095">CPT</codeSystem>
+      </resolvedUsingCodeSystem>
+      <resolvedUsingCodeSystem>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT-2012-07</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://snomed.info">SNOMEDCT</codeSystem>
+      </resolvedUsingCodeSystem>
+      <includesResolvedValueSet>
+         <resolutionOf>
+            <valueSetDefinition xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371/version/20121025" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371/definition/20121025">20121025</valueSetDefinition>
+            <valueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371">2.16.840.1.113883.3.526.3.371</valueSet>
+         </resolutionOf>
+      </includesResolvedValueSet>
+      <includesResolvedValueSet>
+         <resolutionOf>
+            <valueSetDefinition xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371/version/20121025" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371/definition/20121025">20121025</valueSetDefinition>
+            <valueSet xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="urn:oid:2.16.840.1.113883.3.526.3.371" href="https://informatics.mayo.edu/vsmc/cts2/valueset/2.16.840.1.113883.3.526.3.371">2.16.840.1.113883.3.526.3.371</valueSet>
+         </resolutionOf>
+      </includesResolvedValueSet>
+   </resolutionInfo>
+   <entry uri="http://snomed.info/id/10326007" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/10326007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">10326007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass with autogenous graft, three grafts (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/119564002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/119564002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">119564002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Internal mammary-coronary artery bypass graft (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/119565001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/119565001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">119565001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass graft, anastomosis of artery of thorax to coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/15256002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/15256002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">15256002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Transmyocardial revascularization by laser technique (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/174911007" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/174911007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">174911007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revascularization of wall of heart (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175007008" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175007008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175007008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Saphenous vein graft replacement of one coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175008003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175008003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175008003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Saphenous vein graft replacement of two coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175009006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175009006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175009006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Saphenous vein graft replacement of three coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175011002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175011002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175011002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Saphenous vein graft replacement of four or more coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175021005" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175021005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175021005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Allograft bypass of coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175022003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175022003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175022003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Allograft replacement of one coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175024002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175024002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175024002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Allograft replacement of two coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175025001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175025001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175025001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Allograft replacement of three coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175026000" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175026000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175026000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Allograft replacement of four or more coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175036008" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175036008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175036008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of bypass for coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175037004" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175037004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175037004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of bypass for one coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175038009" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175038009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175038009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of bypass for two coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175039001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175039001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175039001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of bypass for three coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175040004" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175040004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175040004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of bypass for four or more coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175041000" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175041000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175041000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Revision of connection of thoracic artery to coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175045009" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175045009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175045009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Connection of mammary artery to coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175047001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175047001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175047001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Double implantation of mammary arteries into coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175048006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175048006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175048006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Single anastomosis of mammary artery to left anterior descending coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/175050003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/175050003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">175050003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Single implantation of mammary artery into coronary artery (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232717009" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232717009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232717009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafting (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232719007" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232719007">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232719007</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass graft x 1 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232720001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232720001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232720001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafts x 2 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232721002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232721002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232721002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafts x 3 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232722009" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232722009">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232722009</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafts x 4 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232723004" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232723004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232723004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafts x 5 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/232724005" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/232724005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">232724005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass grafts greater than 5 (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/265481001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/265481001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">265481001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Double anastomosis of mammary arteries to coronary arteries (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/275215001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/275215001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">275215001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Left internal mammary artery single anastomosis (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/275216000" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/275216000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">275216000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Right internal mammary artery single anastomosis (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/275227003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/275227003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">275227003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Myocardial revascularization (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/275252001" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/275252001">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">275252001</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Left internal mammary artery sequential anastomosis (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/275253006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/275253006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">275253006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Right internal mammary artery sequential anastomosis (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/287277008" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/287277008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">287277008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Indirect heart revascularization (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/30670000" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/30670000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">30670000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Anastomosis of thoracic artery to coronary artery, double (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/309814006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/309814006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">309814006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Aortocoronary bypass grafting (procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33140" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33140">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33140</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Transmyocardial laser revascularization, by thoracotomy; (separate procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33510" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33510">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33510</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; single coronary venous graft</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33511" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33511">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33511</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; 2 coronary venous grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33512" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33512">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33512</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; 3 coronary venous grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33513" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33513">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33513</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; 4 coronary venous grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33514" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33514">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33514</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; 5 coronary venous grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33516" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33516">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33516</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, vein only; 6 or more coronary venous grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33517" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33517">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33517</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); single vein graft (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33518" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33518">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33518</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); 2 venous grafts (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33519" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33519">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33519</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); 3 venous grafts (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33521" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33521">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33521</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); 4 venous grafts (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33522" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33522">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33522</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); 5 venous grafts (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33523" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33523">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33523</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using venous graft(s) and arterial graft(s); 6 or more venous grafts (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33533" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33533">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33533</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using arterial graft(s); single arterial graft</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33534" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33534">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33534</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using arterial graft(s); 2 coronary arterial grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33535" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33535">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33535</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using arterial graft(s); 3 coronary arterial grafts</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/33536" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/33536">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">33536</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass, using arterial graft(s); 4 or more coronary arterial grafts</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/3546002" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/3546002">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">3546002</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Aortocoronary artery bypass graft with saphenous vein graft (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/359597003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/359597003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">359597003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Single internal mammary-coronary artery bypass (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/359601003" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/359601003">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">359601003</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass with autogenous graft of internal mammary artery, single graft (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/39202005" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/39202005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">39202005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass with autogenous graft, four grafts (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/39724006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/39724006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">39724006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Anastomosis of internal mammary artery to coronary artery, double vessel (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/414088005" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/414088005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">414088005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Emergency coronary artery bypass graft (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/48431000" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/48431000">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">48431000</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Anastomosis of thoracic artery to coronary artery, single (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/74371005" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/74371005">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74371005</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass with autogenous graft, two grafts (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/81266008" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/81266008">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">81266008</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Heart revascularization (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/82247006" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/82247006">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">82247006</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Coronary artery bypass with autogenous graft, five grafts (procedure)</designation>
+   </entry>
+   <entry uri="http://snomed.info/id/90205004" href="http://informatics.mayo.edu/vsmc/sct/cts2/codesystem/SNOMED_CT/version/20120731/entity/90205004">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">SNOMEDCT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">90205004</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Cardiac revascularization with bypass anastomosis (procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92980" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92980">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92980</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Transcatheter placement of an intracoronary stent(s), percutaneous, with or without other therapeutic intervention, any method; single vessel</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92981" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92981">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92981</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Transcatheter placement of an intracoronary stent(s), percutaneous, with or without other therapeutic intervention, any method; each additional vessel (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92982" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92982">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92982</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Percutaneous transluminal coronary balloon angioplasty; single vessel</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92984" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92984">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92984</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Percutaneous transluminal coronary balloon angioplasty; each additional vessel (List separately in addition to code for primary procedure)</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92995" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92995">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92995</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Percutaneous transluminal coronary atherectomy, by mechanical or other method, with or without balloon angioplasty; single vessel</designation>
+   </entry>
+   <entry uri="http://id.nlm.nih.gov/cui/C1140095/92996" href="https://informatics.mayo.edu/vsmc/cts2/codesystem/CPT/version/CPT-2012/entity/92996">
+      <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">CPT</namespace>
+      <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">92996</name>
+      <designation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Percutaneous transluminal coronary atherectomy, by mechanical or other method, with or without balloon angioplasty; each additional vessel (List separately in addition to code for primary procedure)</designation>
+   </entry>
+</IteratableResolvedValueSet>

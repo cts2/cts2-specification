@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssociationGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Association http://informatics.mayo.edu/cts2/spec/CTS2/1.1/association/Association.xsd"
+    xmlns="http://www.omg.org/spec/CTS2/1.1/Association" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+    complete="COMPLETE" numEntries="2" graphFocus="SPECIFIC_ENTITY" expansionDirection="FORWARD">
+    <core:heading>
+        <core:resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof/graph</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof/graph</core:resourceURI>
+        <core:accessDate>2013-06-06T03:03:26Z</core:accessDate>
+    </core:heading>
+    <focusEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"
+        uri="http://snomed.info/id/74400008">
+        <core:namespace>sctid</core:namespace>
+        <core:name>74400008</core:name>
+    </focusEntity>
+    <entry depth="1" associationID="http://snomed.info/associd/1" direction="SOURCE_TO_TARGET" nodeNumber="1">
+        <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"
+            uri="http://snomed.info/id/74400008">
+            <core:namespace>sctid</core:namespace>
+            <core:name>74400008</core:name>
+        </subject>
+        <predicate uri="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+            <core:namespace>rdfs</core:namespace>
+            <core:name>subClassOf</core:name>
+        </predicate>
+        <target>
+            <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000"
+                uri="http://snomed.info/id/302168000">
+                <core:namespace>sctid</core:namespace>
+                <core:name>302168000</core:name>
+            </core:entity>
+        </target>
+        <assertedBy>
+            <core:version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</core:version>
+            <core:codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</core:codeSystem>
+        </assertedBy>
+        <nodeEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000"
+            uri="http://snomed.info/id/302168000">
+            <core:namespace>sctid</core:namespace>
+            <core:name>302168000</core:name>
+        </nodeEntity>
+
+    </entry>
+    <entry depth="1" associationID="http://snomed.info/associd/1" direction="SOURCE_TO_TARGET" nodeNumber="2">
+        <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"
+            uri="http://snomed.info/id/74400008">
+            <core:namespace>sctid</core:namespace>
+            <core:name>74400008</core:name>
+        </subject>
+        <predicate uri="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+            <core:namespace>rdfs</core:namespace>
+            <core:name>subClassOf</core:name>
+        </predicate>
+        <target>
+            <core:entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009"
+                uri="http://snomed.info/id/18526009">
+                <core:namespace>sctid</core:namespace>
+                <core:name>18526009</core:name>
+            </core:entity>
+        </target>
+        <assertedBy>
+            <core:version href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</core:version>
+            <core:codeSystem href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</core:codeSystem>
+        </assertedBy>
+        <nodeEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009"
+            uri="http://snomed.info/id/18526009">
+            <core:namespace>sctid</core:namespace>
+            <core:name>18526009</core:name>
+        </nodeEntity>
+    </entry>
+</AssociationGraph>

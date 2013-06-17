@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystemVersionCatalogEntryMsg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion http://informatics.mayo.edu/cts2/spec/CTS2/1.1/codesystemversion/CodeSystemVersion.xsd"
+ xmlns="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+    <core:heading>
+        <core:resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/416098002</core:resourceRoot>
+        <core:resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/416098002?format=html</core:resourceURI>
+        <core:parameter arg="format">
+            <core:val>html</core:val>
+        </core:parameter>
+        <core:accessDate>2013-05-23T18:14:05Z</core:accessDate>
+    </core:heading>
+    <codeSystemVersionCatalogEntry documentURI="http://snomed.info/sct/900000000000207008/version/20130131" about="http://snomed.info/sct/900000000000207008/version/20130131" codeSystemVersionName="SNOMED_CT_20130131">
+        <core:keyword>SNOMED</core:keyword>
+        <core:keyword>SNOMED CT</core:keyword>
+        <core:keyword>SNOMED CT International</core:keyword>
+        <core:keyword>Release 20130131</core:keyword>
+        <core:resourceType uri="http://www.w3.org/2002/07/owl#Ontology">
+            <core:namespace>owl</core:namespace>
+            <core:name>Ontology</core:name>
+        </core:resourceType>
+        <core:resourceSynopsis>
+            <core:value>SNOMED CT International 20130131 Release</core:value>
+        </core:resourceSynopsis>
+        <core:rights>
+            <core:value>© 2002-2013 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. "SNOMED" and "SNOMED CT" are registered trademarks of the IHTSDO.</core:value>
+        </core:rights>
+        <core:sourceAndNotation>
+            <core:sourceDocument>http://download.nlm.nih.gov/umls/kss/IHTSDO20130131/SnomedCT_Release_INT_20130131.zip</core:sourceDocument>
+            <core:sourceLanguage uri="http://snomed.info/format/RF2">Release Format 2</core:sourceLanguage>
+            <core:sourceDocumentSyntax uri="http://www.omg.org/spec/MMT#text/bar-separated-values">text/bar-separated-values</core:sourceDocumentSyntax>
+        </core:sourceAndNotation>
+        <core:predecessor href="SNOMED_CT_20120731" uri="http://snomed.info/sct/900000000000207008/version/20120131">SNOMED_CT_20120731</core:predecessor>
+        <core:officialResourceVersionId>SNOMED Clinical Terms version: 20130131 [R] (July 2012 Release)</core:officialResourceVersionId>
+        <core:officialReleaseDate>2012-07-31T00:00:00</core:officialReleaseDate>
+        <core:officialActivationDate>2012-07-31T00:00:00</core:officialActivationDate>
+        <versionOf href="../SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED CT International</versionOf>
+        <defaultLanguage uri="http://www.omg.org/spec/LNG#en-us">US English</defaultLanguage>
+        <supportedLanguage uri="http://www.omg.org/spec/LNG#en-us">US English</supportedLanguage>
+        <supportedLanguage uri="http://www.omg.org/spec/LNG#en-gb">GB English</supportedLanguage>
+        <associations>associations</associations>
+        <classes>classes</classes>
+        <roles>roles</roles>
+    </codeSystemVersionCatalogEntry>
+</CodeSystemVersionCatalogEntryMsg>

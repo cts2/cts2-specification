@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Test of Issue #121 - need to remove hasOntologyLanguage and includes going to 1.0 -->
+<CodeSystemCatalogEntry xmlns="http://schema.omg.org/spec/CTS2/1.0/CodeSystem" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/CodeSystem http://www.omg.org/spec/cts2/201206/codesystem/CodeSystem.xsd" about="http://www.nlm.nih.gov/research/umls/rxnorm/" codeSystemName="RxNorm" formalName="RxNorm">
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Abstracting and Indexing as Topic</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Algorithms</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Ambulatory Care Facilities</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Anesthesiology</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Bibliometrics</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Biomedical Research</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Community Health Centers</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Computer Communication Networks</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Data Collection</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Decision Support Systems: Clinical</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Decision Support Techniques</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Dictionaries: Pharmaceutic</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Dietary Supplements</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Drug Hypersensitivity</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Drug Information Services</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Drug Labeling</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Drug Therapy</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Drug Utilization Review</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Electronic Prescribing</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Epidemiologic Studies</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Expert Testimony</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Forms and Records Control</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Government Regulation</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Hospitals: Military</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Humans</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Information Management</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Information Storage and Retrieval</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Information Systems</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">International Classification of Diseases</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">International Cooperation</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Internet</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Knowledge Bases</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Humans</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Management Audit</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Audit</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Informatics</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Informatics Applications</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Order Entry Systems</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Order Entry Systems</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Record Linkage</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medical Records Systems: Computerized</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medically Uninsured</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Medication Systems: Hospital</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Natural Language Processing</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Pharmaceutical Preparations</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Pharmacy</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Pharmacy Administration</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Practice Guidelines as Topic</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">PubMed</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Quality Assurance: Health Care</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Safety Management</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Semantics</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Sensitivity and Specificity</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Software</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Software Design</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Surgery Department: Hospital</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Systems Integration</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Tennessee</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Terminology as Topic</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Total Quality Management</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Unified Medical Language System</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">United States</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">United States Department of Veterans Affairs</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">United States Food and Drug Administration</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">United States Government Agencies</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">User-Computer Interface</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Virginia</keyword>
+   <keyword xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">Vocabulary: Controlled</keyword>
+   <resourceType xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" uri="http://www.w3.org/2004/02/skos/core#ConceptSystem">
+      <namespace>skos</namespace>
+      <name>ConceptSystem</name>
+   </resourceType>
+   <resourceSynopsis xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <value>RxNorm, a standardized nomenclature for clinical drugs and drug delivery devices, is produced by the
+            National Library of Medicine (NLM). In this context, a clinical drug is a pharmaceutical product given to
+            (or taken by) a patient with a therapeutic or diagnostic intent. A drug delivery device is a pack that
+            contains multiple clinical drugs or clinical drugs designed to be administered in a specified sequence. In
+            RxNorm, the name of a clinical drug combines its ingredients, strengths, and/or form. While ingredient and
+            strength have straightforward meanings, clarification of what is meant by form may be needed. In RxNorm, the
+            form is the physical form in which the drug is administered or is specified to be administered in a
+            prescription or order. The RxNorm clinical drug name does not refer to the size of the package, the form in
+            which the product was manufactured, its form when it arrived at the dispensary or the intended route.
+            RxNorm's standard names for clinical drugs and drug delivery devices are connected to the varying names of
+            drugs present in many different controlled vocabularies within the Unified Medical Language System (UMLS)
+            Metathesaurus, including those in commercially available drug information sources. These connections are
+            intended to facilitate interoperability among the computerized systems that record or process data dealing
+            with clinical drugs. </value>
+   </resourceSynopsis>
+   <additionalDocumentation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">http://www.nlm.nih.gov/research/umls/rxnorm/docs/index.html</additionalDocumentation>
+   <sourceAndRole xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <source uri="http://www.nlm.nih.gov">NLM</source>
+      <role uri="http://purl.org/dc/terms/creator">creator</role>
+   </sourceAndRole>
+   <sourceAndRole xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <source uri="http://www.va.gov">VA</source>
+      <role uri="http://purl.org/dc/terms/contributor">contributor</role>
+   </sourceAndRole>
+   <sourceAndRole xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <source uri="http://www.nlm.nih.gov/research/umls/rxnorm/RxNorm.pdf">RxNorm.pdf</source>
+   </sourceAndRole>
+   <rights xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <value>UMLS Metathesaurus License <ns1:a xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:cs="http://www.omg.org/spec/CTS2/1.1/CodeSystem" href="http://wwwcf.nlm.nih.gov/umlslicense/snomed/license.cfm">UMLS
+                Metathesaurus License</ns1:a>
+      </value>
+   </rights>
+   <note xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" type="EditorialNote">
+      <value>RxNorm has source vocabularies including:<ul xmlns="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:cs="http://www.omg.org/spec/CTS2/1.1/CodeSystem">
+            <li>SAB (Source Name)</li>
+            <li>GS (Gold Standard Alchemy)</li>
+            <li>MDDB (Medi-Span Master Drug Data Base)</li>
+            <li>MMSL (Multum MediSource Lexicon)</li>
+            <li>MMX (Micromedex DRUGDEX)</li>
+            <li>MSH (Medical Subject Headings ;MeSH.)</li>
+            <li>MTHFDA (FDA National Drug Code Directory)</li>
+            <li>MTHSPL (FDA Structured Product Labels)</li>
+            <li>NDDF (First DataBank NDDF Plus Source Vocabulary)</li>
+            <li>NDFRT (Veterans Health Administration National Drug File -
+                    Reference Terminology)</li>
+            <li>SNOMED CT (SNOMED Clinical Terms ;drug information.)</li>
+            <li>VANDF (Veterans Health Administration National Drug File</li>
+         </ul>
+      </value>
+   </note>
+   <note xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" type="ScopeNote">
+      <value>The scope of RxNorm is determined by the combined scope of its source vocabularies. Many relationships
+            (primarily synonymous), concept attributes, and some concept names are added by the NLM during the creation
+            of RxNorm forms. The concepts themselves are derived from the names provided by the source vocabularies.
+            RxNorm reflects and preserves the meanings, concept names, and relationships from its source vocabularies in
+            the same way that the Metathesaurus preserves content and meaning.(reference to<ns1:a xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:cs="http://www.omg.org/spec/CTS2/1.1/CodeSystem" href="http://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=nlmumls">UMLS Reference Manual)</ns1:a>
+      </value>
+   </note>
+   <property xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <predicate uri="http://omv.ontoware.org/2005/05/ontology/creationDate">
+         <namespace>omv</namespace>
+         <name>creationDate</name>
+      </predicate>
+      <value>
+         <literal>
+            <value>2001</value>
+         </literal>
+      </value>
+   </property>
+   <property xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <predicate uri="http://omv.ontoware.org/2005/05/ontology/hasFormalityLevel">
+         <namespace>omv</namespace>
+         <name>hasFormalityLevel</name>
+      </predicate>
+      <value>
+         <entity uri="http://omv.ontoware.org/2005/05/ontology/Taxonomy">
+            <namespace>omv</namespace>
+            <name>Taxonomy</name>
+         </entity>
+      </value>
+   </property>
+   <property xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <predicate uri="http://omv.ontoware.org/2005/05/ontology/usedOntologyEngineeringTool">
+         <namespace>omv</namespace>
+         <name>usedOntologyEngineeringTool</name>
+      </predicate>
+      <value>
+         <resource>http://www.apelon.com/Products/TDE/</resource>
+      </value>
+   </property>
+   <alternateID xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">urn:oid:2.16.840.1.113883.6.88</alternateID>
+   <alternateID xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">http://purl.bioontology.org/ontology/RXNORM</alternateID>
+   <releaseDocumentation xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <value>Versions are bound to <ns1:a xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:cs="http://www.omg.org/spec/CTS2/1.1/CodeSystem" href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">UMLS Metathesaurus releases</ns1:a>
+      </value>
+   </releaseDocumentation>
+   <releaseFormat xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <sourceLanguage uri="http://www.nlm.nih.gov/umls">umls</sourceLanguage>
+      <sourceDocumentSyntax uri="http://www.nlm.nih.gov/umls/rrf">rrf</sourceDocumentSyntax>
+   </releaseFormat>
+   <codeSystemCategory uri="http://omv.ontoware.org/2005/05/ontology/DescriptionLogics">DescriptionLogics</codeSystemCategory>
+   <ontologyDomain uri="http://dmoz.org/rdf/457471">Drugs_and_Medications</ontologyDomain>
+   <ontologyType uri="http://omv.ontoware.org/2005/05/ontology/DomainOntology">DomainOntology</ontologyType>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/IndexingTask">IndexingTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/IntegrationTask">IntegrationTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/MatchingTask">MatchingTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/QueryFormulationTask">QueryFormulationTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/MatchingTask">MatchingTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/QueryFormulationTask">QueryFormulationTask</designedForOntologyTask>
+   <designedForOntologyTask uri="http://omv.ontoware.org/2005/05/ontology/FilteringTask">FilteringTask</designedForOntologyTask>
+</CodeSystemCatalogEntry>

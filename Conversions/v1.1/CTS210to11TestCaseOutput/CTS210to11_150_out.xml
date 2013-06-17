@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!-- No test in this direction, but simple vsd conversion from 1.0 to 1.1 -->
+<ValueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition http://informatics.mayo.edu/cts2/spec/CTS2/1.1/valuesetdefinition/ValueSetDefinition.xsd" entryState="ACTIVE" about="http://purl.org/net/OCRe/OCRe.owl#OCRE400020" state="FINAL">
+   <changeDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Core" changeType="CREATE" committed="COMMITTED" containingChangeSet="urn:uuid:7c0ee516-4213-4f61-8b61-47b3f1ed5357" changeDate="2012-01-18T21:01:52.014Z"/>
+   <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+      <value>This is a sample of a value set that consists of all of the subclasses of a class</value>
+   </resourceSynopsis>
+   <sourceAndNotation xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+      <sourceAndNotationDescription>Automatically derived from HSDB_Merged_vRevision_191.owl</sourceAndNotationDescription>
+   </sourceAndNotation>
+   <definedValueSet uri="http://purl.org/net/OCRe/OCRe.owl#OCRE400020">Biospecimen_preservation_method</definedValueSet>
+   <entry operator="UNION" entryOrder="1">
+      <associatedEntities direction="TARGET_TO_SOURCE" leafOnly="ALL_INTERMEDIATE_NODES" transitivity="TRANSITIVE_CLOSURE">
+         <referencedEntity uri="http://purl.org/net/OCRe/OCRe.owl#OCRE400020">
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">OCRe2</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">Biospecimen preservation method</name>
+         </referencedEntity>
+         <codeSystem uri="http://purl.org/net/OCRe/OCRe.owl#"/>
+         <predicate uri="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+            <namespace xmlns="http://www.omg.org/spec/CTS2/1.1/Core">rdfs</namespace>
+            <name xmlns="http://www.omg.org/spec/CTS2/1.1/Core">subClassOf</name>
+         </predicate>
+      </associatedEntities>
+   </entry>
+</ValueSetDefinition>

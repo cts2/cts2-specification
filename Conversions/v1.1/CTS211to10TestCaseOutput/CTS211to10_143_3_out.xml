@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Test of designation removal - designations should be removed in all the entries below -->
+<AssociationDirectory xmlns="http://schema.omg.org/spec/CTS2/1.0/Association" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" numEntries="1" complete="COMPLETE" xsi:schemaLocation="http://schema.omg.org/spec/CTS2/1.0/Association http://www.omg.org/spec/cts2/201206/association/Association.xsd">
+   <heading xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+      <resourceRoot>codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof</resourceRoot>
+      <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/subjectof</resourceURI>
+      <accessDate>2013-06-10T15:35:16Z</accessDate>
+   </heading>
+   <entry>
+      <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
+      </subject>
+      <predicate uri="http://www.w3.org/2002/07/owl#equivalentClass">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">owl</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">equivalentClass</name>
+      </predicate>
+      <target>
+         <bnode xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">
+            <predicate uri="http://www.w3.org/2002/07/owl#intersectionOf">
+               <namespace>owl</namespace>
+               <name>intersectionOf</name>
+            </predicate>
+            <target externalIdentifier="4054844028">
+               <entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009" uri="http://snomed.info/id/18526009">
+                  <namespace>sctid</namespace>
+                  <name>18526009</name>
+               </entity>
+            </target>
+            <target externalIdentifier="269009029">
+               <entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000" uri="http://snomed.info/id/302168000">
+                  <namespace>sctid</namespace>
+                  <name>302168000</name>
+               </entity>
+            </target>
+            <target>
+               <bnode>
+                  <predicate uri="http://snomed.info/id/group">
+                     <namespace>sctid</namespace>
+                     <name>group</name>
+                  </predicate>
+                  <target>
+                     <bnode>
+                        <predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                           <namespace>owl</namespace>
+                           <name>someValuesFrom</name>
+                        </predicate>
+                        <target>
+                           <bnode>
+                              <predicate uri="http://www.w3.org/2002/07/owl#intersectionOf">
+                                 <namespace>owl</namespace>
+                                 <name>intersectionOf</name>
+                              </predicate>
+                              <target externalIdentifier="4367195020">
+                                 <bnode>
+                                    <predicate href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:116676008" uri="http://snomed.info/id/116676008">
+                                       <namespace>sctid</namespace>
+                                       <name>116676008</name>
+                                    </predicate>
+                                    <target>
+                                       <bnode>
+                                          <predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                                             <namespace>owl</namespace>
+                                             <name>someValuesFrom</name>
+                                          </predicate>
+                                          <target>
+                                             <entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:23583003" uri="http://snomed.info/id/23583003">
+                                                <namespace>sctid</namespace>
+                                                <name>23583003</name>
+                                             </entity>
+                                          </target>
+                                       </bnode>
+                                    </target>
+                                 </bnode>
+                              </target>
+                              <target externalIdentifier="4442081021">
+                                 <bnode>
+                                    <predicate href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:363698007" uri="http://snomed.info/id/363698007">
+                                       <namespace>sctid</namespace>
+                                       <name>363698007</name>
+                                    </predicate>
+                                    <target>
+                                       <bnode>
+                                          <predicate uri="http://www.w3.org/2002/07/owl#someValuesFrom">
+                                             <namespace>owl</namespace>
+                                             <name>someValuesFrom</name>
+                                          </predicate>
+                                          <target>
+                                             <entity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:66754008" uri="http://snomed.info/id/66754008">
+                                                <namespace>sctid</namespace>
+                                                <name>66754008</name>
+                                             </entity>
+                                          </target>
+                                       </bnode>
+                                    </target>
+                                 </bnode>
+                              </target>
+                           </bnode>
+                        </target>
+                     </bnode>
+                  </target>
+               </bnode>
+            </target>
+         </bnode>
+      </target>
+      <assertedBy>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+      </assertedBy>
+   </entry>
+</AssociationDirectory>
