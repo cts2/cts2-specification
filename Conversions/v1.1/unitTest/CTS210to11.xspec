@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" stylesheet="file:/Users/mrf7578/development/cts2/supp/CTS21.1Conversion/CTS210to11.xsl">
+    <x:scenario label="Issue 134: No link to ResolvedValueSet in ValueSetCatalogEntry">
+        <x:context href="../CTS210to11TestCases/CTS210to11_134.xml"/>
+        <x:expect  label="Only namespaces change (Issue 90)" href="../cts210to11TestCaseOutput/CTS210to11_134_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 136: parents URI needed in EntityDescription">
+        <x:context href="../CTS210to11TestCases/CTS210to11_136.xml"/>
+        <x:expect  label="'parents' added" href="../cts210to11TestCaseOutput/CTS210to11_136_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 136: parents URI needed in EntityDescription Test 2">
+        <x:context href="../CTS210to11TestCases/CTS210to11_136_2.xml"/>
+        <x:expect  label="No 'parents' added because no parents present" href="../cts210to11TestCaseOutput/CTS210to11_136_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 138: documentURI shouldn't be mandatory">
+        <x:context href="../CTS210to11TestCases/CTS210to11_138.xml"/>
+        <x:expect  label="documentURI identical to 'about' - removed" href="../cts210to11TestCaseOutput/CTS210to11_138_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 138: documentURI shouldn't be mandatory">
+        <x:context href="../CTS210to11TestCases/CTS210to11_138_2.xml"/>
+        <x:expect  label="document uri different than 'about' - kept" href="../cts210to11TestCaseOutput/CTS210to11_138_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label='Isusue 147: ResolvedValueSet - convert member" to "entry"'>
+        <x:context href="../CTS210to11TestCases/CTS210to11_147.xml"/>
+        <x:expect  label="ResolvedValueSetMsg - Members converted" href="../cts210to11TestCaseOutput/CTS210to11_147_out.xml"/>
+    </x:scenario>
+    <x:scenario label='Issue 147: ResolvedValueSet - convert "member" to "entry"'>
+        <x:context href="../CTS210to11TestCases/CTS210to11_147_2.xml"/>
+        <x:expect  label="ResolvedValueSet - Members converted" href="../cts210to11TestCaseOutput/CTS210to11_147_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label='Issue 150: cardinality of includesResolvedValueSet is wrong'>
+        <x:context href="../CTS210to11TestCases/CTS210to11_150.xml"/>
+        <x:expect  label="ResolvedValueSet - No change besides namespace conversion" href="../cts210to11TestCaseOutput/CTS210to11_150_out.xml"/>
+    </x:scenario>
+    <x:scenario label='Issue 150: cardinality of includesResolvedValueSet is wrong'>
+        <x:context href="../CTS210to11TestCases/CTS210to11_150_2.xml"/>
+        <x:expect  label="IterableResolvedValueSet - no change besides namespace" href="../cts210to11TestCaseOutput/CTS210to11_150_2_out.xml"/>
+    </x:scenario>
+</x:description>

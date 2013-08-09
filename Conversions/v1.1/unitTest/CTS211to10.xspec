@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" stylesheet="file:/Users/mrf7578/development/cts2/supp/CTS21.1Conversion/CTS211to10.xsl">
+
+    <x:param name="testing" select="true()"/>
+    <x:scenario label="Issue 118: Association Directory - remove association ID when mapping to 1.0 (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_118.xml"/>
+        <x:expect  label="Association ID Removed " href="../CTS211to10TestCaseOutput/CTS211to10_118_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 119: Association - associationID is mandatory in 1.0 and optional in 1.1">
+        <x:context href="../CTS211to10TestCases/CTS211to10_119_1.xml"/>
+        <x:expect  label="Dummy association id added" href="../CTS211to10TestCaseOutput/CTS211to10_119_1_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 119: Association - associationID is mandatory in 1.0 and optional in 1.1">
+        <x:context href="../CTS211to10TestCases/CTS211to10_119_2.xml"/>
+        <x:expect  label="Association present - not added" href="../CTS211to10TestCaseOutput/CTS211to10_119_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 119: AssociationMsg - associationID is mandatory in 1.0 and optional in 1.1">
+        <x:context href="../CTS211to10TestCases/CTS211to10_119_3.xml"/>
+        <x:expect  label="Dummy association id added" href="../CTS211to10TestCaseOutput/CTS211to10_119_3_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 119: AssociationList - associationID is mandatory in 1.0 and optional in 1.1 (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_119_4.xml"/>
+        <x:expect  label="Dummy association id added (NOTE: xspec claims error, but there is none...)" href="../CTS211to10TestCaseOutput/CTS211to10_119_4_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 120 (and ?): strip associationId and depth indicators (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_120.xml"/>
+        <x:expect  label="Association ID and Depth indicators stripped in 1.0" href="../CTS211to10TestCaseOutput/CTS211to10_120_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 121: remove 'hasOntologylanguage' and 'includes' going from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_121.xml"/>
+        <x:expect  label="'hasOntologyLanguage' and 'includes' stripped" href="../CTS211to10TestCaseOutput/CTS211to10_121_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 129:  EntityReferenceMsg - remove codeSystemRole attribute going from 1.1 to 1.0 (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_129_1.xml"/>
+        <x:expect  label="'codeSystemRole; removed" href="../CTS211to10TestCaseOutput/CTS211to10_129_1_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 129:  EntityDescriptionMsg - remove codeSystemRole attribute going from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_129_2.xml"/>
+        <x:expect  label="'codeSystemRole' removed" href="../CTS211to10TestCaseOutput/CTS211to10_129_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 134:  ValueSetCatalogEntry - remove currentResolution element from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_134.xml"/>
+        <x:expect  label="'currentResolution' removed" href="../CTS211to10TestCaseOutput/CTS211to10_134_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 136: EntityDescription - remove parents element from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_136.xml"/>
+        <x:expect  label="'parents' removed" href="../CTS211to10TestCaseOutput/CTS211to10_136_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 140: SourceAndNotation should be optional - add a dummy entry going to 1.0 (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_140_1.xml"/>
+        <x:expect  label="'sourceAndNotation' added" href="../CTS211to10TestCaseOutput/CTS211to10_140_1_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 140: SourceAndNotation should be optional - add a dummy entry going to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_140_2.xml"/>
+        <x:expect  label="No change - already present" href="../CTS211to10TestCaseOutput/CTS211to10_140_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 143: IterableResolvedValueSet URIAndEntityNames should allow a description - have to strip from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_143_1.xml"/>
+        <x:expect  label="'designation' removed" href="../CTS211to10TestCaseOutput/CTS211to10_143_1_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 143: ResolvedValueSetMsg URIAndEntityNames should allow a description - have to strip from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_143_2.xml"/>
+        <x:expect  label="'designation' removed" href="../CTS211to10TestCaseOutput/CTS211to10_143_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 143: AssociationDirectory URIAndEntityNames should allow a description - have to strip from 1.1 to 1.0">
+        <x:context href="../CTS211to10TestCases/CTS211to10_143_3.xml"/>
+        <x:expect  label="'designation' removed" href="../CTS211to10TestCaseOutput/CTS211to10_143_3_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 150: Cardinatlity of includesResolvedValueSet wrong">
+        <x:context href="../CTS211to10TestCases/CTS211to10_150.xml"/>
+        <x:expect  label="no actual change - 1.0 Schema was correct" href="../CTS211to10TestCaseOutput/CTS211to10_150_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 150: Cardinatlity of includesResolvedValueSet wrong">
+        <x:context href="../CTS211to10TestCases/CTS211to10_150_2.xml"/>
+        <x:expect  label="no actual change - 1.0 Schema was correct" href="../CTS211to10TestCaseOutput/CTS211to10_150_2_out.xml"/>
+    </x:scenario>
+    <x:scenario label="Issue 156: AssociationDirectory needs derivation property - remove going from 1.1 to 1.0 (NOTE: xspec claims error, but there is none...)">
+        <x:context href="../CTS211to10TestCases/CTS211to10_156.xml"/>
+        <x:expect  label="'derivation' removed" href="../CTS211to10TestCaseOutput/CTS211to10_156_out.xml"/>
+    </x:scenario>
+
+    
+ 
+</x:description>
