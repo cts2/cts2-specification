@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 13: Invalid JSON characters are escaped">
+        <x:context>
+            <doc>
+                <item>A tab(&#x9;), carriage return(&#xd;) line feed(
+) a qoute(") and a back slash (\). Other characters such as &lt;, &lt;--&gt; are left alone.
+</item>
+            </doc>
+        </x:context><x:expect label="All escape characters">"doc": { "item": "A tab(\t), carriage return(\r) line feed(\n) a qoute(\") and a back slash (\\). Other characters such as &lt;, &lt;--> are left alone.\n" }</x:expect>
+    </x:scenario>
+</x:description>

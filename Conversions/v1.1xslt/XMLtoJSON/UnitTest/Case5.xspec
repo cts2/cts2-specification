@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 5: Empty elements become empty strings.">
+        <x:context>
+            <doc> 
+                <item1/> 
+                <item2></item2> 
+            </doc>
+            
+            
+        </x:context>
+        <x:expect label="Empty strings">"doc": { "item1": "", "item2": "" }</x:expect>
+    </x:scenario>
+    
+</x:description>

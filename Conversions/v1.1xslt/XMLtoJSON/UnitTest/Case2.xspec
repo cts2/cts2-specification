@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 2: XML Elements become JSON Objects">
+        <x:context>
+            <doc> 
+                <item1>item 1</item1> 
+                <item2>item 2</item2>           
+                <item3>item 3</item3>
+            </doc>
+        </x:context>
+        <x:expect label="One empty node">"doc": { "item1": "item 1", "item2": "item 2", "item3": "item 3" }</x:expect>
+    </x:scenario>
+    
+</x:description>

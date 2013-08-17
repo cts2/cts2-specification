@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 4: All data are represented as strings.">
+        <x:context>
+            <doc> 
+                <item1>0012</item1> 
+                <item2>-3.89123</item2>
+                <item3>4.82 x 10^2</item3>
+                <item4>Jul 10, 2013 1:43:18 PM</item4>
+                <item5>2013-07-10T13:39:00.676-05:00</item5>
+            </doc>
+            
+        </x:context>
+        <x:expect label="One empty node">"doc": { "item1": "0012", "item2": "-3.89123", "item3": "4.82 x 10^2", "item4": "Jul 10, 2013 1:43:18 PM", "item5": "2013-07-10T13:39:00.676-05:00" }</x:expect>
+    </x:scenario>
+    
+</x:description>

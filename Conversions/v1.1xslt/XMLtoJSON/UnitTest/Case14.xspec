@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 14: Attribute lists are not expanded">
+        <x:context>
+            <doc>
+                <item attr = "data1  data2  data3"/>
+            </doc>
+        </x:context><x:expect label="One empty node">"doc": { "item": { "attr": "data1  data2  data3" } }</x:expect>
+    </x:scenario>
+</x:description>

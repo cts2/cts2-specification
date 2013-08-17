@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 7: If more than one sibling element has the same name, all siblings become an array.">
+        <x:context>
+            <doc> 
+                <item>1</item> 
+                <item>TRUE</item>           
+                <item>data 3</item>
+                <item>data 4</item>
+            </doc>
+        </x:context>
+        <x:expect label="List of 4 elements">"doc": { "item": ["1", "TRUE", "data 3", "data 4"] }</x:expect>
+    </x:scenario>
+    <x:scenario label="Rule 7: If more than one sibling element has the same name, all siblings become an array.">
+        <x:context>
+            <doc>
+                <item1/>
+                <item2>1</item2> 
+                <item2>2</item2>
+                <item3/>
+                <item4>3</item4>
+                <item4>4</item4>
+                <item5/>
+            </doc>
+        </x:context>
+        <x:expect label="Single, list, single, list">"doc": { "item1": "", "item2": ["1", "2"], "item3": "", "item4": ["3", "4"], "item5": "" }</x:expect>
+    </x:scenario>
+    
+</x:description>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 6: Null is not a key word.  It is treated as any other string.">
+        <x:context>
+            <doc> 
+                <item1></item1> 
+                <item2/>
+                <item3>null</item3> 
+            </doc>
+           
+        </x:context>
+        <x:expect label="Null as a normal string">"doc": { "item1": "", "item2": "", "item3": "null" }</x:expect>
+    </x:scenario>
+    
+</x:description>

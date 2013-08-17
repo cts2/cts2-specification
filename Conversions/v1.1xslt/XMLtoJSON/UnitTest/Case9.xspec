@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 9: When an XML element contains a value and has attributes, the element value will be named &quot;content&quot;.">
+        <x:context>
+            <doc>
+                <item attr1="attribute 1" attr2="attribute 2">some  data</item>
+            </doc>
+            
+        </x:context>
+        <x:expect label="Content node present">"doc": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "content": "some  data" } }</x:expect>
+    </x:scenario>
+    
+</x:description>

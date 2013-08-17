@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Test Report for Users/mrf7578/Documents/workspace/XMLtoJSON/XMLToJson.xsl (passed:24 / pending:0 / failed:0 / total:24)</title>
+      <link rel="stylesheet" type="text/css" href="file:/Applications/Development/oxygen/frameworks/xspec/src/reporter/test-report.css" />
+   </head>
+   <body>
+      <h1>Test Report</h1>
+      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Stylesheet: <a href="file:/Users/mrf7578/Documents/workspace/XMLtoJSON/XMLToJson.xsl">Users/mrf7578/Documents/workspace/XMLtoJSON/XMLToJson.xsl</a></p>
+      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Tested: 17 August 2013 at 19:57</p>
+      <h2 xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Contents</h2>
+      <table xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" class="xspec">
+         <col width="80%" />
+         <col width="5%" />
+         <col width="5%" />
+         <col width="5%" />
+         <col width="5%" />
+         <thead>
+            <tr>
+               <th></th>
+               <th class="result">passed:24</th>
+               <th class="result">pending:0</th>
+               <th class="result">failed:0</th>
+               <th class="result">total:24</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="successful">
+               <th><a href="#d4e4">Rule 1: Start with root node</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e27">Rule 1: Start with root node</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e54">Rule 1: Start with root node</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e78">Rule 1: Start with root node</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e102">Rule 2: XML Elements become JSON Objects</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e136">Rule 3: Capitalization is preserved.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e166">Rule 4: All data are represented as strings.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e205">Rule 5: Empty elements become empty strings.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e233">Rule 6: Null is not a key word.  It is treated as any other string.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e264">Rule 7: If more than one sibling element has the same name, all siblings become an
+                     array.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e300">Rule 7: If more than one sibling element has the same name, all siblings become an
+                     array.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e344">Rule 8: Attributes become JSON Objects.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e374">Rule 8: Attribute become JSON Objects.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e403">Rule 9: When an XML element contains a value and has attributes, the element value
+                     will be named "content".</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e430">Rule 10: All namespaces are removed except xsi</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e459">Rule 10: All namespaces are removed except xsi</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e488">Rule 10: xsi is always xsl</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e518">Rule 11: The JSONString of a member should be contained in double quotes.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e548">Rule 13: Invalid JSON characters are escaped</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e575">Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+                     or its descendants.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e620">Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+                     in the correct sequence.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e653">Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+                     or its descendants.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e698">Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+                     in the correct sequence.</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e732">Rule 14: Attribute lists are not expanded</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+         </tbody>
+      </table>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e4">
+         <h2 class="successful">Rule 1: Start with root node<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e4">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 1: Start with root node</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>One empty node</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e27">
+         <h2 class="successful">Rule 1: Start with root node<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e27">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 1: Start with root node</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Node with data</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e54">
+         <h2 class="successful">Rule 1: Start with root node<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e54">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 1: Start with root node</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Node with text</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e78">
+         <h2 class="successful">Rule 1: Start with root node<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e78">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 1: Start with root node</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Node with attribute attribute</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e102">
+         <h2 class="successful">Rule 2: XML Elements become JSON Objects<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e102">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 2: XML Elements become JSON Objects</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>One empty node</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e136">
+         <h2 class="successful">Rule 3: Capitalization is preserved.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e136">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 3: Capitalization is preserved.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Capitalization is identical</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e166">
+         <h2 class="successful">Rule 4: All data are represented as strings.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e166">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 4: All data are represented as strings.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>One empty node</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e205">
+         <h2 class="successful">Rule 5: Empty elements become empty strings.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e205">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 5: Empty elements become empty strings.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Empty strings</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e233">
+         <h2 class="successful">Rule 6: Null is not a key word.  It is treated as any other string.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e233">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 6: Null is not a key word.  It is treated as any other string.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Null as a normal string</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e264">
+         <h2 class="successful">Rule 7: If more than one sibling element has the same name, all siblings become an
+            array.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e264">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 7: If more than one sibling element has the same name, all siblings become an
+                     array.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>List of 4 elements</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e300">
+         <h2 class="successful">Rule 7: If more than one sibling element has the same name, all siblings become an
+            array.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e300">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 7: If more than one sibling element has the same name, all siblings become an
+                     array.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Single, list, single, list</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e344">
+         <h2 class="successful">Rule 8: Attributes become JSON Objects.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e344">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 8: Attributes become JSON Objects.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>various attributes</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e374">
+         <h2 class="successful">Rule 8: Attribute become JSON Objects.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e374">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 8: Attribute become JSON Objects.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>various attributes</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e403">
+         <h2 class="successful">Rule 9: When an XML element contains a value and has attributes, the element value
+            will be named "content".<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e403">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 9: When an XML element contains a value and has attributes, the element value
+                     will be named "content".
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Content node present</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e430">
+         <h2 class="successful">Rule 10: All namespaces are removed except xsi<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e430">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 10: All namespaces are removed except xsi</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>All namespaces removed</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e459">
+         <h2 class="successful">Rule 10: All namespaces are removed except xsi<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e459">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 10: All namespaces are removed except xsi</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>xsi namespace remains</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e488">
+         <h2 class="successful">Rule 10: xsi is always xsl<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e488">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 10: xsi is always xsl</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>xsi2 is now xsi</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e518">
+         <h2 class="successful">Rule 11: The JSONString of a member should be contained in double quotes.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e518">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 11: The JSONString of a member should be contained in double quotes.</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Quotes</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e548">
+         <h2 class="successful">Rule 13: Invalid JSON characters are escaped<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e548">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 13: Invalid JSON characters are escaped</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>All escape characters</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e575">
+         <h2 class="successful">Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+            or its descendants.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e575">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+                     or its descendants.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Embedded XML</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e620">
+         <h2 class="successful">Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+            in the correct sequence.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e620">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+                     in the correct sequence.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Content array</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e653">
+         <h2 class="successful">Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+            or its descendants.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e653">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item
+                     or its descendants.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Embedded XML witha attribute</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e698">
+         <h2 class="successful">Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+            in the correct sequence.<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e698">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays
+                     in the correct sequence.
+                  </th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>Content array</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e732">
+         <h2 class="successful">Rule 14: Attribute lists are not expanded<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e732">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Rule 14: Attribute lists are not expanded</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>One empty node</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>

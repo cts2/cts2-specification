@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 8: Attributes become JSON Objects.">
+        <x:context>
+            <doc>
+                <item attr1="attribute 1" attr2="attribute 2">
+                    <element>e</element>
+                </item>
+            </doc>
+        </x:context>
+        <x:expect label="various attributes">"doc": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "element": "e" } }</x:expect>
+    </x:scenario>
+    <x:scenario label="Rule 8: Attribute become JSON Objects.">
+        <x:context>
+            <doc att1="foo" att2="bar"> 
+                <item att1="item1a1" att2="17">
+                    <item att3="item1a3" att4="42"/>
+                </item> 
+            </doc>
+        </x:context>
+        <x:expect label="various attributes">"doc": { "att1": "foo", "att2": "bar", "item": { "att1": "item1a1", "att2": "17", "item": { "att3": "item1a3", "att4": "42" } } }</x:expect>
+    </x:scenario>
+</x:description>
