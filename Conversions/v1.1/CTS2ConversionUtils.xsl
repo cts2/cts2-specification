@@ -84,7 +84,7 @@
     </xsl:template>
     
     <!-- Default map to transform namespace -->
-    <xsl:template match="node() | @* | processing-instruction() | comment()">
+    <xsl:template match="node() | @* ">
         <xsl:call-template name="changeNamespace"/>
     </xsl:template>
     
@@ -95,12 +95,12 @@
                     <xsl:value-of select="substring-after(namespace-uri(),$sourceNamespace)"/>
                 </xsl:variable>
                 <xsl:element name="{local-name()}" namespace="{$targetNamespace}{$module}">
-                    <xsl:apply-templates select="node() | @* | processing-instruction() | comment()"/>
+                    <xsl:apply-templates select="node() | @* "/>
                 </xsl:element>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy>
-                    <xsl:apply-templates select="node() | @* | processing-instruction() | comment()"/>
+                    <xsl:apply-templates select="node() | @* "/>
                 </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>

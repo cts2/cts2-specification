@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!-- Value set conversion to 1.1 -->
-<ValueSetCatalogEntryMsg xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/ValueSet http://informatics.mayo.edu/cts2/spec/CTS2/1.1/valueset/ValueSet.xsd">
+<ValueSetCatalogEntryMsg xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/ValueSet http://informatics.mayo.edu/cts2/spec/CTS2/1.1/valueset/ValueSet.xsd">
    <heading xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
       <resourceRoot>valueset/iceci-activity</resourceRoot>
       <resourceURI>http://informatics.mayo.edu/cts2/rest/valueset/iceci-activity</resourceURI>

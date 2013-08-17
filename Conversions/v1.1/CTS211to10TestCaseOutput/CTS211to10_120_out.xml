@@ -9,4 +9,52 @@
       <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
       <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
    </focusEntity>
+   <entry direction="SOURCE_TO_TARGET" nodeNumber="1">
+      <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
+      </subject>
+      <predicate uri="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">rdfs</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">subClassOf</name>
+      </predicate>
+      <target>
+         <entity xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000" uri="http://snomed.info/id/302168000">
+            <namespace>sctid</namespace>
+            <name>302168000</name>
+         </entity>
+      </target>
+      <assertedBy>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+      </assertedBy>
+      <nodeEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:302168000" uri="http://snomed.info/id/302168000">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">302168000</name>
+      </nodeEntity>
+   </entry>
+   <entry direction="SOURCE_TO_TARGET" nodeNumber="2">
+      <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
+      </subject>
+      <predicate uri="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">rdfs</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">subClassOf</name>
+      </predicate>
+      <target>
+         <entity xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009" uri="http://snomed.info/id/18526009">
+            <namespace>sctid</namespace>
+            <name>18526009</name>
+         </entity>
+      </target>
+      <assertedBy>
+         <version xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131" uri="http://snomed.info/sct/900000000000207008/version/20130131">SNOMED_CT_20130131</version>
+         <codeSystem xmlns="http://schema.omg.org/spec/CTS2/1.0/Core" href="http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT" uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</codeSystem>
+      </assertedBy>
+      <nodeEntity href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:18526009" uri="http://snomed.info/id/18526009">
+         <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
+         <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">18526009</name>
+      </nodeEntity>
+   </entry>
 </AssociationGraph>

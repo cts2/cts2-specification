@@ -6,7 +6,7 @@
       <resourceURI>http://informatics.mayo.edu/cts2/services/sct/cts2/codesystem/SNOMED_CT/version/20130131/entity/74400008/association/74400008_0</resourceURI>
       <accessDate>2013-06-06T03:03:26Z</accessDate>
    </heading>
-   <association associationID="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008/d0e10" derivation="ASSERTED">
+   <association associationID="(GUID)" derivation="ASSERTED">
       <subject uri="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008"/>
       <predicate uri="http://www.w3.org/2002/07/owl#equivalentClass"/>
       <target>

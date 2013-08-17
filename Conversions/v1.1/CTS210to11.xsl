@@ -132,7 +132,7 @@
         ========================================== -->
     <xsl:template match="valuesetdefinition1.0:member">
         <xsl:element name="entry" namespace="{$nsmap/valuesetdefinition}">
-            <xsl:apply-templates select="node() | @* | comment() | processing-instruction()"/>
+            <xsl:apply-templates select="node() | @* "/>
         </xsl:element>
     </xsl:template>
 

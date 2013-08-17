@@ -8,7 +8,7 @@
       </parameter>
       <accessDate>2013-06-07T01:07:30Z</accessDate>
    </heading>
-   <entry derivation="ASSERTED" associationID="http://snomed.info/id/74400008/d0e12">
+   <entry derivation="ASSERTED" associationID="(GUID)">
       <subject href="http://informatics.mayo.edu/cts2/services/sct/cts2/entity/sctid:74400008" uri="http://snomed.info/id/74400008">
          <namespace xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">sctid</namespace>
          <name xmlns="http://schema.omg.org/spec/CTS2/1.0/Core">74400008</name>
