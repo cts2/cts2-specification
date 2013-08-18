@@ -4,6 +4,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
     version="2.0">
+    <!-- Output method is xml because we needed the "copy-of" function -->
     <xsl:output method="xml" omit-xml-declaration="yes" media-type="application/json" />
     
     <xsl:strip-space elements="*"/>
