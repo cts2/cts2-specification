@@ -29,6 +29,15 @@
         </x:context>
         <x:expect label="Embedded XML witha attribute">"doc": { "item": { "att": "att1", "content": "This is a <b xmlns:xhtml="http://www.w3.org/1999/xhtml">bold</b> and <i xmlns:xhtml="http://www.w3.org/1999/xhtml">italic</i> string." } }</x:expect>
     </x:scenario>
+    <x:scenario label="Rule 13: _CDATA embeeded information is escaped">
+        <x:context>
+            <doc>
+                <item _CDATA="true" xmlns:xhtml="http://www.w3.org/1999/xhtml">This is a <b>bold</b>
+and <i>italic</i> string with a <i>&quot;</i> and \.</item>
+            </doc>
+        </x:context>
+        <x:expect label="Embedded XML witha attribute">"doc": { "item": "This is a <b xmlns:xhtml="http://www.w3.org/1999/xhtml">bold</b>\nand <i xmlns:xhtml="http://www.w3.org/1999/xhtml">italic</i> string with a <i xmlns:xhtml="http://www.w3.org/1999/xhtml">\"</i> and \\." }</x:expect>
+    </x:scenario>
     <x:scenario label="Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays in the correct sequence.">
         <x:context>
             <doc>

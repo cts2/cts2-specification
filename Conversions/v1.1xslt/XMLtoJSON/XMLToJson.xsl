@@ -32,7 +32,7 @@
                 </xsl:if>
                 <xsl:text>"</xsl:text>
                 <!-- NOTE: this does not escape embedded characters. -->
-                <xsl:copy-of select="node()"/>
+                <xsl:apply-templates select="node()" mode="cdata"/>
                 <xsl:text>"</xsl:text>
                 <xsl:if test="count(@*) > 1">
                     <xsl:text> }</xsl:text>
@@ -110,6 +110,16 @@
         <xsl:if test="position() > 1">, </xsl:if>
         <xsl:if test="../@*">"content": </xsl:if>
         <xsl:value-of select="concat('&quot;', f:escape(.), '&quot;')"/>
+    </xsl:template>
+    
+    <xsl:template match="*|@*" mode="cdata">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" mode="cdata"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="text()" mode="cdata">
+        <xsl:value-of select="f:escape(.)"/>
     </xsl:template>
     
     <!-- Format a name, removing all namespaces except 'xsi' -->
