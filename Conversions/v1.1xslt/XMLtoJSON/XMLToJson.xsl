@@ -94,23 +94,8 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="*" mode="cdata">
-        <xsl:value-of select="concat('&lt;',name())"/>
-        <xsl:apply-templates select="@*" mode="cdata"/>
-        <xsl:text>></xsl:text>
-        <xsl:apply-templates select="*|text()" mode="cdata"/>
-        <xsl:value-of select="concat('&lt;/',name(),'>')"/>
-    </xsl:template>
-    
-    <xsl:template match="@*" mode="cdata">
-        <xsl:value-of select="concat(' ',name(),'=&quot;',.,'&quot;')"/>
-    </xsl:template>
-    
-    <xsl:template match="text()" mode="cdata">
-        <xsl:value-of select="."/>
-    </xsl:template>
-    
     <xsl:template match="@*">
+        <!-- Attriutes are represented as JSONMember -->
         <xsl:if test="position() > 1">, </xsl:if>
         <xsl:call-template name="name"/>
         <xsl:text>"</xsl:text>
@@ -120,6 +105,7 @@
     
     
     <xsl:template match="text()">
+        <!-- Text is JSONValue if alone otherwise JSONMember with JSONString of "content" -->
         <xsl:if test="position() > 1">, </xsl:if>
         <xsl:if test="../@*">"content": </xsl:if>
         <xsl:value-of select="concat('&quot;', f:escape(.), '&quot;')"/>
@@ -139,6 +125,7 @@
         <xsl:text>": </xsl:text>
     </xsl:template>
     
+    <!-- Escape text, replacing tabs, line feeds, carriage returns, back slashes and quotes -->
     <xsl:function name="f:escape">
         <xsl:param name="text"/>
         <xsl:value-of select="replace(
