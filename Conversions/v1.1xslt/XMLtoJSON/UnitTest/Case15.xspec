@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Rule 15: Comments and processing instructions are ignored. ">
+        <x:context>
+            <doc>
+                <!-- A sample comment -->
+                <item attr = "data"><![CDATA[ some strange stuff "\]]></item>
+                <?pins A processing instruction?>
+            </doc>
+        </x:context><x:expect label="Instructions omitted">"doc": { "item": { "attr": "data", "content": " some strange stuff \"\\" } }</x:expect>
+    </x:scenario>
+</x:description>
