@@ -137,11 +137,6 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #150 - cardinality of includesResolvedValueSet is [0..1] in ResolvedValueSetHeader.  Should be [0..*]
-        CTS2 1.0 services should not be able to fill out more than one, no change.
-        ========================================== -->
-
-    <!-- =========================================
         OMG Issue 18542 (GitHub issue #150) - cardinality of includesResolvedValueSet is [0..1] in ResolvedValueSetHeader.  Should be [0..*]
         CTS2 1.0 services should not be able to fill out more than one, no change.
         ========================================== -->
