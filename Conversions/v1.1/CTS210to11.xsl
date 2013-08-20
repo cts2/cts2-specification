@@ -41,7 +41,7 @@
     <xsl:include href="CTS2ConversionUtils.xsl"/>
 
     <!-- =========================================
-        Issue #90 - Namespace transformation 
+        OMG Issue 17318 (GitHub issue #90) - Namespace transformation 
          Part 1: Convert the schemaLocation if present
             Covered in CTS2ConversionUtils.xsl on match schemaLocation
          Part 2: Change all the actual namespaces.
@@ -49,39 +49,39 @@
 
 
     <!-- =========================================
-        Issue #118 - AssociationDirectory needs associationID
+        OMG Issue 18490 (GitHub issue #118) - AssociationDirectory needs associationID
         No change in transformation, as it is optional and not present in 1.0
         ========================================== -->
 
     <!-- =========================================
-        Issue #119 - associationID should optional in Association
+        OMG Issue 18489 (GitHub issue #119) - associationID should optional in Association
         No change in transformation, as it is always present in 1.0
         ========================================== -->
 
     <!-- =========================================
-        Issue #120 - include a depth indicator in AssociationGraph
+        OMG Issue 18488 (GitHub issue #120) - include a depth indicator in AssociationGraph
         No change in transformation, as it is not present in 1.0 and is optional in 1.1
         ========================================== -->
 
     <!-- =========================================
-        Issue #121 - add optional 'hasOntologyLanguage' and 'includes' to CodeSystemCatalogEntry
+        OMG Issue 18487 (GitHub issue #121) - add optional 'hasOntologyLanguage' and 'includes' to CodeSystemCatalogEntry
         No change in transformation, as it is not present in 1.0 and is optional in 1.1
         ========================================== -->
 
 
     <!-- =========================================
-        Issue #129 - additional options for Entity Read Query
+        OMG Issue 18479 (GitHub issue #129) - additional options for Entity Read Query
         CodeSystemRole is not present in 1.0, so no transformation necessary
         ========================================== -->
 
     <!-- =========================================
-        Issue #134 - no way to get to current resolution from a value set
+        OMG Issue 18476 (GitHub issue #134) - no way to get to current resolution from a value set
         Attribute is optional and not present in 1.0, so no transformation necessary
         ========================================== -->
 
 
     <!-- =========================================
-        Issue #136 - parents URI needed in EntityDescription
+        OMG Issue 18494 (GitHub issue #136) - parents URI needed in EntityDescription
         If the EntityDescription has parents, add a link to all the parents
         ========================================== -->
     <xsl:template match="entity1.0:parent">
@@ -98,13 +98,13 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #137 - extensible directories, which are constraints on lists
+        OMG Issue 18474 (GitHub issue #137) - extensible directories, which are constraints on lists
         Issue #
         Constraints are ignored in CTS2 1.0, so client needs to deal with extra if it shows up
         ========================================== -->
 
     <!-- =========================================
-        Issue #138 - document URI shouldn't be mandatory in resource description
+        OMG Issue 18473 (GitHub issue #138) - document URI shouldn't be mandatory in resource description
         Will always be present when going from 1.0 to 1.1.  Remove if it matches the about URI
         ========================================== -->
     <xsl:template match="@documentURI">
@@ -116,19 +116,19 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #140 - sourceAndNotation made optional
+        OMG Issue 18471 (GitHub issue #140) - sourceAndNotation made optional
         Will always be present in 1.0, so no change required.
         ========================================== -->
 
     <!-- =========================================
-        Issue #122- MapEntry MapFrom and MapTo elements need optional description
-        Issue #141 - referencedEntity in value set definition should have optional description
-        Issue #143 - URIAndEntityName should have an optional description
+        OMG Issue 18486 (GitHub issue #122)- MapEntry MapFrom and MapTo elements need optional description
+        OMG Issue 18470 (GitHub issue #141) - referencedEntity in value set definition should have optional description
+        OMG Issue 18532 (GitHub issue #143) - URIAndEntityName should have an optional description
         Never present in 1.0, so no change
         ========================================== -->
 
     <!-- =========================================
-        Issue #147 - ResolvedValueSet.member changed to ResolvedValueSet.entry 
+        OMG Issue 18531 (GitHub issue #147) - ResolvedValueSet.member changed to ResolvedValueSet.entry 
         ========================================== -->
     <xsl:template match="valuesetdefinition1.0:member">
         <xsl:element name="entry" namespace="{$nsmap/valuesetdefinition}">
@@ -142,17 +142,17 @@
         ========================================== -->
 
     <!-- =========================================
-        Issue #150 - cardinality of includesResolvedValueSet is [0..1] in ResolvedValueSetHeader.  Should be [0..*]
+        OMG Issue 18542 (GitHub issue #150) - cardinality of includesResolvedValueSet is [0..1] in ResolvedValueSetHeader.  Should be [0..*]
         CTS2 1.0 services should not be able to fill out more than one, no change.
         ========================================== -->
 
     <!-- =========================================
-        Issue #157 -AssociationDirectory needs an optional derivation.
+        OMG Issue 18624 (GitHub issue #157) -AssociationDirectory needs an optional derivation.
         Not present in 1.0, so no change
         ========================================== -->
 
     <!-- =========================================
-        Issue #158 - Association derivation should be optional and not have a default
+        OMG Issue 18682 (GitHub issue #158) - Association derivation should be optional and not have a default
         It is mandatory in 1.0, so not an issue
         ========================================== -->
 

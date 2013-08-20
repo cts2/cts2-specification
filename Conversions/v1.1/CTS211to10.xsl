@@ -39,7 +39,7 @@
 
 
     <!-- =========================================
-        Issue #90 - Namespace transformation 
+        OMG Issue 17318 (GitHub issue #90) - Namespace transformation 
          Part 1: Convert the schemaLocation if present
             Covered in CTS2ConversionUtils.xsl on match schemaLocation
          Part 2: Change all the actual namespaces.
@@ -54,13 +54,13 @@
     <xsl:include href="CTS2ConversionUtils.xsl"/>
     
     <!-- =========================================
-        Issue #118 - AssociationDirectory needs associationID
+        OMG Issue 18490 (GitHub issue #118) - AssociationDirectory needs associationID
             associationID has to be removed when transforming to 1.0
-        Issue #120 - Include depth indicator in AssociationGraph
+        OMG Issue 18488 (GitHub issue #120) - Include depth indicator in AssociationGraph
             depth has to be removed when transforming to 1.0
         (no issue?) - AssociationGraph needs associationID
              associationID has to be removed when transforming to 1.0
-        Issue #156 - AssociationDirectory needs derivation
+        OMG Issue 18622 (GitHub issue #156) - AssociationDirectory needs derivation
             derivation has to be removed when transforming to 1.0
         ========================================== -->
     <xsl:template match="association1.1:entry">
@@ -89,9 +89,9 @@
 
 
     <!-- =========================================
-        Issue #119 - associationID should optional and not have a deafult
+        OMG Issue 18489 (GitHub issue #119) - associationID should optional and not have a deafult
              If absent, add it with a generated value.  This impacts Association, AssociationMsg and AssociationList
-        Issue #157 - derivation should be optional and not have a default
+        OMG Issue 18624 (GitHub issue #157) - derivation should be optional and not have a default
              If absent, add one with the default of ASSERTED
         ========================================== -->
     <xsl:template match="association1.1:Association | association1.1:association">
@@ -138,7 +138,7 @@
 
 
     <!-- =========================================
-        Issue #121 - add optional 'hasOntologyLanguage' and 'includes' to CodeSystemCatalogEntry
+        OMG Issue 18487 (GitHub issue #121) - add optional 'hasOntologyLanguage' and 'includes' to CodeSystemCatalogEntry
                Need to remove from CTS2 1.1 if present
         ========================================== -->
     <xsl:template match="codesystem1.1:hasOntologyLanguage"/>
@@ -146,7 +146,7 @@
 
 
     <!-- =========================================
-        Issue #129 - additional options for Entity Read Query
+        OMG Issue 18479 (GitHub issue #129) - additional options for Entity Read Query
             codeSystemRole added to DescriptionInCodeSystem and EntityDescriptionBase
             DescriptionInCodeSystem - in entityReference (knownEntityDescription)
                                     - AnonymousEntityReference
@@ -168,7 +168,7 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #134 - no way to get to current resolution from a value set
+        OMG Issue 18476 (GitHub issue #134) - no way to get to current resolution from a value set
             Need to remove currentResolution node when converting back to 1.0
         ========================================== -->
     <xsl:template match="valueset1.1:currentResolution">
@@ -183,21 +183,21 @@
 
 
     <!-- =========================================
-        Issue #136 - parents URI needed in EntityDescription
+        OMG Issue 18494 (GitHub issue #136) - parents URI needed in EntityDescription
             Remove parents when converting back to 1.0
         ========================================== -->
     <xsl:template match="entity1.1:parents"/>
 
     <!-- =========================================
-        Issue #137 - extensible directories, which are constraints on lists
+        OMG Issue 18474 (GitHub issue #137) - extensible directories, which are constraints on lists
         Constraints are ignored in CTS2 1.0, so client needs to deal with extra if it shows up
         ========================================== -->
 
 
     <!-- =========================================
-        Issue #138 - document URI shouldn't be mandatory in resource description
+        OMG Issue 18473 (GitHub issue #138) - document URI shouldn't be mandatory in resource description
             Add a document URI that matches about URI if not present
-        Issue #140 - sourceAndNotation made optional
+        OMG Issue 18471 (GitHub issue #140) - sourceAndNotation made optional
             Add a dummy sourceAndNotation if missing
         ========================================== -->
     <xsl:template
@@ -265,9 +265,9 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #122- MapEntry MapFrom and MapTo elements need optional description
-        Issue #141 - referencedEntity in value set definition should have optional description
-        Issue #143 - URIAndEntityName should have an optional description
+        OMG Issue 18486 (GitHub issue #122)- MapEntry MapFrom and MapTo elements need optional description
+        OMG Issue 18470 (GitHub issue #141) - referencedEntity in value set definition should have optional description
+        OMG Issue 18532 (GitHub issue #143) - URIAndEntityName should have an optional description
             Strip designation from all URIAndEntityName entries that weren't EntitySynopsis in 1.0
             Instead of listing all of the places with URIAndEntityName, it is easier to strip 
             designations from everywhere thowe whose ancestor is IterableResolvedValueSet or ResolvedValueSet           
@@ -283,7 +283,7 @@
     </xsl:template>
 
     <!-- =========================================
-        Issue #147 - ResolvedValueSet.member changed to ResolvedValueSet.entry 
+        OMG Issue 18531 (GitHub issue #147) - ResolvedValueSet.member changed to ResolvedValueSet.entry 
             Have to switch back to member in 1.0
         ========================================== -->
     <xsl:template match="valuesetdefinition1.1:entry">
