@@ -142,12 +142,12 @@
         ========================================== -->
 
     <!-- =========================================
-        OMG Issue 18624 (GitHub issue #157) -AssociationDirectory needs an optional derivation.
+        OMG Issue 18622 (GitHub issue #156) -AssociationDirectory needs an optional derivation.
         Not present in 1.0, so no change
         ========================================== -->
 
     <!-- =========================================
-        OMG Issue 18682 (GitHub issue #158) - Association derivation should be optional and not have a default
+        OMG Issue 18624 (GitHub issue #157) - Association derivation should be optional and not have a default
         It is mandatory in 1.0, so not an issue
         ========================================== -->
 
