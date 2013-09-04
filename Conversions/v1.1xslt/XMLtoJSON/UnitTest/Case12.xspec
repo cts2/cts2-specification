@@ -9,9 +9,9 @@
         <x:context>
             <doc>
                 <item>A tab(&#x9;), carriage return(&#xd;) line feed(
-) a qoute(") and a back slash (\). Other characters such as &lt;, &lt;--&gt; are left alone.
+) a qoute(") and a back slash (\). Other characters such as &amp;, &lt;, > are left alone.
 </item>
             </doc>
-        </x:context><x:expect label="All escape characters">"doc": { "item": "A tab(\t), carriage return(\r) line feed(\n) a qoute(\") and a back slash (\\). Other characters such as &lt;, &lt;--> are left alone.\n" }</x:expect>
+        </x:context><x:expect label="All escape characters"><![CDATA["doc": { "item": "A tab(\t), carriage return(\r) line feed(\n) a qoute(\") and a back slash (\\). Other characters such as &, <, > are left alone.\n" }]]></x:expect>
     </x:scenario>
 </x:description>

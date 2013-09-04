@@ -16,6 +16,30 @@
         </x:context>
         <x:expect label="List of 4 elements">"doc": { "item": ["1", "TRUE", "data 3", "data 4"] }</x:expect>
     </x:scenario>
+    <x:scenario label="Rule 7: Order will be preserved within the JSONArray but not in dictionaries">
+        <x:context>
+            <doc> 
+                <item>1</item> 
+                <item>True</item>
+                <a/>
+                <item>data 3</item>
+                <item>data 4</item>
+            </doc>
+        </x:context>
+        <x:expect label="Element at the front or the end">"doc": { "item": ["1", "True", "data 3", "data 4"], "a": "" }</x:expect>
+    </x:scenario>
+    <x:scenario label="Rule 7: Order will be preserved within the JSONArray but not in dictionaries">
+        <x:context>
+            <doc> 
+                <item>1</item> 
+                <item>True</item>
+                <a att1="a1"/>
+                <item>data 3</item>
+                <item>data 4</item>
+            </doc>
+        </x:context>
+        <x:expect label="Element at the front or the end with attributes">"doc": { "item": ["1", "True", "data 3", "data 4"], "a": { "att1": "a1" } }</x:expect>
+    </x:scenario>
     <x:scenario label="Rule 7: If more than one sibling element has the same name, all siblings become an array.">
         <x:context>
             <doc>
@@ -29,6 +53,20 @@
             </doc>
         </x:context>
         <x:expect label="Single, list, single, list">"doc": { "item1": "", "item2": ["1", "2"], "item3": "", "item4": ["3", "4"], "item5": "" }</x:expect>
+    </x:scenario>
+    <x:scenario label="Rule 7: If more than one sibling element has the same name, all siblings become an array.">
+        <x:context>
+            <doc>
+                <item1>Text</item1>
+                <item2>1</item2> 
+                <item2 att2="a2">2</item2>
+                <item3><b>Bold</b> text.</item3>
+                <item4><i>Italic</i> 3</item4>
+                <item4 _CDATA="true" att4="a4"><i>Italic</i>4</item4>
+                <item5 _CDATA="true"><b>Bold</b> text.</item5>
+            </doc>
+        </x:context>
+        <x:expect label="Single, list, single, list">"doc": { "item1": "Text", "item2": ["1", { "att2": "a2", "content": "2" }], "item3": [{ "b": "Bold" }, " text."], "item4": [[{ "i": "Italic" }, " 3"], { "att4": "a4", "content": "<i>Italic</i>4" }], "item5": "<b>Bold</b> text." }</x:expect>
     </x:scenario>
     
 </x:description>
