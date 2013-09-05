@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:f="http://www.omg.org/spec/cts2/1.2/function" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs"
     version="2.0">
-    <!-- Output method is xml because we needed the "copy-of" function -->
-    <xsl:output method="xml" omit-xml-declaration="yes" media-type="application/json"/>
+    <xsl:output method="text"  media-type="application/json"/>
 
     <xsl:strip-space elements="*"/>
 
@@ -139,16 +138,35 @@
         <xsl:if test="../@* and not($generatingValues)">"content": </xsl:if>
         <xsl:value-of select="concat('&quot;', f:escape(.), '&quot;')"/>
     </xsl:template>
+    
+    <!-- Comments and processing instructions are dropped -->
+    <xsl:template match="comment()|processing-instruction()"/>
 
-    <!-- Match on an attribute or element in cdata mode -->
-    <xsl:template match="*|@*" mode="cdata">
-        <xsl:copy>
-            <xsl:apply-templates select="@*|*|text()" mode="cdata"/>
-        </xsl:copy>
+    <!-- Match on an attribute in cdata mode -->
+    <xsl:template match="@*" mode="cdata">
+        <xsl:value-of select="concat(' ', name(),'=\&quot;',.,'\&quot;')"/>
     </xsl:template>
+    
+    <!-- Match on an element in cdata mode -->
+    <xsl:template match="*" mode="cdata">
+        <xsl:value-of select="concat('&lt;',local-name())"/>
+        <xsl:if test="namespace-uri() and (../@_CDATA or namespace-uri() != namespace-uri(..))">
+            <xsl:value-of select="concat(' xmlns=\&quot;',namespace-uri(),'\&quot;')"/>
+        </xsl:if>
+        <xsl:apply-templates select="@*" mode="cdata"/>
+        <xsl:choose>
+            <xsl:when test="child::node()">
+                <xsl:text>></xsl:text>
+                <xsl:apply-templates select="node()" mode="cdata"/>
+                <xsl:value-of select="concat('&lt;/',local-name(),'>')"/>
+            </xsl:when>
+            <xsl:otherwise>/></xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
 
     <!-- Match on text in cdata mode -->
-    <xsl:template match="text()" mode="cdata">
+    <xsl:template match="text() | comment() | processing-instruction()" mode="cdata">
         <xsl:value-of select="f:escape(.)"/>
     </xsl:template>
 
