@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../XMLToJson.xsl">
+    <!-- Note: the xspec process doesn't dispatch with the first node as the root, meaning that
+        the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
+        in '{' ... '}'
+        -->
+    <x:scenario label="Error 1: Content tag missing ">
+        <x:context>
+            <EntityDescriptionMsg xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Entity http://informatics.mayo.edu/cts2/spec/CTS2/1.1/entity/Entity.xsd">
+                <core:heading>
+                    <core:resourceRoot>codesystem/ActMood/version/134/entity/PRMS</core:resourceRoot>
+                    <core:resourceURI>http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS</core:resourceURI>
+                    <core:accessDate>2013-09-02T16:21:20.579-04:00</core:accessDate>
+                </core:heading>
+                <EntityDescription>
+                    <namedEntity
+                        about="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRMS" entryState="ACTIVE">
+                        <entityID>
+                            <core:namespace>ActMood</core:namespace>
+                            <core:name>PRMS</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>16728</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version
+                                uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/134" href="http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134">134</core:version>
+                            <core:codeSystem
+                                uri="http://hl7.org/ontology/vocab/uv/cs/ActMood" href="http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood">ActMood</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>promise</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <definition definitionRole="NORMATIVE">
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">
+                                    <b>Definition:</b> A commitment to perform an act (may be either solicited or unsolicited). The committer becomes responsible to the other party for executing the act, and, as a consequence, the other party may rely on the first party to perform or cause to perform the act.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">
+                                    <b>UsageNotes:</b> Commitments may be retracted or cancelled.  </p>
+                            </core:value>
+                        </definition>
+                        <property>
+                            <core:predicate uri="http://hl7.org/ontology/vocab/uv/pr/Name%3AClass">
+                                <core:namespace>pr</core:namespace>
+                                <core:name>Name:Class</core:name>
+                            </core:predicate>
+                            <core:value>
+                                <core:literal>
+                                    <core:value>Promise</core:value>
+                                </core:literal>
+                            </core:value>
+                        </property>
+                        <subjectOf>http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children</subjectOf>
+                        <targetOf>http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children</targetOf>
+                        <parent uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#INT">
+                            <core:namespace>ActMood</core:namespace>
+                            <core:name>INT</core:name>
+                            <core:designation>intent</core:designation>
+                        </parent>
+                        <children>http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children</children>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                        <core:changeDescription changeType="IMPORT"
+                            committed="COMMITTED"
+                            containingChangeSet="urn:uuid:7b423c09-865e-4447-be49-6d43433dfbf7" changeDate="2013-09-02T16:18:12.664-04:00"/>
+                    </namedEntity>
+                </EntityDescription>
+            </EntityDescriptionMsg>
+            
+        </x:context><x:expect label="Content after bold">"EntityDescriptionMsg": { "xsi:schemaLocation": "http://www.omg.org/spec/CTS2/1.1/Entity http://informatics.mayo.edu/cts2/spec/CTS2/1.1/entity/Entity.xsd", "heading": { "resourceRoot": "codesystem/ActMood/version/134/entity/PRMS", "resourceURI": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS", "accessDate": "2013-09-02T16:21:20.579-04:00" }, "EntityDescription": { "namedEntity": { "about": "http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRMS", "entryState": "ACTIVE", "entityID": { "namespace": "ActMood", "name": "PRMS" }, "alternateEntityID": { "namespace": "internalId", "name": "16728" }, "describingCodeSystemVersion": { "version": { "uri": "http://hl7.org/ontology/vocab/uv/cs/ActMood/134", "href": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134", "content": "134" }, "codeSystem": { "uri": "http://hl7.org/ontology/vocab/uv/cs/ActMood", "href": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood", "content": "ActMood" } }, "designation": { "designationRole": "PREFERRED", "value": "promise", "language": { "uri": "http://www.omg.org/spec/LNG#en", "content": "en" } }, "definition": { "definitionRole": "NORMATIVE", "value": { "p": [[{ "b": "Definition:" }, " A commitment to perform an act (may be either solicited or unsolicited). The committer becomes responsible to the other party for executing the act, and, as a consequence, the other party may rely on the first party to perform or cause to perform the act."], [{ "b": "UsageNotes:" }, " Commitments may be retracted or cancelled.  "]] } }, "property": { "predicate": { "uri": "http://hl7.org/ontology/vocab/uv/pr/Name%3AClass", "namespace": "pr", "name": "Name:Class" }, "value": { "literal": { "value": "Promise" } } }, "subjectOf": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children", "targetOf": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children", "parent": { "uri": "http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#INT", "namespace": "ActMood", "name": "INT", "designation": "intent" }, "children": "http://informatics.mayo.edu/cts2/services/hl7/codesystem/ActMood/version/134/entity/PRMS/children", "entityType": { "uri": "http://www.w3.org/2004/02/skos/core#Concept", "namespace": "skos", "name": "Concept" }, "changeDescription": { "changeType": "IMPORT", "committed": "COMMITTED", "containingChangeSet": "urn:uuid:7b423c09-865e-4447-be49-6d43433dfbf7", "changeDate": "2013-09-02T16:18:12.664-04:00" } } } }</x:expect></x:scenario>
+</x:description>
