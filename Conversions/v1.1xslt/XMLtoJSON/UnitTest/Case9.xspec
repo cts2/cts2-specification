@@ -7,12 +7,12 @@
         -->
     <x:scenario label="Rule 9: When an XML element contains a value and has attributes, the element value will be named &quot;content&quot;.">
         <x:context>
-            <doc>
+            <root>
                 <item attr1="attribute 1" attr2="attribute 2">some  data</item>
-            </doc>
+            </root>
             
         </x:context>
-        <x:expect label="Content node present">"doc": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "content": "some  data" } }</x:expect>
+        <x:expect label="Content node present">"root": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "_content": "some  data" } }</x:expect>
     </x:scenario>
     
 </x:description>

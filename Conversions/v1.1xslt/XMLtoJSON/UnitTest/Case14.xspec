@@ -7,9 +7,9 @@
         -->
     <x:scenario label="Rule 14: Attribute lists are not expanded">
         <x:context>
-            <doc>
+            <root>
                 <item attr = "data1  data2  data3"/>
-            </doc>
-        </x:context><x:expect label="One empty node">"doc": { "item": { "attr": "data1  data2  data3" } }</x:expect>
+            </root>
+        </x:context><x:expect label="One empty node">"root": { "item": { "attr": "data1  data2  data3" } }</x:expect>
     </x:scenario>
 </x:description>

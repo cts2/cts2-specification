@@ -1,0 +1,22 @@
+a = { "_xmlns": "http://test.org/", "docs": { "root": [
+    { "item": ["This is a ", { "b": "bold" }, " and ", { "i": "italic" }, " string."] },
+    { "item1": "data 1", "item2": "data 2", "item3": "data 3" },
+    { "ITEM1": "DATA 1", "Item2": "Data 2" },
+    { "item1": "0012", "item2": "-3.89123", "item3": "4.82 x 10^2", "item4": "Jul 10, 2013 1:43:18 PM", "item5": "2013-0710T13:39:00.676-05:00" },
+    { "item1": "", "item2": "" },
+    { "item1": "", "item2": "", "item3": "null" },
+    { "item": ["1", "TRUE", "data 3", { "b": "text" }] },
+    { "item": ["1", "True", "data 3", "data 4"], "a": "" },
+    { "item1": "", "item2": ["1", "2"], "item3": "", "item4": ["3", "4"], "item5": "" },
+    { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "element": "e" } },
+    { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "_content": "data" } },
+    { "body": "data", "item": { "att": "abc" } },
+    { "body": "data", "item": { "att": "abc", "xsi:nill": "true" } },
+    { "body": "data", "item": { "att": "abc", "xsi:nill": "true" } },
+    { "item1": "data 1", "item2": "data 2" },
+    { "item": "A tab(\t), carriage return(\r) line feed( ) a qoute(\") and a back slash (\\). Other characters such as &, <, > are left alone." },
+    { "item": "This is a <b xmlns=\"http://test.org/\">bold</b> and <i xmlns=\"http://test.org/\" id=\"1\">italic</i> string." },
+    { "item": "<p xmlns=\"http://www.w3.org/1999/xhtml\">This is a <b>bold</b> paragraph with am <image xmlns=\"http://schema.org\">image</image></p>" },
+    { "item": { "attr": "data1  data2  data3" } },
+    { "item": { "attr": "data", "_content": "some strange stuff \"\\" } }
+] } }

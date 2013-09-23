@@ -7,11 +7,11 @@
         -->
     <x:scenario label="Rule 15: Comments and processing instructions are ignored. ">
         <x:context>
-            <doc>
+            <root>
                 <!-- A sample comment -->
                 <item attr = "data"><![CDATA[ some strange stuff "\]]></item>
                 <?pins A processing instruction?>
-            </doc>
-        </x:context><x:expect label="Instructions omitted">"doc": { "item": { "attr": "data", "content": " some strange stuff \"\\" } }</x:expect>
+            </root>
+        </x:context><x:expect label="Instructions omitted">"root": { "item": { "attr": "data", "_content": " some strange stuff \"\\" } }</x:expect>
     </x:scenario>
 </x:description>

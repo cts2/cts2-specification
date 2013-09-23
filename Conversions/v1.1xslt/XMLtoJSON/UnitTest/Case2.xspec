@@ -7,13 +7,21 @@
         -->
     <x:scenario label="Rule 2: XML Elements become JSON Objects">
         <x:context>
-            <doc> 
-                <item1>item 1</item1> 
-                <item2>item 2</item2>           
-                <item3>item 3</item3>
-            </doc>
+            <root> 
+                <item1>data 1</item1> 
+                <item2>data 2</item2>           
+                <item3>data 3</item3>
+            </root>
         </x:context>
-        <x:expect label="One empty node">"doc": { "item1": "item 1", "item2": "item 2", "item3": "item 3" }</x:expect>
+        <x:expect label="One empty node">"root": { "item1": "data 1", "item2": "data 2", "item3": "data 3" }</x:expect>
+    </x:scenario>
+    <x:scenario label="Rule 2b: Old Rule 11 about quotes">
+        <x:context>
+            <root> 
+                <item1>data 1</item1> 
+                <item2>data 2</item2>  
+            </root>
+        </x:context><x:expect label="Quotes">"root": { "item1": "data 1", "item2": "data 2" }</x:expect>
     </x:scenario>
     
 </x:description>

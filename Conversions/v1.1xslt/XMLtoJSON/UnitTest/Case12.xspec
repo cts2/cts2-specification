@@ -5,13 +5,13 @@
         the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
         in '{' ... '}'
         -->
-    <x:scenario label="Rule 13: Invalid JSON characters are escaped">
+    <x:scenario label="Rule 12: Invalid JSON characters are escaped">
         <x:context>
-            <doc>
+            <root>
                 <item>A tab(&#x9;), carriage return(&#xd;) line feed(
 ) a qoute(") and a back slash (\). Other characters such as &amp;, &lt;, > are left alone.
 </item>
-            </doc>
-        </x:context><x:expect label="All escape characters"><![CDATA["doc": { "item": "A tab(\t), carriage return(\r) line feed(\n) a qoute(\") and a back slash (\\). Other characters such as &, <, > are left alone.\n" }]]></x:expect>
+            </root>
+        </x:context><x:expect label="All escape characters"><![CDATA["root": { "item": "A tab(\t), carriage return(\r) line feed(\n) a qoute(\") and a back slash (\\). Other characters such as &, <, > are left alone.\n" }]]></x:expect>
     </x:scenario>
 </x:description>

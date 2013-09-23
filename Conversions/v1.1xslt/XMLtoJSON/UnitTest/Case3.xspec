@@ -7,12 +7,12 @@
         -->
     <x:scenario label="Rule 3: Capitalization is preserved.">
         <x:context>
-            <doc> 
-                <ITEM1>ITEM 1</ITEM1> 
-                <Item2>Item 2</Item2>  
-            </doc>
+            <root> 
+                <ITEM1>DATA 1</ITEM1> 
+                <Item2>Data 2</Item2>  
+            </root>
         </x:context>
-        <x:expect label="Capitalization is identical">"doc": { "ITEM1": "ITEM 1", "Item2": "Item 2" }</x:expect>
+        <x:expect label="Capitalization is identical">"root": { "ITEM1": "DATA 1", "Item2": "Data 2" }</x:expect>
     </x:scenario>
     
 </x:description>

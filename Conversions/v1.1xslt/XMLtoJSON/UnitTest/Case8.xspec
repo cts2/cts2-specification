@@ -7,22 +7,22 @@
         -->
     <x:scenario label="Rule 8: Attributes become JSON Objects.">
         <x:context>
-            <doc>
+            <root>
                 <item attr1="attribute 1" attr2="attribute 2">
                     <element>e</element>
                 </item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="various attributes">"doc": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "element": "e" } }</x:expect>
+        <x:expect label="various attributes">"root": { "item": { "attr1": "attribute 1", "attr2": "attribute 2", "element": "e" } }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 8: Attribute become JSON Objects.">
         <x:context>
-            <doc att1="foo" att2="bar"> 
+            <root att1="foo" att2="bar"> 
                 <item att1="item1a1" att2="17">
                     <item att3="item1a3" att4="42"/>
                 </item> 
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="various attributes">"doc": { "att1": "foo", "att2": "bar", "item": { "att1": "item1a1", "att2": "17", "item": { "att3": "item1a3", "att4": "42" } } }</x:expect>
+        <x:expect label="various attributes">"root": { "att1": "foo", "att2": "bar", "item": { "att1": "item1a1", "att2": "17", "item": { "att3": "item1a3", "att4": "42" } } }</x:expect>
     </x:scenario>
 </x:description>

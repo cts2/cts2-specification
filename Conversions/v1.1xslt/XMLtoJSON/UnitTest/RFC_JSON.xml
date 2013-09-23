@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<docs>
+<docs xmlns="http://test.org/">
     <!-- Rule 1 -->
-    <doc>
+    <root>
         <item>This is a <b>bold</b> and <i>italic</i> string.</item>
-    </doc>
+    </root>
     <!-- Rule 2 -->
-    <doc>
-        <item1>item 1</item1>
-        <item2>item 2</item2>
-        <item3>item 3</item3>
-    </doc>
+    <root>
+        <item1>data 1</item1>
+        <item2>data 2</item2>
+        <item3>data 3</item3>
+    </root>
     <!-- Rule 3 -->
-    <doc>
-        <ITEM1>ITEM 1</ITEM1>
-        <Item2>Item 2</Item2>
-    </doc>
+    <root>
+        <ITEM1>DATA 1</ITEM1>
+        <Item2>Data 2</Item2>
+    </root>
     <!-- Rule 4 -->
-    <doc>
+    <root>
         <item1>0012</item1>
         <item2>-3.89123</item2>
         <item3>4.82 x 10^2</item3>
         <item4>Jul 10, 2013 1:43:18 PM</item4>
         <item5>2013-0710T13:39:00.676-05:00</item5>
-    </doc>
+    </root>
     <!-- Rule 5 -->
-    <doc>
+    <root>
         <item1/>
         <item2/>
-    </doc>
+    </root>
     <!-- Rule 6 -->
-    <doc>
+    <root>
         <item1/>
         <item2/>
         <item3>null</item3>
-    </doc>
+    </root>
     <!-- Rule 7.1 -->
-    <doc>
+    <root>
         <item>1</item>
         <item>TRUE</item>
         <item>data 3</item>
         <item>
             <b>text</b>
         </item>
-    </doc>
+    </root>
     <!-- Rule 7.2 -->
-    <doc>
+    <root>
         <item>1</item>
         <item>True</item>
         <a/>
         <item>data 3</item>
         <item>data 4</item>
-    </doc>
+    </root>
     <!-- Rule 7.3 -->
-    <doc>
+    <root>
         <item1/>
         <item2>1</item2>
         <item2>2</item2>
@@ -60,58 +60,59 @@
         <item4>3</item4>
         <item4>4</item4>
         <item5/>
-    </doc>
+    </root>
     <!-- Rule 8 -->
-    <doc>
+    <root>
         <item attr1="attribute 1" attr2="attribute 2">
             <element>e</element>
         </item>
-    </doc>
+    </root>
     <!-- Rule 9 -->
-    <doc>
+    <root>
         <item attr1="attribute 1" attr2="attribute 2">data</item>
-    </doc>
+    </root>
     <!-- Rule 10.1 -->
-    <doc xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <root xmlns:xhtml="http://www.w3.org/1999/xhtml">
         <xhtml:body>data</xhtml:body>
         <item xhtml:att="abc"/>
-    </doc>
+    </root>
     <!-- Rule 10.2 -->
-    <doc xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <root xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <xhtml:body>data</xhtml:body>
         <item xhtml:att="abc" xsi:nill="true"/>
-    </doc>
+    </root>
     <!-- Rule 10.3 -->
-    <doc xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi2="http://www.w3.org/2001/XMLSchema-instance">
+    <root xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi2="http://www.w3.org/2001/XMLSchema-instance">
         <xhtml:body>data</xhtml:body>
         <item xhtml:att="abc" xsi2:nill="true"/>
-    </doc>
+    </root>
     <!-- Rule 11 -->
-    <doc>
-        <item1>item 1</item1>
-        <item2>item 2</item2>
-    </doc>
+    <root xmlns="http://example.org/schema/roots.xsd"> 
+        <item1>data 1</item1> 
+        <item2>data 2</item2>  
+    </root>
+    
     <!-- Rule 12 -->
-    <doc>
+    <root>
         <item>A tab(&#x9;), carriage return(&#xd;) line feed( ) a qoute(") and a back slash (\). Other characters such as &amp;, &lt;, > are left alone.</item>
-    </doc>
+    </root>
     <!-- Rule 13.1 -->
-    <doc xmlns:t="http://test.org">
+    <root xmlns:t="http://test.org">
         <item _CDATA="true">This is a <b>bold</b> and <i id="1">italic</i> string.</item>
-    </doc>
+    </root>
     <!-- Rule 13.2 -->
-    <doc xmlns:schema="http://schema.org">
+    <root xmlns:schema="http://schema.org">
         <item xmlns="http://www.w3.org/1999/xhtml" _CDATA="true"><p>This is a <b>bold</b> paragraph with am <schema:image>image</schema:image></p></item>
-    </doc>
+    </root>
     <!-- Rule 14 -->
-    <doc>
+    <root>
         <item attr="data1  data2  data3"/>
-    </doc>
+    </root>
     <!-- Rule 15 -->
-    <doc>
+    <root>
         <!-- A sample comment -->
         <item attr="data"><![CDATA[some strange stuff "\]]></item>
         <?pins A processing instruction?>
-    </doc>
+    </root>
 
 </docs>

@@ -7,14 +7,14 @@
         -->
     <x:scenario label="Rule 6: Null is not a key word.  It is treated as any other string.">
         <x:context>
-            <doc> 
+            <root> 
                 <item1></item1> 
                 <item2/>
                 <item3>null</item3> 
-            </doc>
+            </root>
            
         </x:context>
-        <x:expect label="Null as a normal string">"doc": { "item1": "", "item2": "", "item3": "null" }</x:expect>
+        <x:expect label="Null as a normal string">"root": { "item1": "", "item2": "", "item3": "null" }</x:expect>
     </x:scenario>
     
 </x:description>

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:f="http://www.omg.org/spec/cts2/1.2/function" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs"
     version="2.0">
+    <!-- Implementation of the OMG XML to JSON conversion specification.
+         Version 1.1
+         Change History:
+         ===============
+         Harold Solbrig   9/23/2013 - changed "content" to "_content" to prevent collisions with attributes or elements called "content"
+                                    - added base schema to the header
+      -->
     <xsl:output method="text"  media-type="application/json"/>
 
     <xsl:strip-space elements="*"/>
@@ -15,12 +22,16 @@
     <!-- Match an Element 
          Parameters:
             generatingValues: True means that we're emitting JSONValues, and that tag/values have to be enclosed in braces.
-                              False means that we're inside an object, no braces and values have to have a "content:" tag
+                              False means that we're inside an object, no braces and values have to have a "_content:" tag
             inList: True means that we're iterating over multiple elements and that the name should not be emitted.
     -->
     <xsl:template match="*">
         <xsl:param name="generatingValues" as="xs:boolean" select="false()"/>
         <xsl:param name="inList" as="xs:boolean" select="false()"/>
+        
+        <xsl:if test="not(ancestor::*) and namespace-uri()">
+            <xsl:value-of select="concat('&quot;_xmlns&quot; : &quot;',namespace-uri(),'&quot;, ')"/>
+        </xsl:if>
 
         <xsl:choose>
             <xsl:when test="count(../*[name()=current()/name()]) > 1 and not($inList)">
@@ -50,7 +61,7 @@
                     <!-- There are attributes, generate a JSONObject to carry it -->
                     <xsl:text>{ </xsl:text>
                     <xsl:apply-templates select="@*[name() != '_CDATA']"/>
-                    <xsl:text>, "content": </xsl:text>
+                    <xsl:text>, "_content": </xsl:text>
                 </xsl:if>
 
                 <!-- Embed the actual data -->
@@ -109,7 +120,7 @@
     <!-- Match an Attribute 
          Parameters:
             generatingValues: True means that we're emitting JSONValues, and that tag/values have to be enclosed in braces.
-                              False means that we're inside an object, no braces and values have to have a "content:" tag
+                              False means that we're inside an object, no braces and values have to have a "_content:" tag
     -->
     <xsl:template match="@*">
         <xsl:param name="generatingValues" as="xs:boolean" select="false()"/>
@@ -128,14 +139,14 @@
     <!-- Match an Text 
          Parameters:
             generatingValues: True means that we're emitting JSONValues, and that tag/values have to be enclosed in braces.
-                              False means that we're inside an object, no braces and values have to have a "content:" tag
+                              False means that we're inside an object, no braces and values have to have a "_content:" tag
     -->
     <xsl:template match="text()">
         <xsl:param name="generatingValues" as="xs:boolean" select="false()"/>
 
         <!-- Text as a quoted string -->
         <xsl:if test="position() > 1">, </xsl:if>
-        <xsl:if test="../@* and not($generatingValues)">"content": </xsl:if>
+        <xsl:if test="../@* and not($generatingValues)">"_content": </xsl:if>
         <xsl:value-of select="concat('&quot;', f:escape(.), '&quot;')"/>
     </xsl:template>
     

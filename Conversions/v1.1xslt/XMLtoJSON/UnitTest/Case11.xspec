@@ -5,12 +5,12 @@
         the "xsl:template match="/" doesn't work.  All the tests below are assumed to be embedded
         in '{' ... '}'
         -->
-    <x:scenario label="Rule 11: The JSONString of a member should be contained in double quotes.">
+    <x:scenario label="Rule 11: If known, the root namespace should be represented as an JSONMember in the root JSONObject using the JSONString, “_xmlns”">
         <x:context>
-            <doc> 
-                <item1>item 1</item1> 
-                <item2>item 2</item2>  
-            </doc>
-        </x:context><x:expect label="Quotes">"doc": { "item1": "item 1", "item2": "item 2" }</x:expect>
+            <root xmlns="http://example.org/schema/roots.xsd"> 
+                <item1>data 1</item1> 
+                <item2>data 2</item2>  
+            </root>
+        </x:context><x:expect label="xmlns">"_xmlns" : "http://example.org/schema/roots.xsd", "root": { "item1": "data 1", "item2": "data 2" }</x:expect>
     </x:scenario>
 </x:description>

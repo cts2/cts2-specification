@@ -7,51 +7,51 @@
         -->
     <x:scenario label="Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item or its descendants.">
         <x:context>
-            <doc xmlns:f="http://test.org/">
+            <root xmlns:f="http://test.org/">
                 <f:item _CDATA="true" xmlns="http://www.w3.org/1999/xhtml">This is a <b>bold</b> and <i>italic</i> string.</f:item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Embedded XML">"doc": { "item": "This is a &lt;b xmlns=\"http://www.w3.org/1999/xhtml\">bold&lt;/b> and &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">italic&lt;/i> string." }</x:expect>
+        <x:expect label="Embedded XML">"root": { "item": "This is a &lt;b xmlns=\"http://www.w3.org/1999/xhtml\">bold&lt;/b> and &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">italic&lt;/i> string." }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays in the correct sequence.">
         <x:context>
-            <doc>
+            <root>
                 <item xmlns:xhtml="http://www.w3.org/1999/xhtml">This is a <b>bold</b> and <i>italic</i> string.</item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Content array">"doc": { "item": ["This is a ", { "b": "bold" }, " and ", { "i": "italic" }, " string."] }</x:expect>
+        <x:expect label="Content array">"root": { "item": ["This is a ", { "b": "bold" }, " and ", { "i": "italic" }, " string."] }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 13: _CDATA attribute tag can be specified to indicate no conversion for the item or its descendants.">
         <x:context>
-            <doc>
+            <root>
                 <item _CDATA="true" att="att1" xmlns:xhtml="http://www.w3.org/1999/xhtml">This is a <b>bold</b> and <i>italic</i> string.</item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Embedded XML witha attribute">"doc": { "item": { "att": "att1", "content": "This is a &lt;b>bold&lt;/b> and &lt;i>italic&lt;/i> string." } }</x:expect>
+        <x:expect label="Embedded XML witha attribute">"root": { "item": { "att": "att1", "_content": "This is a &lt;b>bold&lt;/b> and &lt;i>italic&lt;/i> string." } }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 13: _CDATA embedded information is escaped">
         <x:context>
-            <doc xmlns:t="http://test.org">
+            <root xmlns:t="http://test.org">
                 <t:item _CDATA="true" xmlns="http://www.w3.org/1999/xhtml">This is a <b>bold</b>
 and <i xmlns="http://www.w3.org/1999/xhtml">italic</i> string with a <i>&quot;</i> and \.</t:item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Embedded XML witha attribute">"doc": { "item": "This is a &lt;b xmlns=\"http://www.w3.org/1999/xhtml\">bold&lt;/b>\nand &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">italic&lt;/i> string with a &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">\"&lt;/i> and \\." }</x:expect>
+        <x:expect label="Embedded XML witha attribute">"root": { "item": "This is a &lt;b xmlns=\"http://www.w3.org/1999/xhtml\">bold&lt;/b>\nand &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">italic&lt;/i> string with a &lt;i xmlns=\"http://www.w3.org/1999/xhtml\">\"&lt;/i> and \\." }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 13: XML textual content mixed up with elements will be parsed and put into objects/arrays in the correct sequence.">
         <x:context>
-            <doc>
+            <root>
                 <item att="att1" xmlns:xhtml="http://www.w3.org/1999/xhtml">This is a <b>bold</b> and <i>italic</i> string.</item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Content array">"doc": { "item": [{ "att": "att1" }, "This is a ", { "b": "bold" }, " and ", { "i": "italic" }, " string."] }</x:expect>
+        <x:expect label="Content array">"root": { "item": [{ "att": "att1" }, "This is a ", { "b": "bold" }, " and ", { "i": "italic" }, " string."] }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 13 test 2: XML textual content mixed up with elements will be parsed and put into objects/arrays in the correct sequence.">
         <x:context>
-            <doc>
+            <root>
                 <item xmlns:xhtml="http://www.w3.org/1999/xhtml"><b>Bold</b> string.</item>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="Content array with element in front">"doc": { "item": [{ "b": "Bold" }, " string."] }</x:expect>
+        <x:expect label="Content array with element in front">"root": { "item": [{ "b": "Bold" }, " string."] }</x:expect>
     </x:scenario>
 </x:description>

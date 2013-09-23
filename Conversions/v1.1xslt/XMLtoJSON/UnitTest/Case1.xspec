@@ -7,26 +7,26 @@
         -->
     <x:scenario label="Rule 1: Start with root node">
         <x:context>
-            <doc> 
-            </doc>       
-        </x:context><x:expect label="One empty node">"doc": ""</x:expect>
+            <root> 
+            </root>       
+        </x:context><x:expect label="One empty node">"root": ""</x:expect>
     </x:scenario>
     <x:scenario label="Rule 1: Start with root node">
         <x:context>
-            <doc> 
+            <root> 
                 <item>data</item> 
-            </doc>      
-        </x:context><x:expect label="Node with data">"doc": { "item": "data" }</x:expect>
+            </root>      
+        </x:context><x:expect label="Node with data">"root": { "item": "data" }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 1: Start with root node">
         <x:context>
-            <doc>text</doc>      
-        </x:context><x:expect label="Node with text">"doc": "text"</x:expect>
+            <root>text</root>      
+        </x:context><x:expect label="Node with text">"root": "text"</x:expect>
     </x:scenario>
     <x:scenario label="Rule 1: Start with root node">
         <x:context>
-            <doc att1="attribute 1">text</doc>      
-        </x:context><x:expect label="Node with attribute attribute">"doc": { "att1": "attribute 1", "content": "text" }</x:expect>
+            <root att1="attribute 1">text</root>      
+        </x:context><x:expect label="Node with attribute attribute">"root": { "att1": "attribute 1", "_content": "text" }</x:expect>
     </x:scenario>
     
    

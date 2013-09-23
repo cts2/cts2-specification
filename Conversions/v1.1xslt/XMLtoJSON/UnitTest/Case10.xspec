@@ -7,30 +7,30 @@
         -->
     <x:scenario label="Rule 10: All namespaces are removed except xsi">
         <x:context>
-            <doc xmlns:xhtml="http://www.w3.org/1999/xhtml">
+            <root xmlns:xhtml="http://www.w3.org/1999/xhtml">
                 <xhtml:body> data </xhtml:body>
                 <item xhtml:att="abc"/>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="All namespaces removed">"doc": { "body": " data ", "item": { "att": "abc" } }</x:expect>
+        <x:expect label="All namespaces removed">"root": { "body": " data ", "item": { "att": "abc" } }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 10: All namespaces are removed except xsi">
         <x:context>
-            <doc xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <root xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <xhtml:body> data </xhtml:body>
                 <item xhtml:att="abc" xsi:nill="true"/>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="xsi namespace remains">"doc": { "body": " data ", "item": { "att": "abc", "xsi:nill": "true" } }</x:expect>
+        <x:expect label="xsi namespace remains">"root": { "body": " data ", "item": { "att": "abc", "xsi:nill": "true" } }</x:expect>
     </x:scenario>
     <x:scenario label="Rule 10: xsi is always xsl">
         <x:context>
-            <doc xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi2="http://www.w3.org/2001/XMLSchema-instance">
+            <root xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi2="http://www.w3.org/2001/XMLSchema-instance">
                 <xhtml:body> data </xhtml:body>
                 <item xhtml:att="abc" xsi2:nill="true"/>
-            </doc>
+            </root>
         </x:context>
-        <x:expect label="xsi2 is now xsi">"doc": { "body": " data ", "item": { "att": "abc", "xsi:nill": "true" } }</x:expect>
+        <x:expect label="xsi2 is now xsi">"root": { "body": " data ", "item": { "att": "abc", "xsi:nill": "true" } }</x:expect>
     </x:scenario>
     
 </x:description>
