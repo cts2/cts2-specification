@@ -481,6 +481,9 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="count">
       <wsdl:input name="count" message="tns:count" />
       <wsdl:output name="countResponse" message="tns:countResponse" />
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="resolveAsList">
@@ -571,7 +574,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
       <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
       <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
-
     </wsdl:operation>
 
     <wsdl:operation name="restrictToSourceOrTargetEntity">
@@ -586,6 +588,13 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="restrict">
       <wsdl:input name="restrict" message="tns:restrict" />
       <wsdl:output name="restrictResponse" message="tns:restrictResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetLiteral">
@@ -625,16 +634,22 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="difference">
       <wsdl:input name="difference" message="tns:difference" />
       <wsdl:output name="differenceResponse" message="tns:differenceResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="intersect">
       <wsdl:input name="intersect" message="tns:intersect" />
       <wsdl:output name="intersectResponse" message="tns:intersectResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="union">
       <wsdl:input name="union" message="tns:union" />
       <wsdl:output name="unionResponse" message="tns:unionResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
   </wsdl:portType>
@@ -1009,8 +1024,8 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     </wsdl:operation>
 
     <wsdl:operation name="count">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
-      currently represented by the supplied directory URI.</documentation>
+      <wsdl:documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
+      currently represented by the supplied directory URI.</wsdl:documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="count">
@@ -1020,6 +1035,23 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="countResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1196,7 +1228,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
         <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
           implementation</wsdl:documentation>
-
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
       </wsdl:fault>
 
@@ -1528,6 +1559,44 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetLiteral">
@@ -1707,6 +1776,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="intersect">
@@ -1722,6 +1802,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="intersectResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1739,6 +1830,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="unionResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
