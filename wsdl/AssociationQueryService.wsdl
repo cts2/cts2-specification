@@ -901,7 +901,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1106,7 +1106,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1199,7 +1199,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1289,7 +1289,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1461,7 +1461,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1571,7 +1571,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
@@ -1677,7 +1677,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       </wsdl:fault>
 
       <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
-        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;i&gt; is not supported by the service.</wsdl:documentation>
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
         <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
       </wsdl:fault>
 
