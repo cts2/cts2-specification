@@ -3,12 +3,14 @@
 xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
 xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
 xmlns:baseServices="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServices"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="UpdateService" targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices">
   <wsdl:types>
     <xsd:schema>
       <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
       schemaLocation="UpdateServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -118,6 +120,10 @@ name="UpdateService" targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/Upda
   <wsdl:message name="getSupportedStructures">
     <wsdl:part name="parameters" element="tns:getSupportedStructures" />
   </wsdl:message>
+  
+  <wsdl:message name="UnableToOpenDocument">
+    <wsdl:part name="parameters" element="exceptions:UnableToOpenDocument" />
+  </wsdl:message>
 
   <wsdl:portType name="UpdateServicePortType">
     <!-- BaseService -->
@@ -182,6 +188,7 @@ name="UpdateService" targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/Upda
     <wsdl:operation name="validateChangeSet">
       <wsdl:input name="validateChangeSet" message="tns:validateChangeSet" />
       <wsdl:output name="validateChangeSetResponse" message="tns:validateChangeSetResponse" />
+      <wsdl:fault name="UnableToOpenDocument" message="tns:UnableToOpenDocument" />
     </wsdl:operation>
 
     <wsdl:operation name="getSupportedStructures">
@@ -388,12 +395,11 @@ name="UpdateService" targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/Upda
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
-        <documentation>the process is unable to open the primary document to be
-        imported</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
+        <wsdl:documentation>the process is unable to open the primary document to be
+          imported</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
+      </wsdl:fault>
 
     </wsdl:operation>
 

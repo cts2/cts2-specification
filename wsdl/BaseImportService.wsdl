@@ -2,6 +2,7 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices"
 xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="BaseImportService"
 targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
@@ -9,6 +10,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
     <xsd:schema>
       <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices"
       schemaLocation="BaseImportServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -134,6 +136,34 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
   <wsdl:message name="import">
     <wsdl:part name="parameters" element="tns:import" />
   </wsdl:message>
+  
+  <wsdl:message name="UnknownProcessId">
+    <wsdl:part name="parameters" element="exceptions:UnknownProcessId" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedOntologySyntax">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedOntologySyntax" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedOntologyLanguage">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedOntologyLanguage" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnableToOpenDocument">
+    <wsdl:part name="parameters" element="exceptions:UnableToOpenDocument" />
+  </wsdl:message>
+  
+  <wsdl:message name="MetadataError">
+    <wsdl:part name="parameters" element="exceptions:MetadataError" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnableToOpenMetadataDocument">
+    <wsdl:part name="parameters" element="exceptions:UnableToOpenMetadataDocument" />
+  </wsdl:message>
+  
+  <wsdl:message name="MetadataDocumentRequired">
+    <wsdl:part name="parameters" element="exceptions:MetadataDocumentRequired" />
+  </wsdl:message>
 
   <wsdl:portType name="BaseImportServicePortType">
     <!-- BaseService -->
@@ -188,26 +218,41 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
     <wsdl:operation name="validate">
       <wsdl:input name="validate" message="tns:validate" />
       <wsdl:output name="validateResponse" message="tns:validateResponse" />
+      <wsdl:fault name="UnableToOpenDocument" message="tns:UnableToOpenDocument" />
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax" />
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage" />
+      <wsdl:fault name="MetadataError" message="tns:MetadataError" />
+      <wsdl:fault name="UnableToOpenMetadataDocument" message="tns:UnableToOpenMetadataDocument" />
+      <wsdl:fault name="MetadataDocumentRequired" message="tns:MetadataDocumentRequired" />
     </wsdl:operation>
 
     <wsdl:operation name="getLog">
       <wsdl:input name="getLog" message="tns:getLog" />
       <wsdl:output name="getLogResponse" message="tns:getLogResponse" />
+      <wsdl:fault name="UnknownProcessId" message="tns:UnknownProcessId" />
     </wsdl:operation>
 
-    <wsdl:operation name="import">
+    <wsdl:operation name="importResource">
       <wsdl:input name="import" message="tns:import" />
       <wsdl:output name="importResponse" message="tns:importResponse" />
+      <wsdl:fault name="UnableToOpenDocument" message="tns:UnableToOpenDocument" />
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax" />
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage" />
+      <wsdl:fault name="MetadataError" message="tns:MetadataError" />
+      <wsdl:fault name="UnableToOpenMetadataDocument" message="tns:UnableToOpenMetadataDocument" />
+      <wsdl:fault name="MetadataDocumentRequired" message="tns:MetadataDocumentRequired" />
     </wsdl:operation>
 
     <wsdl:operation name="clearLog">
       <wsdl:input name="clearLog" message="tns:clearLog" />
       <wsdl:output name="clearLogResponse" message="tns:clearLogResponse" />
+      <wsdl:fault name="UnknownProcessId" message="tns:UnknownProcessId" />
     </wsdl:operation>
 
     <wsdl:operation name="getStatus">
       <wsdl:input name="getStatus" message="tns:getStatus" />
       <wsdl:output name="getStatusResponse" message="tns:getStatusResponse" />
+      <wsdl:fault name="UnknownProcessId" message="tns:UnknownProcessId" />
     </wsdl:operation>
 
     <wsdl:operation name="getSupportedLanguageAndSyntax">
@@ -379,54 +424,40 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
-        <documentation>the process is unable to open the primary document to be
-        imported</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataError">
-        <documentation>An error was encountered in the metadata document. This error includes
-        formatting errors, missing parameters and invalid content.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataError" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenMetadataDocument">
-        <documentation>the service is unable to access the supplied metadata
-        document</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenMetadataDocument" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataDocumentRequired">
-        <documentation>Additional metadata must be supplied to perform this
-        operation</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataDocumentRequired" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
-        <documentation>The supplied ontology syntax is not supported by the service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
-        <documentation>The supplied ontology language is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
+        <wsdl:documentation>the process is unable to open the primary document to be
+          imported</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataError">
+        <wsdl:documentation>An error was encountered in the metadata document. This error includes
+          formatting errors, missing parameters and invalid content.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataError" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenMetadataDocument">
+        <wsdl:documentation>the service is unable to access the supplied metadata
+          document</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenMetadataDocument" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataDocumentRequired">
+        <wsdl:documentation>Additional metadata must be supplied to perform this
+          operation</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataDocumentRequired" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -443,10 +474,15 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
       <wsdl:output name="getLogResponse">
         <soap:body use="literal" />
       </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
+        <wsdl:documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service.</wsdl:documentation>        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
-    <wsdl:operation name="import">
+    <wsdl:operation name="importResource">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Load structured content from a
       specified source and return a URI that references the "process" that performed or is
       performing the importLoad structured content from a specified source and return a URI that
@@ -461,54 +497,40 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
-        <documentation>the process is unable to open the primary document to be
-        imported</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
+        <wsdl:documentation>the process is unable to open the primary document to be
+        imported</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataError">
+        <wsdl:documentation>An error was encountered in the metadata document. This error includes
+        formatting errors, missing parameters and invalid content.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataError" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
-        <documentation>The supplied ontology syntax is not supported by the service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenMetadataDocument">
+        <wsdl:documentation>the service is unable to access the supplied metadata
+        document</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenMetadataDocument" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
-        <documentation>The supplied ontology language is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataError">
-        <documentation>An error was encountered in the metadata document. This error includes
-        formatting errors, missing parameters and invalid content.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataError" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenMetadataDocument">
-        <documentation>the service is unable to access the supplied metadata
-        document</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenMetadataDocument" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataDocumentRequired">
-        <documentation>Additional metadata must be supplied to perform this
-        operation</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataDocumentRequired" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MetadataDocumentRequired">
+        <wsdl:documentation>Additional metadata must be supplied to perform this
+        operation</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MetadataDocumentRequired" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -524,6 +546,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
       <wsdl:output name="clearLogResponse">
         <soap:body use="literal" />
       </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
+        <wsdl:documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service.</wsdl:documentation>        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -540,11 +567,10 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
-        <documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
+        <wsdl:documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service.</wsdl:documentation>        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
