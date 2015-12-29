@@ -4,6 +4,7 @@ xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceSer
 xmlns:baseMaintenanceService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseMaintenanceServices"
 xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
 xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="CodeSystemCatalogMaintenanceService"
 targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceServices">
@@ -11,6 +12,7 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
     <xsd:schema>
       <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceServices"
       schemaLocation="CodeSystemCatalogMaintenanceServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -235,6 +237,82 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
     <wsdl:part name="parameters" element="tns:putChangeSet" />
   </wsdl:message>
 
+  <wsdl:message name="UnableToOpenDocument">
+    <wsdl:part name="fault" element="exceptions:UnableToOpenDocument" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnknownChangeSet">
+    <wsdl:part name="fault" element="exceptions:UnknownChangeSet" />
+  </wsdl:message>
+  
+  <wsdl:message name="ChangeSetIsNotOpen">
+    <wsdl:part name="fault" element="exceptions:ChangeSetIsNotOpen" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnknownEntity">
+    <wsdl:part name="fault" element="exceptions:UnknownEntity" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedSource">
+    <wsdl:part name="fault" element="exceptions:UnsupportedSource" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceStateMismatch">
+    <wsdl:part name="fault" element="exceptions:ResourceStateMismatch" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceIsNotOpen">
+    <wsdl:part name="fault" element="exceptions:ResourceIsNotOpen" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedMatchAlgorithm">
+    <wsdl:part name="fault" element="exceptions:UnsupportedMatchAlgorithm" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedPredicate">
+    <wsdl:part name="fault" element="exceptions:UnsupportedPredicate" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedNamespaceName">
+    <wsdl:part name="fault" element="exceptions:UnsupportedNamespaceName" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnknownPredicateNamespaceName">
+    <wsdl:part name="fault" element="exceptions:UnknownPredicateNamespaceName" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedModelAttribute">
+    <wsdl:part name="fault" element="exceptions:UnsupportedModelAttribute" />
+  </wsdl:message>
+  
+  <wsdl:message name="MatchValueFormatException">
+    <wsdl:part name="fault" element="exceptions:MatchValueFormatException" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedFormat">
+    <wsdl:part name="fault" element="exceptions:UnsupportedFormat" />
+  </wsdl:message>
+  
+  <wsdl:message name="QueryTimeout">
+    <wsdl:part name="fault" element="exceptions:QueryTimeout" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedStatus">
+    <wsdl:part name="fault" element="exceptions:UnsupportedStatus" />
+  </wsdl:message>
+  
+  <wsdl:message name="AlternateURINotUnique">
+    <wsdl:part name="fault" element="exceptions:AlternateURINotUnique" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceNameAlreadyExists">
+    <wsdl:part name="fault" element="exceptions:ResourceNameAlreadyExists" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceURIAlreadyExists">
+    <wsdl:part name="fault" element="exceptions:ResourceURIAlreadyExists" />
+  </wsdl:message>
+
   <wsdl:portType name="CodeSystemCatalogMaintenanceServicePortType">
     <!-- BaseService -->
     <wsdl:operation name="getSupportedFormat">
@@ -284,17 +362,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
       message="tns:getImplementationTypeResponse" />
     </wsdl:operation>
 
-    <wsdl:operation name="readIteratableChangeSet">
-      <wsdl:input name="readIteratableChangeSet" message="tns:readIteratableChangeSet" />
-      <wsdl:output name="readIteratableChangeSetResponse"
-      message="tns:readIteratableChangeSetResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="newProperty">
-      <wsdl:input name="newProperty" message="tns:newProperty" />
-      <wsdl:output name="newPropertyResponse" message="tns:newPropertyResponse" />
-    </wsdl:operation>
-
     <wsdl:operation name="newResourceTarget">
       <wsdl:input name="newResourceTarget" message="tns:newResourceTarget" />
       <wsdl:output name="newResourceTargetResponse" message="tns:newResourceTargetResponse" />
@@ -305,12 +372,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
       <wsdl:output name="newLiteralTargetResponse" message="tns:newLiteralTargetResponse" />
     </wsdl:operation>
 
-    <wsdl:operation name="newEntityReferenceTarget">
-      <wsdl:input name="newEntityReferenceTarget" message="tns:newEntityReferenceTarget" />
-      <wsdl:output name="newEntityReferenceTargetResponse"
-      message="tns:newEntityReferenceTargetResponse" />
-    </wsdl:operation>
-
     <!-- End BaseService -->
     <!-- UpdateService -->
     <wsdl:operation name="getSupportedStructures">
@@ -319,47 +380,101 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
       message="tns:getSupportedStructuresResponse" />
     </wsdl:operation>
 
-    <!-- End UpdateService -->
-    <wsdl:operation name="updateChangeSetMetadata">
-      <wsdl:input name="updateChangeSetMetadata" message="tns:updateChangeSetMetadata" />
-      <wsdl:output name="updateChangeSetMetadataResponse"
-      message="tns:updateChangeSetMetadataResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="commitChangeSet">
-      <wsdl:input name="commitChangeSet" message="tns:commitChangeSet" />
-      <wsdl:output name="commitChangeSetResponse" message="tns:commitChangeSetResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="updateChangeableMetadata">
-      <wsdl:input name="updateChangeableMetadata" message="tns:updateChangeableMetadata" />
-      <wsdl:output name="updateChangeableMetadataResponse"
-      message="tns:updateChangeableMetadataResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="createCodeSystem">
-      <wsdl:input name="createCodeSystem" message="tns:createCodeSystem" />
-      <wsdl:output name="createCodeSystemResponse" message="tns:createCodeSystemResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="deleteChangeable">
-      <wsdl:input name="deleteChangeable" message="tns:deleteChangeable" />
-      <wsdl:output name="deleteChangeableResponse" message="tns:deleteChangeableResponse" />
-    </wsdl:operation>
-
-    <wsdl:operation name="rollbackChangeSet">
-      <wsdl:input name="rollbackChangeSet" message="tns:rollbackChangeSet" />
-      <wsdl:output name="rollbackChangeSetResponse" message="tns:rollbackChangeSetResponse" />
-    </wsdl:operation>
-
     <wsdl:operation name="validateChangeSet">
       <wsdl:input name="validateChangeSet" message="tns:validateChangeSet" />
       <wsdl:output name="validateChangeSetResponse" message="tns:validateChangeSetResponse" />
+      <wsdl:fault name="UnableToOpenDocument" message="tns:UnableToOpenDocument" />
     </wsdl:operation>
-
+    
+    <wsdl:operation name="updateChangeSetMetadata">
+      <wsdl:input name="updateChangeSetMetadata" message="tns:updateChangeSetMetadata" />
+      <wsdl:output name="updateChangeSetMetadataResponse" message="tns:updateChangeSetMetadataResponse" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="UnsupportedSource" message="tns:UnsupportedSource" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="deleteChangeable">
+      <wsdl:input name="deleteChangeable" message="tns:deleteChangeable" />
+      <wsdl:output name="deleteChangeableResponse" message="tns:deleteChangeableResponse" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="ResourceStateMismatch" message="tns:ResourceStateMismatch" />
+      <wsdl:fault name="ResourceIsNotOpen" message="tns:ResourceIsNotOpen" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="updateChangeableMetadata">
+      <wsdl:input name="updateChangeableMetadata" message="tns:updateChangeableMetadata" />
+      <wsdl:output name="updateChangeableMetadataResponse" message="tns:updateChangeableMetadataResponse" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity" />
+      <wsdl:fault name="UnsupportedStatus" message="tns:UnsupportedStatus" />
+    </wsdl:operation>
+    
     <wsdl:operation name="readChangeSet">
       <wsdl:input name="readChangeSet" message="tns:readChangeSet" />
       <wsdl:output name="readChangeSetResponse" message="tns:readChangeSetResponse" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm" />
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate" />
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName" />
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute" />
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException" />
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat" />
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="commitChangeSet">
+      <wsdl:input name="commitChangeSet" message="tns:commitChangeSet" />
+      <wsdl:output name="commitChangeSetResponse" message="tns:commitChangeSetResponse" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="rollbackChangeSet">
+      <wsdl:input name="rollbackChangeSet" message="tns:rollbackChangeSet" />
+      <wsdl:output name="rollbackChangeSetResponse" message="tns:rollbackChangeSetResponse" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="readIteratableChangeSet">
+      <wsdl:input name="readIteratableChangeSet" message="tns:readIteratableChangeSet" />
+      <wsdl:output name="readIteratableChangeSetResponse" message="tns:readIteratableChangeSetResponse" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm" />
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate" />
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName" />
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute" />
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException" />
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat" />
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="newProperty">
+      <wsdl:input name="newProperty" message="tns:newProperty" />
+      <wsdl:output name="newPropertyResponse" message="tns:newPropertyResponse" />
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName" />
+      <wsdl:fault name="UnknownPredicateNamespaceName" message="tns:UnknownPredicateNamespaceName" />
+    </wsdl:operation>
+    
+    <wsdl:operation name="newEntityReferenceTarget">
+      <wsdl:input name="newEntityReferenceTarget" message="tns:newEntityReferenceTarget" />
+      <wsdl:output name="newEntityReferenceTargetResponse" message="tns:newEntityReferenceTargetResponse" />
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName" />
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity" />
+    </wsdl:operation>
+
+    <!-- End UpdateService -->
+    <wsdl:operation name="createCodeSystem">
+      <wsdl:input name="createCodeSystem" message="tns:createCodeSystem" />
+      <wsdl:output name="createCodeSystemResponse" message="tns:createCodeSystemResponse" />
+      <wsdl:fault name="AlternateURINotUnique" message="tns:AlternateURINotUnique" />
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet" />
+      <wsdl:fault name="ResourceNameAlreadyExists" message="tns:ResourceNameAlreadyExists" />
+      <wsdl:fault name="ResourceURIAlreadyExists" message="tns:ResourceURIAlreadyExists" />
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen" />
     </wsdl:operation>
 
     <wsdl:operation name="updateCodeSystem">
@@ -548,135 +663,64 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
     </wsdl:operation>
 
     <!-- End UpdateService -->
-    <wsdl:operation name="updateChangeSetMetadata">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the descriptive information of
-      a change set.</documentation>
+    <wsdl:operation name="readIteratableChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a change set with an iterator
+      that allows its contents to be read in chunks.</documentation>
 
       <soap:operation soapAction="" style="document" />
-      <wsdl:input name="updateChangeSetMetadata">
+      <wsdl:input name="readIteratableChangeSet">
         <soap:body use="literal" />
       </wsdl:input>
 
-      <wsdl:output name="updateChangeSetMetadataResponse">
+      <wsdl:output name="readIteratableChangeSetResponse">
         <soap:body use="literal" />
       </wsdl:output>
 
-    </wsdl:operation>
-
-    <wsdl:operation name="commitChangeSet">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Apply the proposed changes specified
-      in the change set transaction to the changeable being updated.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="commitChangeSet">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="commitChangeSetResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="updateChangeableMetadata">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the metadata for a change set
-      and return an image of the updated resource.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="updateChangeableMetadata">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="updateChangeableMetadataResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="createCodeSystem">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new entry in the code system
-      catalogCreate a new entry in the code system catalog</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="createCodeSystem">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="createCodeSystemResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceCreationExceptions">
-        <documentation>The set of exceptions that can occur when creating resources</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceCreationExceptions" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="AlternateURINotUnique">
-        <documentation>One of the supplied &lt;i&gt;alternateIDs&lt;/i&gt; is not unique - it
-        appears as an &lt;i&gt;entryID&lt;/i&gt; or &lt;i&gt;alternateID&lt;/i&gt; for a different
-        resource of the same type.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="AlternateURINotUnique" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceNameAlreadyExists">
-        <documentation>The local identifier for the resource already exists in the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceNameAlreadyExists" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceURIAlreadyExists">
-        <documentation>The URI (entityID) of the supplied resource already exists in the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceURIAlreadyExists" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="deleteChangeable">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove the
-      &lt;i&gt;changeAble&lt;/i&gt; resource from the service.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="deleteChangeable">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="deleteChangeableResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="rollbackChangeSet">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Cancel the proposed changes specified
-      in a change set transaction to the changeable being updated.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="rollbackChangeSet">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="rollbackChangeSetResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
+        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -693,6 +737,274 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
+        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeSetMetadata">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the descriptive information of
+      a change set.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateChangeSetMetadata">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="updateChangeSetMetadataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedSource">
+        <wsdl:documentation>The supplied source is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedSource" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="commitChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Apply the proposed changes specified
+      in the change set transaction to the changeable being updated.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="commitChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="commitChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="rollbackChangeSet">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Cancel the proposed changes specified
+      in a change set transaction to the changeable being updated.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="rollbackChangeSet">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="rollbackChangeSetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="updateChangeableMetadata">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Update the metadata for a change set
+      and return an image of the updated resource.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateChangeableMetadata">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="updateChangeableMetadataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedStatus">
+        <wsdl:documentation>The name or URI of the &lt;i&gt;Changeable&lt;/i&gt;
+          &lt;i&gt;status&lt;/i&gt; property is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedStatus" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="deleteChangeable">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Remove the
+      &lt;i&gt;changeAble&lt;/i&gt; resource from the service.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteChangeable">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="deleteChangeableResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceStateMismatch">
+        <wsdl:documentation>The resource being updated did not match the satte if the resource in the service.
+          A change has occurred since the resource image has been retrieved.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceStateMismatch" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceIsNotOpen">
+        <wsdl:documentation>The target resource version description has been finalized
+          and cannot be updated.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceIsNotOpen" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newProperty">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
+      &lt;i&gt;Property&lt;/i&gt; for inclusion in a resource or statement
+      construct</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newProperty">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newPropertyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownPredicateNamespaceName">
+        <wsdl:documentation>The namespace in the &lt;i&gt;predicate&lt;/i&gt; identifier is not known to
+          or supported by the service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownPredicateNamespaceName" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="newEntityReferenceTarget">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a
+      &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;ENTITY&lt;/i&gt;. Note that this is a
+      helper function and does not effect the state of the service. Services may choose to validate
+      the input parameters of this method when it is invoked or may postpone validation until the
+      corresponding create or update service call is invoked.</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="newEntityReferenceTarget">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="newEntityReferenceTargetResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="validateChangeSet">
@@ -707,6 +1019,58 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
       <wsdl:output name="validateChangeSetResponse">
         <soap:body use="literal" />
       </wsdl:output>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenDocument">
+        <wsdl:documentation>The process is unable to open the primary document to be
+          imported</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenDocument" />
+      </wsdl:fault>
+
+    </wsdl:operation>
+    
+    <wsdl:operation name="createCodeSystem">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new entry in the code system
+      catalogCreate a new entry in the code system catalog</documentation>
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCodeSystem">
+        <soap:body use="literal" />
+      </wsdl:input>
+
+      <wsdl:output name="createCodeSystemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="AlternateURINotUnique">
+        <wsdl:documentation>One of the supplied &lt;i&gt;alternateIDs&lt;/i&gt; is not unique - it
+        appears as an &lt;i&gt;entryID&lt;/i&gt; or &lt;i&gt;alternateID&lt;/i&gt; for a different
+        resource of the same type.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="AlternateURINotUnique" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceNameAlreadyExists">
+        <wsdl:documentation>The local identifier for the resource already exists in the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceNameAlreadyExists" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceURIAlreadyExists">
+        <wsdl:documentation>The URI (entityID) of the supplied resource already exists in the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceURIAlreadyExists" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -773,37 +1137,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
 
     </wsdl:operation>
 
-    <wsdl:operation name="readIteratableChangeSet">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return a change set with an iterator
-      that allows its contents to be read in chunks.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="readIteratableChangeSet">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="readIteratableChangeSetResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="newProperty">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
-      &lt;i&gt;Property&lt;/i&gt; for inclusion in a resource or statement
-      construct</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="newProperty">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="newPropertyResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
     <wsdl:operation name="newResourceTarget">
       <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a new
       &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;RESOURCE&lt;/i&gt;. This is a helper
@@ -834,24 +1167,6 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintena
       </wsdl:input>
 
       <wsdl:output name="newLiteralTargetResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-
-    </wsdl:operation>
-
-    <wsdl:operation name="newEntityReferenceTarget">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Create a
-      &lt;i&gt;StatementTarget&lt;/i&gt; of type &lt;i&gt;ENTITY&lt;/i&gt;. Note that this is a
-      helper function and does not effect the state of the service. Services may choose to validate
-      the input parameters of this method when it is invoked or may postpone validation until the
-      corresponding create or update service call is invoked.</documentation>
-
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="newEntityReferenceTarget">
-        <soap:body use="literal" />
-      </wsdl:input>
-
-      <wsdl:output name="newEntityReferenceTargetResponse">
         <soap:body use="literal" />
       </wsdl:output>
 
