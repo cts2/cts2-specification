@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseHistoryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryHistoryServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:historyService="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServices"
-xmlns:historyServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/HistoryServiceTypes"
+xmlns:baseHistoryServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/HistoryServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/MapEntryHistoryServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
+xmlns:historyService="http://www.omg.org/spec/CTS2/1.2/wsdl/HistoryServices"
+xmlns:historyServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/HistoryServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="MapEntryHistoryService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryHistoryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapEntryHistoryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryHistoryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapEntryHistoryServices"
       schemaLocation="MapEntryHistoryServiceTypes.xsd" />
     </xsd:schema>
 

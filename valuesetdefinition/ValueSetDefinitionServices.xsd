@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-		xmlns:valuesetdefinition="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
-		xmlns:coreservice="http://www.omg.org/spec/CTS2/1.1/CoreService"
-		xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices"
-		targetNamespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices" elementFormDefault="qualified">
-		<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-		<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" schemaLocation="ValueSetDefinition.xsd"/>
-		<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd" />
+		xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+		xmlns:valuesetdefinition="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinition"
+		xmlns:coreservice="http://www.omg.org/spec/CTS2/1.2/CoreService"
+		xmlns="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinitionServices"
+		targetNamespace="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinitionServices" elementFormDefault="qualified">
+		<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+		<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinition" schemaLocation="ValueSetDefinition.xsd"/>
+		<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd" />
 		
 	<xs:element name="ValueSetDefinitionHistoryService" type="ValueSetDefinitionHistoryService"/>
 	<xs:complexType name="ValueSetDefinitionHistoryService">

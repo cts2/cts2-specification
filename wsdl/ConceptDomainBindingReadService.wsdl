@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseReadServices"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/ConceptDomainBindingReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ConceptDomainBindingReadService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingReadServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/ConceptDomainBindingReadServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainBindingReadServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/ConceptDomainBindingReadServices"
       schemaLocation="ConceptDomainBindingReadServiceTypes.xsd" />
     </xsd:schema>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity" xmlns="http://www.omg.org/spec/CTS2/1.1/CoreService" targetNamespace="http://www.omg.org/spec/CTS2/1.1/CoreService" elementFormDefault="qualified">
-	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core" xmlns:entity="http://www.omg.org/spec/CTS2/1.2/Entity" xmlns="http://www.omg.org/spec/CTS2/1.2/CoreService" targetNamespace="http://www.omg.org/spec/CTS2/1.2/CoreService" elementFormDefault="qualified">
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
 	
 	<xs:element name="Query" type="Query"/>
 	<xs:complexType name="Query">

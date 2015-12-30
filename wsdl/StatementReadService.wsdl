@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementReadServices"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/StatementReadServices"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="StatementReadService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementReadServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/StatementReadServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/StatementReadServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/StatementReadServices"
       schemaLocation="StatementReadServiceTypes.xsd" />
     </xsd:schema>
 

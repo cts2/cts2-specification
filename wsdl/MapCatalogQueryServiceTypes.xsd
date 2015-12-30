@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:map="http://www.omg.org/spec/CTS2/1.1/MapCatalog"
-  xmlns:mapVersionService="http://www.omg.org/spec/CTS2/1.1/MapVersionServices"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapCatalogQueryServices"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.2/CoreService"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+  xmlns:map="http://www.omg.org/spec/CTS2/1.2/MapCatalog"
+  xmlns:mapVersionService="http://www.omg.org/spec/CTS2/1.2/MapVersionServices"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/MapCatalogQueryServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapCatalogQueryServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapCatalogQueryServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/MapCatalog" schemaLocation="../map/Map.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>  
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/MapVersionServices" schemaLocation="../mapversion/MapVersionServices.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/MapCatalog" schemaLocation="../map/Map.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>  
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/MapVersionServices" schemaLocation="../mapversion/MapVersionServices.xsd"/>
   
   <xs:element name="getAllMaps" type="tns:getAllMaps"/>
   <xs:complexType name="getAllMaps"/>

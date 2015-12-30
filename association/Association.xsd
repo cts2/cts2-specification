@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:assoc="http://www.omg.org/spec/CTS2/1.1/Association" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns="http://www.omg.org/spec/CTS2/1.1/Association"
-	targetNamespace="http://www.omg.org/spec/CTS2/1.1/Association" elementFormDefault="qualified">
-	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:assoc="http://www.omg.org/spec/CTS2/1.2/Association" xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core" xmlns="http://www.omg.org/spec/CTS2/1.2/Association"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.2/Association" elementFormDefault="qualified">
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
 
 	<!-- ====================================================
 		Association

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionReadServices"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/MapVersionReadServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="MapVersionReadService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionReadServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapVersionReadServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionReadServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapVersionReadServices"
       schemaLocation="MapVersionReadServiceTypes.xsd" />
     </xsd:schema>
 

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/AssociationReadServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="AssociationReadService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/AssociationReadServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationReadServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/AssociationReadServices"
       schemaLocation="AssociationReadServiceTypes.xsd" />
     </xsd:schema>
 

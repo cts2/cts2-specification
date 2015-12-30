@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:map="http://www.omg.org/spec/CTS2/1.1/MapCatalog"
-  xmlns:mapVersion="http://www.omg.org/spec/CTS2/1.1/MapVersion"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryReadServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+  xmlns:map="http://www.omg.org/spec/CTS2/1.2/MapCatalog"
+  xmlns:mapVersion="http://www.omg.org/spec/CTS2/1.2/MapVersion"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.2/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/MapEntryReadServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapEntryReadServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/MapEntryReadServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/MapCatalog" schemaLocation="../map/Map.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/MapVersion" schemaLocation="../mapversion/MapVersion.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/MapCatalog" schemaLocation="../map/Map.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/MapVersion" schemaLocation="../mapversion/MapVersion.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="exists" type="tns:exists"/>
   <xs:complexType name="exists">

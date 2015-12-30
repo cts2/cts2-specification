@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-		xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-		xmlns:coreservice="http://www.omg.org/spec/CTS2/1.1/CoreService"
-		xmlns="http://www.omg.org/spec/CTS2/1.1/MapServices"
-		targetNamespace="http://www.omg.org/spec/CTS2/1.1/MapServices" elementFormDefault="qualified">
-		<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-		<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd" />
+		xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+		xmlns:coreservice="http://www.omg.org/spec/CTS2/1.2/CoreService"
+		xmlns="http://www.omg.org/spec/CTS2/1.2/MapServices"
+		targetNamespace="http://www.omg.org/spec/CTS2/1.2/MapServices" elementFormDefault="qualified">
+		<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+		<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd" />
 		
 	<xs:element name="MapCatalogHistoryService" type="MapCatalogHistoryService"/>
 	<xs:complexType name="MapCatalogHistoryService">

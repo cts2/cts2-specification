@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintenanceServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
-xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/EntityDescriptionMaintenanceServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseQueryServiceTypes"
+xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/UpdateServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="EntityDescriptionMaintenanceService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintenanceServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/EntityDescriptionMaintenanceServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintenanceServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/EntityDescriptionMaintenanceServices"
       schemaLocation="EntityDescriptionMaintenanceServiceTypes.xsd" />
     </xsd:schema>
 
