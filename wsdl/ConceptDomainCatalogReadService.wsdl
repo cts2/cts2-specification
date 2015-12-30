@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseReadServices"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ConceptDomainCatalogReadService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogReadServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogReadServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogReadServices"
       schemaLocation="ConceptDomainCatalogReadServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>

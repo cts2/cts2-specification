@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetLoaderServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetLoaderServices"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ResolvedValueSetLoaderServices"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetLoaderServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetLoaderServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetLoaderServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetLoaderServices"
       schemaLocation="ResolvedValueSetLoaderTypes.xsd" />
     </xsd:schema>
 

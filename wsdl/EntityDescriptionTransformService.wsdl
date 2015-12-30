@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransformServices"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/EntityDescriptionTransformServices"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="EntityDescriptionTransformService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransformServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/EntityDescriptionTransformServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionTransformServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/EntityDescriptionTransformServices"
       schemaLocation="EntityDescriptionTransformServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>

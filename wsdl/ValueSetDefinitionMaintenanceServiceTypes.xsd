@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:updates="http://www.omg.org/spec/CTS2/1.1/Updates"
-  xmlns:valueSet="http://www.omg.org/spec/CTS2/1.1/ValueSet"
-  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:valueSetService="http://www.omg.org/spec/CTS2/1.1/ValueSetServices"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices"
+  xmlns="http://www.omg.org/spec/CTS2/1.3/wsdl/ValueSetDefinitionMaintenanceServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.3/Core"
+  xmlns:updates="http://www.omg.org/spec/CTS2/1.3/Updates"
+  xmlns:valueSet="http://www.omg.org/spec/CTS2/1.3/ValueSet"
+  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.3/ValueSetDefinition"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.3/CoreService"
+  xmlns:valueSetService="http://www.omg.org/spec/CTS2/1.3/ValueSetServices"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ValueSetDefinitionMaintenanceServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionMaintenanceServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ValueSetDefinitionMaintenanceServices">
   
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Updates" schemaLocation="../updates/Updates.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetServices" schemaLocation="../valueset/ValueSetServices.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Core" schemaLocation="../core/Core.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/CoreService" schemaLocation="../core/CoreService.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Updates" schemaLocation="../updates/Updates.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/ValueSetServices" schemaLocation="../valueset/ValueSetServices.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
   
       <xs:element name="updateChangeSetMetadata" type="tns:updateChangeSetMetadata"/>
       <xs:complexType name="updateChangeSetMetadata">

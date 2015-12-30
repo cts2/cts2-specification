@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetQueryServices"
-xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetQueryServices"
+xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ResolvedValueSetQueryService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetQueryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetQueryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetQueryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ResolvedValueSetQueryServices"
       schemaLocation="ResolvedValueSetQueryServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>

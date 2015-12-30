@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:updates="http://www.omg.org/spec/CTS2/1.1/Updates"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
-  xmlns:entityDescriptionService="http://www.omg.org/spec/CTS2/1.1/EntityDescriptionServices"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintenanceServices"
+  xmlns:updates="http://www.omg.org/spec/CTS2/1.3/Updates"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.3/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.3/CoreService"
+  xmlns:entity="http://www.omg.org/spec/CTS2/1.3/Entity"
+  xmlns:entityDescriptionService="http://www.omg.org/spec/CTS2/1.3/EntityDescriptionServices"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/EntityDescriptionMaintenanceServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/EntityDescriptionMaintenanceServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/EntityDescriptionMaintenanceServices">
   
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Updates" schemaLocation="../updates/Updates.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/EntityDescriptionServices" schemaLocation="../entity/EntityDescriptionServices.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Entity" schemaLocation="../entity/Entity.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
-      <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Core" schemaLocation="../core/Core.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/CoreService" schemaLocation="../core/CoreService.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Updates" schemaLocation="../updates/Updates.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/EntityDescriptionServices" schemaLocation="../entity/EntityDescriptionServices.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Entity" schemaLocation="../entity/Entity.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+      <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/UpdateServices" schemaLocation="UpdateServiceTypes.xsd"/>
   
       <xs:element name="updateEntityDescription" type="tns:updateEntityDescription"/>
       <xs:complexType name="updateEntityDescription">

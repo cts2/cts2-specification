@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogQueryServices"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogQueryServices"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="ConceptDomainCatalogQueryService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogQueryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogQueryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ConceptDomainCatalogQueryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ConceptDomainCatalogQueryServices"
       schemaLocation="ConceptDomainCatalogQueryServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>

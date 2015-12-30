@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceServices"
-xmlns:baseMaintenanceService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseMaintenanceServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/UpdateServices"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/CodeSystemCatalogMaintenanceServices"
+xmlns:baseMaintenanceService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseMaintenanceServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:updateServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/UpdateServices"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="CodeSystemCatalogMaintenanceService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/CodeSystemCatalogMaintenanceServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/CodeSystemCatalogMaintenanceServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/CodeSystemCatalogMaintenanceServices"
       schemaLocation="CodeSystemCatalogMaintenanceServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>

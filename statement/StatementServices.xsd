@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-	xmlns:coreservice="http://www.omg.org/spec/CTS2/1.1/CoreService"
-	xmlns="http://www.omg.org/spec/CTS2/1.1/StatementServices"
-	targetNamespace="http://www.omg.org/spec/CTS2/1.1/StatementServices" elementFormDefault="qualified">
-	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd" />
+	xmlns:core="http://www.omg.org/spec/CTS2/1.3/Core"
+	xmlns:coreservice="http://www.omg.org/spec/CTS2/1.3/CoreService"
+	xmlns="http://www.omg.org/spec/CTS2/1.3/StatementServices"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.3/StatementServices" elementFormDefault="qualified">
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.3/CoreService" schemaLocation="../core/CoreService.xsd" />
 	
 	<xs:element name="StatementHistoryService" type="StatementHistoryService"/>
 	<xs:complexType name="StatementHistoryService">

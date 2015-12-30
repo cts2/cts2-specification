@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionReadServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.3/Core"
+  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.3/ValueSetDefinition"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.3/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/ValueSetDefinitionReadServices"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetDefinitionReadServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/ValueSetDefinitionReadServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="getSupportedTag" type="tns:getSupportedTag"/>
   <xs:complexType name="getSupportedTag"/>

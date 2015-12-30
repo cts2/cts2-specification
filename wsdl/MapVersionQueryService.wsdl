@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:mapVersionService="http://www.omg.org/spec/CTS2/1.1/MapVersionServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionQueryServices"
-xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServices"
-xmlns:exceptions="http://www.omg.org/spec/CTS2/1.1/Exceptions"
+xmlns:mapVersionService="http://www.omg.org/spec/CTS2/1.3/MapVersionServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/MapVersionQueryServices"
+xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServices"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="MapVersionQueryService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionQueryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/MapVersionQueryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/MapVersionQueryServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/MapVersionQueryServices"
       schemaLocation="MapVersionQueryServiceTypes.xsd" />
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/Exceptions" schemaLocation="../core/Exceptions.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
