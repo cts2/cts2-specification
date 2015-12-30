@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
-xmlns:baseQueryService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationQueryServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:baseQueryServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseQueryServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="AssociationQueryService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationQueryServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
-      schemaLocation="AssociationQueryServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationQueryServices" schemaLocation="AssociationQueryServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -285,6 +285,78 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:part name="parameters" element="tns:union" />
   </wsdl:message>
 
+  <wsdl:message name="InvalidDirectoryURI">
+    <wsdl:part name="fault" element="exceptions:InvalidDirectoryURI" />
+  </wsdl:message>
+
+  <wsdl:message name="InvalidDirectoryType">
+    <wsdl:part name="fault" element="exceptions:InvalidDirectoryType" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedLanguage">
+    <wsdl:part name="fault" element="exceptions:UnsupportedLanguage" />
+  </wsdl:message>
+
+  <wsdl:message name="UnknownChangeSet">
+    <wsdl:part name="fault" element="exceptions:UnknownChangeSet" />
+  </wsdl:message>
+
+  <wsdl:message name="ChangeSetIsNotOpen">
+    <wsdl:part name="fault" element="exceptions:ChangeSetIsNotOpen" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedContext">
+    <wsdl:part name="fault" element="exceptions:UnsupportedContext" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedMatchAlgorithm">
+    <wsdl:part name="fault" element="exceptions:UnsupportedMatchAlgorithm" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedPredicate">
+    <wsdl:part name="fault" element="exceptions:UnsupportedPredicate" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedNamespaceName">
+    <wsdl:part name="fault" element="exceptions:UnsupportedNamespaceName" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedModelAttribute">
+    <wsdl:part name="fault" element="exceptions:UnsupportedModelAttribute" />
+  </wsdl:message>
+
+  <wsdl:message name="MatchValueFormatException">
+    <wsdl:part name="fault" element="exceptions:MatchValueFormatException" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedFormat">
+    <wsdl:part name="fault" element="exceptions:UnsupportedFormat" />
+  </wsdl:message>
+
+  <wsdl:message name="QueryTimeout">
+    <wsdl:part name="fault" element="exceptions:QueryTimeout" />
+  </wsdl:message>
+
+  <wsdl:message name="EntityExpressionSyntaxError">
+    <wsdl:part name="fault" element="exceptions:EntityExpressionSyntaxError" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedOntologySyntax">
+    <wsdl:part name="fault" element="exceptions:UnsupportedOntologySyntax" />
+  </wsdl:message>
+
+  <wsdl:message name="UnsupportedOntologyLanguage">
+    <wsdl:part name="fault" element="exceptions:UnsupportedOntologyLanguage" />
+  </wsdl:message>
+
+  <wsdl:message name="UnknownCodeSystemVersion">
+    <wsdl:part name="fault" element="exceptions:UnknownCodeSystemVersion" />
+  </wsdl:message>
+
+  <wsdl:message name="UnknownEntity">
+    <wsdl:part name="fault" element="exceptions:UnknownEntity" />
+  </wsdl:message>
+
   <wsdl:portType name="AssociationQueryServicePortType">
     <!-- BaseService -->
     <wsdl:operation name="getSupportedFormat">
@@ -373,100 +445,211 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
     <wsdl:operation name="resolve">
       <wsdl:input name="resolve" message="tns:resolve" />
       <wsdl:output name="resolveResponse" message="tns:resolveResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetExpression">
       <wsdl:input name="restrictToTargetExpression" message="tns:restrictToTargetExpression" />
-      <wsdl:output name="restrictToTargetExpressionResponse"
-      message="tns:restrictToTargetExpressionResponse" />
+      <wsdl:output name="restrictToTargetExpressionResponse" message="tns:restrictToTargetExpressionResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="EntityExpressionSyntaxError" message="tns:EntityExpressionSyntaxError"/>
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax"/>
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToCodeSystemVersion">
       <wsdl:input name="restrictToCodeSystemVersion" message="tns:restrictToCodeSystemVersion" />
-      <wsdl:output name="restrictToCodeSystemVersionResponse"
-      message="tns:restrictToCodeSystemVersionResponse" />
+      <wsdl:output name="restrictToCodeSystemVersionResponse" message="tns:restrictToCodeSystemVersionResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnknownCodeSystemVersion" message="tns:UnknownCodeSystemVersion"/>
     </wsdl:operation>
 
     <wsdl:operation name="count">
       <wsdl:input name="count" message="tns:count" />
       <wsdl:output name="countResponse" message="tns:countResponse" />
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="resolveAsList">
       <wsdl:input name="resolveAsList" message="tns:resolveAsList" />
       <wsdl:output name="resolveAsListResponse" message="tns:resolveAsListResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="getTargetEntities">
       <wsdl:input name="getTargetEntities" message="tns:getTargetEntities" />
       <wsdl:output name="getTargetEntitiesResponse" message="tns:getTargetEntitiesResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="getSourceEntities">
       <wsdl:input name="getSourceEntities" message="tns:getSourceEntities" />
       <wsdl:output name="getSourceEntitiesResponse" message="tns:getSourceEntitiesResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToSourceEntity">
       <wsdl:input name="restrictToSourceEntity" message="tns:restrictToSourceEntity" />
-      <wsdl:output name="restrictToSourceEntityResponse"
-      message="tns:restrictToSourceEntityResponse" />
+      <wsdl:output name="restrictToSourceEntityResponse" message="tns:restrictToSourceEntityResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToPredicate">
       <wsdl:input name="restrictToPredicate" message="tns:restrictToPredicate" />
       <wsdl:output name="restrictToPredicateResponse" message="tns:restrictToPredicateResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity"/>
     </wsdl:operation>
 
     <wsdl:operation name="getAllSourceAndTargetEntities">
-      <wsdl:input name="getAllSourceAndTargetEntities"
-      message="tns:getAllSourceAndTargetEntities" />
-      <wsdl:output name="getAllSourceAndTargetEntitiesResponse"
-      message="tns:getAllSourceAndTargetEntitiesResponse" />
+      <wsdl:input name="getAllSourceAndTargetEntities" message="tns:getAllSourceAndTargetEntities" />
+      <wsdl:output name="getAllSourceAndTargetEntitiesResponse" message="tns:getAllSourceAndTargetEntitiesResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToSourceOrTargetEntity">
-      <wsdl:input name="restrictToSourceOrTargetEntity"
-      message="tns:restrictToSourceOrTargetEntity" />
-      <wsdl:output name="restrictToSourceOrTargetEntityResponse"
-      message="tns:restrictToSourceOrTargetEntityResponse" />
+      <wsdl:input name="restrictToSourceOrTargetEntity" message="tns:restrictToSourceOrTargetEntity" />
+      <wsdl:output name="restrictToSourceOrTargetEntityResponse" message="tns:restrictToSourceOrTargetEntityResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrict">
       <wsdl:input name="restrict" message="tns:restrict" />
       <wsdl:output name="restrictResponse" message="tns:restrictResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetLiteral">
       <wsdl:input name="restrictToTargetLiteral" message="tns:restrictToTargetLiteral" />
-      <wsdl:output name="restrictToTargetLiteralResponse"
-      message="tns:restrictToTargetLiteralResponse" />
+      <wsdl:output name="restrictToTargetLiteralResponse" message="tns:restrictToTargetLiteralResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
     </wsdl:operation>
 
     <wsdl:operation name="getPredicates">
       <wsdl:input name="getPredicates" message="tns:getPredicates" />
       <wsdl:output name="getPredicatesResponse" message="tns:getPredicatesResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedLanguage" message="tns:UnsupportedLanguage"/>
+      <wsdl:fault name="UnknownChangeSet" message="tns:UnknownChangeSet"/>
+      <wsdl:fault name="ChangeSetIsNotOpen" message="tns:ChangeSetIsNotOpen"/>
+      <wsdl:fault name="UnsupportedContext" message="tns:UnsupportedContext"/>
+      <wsdl:fault name="UnsupportedMatchAlgorithm" message="tns:UnsupportedMatchAlgorithm"/>
+      <wsdl:fault name="UnsupportedPredicate" message="tns:UnsupportedPredicate"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnsupportedModelAttribute" message="tns:UnsupportedModelAttribute"/>
+      <wsdl:fault name="MatchValueFormatException" message="tns:MatchValueFormatException"/>
+      <wsdl:fault name="UnsupportedFormat" message="tns:UnsupportedFormat"/>
+      <wsdl:fault name="QueryTimeout" message="tns:QueryTimeout"/>
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetEntity">
       <wsdl:input name="restrictToTargetEntity" message="tns:restrictToTargetEntity" />
-      <wsdl:output name="restrictToTargetEntityResponse"
-      message="tns:restrictToTargetEntityResponse" />
+      <wsdl:output name="restrictToTargetEntityResponse" message="tns:restrictToTargetEntityResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI"/>
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType"/>
+      <wsdl:fault name="UnsupportedNamespaceName" message="tns:UnsupportedNamespaceName"/>
+      <wsdl:fault name="UnknownEntity" message="tns:UnknownEntity"/>
     </wsdl:operation>
 
     <wsdl:operation name="difference">
       <wsdl:input name="difference" message="tns:difference" />
       <wsdl:output name="differenceResponse" message="tns:differenceResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="intersect">
       <wsdl:input name="intersect" message="tns:intersect" />
       <wsdl:output name="intersectResponse" message="tns:intersectResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
     <wsdl:operation name="union">
       <wsdl:input name="union" message="tns:union" />
       <wsdl:output name="unionResponse" message="tns:unionResponse" />
+      <wsdl:fault name="InvalidDirectoryURI" message="tns:InvalidDirectoryURI" />
+      <wsdl:fault name="InvalidDirectoryType" message="tns:InvalidDirectoryType" />
     </wsdl:operation>
 
   </wsdl:portType>
@@ -682,66 +865,80 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+        implementation</wsdl:documentation>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -761,33 +958,32 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+        the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="EntityExpressionSyntaxError">
+        <wsdl:documentation>The entity expression is syntactically incorrect and cannot be
+        parsed</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="EntityExpressionSyntaxError" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="EntityExpressionSyntaxError">
-        <documentation>The entity expression is syntactically incorrect and cannot be
-        parsed</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="EntityExpressionSyntaxError" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by tge service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -808,31 +1004,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
-        <documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
+        <wsdl:documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+        the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
     <wsdl:operation name="count">
-      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
-      currently represented by the supplied directory URI.</documentation>
+      <wsdl:documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the number of elements
+      currently represented by the supplied directory URI.</wsdl:documentation>
 
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="count">
@@ -842,6 +1035,23 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="countResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -860,66 +1070,80 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -939,66 +1163,79 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1016,66 +1253,80 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1095,32 +1346,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
-        <documentation>The supplied namespace name is not one that is known to the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+        service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
-        <documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+        the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1138,32 +1385,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
-        <documentation>The supplied namespace name is not one that is known to the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
-        <documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1182,66 +1425,80 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1262,32 +1519,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
-        <documentation>The supplied namespace name is not one that is known to the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
-        <documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1306,6 +1559,44 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="restrictToTargetLiteral">
@@ -1323,18 +1614,16 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1352,66 +1641,80 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
+        <wsdl:documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
+        <wsdl:documentation>The change set specified could either not be read or located by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="SortAndFilterException">
-        <documentation>Errors that can occur in sort and/or filter parameters</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
+        <wsdl:documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
+          its state is not &lt;i&gt;OPEN&lt;/i&gt;.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="SortAndFilterException" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
+        <wsdl:documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
-        <documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
-        implementation</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedMatchAlgorithm">
+        <wsdl:documentation>The &lt;i&gt;matchAlgorithm&lt;/i&gt; is not supported by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedMatchAlgorithm" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedPredicate">
+        <wsdl:documentation>The predicate name or URI is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedPredicate" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
-        <documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
-        service.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedModelAttribute">
+        <wsdl:documentation>The name or URI of a CTS2 model attribute is not recognized and/or supported by the
+          service implementation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedModelAttribute" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedLanguage">
-        <documentation>The &lt;i&gt;referenceLanguage&lt;/i&gt; is not supported by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="MatchValueFormatException">
+        <wsdl:documentation>The match value does not meet the format or syntax required or the supplied match
+          algorithm.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="MatchValueFormatException" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedFormat">
+        <wsdl:documentation>The &lt;i&gt;format&lt;/i&gt; is not supported by the service
+          implementation</wsdl:documentation>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownChangeSet">
-        <documentation>The change set specified could either not be read or located by the
-        service.</documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedFormat" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownChangeSet" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ChangeSetIsNotOpen">
-        <documentation>The &lt;i&gt;changeSetContext&lt;/i&gt; is recognized by the service, but
-        its state is not &lt;i&gt;OPEN&lt;/i&gt;.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ChangeSetIsNotOpen" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedContext">
-        <documentation>One or more &lt;i&gt;changeSetContext&lt;/i&gt; is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedContext" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="QueryTimeout">
+        <wsdl:documentation>The &lt;i&gt;timeLimit&lt;/i&gt; was exceeded by the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="QueryTimeout" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1433,32 +1736,28 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
-        <documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
+        <wsdl:documentation>The supplied namespace name is not one that is known to the
+          service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
+        <wsdl:documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
+          service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
-        <documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
-        the one required by the service invocation.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedNamespaceName">
-        <documentation>The supplied namespace name is not one that is known to the
-        service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedNamespaceName" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownEntity">
-        <documentation>The &lt;i&gt;EntityNameOrURI&lt;/i&gt; is not known to the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownEntity" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1477,6 +1776,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="intersect">
@@ -1492,6 +1802,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="intersectResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -1509,6 +1830,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationQueryServices"
       <wsdl:output name="unionResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI">
+        <wsdl:documentation>The type represented by the supplied &lt;i&gt;directory&lt;/i&gt; URI is not
+          the one required by the service invocation.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryURI" />
+      </wsdl:fault>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="InvalidDirectoryType">
+        <wsdl:documentation>The supplied &lt;i&gt;directory&lt;/i&gt; URI is not valid</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="InvalidDirectoryType" />
+      </wsdl:fault>
 
     </wsdl:operation>
 

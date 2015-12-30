@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-	xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
-	xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-	xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+	targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+	xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+	xmlns:core="http://www.omg.org/spec/CTS2/1.3/Core"
+	xmlns:coreService="http://www.omg.org/spec/CTS2/1.3/CoreService"
 	elementFormDefault="qualified">
 
-	<import namespace="http://www.omg.org/spec/CTS2/1.1/Core"
+	<import namespace="http://www.omg.org/spec/CTS2/1.3/Core"
 		schemaLocation="../core/Core.xsd" />
-	<import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService"
+	<import namespace="http://www.omg.org/spec/CTS2/1.3/CoreService"
 		schemaLocation="../core/CoreService.xsd" />
 
 	<element name="getSupportedFormat" type="tns:getSupportedFormat" />

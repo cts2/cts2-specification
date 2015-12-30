@@ -1,15 +1,17 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServices"
-xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseReadServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationTransformServices"
+xmlns:baseReadService="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseReadServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="AssociationTransformService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationTransformServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/AssociationTransformServices"
       schemaLocation="AssociationTransformServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -119,6 +121,22 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
   <wsdl:message name="toAssociationFormatResponse">
     <wsdl:part name="parameters" element="tns:toAssociationFormatResponse" />
   </wsdl:message>
+  
+  <wsdl:message name="EntityExpressionSyntaxError">
+    <wsdl:part name="fault" element="exceptions:EntityExpressionSyntaxError" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnknownCodeSystemVersion">
+    <wsdl:part name="fault" element="exceptions:UnknownCodeSystemVersion" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedOntologySyntax">
+    <wsdl:part name="fault" element="exceptions:UnsupportedOntologySyntax" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedOntologyLanguage">
+    <wsdl:part name="fault" element="exceptions:UnsupportedOntologyLanguage" />
+  </wsdl:message>
 
   <wsdl:portType name="AssociationTransformServicePortType">
     <!-- BaseService -->
@@ -186,11 +204,17 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
     <wsdl:operation name="fromAssociationList">
       <wsdl:input name="fromAssociationList" message="tns:fromAssociationList" />
       <wsdl:output name="fromAssociationListResponse" message="tns:fromAssociationListResponse" />
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax"/>
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage"/>
     </wsdl:operation>
 
     <wsdl:operation name="toAssociationFormat">
       <wsdl:input name="toAssociationFormat" message="tns:toAssociationFormat" />
       <wsdl:output name="toAssociationFormatResponse" message="tns:toAssociationFormatResponse" />
+      <wsdl:fault name="EntityExpressionSyntaxError" message="tns:EntityExpressionSyntaxError"/>
+      <wsdl:fault name="UnknownCodeSystemVersion" message="tns:UnknownCodeSystemVersion"/>
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax"/>
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage"/>
     </wsdl:operation>
 
   </wsdl:portType>
@@ -383,26 +407,16 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
-        <documentation>The supplied ontology syntax is not supported by the service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
-        <documentation>The supplied ontology language is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -420,40 +434,29 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/AssociationTransformServi
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="EntityExpressionSyntaxError">
-        <documentation>The entity expression is syntactically incorrect and cannot be
-        parsed</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="EntityExpressionSyntaxError">
+        <wsdl:documentation>The entity expression is syntactically incorrect and cannot be
+        parsed</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="EntityExpressionSyntaxError" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="EntityExpressionSyntaxError" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
+        <wsdl:documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownCodeSystemVersion">
-        <documentation>The referenced &lt;i&gt;CodeSystemVersion&lt;/i&gt; is not recognized by the
-        service</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service</wsdl:documentation>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownCodeSystemVersion" />
-      </fault>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
-        <documentation>The supplied ontology syntax is not supported by the service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
-        <documentation>The supplied ontology language is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
 
     </wsdl:operation>
 

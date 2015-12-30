@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseExportServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseServiceTypes"
+xmlns:exceptions="http://www.omg.org/spec/CTS2/1.3/Exceptions"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="BaseExportService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseExportServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/wsdl/BaseExportServices"
       schemaLocation="BaseExportServiceTypes.xsd" />
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.3/Exceptions" schemaLocation="../core/Exceptions.xsd" />
     </xsd:schema>
 
   </wsdl:types>
@@ -126,6 +128,38 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
   <wsdl:message name="getSupportedLanguageAndSyntaxResponse">
     <wsdl:part name="parameters" element="tns:getSupportedLanguageAndSyntaxResponse" />
   </wsdl:message>
+  
+  <wsdl:message name="UnknownProcessId">
+    <wsdl:part name="parameters" element="exceptions:UnknownProcessId" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedStatus">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedStatus" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedResourceType">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedResourceType" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceAlreadyExists">
+    <wsdl:part name="parameters" element="exceptions:ResourceAlreadyExists" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnableToOpenOrCreateTargetDirectory">
+    <wsdl:part name="parameters" element="exceptions:UnableToOpenOrCreateTargetDirectory" />
+  </wsdl:message>
+  
+  <wsdl:message name="ResourceWriteError">
+    <wsdl:part name="parameters" element="exceptions:ResourceWriteError" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedOntologySyntax">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedOntologySyntax" />
+  </wsdl:message>
+  
+  <wsdl:message name="UnsupportedOntologyLanguage">
+    <wsdl:part name="parameters" element="exceptions:UnsupportedOntologyLanguage" />
+  </wsdl:message>
 
   <wsdl:portType name="BaseExportServicePortType">
     <!-- BaseService -->
@@ -180,21 +214,30 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
     <wsdl:operation name="getLog">
       <wsdl:input name="getLog" message="tns:getLog" />
       <wsdl:output name="getLogResponse" message="tns:getLogResponse" />
+      <wsdl:fault name="UnknownProcessId" message="tns:UnknownProcessId" />
     </wsdl:operation>
 
     <wsdl:operation name="clearLog">
       <wsdl:input name="clearLog" message="tns:clearLog" />
       <wsdl:output name="clearLogResponse" message="tns:clearLogResponse" />
+      <wsdl:fault name="UnknownProcessId" message="tns:UnknownProcessId" />
     </wsdl:operation>
 
     <wsdl:operation name="getStatus">
       <wsdl:input name="getStatus" message="tns:getStatus" />
       <wsdl:output name="getStatusResponse" message="tns:getStatusResponse" />
+      <wsdl:fault name="UnsupportedStatus" message="tns:UnsupportedStatus" />
     </wsdl:operation>
 
     <wsdl:operation name="export">
       <wsdl:input name="export" message="tns:export" />
       <wsdl:output name="exportResponse" message="tns:exportResponse" />
+      <wsdl:fault name="UnsupportedResourceType" message="tns:UnsupportedResourceType" />
+      <wsdl:fault name="ResourceAlreadyExists" message="tns:ResourceAlreadyExists" />
+      <wsdl:fault name="UnableToOpenOrCreateTargetDirectory" message="tns:UnableToOpenOrCreateTargetDirectory" />
+      <wsdl:fault name="ResourceWriteError" message="tns:ResourceWriteError" />
+      <wsdl:fault name="UnsupportedOntologySyntax" message="tns:UnsupportedOntologySyntax" />
+      <wsdl:fault name="UnsupportedOntologyLanguage" message="tns:UnsupportedOntologyLanguage" />
     </wsdl:operation>
 
     <wsdl:operation name="getSupportedLanguageAndSyntax">
@@ -366,6 +409,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
+        <wsdl:documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service.</wsdl:documentation>        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
+      </wsdl:fault>
+
     </wsdl:operation>
 
     <wsdl:operation name="clearLog">
@@ -380,6 +428,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
       <wsdl:output name="clearLogResponse">
         <soap:body use="literal" />
       </wsdl:output>
+
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnknownProcessId">
+        <wsdl:documentation>The &lt;i&gt;processId&lt;/i&gt; is not known to the service.</wsdl:documentation>        
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnknownProcessId" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -396,12 +449,11 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedStatus">
-        <documentation>The name or URI of the &lt;i&gt;Changeable&lt;/i&gt;
-        &lt;i&gt;status&lt;/i&gt; property is not recognized by the service.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedStatus" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedStatus">
+        <wsdl:documentation>The name or URI of the &lt;i&gt;Changeable&lt;/i&gt;
+        &lt;i&gt;status&lt;/i&gt; property is not recognized by the service.</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedStatus" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
@@ -421,56 +473,41 @@ targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
         <soap:body use="literal" />
       </wsdl:output>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedResourceType">
-        <documentation>the type of resource referenced by the directory is not supported by the
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedResourceType">
+        <wsdl:documentation>the type of resource referenced by the directory is not supported by the
         service - either it can't be exported period or it can't be exported in the supplied
-        language or format</documentation>
+        language or format</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedResourceType" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedResourceType" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceAlreadyExists">
+        <wsdl:documentation>a referenced resource already exists and &lt;i&gt;overWrite&lt;/i&gt; is set
+        to &lt;i&gt;FAIL_IF_EXISTS&lt;/i&gt;</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceAlreadyExists" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceAlreadyExists">
-        <documentation>a referenced resource already exists and &lt;i&gt;overWrite&lt;/i&gt; is set
-        to &lt;i&gt;FAIL_IF_EXISTS&lt;/i&gt;</documentation>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenOrCreateTargetDirectory">
+        <wsdl:documentation>the export service is unable to open or create the supplied target
+        directory</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnableToOpenOrCreateTargetDirectory" />
+      </wsdl:fault>
 
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceAlreadyExists" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceWriteError">
+        <wsdl:documentation>an error occurred while trying to write the exported image of a resource
+        into the directory</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceWriteError" />
+      </wsdl:fault>
+      
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
+        <wsdl:documentation>The supplied ontology syntax is not supported by the service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
+      </wsdl:fault>
 
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnableToOpenOrCreateTargetDirectory">
-        <documentation>the export service is unable to open or create the supplied target
-        directory</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="UnableToOpenOrCreateTargetDirectory" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="ResourceWriteError">
-        <documentation>an error occurred while trying to write the exported image of a resource
-        into the directory</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="ResourceWriteError" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="OntologyLanguageAndSyntaxException">
-        <documentation>An exception in the &lt;i&gt;OntologyLanguageAndSyntax&lt;/i&gt;
-        parameter.</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
-        name="OntologyLanguageAndSyntaxException" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologySyntax">
-        <documentation>The supplied ontology syntax is not supported by the service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologySyntax" />
-      </fault>
-
-      <fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
-        <documentation>The supplied ontology language is not supported by the
-        service</documentation>
-
-        <fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
-      </fault>
+      <wsdl:fault xmlns="http://schemas.xmlsoap.org/wsdl/" name="UnsupportedOntologyLanguage">
+        <wsdl:documentation>The supplied ontology language is not supported by the
+        service</wsdl:documentation>
+        <soap:fault xmlns="http://schemas.xmlsoap.org/wsdl/soap/" name="UnsupportedOntologyLanguage" />
+      </wsdl:fault>
 
     </wsdl:operation>
 
