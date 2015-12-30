@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseExportServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.2/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseExportServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseExportServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
 
   <xs:element name="getLog" type="tns:getLog"/>
   <xs:complexType name="getLog">

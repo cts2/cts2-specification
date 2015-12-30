@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns="http://www.omg.org/spec/CTS2/1.1/Entity" targetNamespace="http://www.omg.org/spec/CTS2/1.1/Entity"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core" xmlns="http://www.omg.org/spec/CTS2/1.2/Entity" targetNamespace="http://www.omg.org/spec/CTS2/1.2/Entity"
 	elementFormDefault="qualified">
 
-	<xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
 
 	<!-- ====================================================
 		EntityDescription

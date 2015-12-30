@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetLoaderServices"
-  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
-  xmlns:valueSetDefinitionService="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/ResolvedValueSetLoaderServices"
+  xmlns:valueSetDefinition="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinition"
+  xmlns:valueSetDefinitionService="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinitionServices"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.2/CoreService"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ResolvedValueSetLoaderServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/ResolvedValueSetLoaderServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinitionServices" schemaLocation="../valuesetdefinition/ValueSetDefinitionServices.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinitionServices" schemaLocation="../valuesetdefinition/ValueSetDefinitionServices.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/ValueSetDefinition" schemaLocation="../valuesetdefinition/ValueSetDefinition.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
   
   <xs:element name="getKnownValueSets" type="tns:getKnownValueSets"/>
   <xs:complexType name="getKnownValueSets"/>

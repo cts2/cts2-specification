@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:coreService="http://www.omg.org/spec/CTS2/1.1/CoreService"
-  xmlns:valueSet="http://www.omg.org/spec/CTS2/1.1/ValueSet"
-  xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetCatalogQueryServices"
-  xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+  xmlns:coreService="http://www.omg.org/spec/CTS2/1.2/CoreService"
+  xmlns:valueSet="http://www.omg.org/spec/CTS2/1.2/ValueSet"
+  xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/ValueSetCatalogQueryServices"
+  xmlns:core="http://www.omg.org/spec/CTS2/1.2/Core"
   attributeFormDefault="qualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/ValueSetCatalogQueryServices">
+  targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/ValueSetCatalogQueryServices">
   
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/CoreService" schemaLocation="../core/CoreService.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="../core/Core.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
-  <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/CoreService" schemaLocation="../core/CoreService.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/Core" schemaLocation="../core/Core.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/ValueSet" schemaLocation="../valueset/ValueSet.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes" schemaLocation="BaseServiceTypes.xsd"/>
+  <xs:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseQueryServiceTypes" schemaLocation="BaseQueryServiceTypes.xsd"/>
   
   <xs:element name="getAllValueSetCatalogEntries" type="tns:getAllValueSetCatalogEntries"/>
   <xs:complexType name="getAllValueSetCatalogEntries"/>

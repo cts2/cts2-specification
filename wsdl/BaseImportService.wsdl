@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:tns="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices"
-xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseServiceTypes"
+xmlns:tns="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseImportServices"
+xmlns:baseServiceTypes="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseServiceTypes"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 name="BaseImportService"
-targetNamespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices">
+targetNamespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseImportServices">
   <wsdl:types>
     <xsd:schema>
-      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.1/wsdl/BaseImportServices"
+      <xsd:import namespace="http://www.omg.org/spec/CTS2/1.2/wsdl/BaseImportServices"
       schemaLocation="BaseImportServiceTypes.xsd" />
     </xsd:schema>
 
